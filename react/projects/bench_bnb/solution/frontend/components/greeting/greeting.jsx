@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import SessionFormContainer from '../session_form/session_form_container';
 
 class Greeting extends React.Component {
   constructor(props) {
@@ -8,11 +9,7 @@ class Greeting extends React.Component {
 
   sessionLinks() {
     return(
-      <nav className="login-signup">
-        <Link to="/login" activeClassName="current">Login</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup" activeClassName="current">Sign up!</Link>
-      </nav>
+      <SessionFormContainer />
     );
   }
 
