@@ -9,7 +9,7 @@
 #  updated_at       :datetime
 #
 
-class Visit < ActiveRecord::Base
+class Visit < ApplicationRecord
   validates :user_id, :shortened_url_id, presence: true
 
   belongs_to :shortened_url

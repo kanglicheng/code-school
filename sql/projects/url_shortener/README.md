@@ -38,11 +38,6 @@ Go ahead and create a new Rails project...
 ```
 $ rails new URLShortener --database postgresql
 ```
-Create the database with the following command...
-
-```
-$ bundle exec rake db:create
-```
 
 You now have a working Rails app with database! We can now run migrations to
 add tables to our database.

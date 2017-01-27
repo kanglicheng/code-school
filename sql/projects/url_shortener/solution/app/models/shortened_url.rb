@@ -10,7 +10,7 @@
 #  updated_at   :datetime
 #
 
-class ShortenedUrl < ActiveRecord::Base
+class ShortenedUrl < ApplicationRecord
   validates :long_url, :short_url, :submitter_id, presence: true
   validates :short_url, uniqueness: true
   validate :no_spamming, :nonpremium_max
@@ -22,23 +22,25 @@ class ShortenedUrl < ActiveRecord::Base
     primary_key: :id
   )
 
-  has_many :taggings,
-  primary_key: :id,
-  foreign_key: :shortened_url_id,
-  class_name: :Tagging,
-  dependent: :destroy
+  has_many(
+    :taggings,
+    primary_key: :id,
+    foreign_key: :shortened_url_id,
+    class_name: :Tagging,
+    dependent: :destroy
+  )
 
-  has_many :tag_topics,
-  through: :taggings,
-  source: :tag_topic
+  has_many :tag_topics, through: :taggings, source: :tag_topic
 
-  has_many :visits,
-  primary_key: :id,
-  foreign_key: :shortened_url_id,
-  class_name: :Visit,
-  dependent: :destroy
+  has_many(
+    :visits,
+    primary_key: :id,
+    foreign_key: :shortened_url_id,
+    class_name: :Visit,
+    dependent: :destroy
+  )
 
-  # TA: Again, the association would return the same user multiple times. You
+  # Again, the association would return the same user multiple times. You
   # may uncomment the lambda below to eliminate duplicates in the result set.
   has_many(
     :visitors,
@@ -68,9 +70,9 @@ class ShortenedUrl < ActiveRecord::Base
   end
 
   def num_uniques
-    # TA: You can just write `visitors.count` if you're using the lambda above.
+    # You can just write `visitors.count` if you're using the lambda above.
     # visitors.count
-    # TA: Alternatively, if your `#visitors` returns duplicates, you can count
+    # Alternatively, if your `#visitors` returns duplicates, you can count
     # the unique values like so:
     visits.select("user_id").distinct.count
   end
@@ -113,7 +115,7 @@ class ShortenedUrl < ActiveRecord::Base
     #       AND users.premium ='f'"
   end
 
-  private 
+  private
 
   def no_spamming
     last_minute = ShortenedUrl
