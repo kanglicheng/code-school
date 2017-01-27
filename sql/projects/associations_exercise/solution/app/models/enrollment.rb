@@ -9,7 +9,7 @@
 #  updated_at :datetime
 #
 
-class Enrollment < ActiveRecord::Base
+class Enrollment < ApplicationRecord
   belongs_to(
       :user,
       :class_name => "User",
