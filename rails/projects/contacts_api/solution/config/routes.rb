@@ -1,4 +1,4 @@
-FirstRoutes::Application.routes.draw do
+Rails.application.routes.draw do
   resources(
     :contacts,
     :only => [:create, :destroy, :show, :update]

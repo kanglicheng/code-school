@@ -1,13 +1,13 @@
 class ContactSharesController < ApplicationController
   def create
     @share = ContactShare.create(contact_share_params)
-    render :json => @share
+    render json: @share
   end
 
   def destroy
     @share = ContactShare.find(params[:id])
     @share.destroy
-    render :json => @share
+    render json: @share
   end
 
   private

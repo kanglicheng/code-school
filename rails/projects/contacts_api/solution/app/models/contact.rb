@@ -10,7 +10,7 @@
 #  updated_at :datetime
 #
 
-class Contact < ActiveRecord::Base
+class Contact < ApplicationRecord
   has_many :contact_shares
   has_many :shared_users, through: :contact_shares, source: :user
   belongs_to :owner, foreign_key: :user_id, class_name: "User"
@@ -30,6 +30,6 @@ class Contact < ActiveRecord::Base
     Contact
       .joins(joins_cond)
       .where(where_cond, :user_id => user_id)
-      .uniq
+      .distinct
   end
 end
