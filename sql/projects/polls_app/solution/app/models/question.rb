@@ -1,4 +1,4 @@
-class Question < ActiveRecord::Base
+class Question < ApplicationRecord
   validates :poll, :text, presence: true
 
   has_many :answer_choices

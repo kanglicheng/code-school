@@ -1,4 +1,4 @@
-class Poll < ActiveRecord::Base
+class Poll < ApplicationRecord
   validates :author, :title, presence: true
 
   belongs_to :author, class_name: "User"

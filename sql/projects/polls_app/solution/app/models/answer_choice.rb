@@ -1,4 +1,4 @@
-class AnswerChoice < ActiveRecord::Base
+class AnswerChoice < ApplicationRecord
   validates :question, :text, presence: true
 
   belongs_to :question

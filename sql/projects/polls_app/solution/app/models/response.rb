@@ -1,4 +1,4 @@
-class Response < ActiveRecord::Base
+class Response < ApplicationRecord
   validates :answer_choice, :respondent, presence: true
 
   belongs_to :answer_choice
