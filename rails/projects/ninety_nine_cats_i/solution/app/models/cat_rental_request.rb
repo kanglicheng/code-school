@@ -1,4 +1,4 @@
-class CatRentalRequest < ActiveRecord::Base
+class CatRentalRequest < ApplicationRecord
   STATUS_STATES = %w(APPROVED DENIED PENDING)
 
   belongs_to :cat

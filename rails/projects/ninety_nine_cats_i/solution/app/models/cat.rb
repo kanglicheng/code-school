@@ -1,6 +1,4 @@
-require 'action_view'
-
-class Cat < ActiveRecord::Base
+class Cat < ApplicationRecord
   include ActionView::Helpers::DateHelper
 
   CAT_COLORS = %w(black white orange brown)
