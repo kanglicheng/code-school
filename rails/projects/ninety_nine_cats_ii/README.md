@@ -17,7 +17,7 @@ Today we add a users and login to our 99Cats application.
 
 **NB**: Download the [skeleton][skeleton] containing solutions from day one.
 
-[skeleton]: ./skeleton.zip
+[skeleton]: ../ninety_nine_cats_i/day_1_solution.zip
 
 ## Phase IV: Users
 
