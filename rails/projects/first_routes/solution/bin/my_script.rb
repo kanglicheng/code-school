@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'addressable/uri'
 require 'rest-client'
 

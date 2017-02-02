@@ -1,4 +1,4 @@
-FirstRoutes::Application.routes.draw do
+Rails.application.routes.draw do
   resources :users
 
   ## The above line is shorthand for all of the following 8 lines...
