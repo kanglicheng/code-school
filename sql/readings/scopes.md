@@ -1,7 +1,7 @@
 # Scopes
 
 It's common to write commonly used queries as a **scope**. A scope is
-just a fancy name for an `ActiveRecord::Base` class method that
+just a fancy name for a model class method that
 constructs all or part of a query and then returns the resulting
 [`Relation` object][relation-reading].
 
@@ -10,7 +10,7 @@ into a scope. It will also make things much more readable by giving a
 convenient name of your choosing to the query.
 
 ```ruby
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   def self.by_popularity
     self
       .select("posts.*, COUNT(*) AS comment_count")

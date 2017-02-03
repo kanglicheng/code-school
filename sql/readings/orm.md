@@ -57,34 +57,35 @@ the objects in an application can be easily stored and retrieved from
 a database without writing SQL statements directly and with less
 overall database access code.
 
-## Model classes and `ActiveRecord::Base`
+## Model classes and `ApplicationRecord`
 
 For each table, we define a Ruby **model** class; an instance of the
 model will represent an individual row in the table. For instance, a
 `physicians` table will have a corresponding `Physician` model class;
 when we fetch rows from the `physicians` table, we will get back
-`Physician` objects. All model classes extend `ActiveRecord::Base`;
-methods in `ActiveRecord::Base` will allow us to fetch and save Ruby
-objects from/to the table.
+`Physician` objects. All model classes inherit from `ApplicationRecord`,
+which in turn inherits from `ActiveRecord::Base` (check out
+`application_record.rb`); the methods given to us by `ActiveRecord::Base`
+will allow us to fetch and save Ruby objects from/to the table.
 
 If we had a table named `physicians`, we would create a model
 class like so:
 
 ```ruby
 # app/models/physician.rb
-class Physician < ActiveRecord::Base
+class Physician < ApplicationRecord
 end
 ```
 
 By convention, we define this class in `app/models/physician.rb`. The
 `app/models` directory is where Rails looks for model classes.
 
-The `ActiveRecord::Base` class has lots of magic within it. For one,
-the name of the class is important; ActiveRecord is able to infer from
-the class name `Physician` that the associated table is
-`physicians`. Model classes are always singular (just like tables are
-always plural): respect the connection so ActiveRecord knows how to
-make the connection between the two worlds.
+The `ActiveRecord::Base` class (parent of `ApplicationRecord`) has lots
+of magic within it. For one, the name of the class is important;
+ActiveRecord is able to infer from the model class name `Physician`
+that the associated table is `physicians`. Model classes are always
+singular (just like tables are always plural): respect the connection
+so ActiveRecord knows how to make the connection between the two worlds.
 
 ### `::find` and `::all`
 
@@ -123,9 +124,7 @@ called **SQL injection**) attack.
 ActiveRecord lets you query without SQL fragments:
 
 ```ruby
-Physician.where(
-  :home_city => "La Jolla"
-)
+Physician.where(home_city: "La Jolla")
 ```
 
 ActiveRecord will look at the hash and construct a `WHERE` fragment
@@ -146,7 +145,7 @@ shame in writing SQL fragments instead; just be sure you interpolate properly!
 
 ### Updating and inserting rows
 
-By extending `ActiveRecord::Base`, your model class will automatically
+By extending `ApplicationRecord`, your model class will automatically
 receive getter/setter methods for each of the database columns. This
 is convenient, since you won't have to write `attr_accessor` for each
 column. Here we construct a new `Physician` and set some appropriate
@@ -154,36 +153,36 @@ fields:
 
 ```ruby
 # create a new Physician object
-p = Physician.new
+physician = Physician.new
 
 # set some fields
-p.name = "Jonas Salk"
-p.college = "City College"
-p.home_city = "La Jolla"
+physician.name = "Jonas Salk"
+physician.college = "City College"
+physician.home_city = "La Jolla"
 ```
 
 Great! As you know from your previous AA Questions project, this will
-not have saved `p` to the Database however. To do this, we need to
+not have saved `physician` to the Database however. To do this, we need to
 call the `ActiveRecord::Base#save!` method:
 
 ```ruby
 # save the record to the database
-p.save!
+physician.save!
 ```
 
 Notice that I use `#save!`; you may have also seen the plain ol'
 `#save`. The difference between the two is that `#save!` will warn you
 if you fail to save the object, whereas `#save` will quietly return
-`false` (it returns `true` on success). 
+`false` (it returns `true` on success).
 
 To save some steps of `#save!`, we can use `#create!` to create a new
 record and immediately save it to the db:
 
 ```ruby
 Physician.create!(
-  :name => "Jonas Salk",
-  :college => "City College",
-  :home_city => "La Jolla"
+  name: "Jonas Salk",
+  college: "City College",
+  home_city: "La Jolla"
 )
 ```
 

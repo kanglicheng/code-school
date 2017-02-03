@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -18,9 +17,8 @@ ActiveRecord::Schema.define(version: 20160921205724) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name", null: false
+    t.index ["name"], name: "index_actors_on_name", using: :btree
   end
-
-  add_index "actors", ["name"], name: "index_actors_on_name", using: :btree
 
   create_table "castings", force: :cascade do |t|
     t.integer "movie_id", null: false
@@ -34,9 +32,8 @@ ActiveRecord::Schema.define(version: 20160921205724) do
     t.float   "score",       null: false
     t.integer "votes",       null: false
     t.integer "director_id", null: false
+    t.index ["director_id"], name: "index_movies_on_director_id", using: :btree
+    t.index ["title"], name: "index_movies_on_title", using: :btree
   end
-
-  add_index "movies", ["director_id"], name: "index_movies_on_director_id", using: :btree
-  add_index "movies", ["title"], name: "index_movies_on_title", using: :btree
 
 end

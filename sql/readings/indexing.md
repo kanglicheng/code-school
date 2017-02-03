@@ -41,11 +41,11 @@ indexed.
 Now let's consider a practical example.
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :conversations, foreign_key: :user_id
 end
 
-class Conversation < ActiveRecord::Base
+class Conversation < ApplicationRecord
   belongs_to :user, foreign_key: :user_id
 end   
 ```

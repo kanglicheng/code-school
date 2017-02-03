@@ -85,7 +85,7 @@ validations and returns true if no errors were found in the object,
 and false otherwise.
 
 ```ruby
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   validates :name, :presence => true
 end
 
@@ -110,7 +110,7 @@ some such before trying to access `errors`.
 ```ruby
 # let's see some of the many ways a record may fail to save!
 
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   validates :name, :presence => true
 end
 
@@ -172,7 +172,7 @@ method to check if the value is either `nil` or a blank string, that
 is, a string that is either empty or consists of only whitespace.
 
 ```ruby
-class Person < ActiveRecord::Base
+class Person < ApplicationRecord
   # must have name, login, and email
   validates :name, :login, :email, :presence => true
 end
@@ -186,7 +186,7 @@ If you want to be sure that an associated object exists, you can do
 that too:
 
 ```ruby
-class LineItem < ActiveRecord::Base
+class LineItem < ApplicationRecord
   belongs_to :order
 
   validates :order, :presence => true
@@ -205,7 +205,7 @@ The default error message is "X can't be empty".
 This helper validates that the attribute's value is unique:
 
 ```ruby
-class Account < ActiveRecord::Base
+class Account < ApplicationRecord
   # no two Accounts with the same email
   validates :email, :uniqueness => true
 end
@@ -215,7 +215,7 @@ There is a very useful `:scope` option that you can use to specify
 other attributes that are used to limit the uniqueness check:
 
 ```ruby
-class Holiday < ActiveRecord::Base
+class Holiday < ApplicationRecord
   # no two Holidays with the same name for a single year
   validates :name, :uniqueness => {
     :scope => :year,

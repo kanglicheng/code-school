@@ -1,5 +1,5 @@
-class Casting < ActiveRecord::Base
-	
+class Casting < ApplicationRecord
+
 	belongs_to :actor
 	belongs_to :movie
 

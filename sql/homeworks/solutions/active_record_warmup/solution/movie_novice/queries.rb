@@ -48,9 +48,9 @@ def below_average_years
   #in descending order
   # hint: use 'select', 'where', 'group', 'order'
   Movie
-    .select("yr", "COUNT(*) as bad_movies")
+    .select(:yr, "COUNT(*) as bad_movies")
     .where("score < 5")
-    .group("yr")
+    .group(:yr)
     .order("bad_movies DESC")
 end
 
@@ -61,7 +61,7 @@ def alphabetized_actors
   # are alphabetized differently than the specs.
   # This spec might fail for Ubuntu users. It's ok!
   Actor
-    .order("name ASC")
+    .order(name: :asc)
     .limit(10)
 end
 
@@ -72,7 +72,7 @@ def pulp_fiction_actors
   Actor
     .select(:id, :name)
     .joins(:movies)
-    .where("title = 'Pulp Fiction'")
+    .where(movies: { title: 'Pulp Fiction' })
 end
 
 def uma_movies
@@ -83,6 +83,6 @@ def uma_movies
   Movie
     .select(:id, :title, :yr)
     .joins(:actors)
-    .where("name = 'Uma Thurman'")
-    .order("yr ASC")
+    .where(actors: { name: 'Uma Thurman'} )
+    .order(yr: :asc)
 end

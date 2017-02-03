@@ -47,7 +47,9 @@ Let's write some code to get the number of comments per `Post` by a
 
 ```ruby
 # app/models/user.rb
-class User
+class User < ApplicationRecord
+  has_many :posts
+
   # ...
 
   def n_plus_one_post_comment_counts
@@ -107,8 +109,18 @@ Revisiting the above case, we could rewrite `post_comment_counts` to
 use eager loading:
 
 ```ruby
+# app/model/post.rb
+class Post < ApplicationRecord
+  has_many :comments
+ 
+  # ... 
+
+end
+
 # app/model/user.rb
-class User
+class User < ApplicationRecord
+  has_many :posts
+
   # ...
 
   def includes_post_comment_counts
@@ -195,7 +207,9 @@ instance, let's filter `User`s who don't have `Comment`s:
 
 ```ruby
 # app/models/user.rb
-class User
+class User < ApplicationRecord
+  has_many :posts
+
   # ...
 
   def self.users_with_comments
@@ -244,7 +258,9 @@ objects with associated comment counts. This is another major use of
 
 ```ruby
 # app/models/user.rb
-class User
+class User < ApplicationRecord
+  has_many :posts
+
   # ...
 
   def joins_post_comment_counts

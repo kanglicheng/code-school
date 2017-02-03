@@ -11,7 +11,7 @@ What about indirect relations? For instance, consider the following
 example:
 
 ```ruby
-class Physician < ActiveRecord::Base
+class Physician < ApplicationRecord
   has_many(
     :appointments,
     :class_name => "Appointment",
@@ -20,7 +20,7 @@ class Physician < ActiveRecord::Base
   )
 end
 
-class Appointment < ActiveRecord::Base
+class Appointment < ApplicationRecord
   belongs_to(
     :physician,
     :class_name => "Physician",
@@ -36,7 +36,7 @@ class Appointment < ActiveRecord::Base
   )
 end
 
-class Patient < ActiveRecord::Base
+class Patient < ApplicationRecord
   has_many(
     :appointments
     :class_name => "Appointment",
@@ -78,7 +78,7 @@ up two existing associations. **Important note**: a **`has_many
 :through` association has nothing to do with traditional `has_many`**.
 
 ```ruby
-class Physician < ActiveRecord::Base
+class Physician < ApplicationRecord
   has_many(
     :appointments,
     :class_name => "Appointment",
@@ -89,7 +89,7 @@ class Physician < ActiveRecord::Base
   has_many :patients, :through => :appointments, :source => :patient
 end
 
-class Appointment < ActiveRecord::Base
+class Appointment < ApplicationRecord
   belongs_to(
     :physician,
     :class_name => "Physician",
@@ -105,7 +105,7 @@ class Appointment < ActiveRecord::Base
   )
 end
 
-class Patient < ActiveRecord::Base
+class Patient < ApplicationRecord
   has_many(
     :appointments
     :class_name => "Appointment",

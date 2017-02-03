@@ -67,7 +67,7 @@ tables, depending on the purpose of these columns.
 In our previous example of `Physician` and `Appointment`, we wrote:
 
 ```ruby
-class Physician < ActiveRecord::base
+class Physician < ApplicationRecord
   has_many(
     :appointments,
     :class_name => "Appointment",

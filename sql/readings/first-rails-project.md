@@ -9,7 +9,7 @@ straightforward.
 First, make sure that rails is installed:
 
 ```sh
-  gem install rails -v '~> 4.2.0'
+  gem install rails'
 ```
 
 Next, generate a new Rails *project*:
@@ -33,7 +33,7 @@ This will add the correct gem and have sensible defaults in
 Open up the `Gemfile` file (located in your new `DemoProject` folder).
 Rails sets you up with a bunch of gems by default, but there are a few
 other gems we recommend that will make your life **much** easier. You
-should get in the habit of including the the following gems to your 
+should get in the habit of including the the following gems to your
 `development` group:
 
 ```ruby
@@ -67,8 +67,8 @@ listed in it.
 
 As noted above, you can initialize a new Rails app with a Postgres
 database by using the `--database=postgresql` option. You can also
-**switch** an existing Rails app from SQLite to Postgres. This is 
-convenient because differences between your development and 
+**switch** an existing Rails app from SQLite to Postgres. This is
+convenient because differences between your development and
 production databases can be frustrating.
 
 First, replace the `gem 'sqlite3'` line in the `Gemfile` with `gem
@@ -87,7 +87,7 @@ You will have to create a database with the given name. Name your development, t
 
 ```rb
 development:
-  <<: *default 
+  <<: *default
   database: ProjectName_development
 ```
 

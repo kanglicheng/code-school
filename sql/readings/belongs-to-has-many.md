@@ -20,10 +20,10 @@ class CreateCoursesAndProfessorsTables < ActiveRecord::Migration
     create_table :professors do |t|
       t.string :name
       t.string :thesis_title
-      
+
       t.timestamps
     end
-    
+
     create_table :courses do |t|
       t.string :course_name
       t.integer :professor_id
@@ -56,7 +56,7 @@ there is a connection between the two models. Here we modify the
 associated model classes:
 
 ```ruby
-class Course < ActiveRecord::Base
+class Course < ApplicationRecord
   belongs_to(
     :professor,
     :class_name => "Professor",
@@ -65,7 +65,7 @@ class Course < ActiveRecord::Base
   )
 end
 
-class Professor < ActiveRecord::Base
+class Professor < ApplicationRecord
   has_many(
     :courses,
     :class_name => "Course",
@@ -77,8 +77,9 @@ end
 
 The `belongs_to` and `has_many` methods exist in a module named
 `ActiveRecord::Associations::ClassMethods`. `ActiveRecord::Base`
-extends this module, so the association methods are available as class
-methods. These class methods define instance methods: in this case,
+extends this module, and `ApplicationRecord` inherits from
+`ActiveRecord::Base`, so those association methods are available as class
+methods on your model. These class methods define instance methods: in this case,
 `Course#professor` and `Professor#courses`. Class methods like this
 are called **macros**. These let us write more simply:
 

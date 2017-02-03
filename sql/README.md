@@ -106,6 +106,9 @@
 + :movie_camera: [More Associations (has_many through:...)][associations-2-video] (12 min)
 + :movie_camera: [Validations][validations-video] (13 min)
 + :movie_camera: [Indices][indices-video] (7 min)
+**NB** The above videos were made with Rails 4, but we are now using Rails 5.
+The main difference is that your Rails 5 models will inherit from
+`ApplicationRecord` instead of `ActiveRecord::Base`.
 
 ### Homeworks (45 min)
 
@@ -189,7 +192,7 @@
 [querying-ii]: readings/querying-ii.md
 [sql-ternary-logic]: readings/sql-ternary-logic.md
 
-[n1-buster]: homeworks/questions/n_1_buster.md
+[n1-buster]: homeworks/questions/n_1_buster/README.md
 [movie-buff-hw]: homeworks/questions/active_record_warmup/README.md
 [movie-buff]: projects/movie_buff
 [polls-app]: projects/polls_app

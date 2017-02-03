@@ -7,13 +7,13 @@ options for `belongs_to` and `has_many`. We know that Rails can often
 infer these. Let's see an example where it cannot:
 
 ```ruby
-class Employee < ActiveRecord::Base
-  has_many :subordinates, 
+class Employee < ApplicationRecord
+  has_many :subordinates,
            :class_name => "Employee",
            :foreign_key => :manager_id,
            :primary_key => :id
-           
-  belongs_to :manager, 
+
+  belongs_to :manager,
              :class_name => "Employee",
              :foreign_key => :manager_id,
              :primary_key => :id
@@ -41,7 +41,7 @@ Let's look at another example:
 # emails: id|from_email_address|to_email_address|text
 #  users: id|email_address
 
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many(
     :sent_emails,
     :class_name => "Email",
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
   )
 end
 
-class Email < ActiveRecord::Base
+class Email < ApplicationRecord
   belongs_to(
     :sender,
     :class_name => "User",

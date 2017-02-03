@@ -255,7 +255,7 @@ clicks in a recent time period (say, `10.minutes.ago`). This involves throwing a
 You probably wrote a has_many association that looked like this:
 
 ```ruby
-class ShortenedUrl < ActiveRecord::Base
+class ShortenedUrl < ApplicationRecord
   has_many(
     :visitors,
     through: :visits,
@@ -268,7 +268,7 @@ To get this association to return each visitor exactly once, we can add a magic
 "scope block" to ask Rails to remove duplicates:
 
 ```ruby
-class ShortenedUrl < ActiveRecord::Base
+class ShortenedUrl < ApplicationRecord
   has_many(
     :visitors,
     Proc.new { distinct }, #<<<

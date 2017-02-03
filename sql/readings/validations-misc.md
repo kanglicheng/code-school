@@ -40,7 +40,7 @@ The `:allow_nil` option skips the validation when the value being
 validated is `nil`.
 
 ```ruby
-class Coffee < ActiveRecord::Base
+class Coffee < ApplicationRecord
   validates :size, :inclusion => { :in => %w(small medium large),
     :message => "#{value} is not a valid size" }, :allow_nil => true
 end
@@ -51,7 +51,7 @@ option will let validation pass if the attribute's value is `blank?`,
 like `nil` or an empty string for example.
 
 ```ruby
-class Topic < ActiveRecord::Base
+class Topic < ApplicationRecord
   validates :title, :length => { :is => 5 }, :allow_blank => true
 end
 
@@ -79,7 +79,7 @@ corresponding to the name of a method that will get called right
 before validation happens:
 
 ```ruby
-class Order < ActiveRecord::Base
+class Order < ApplicationRecord
   validates :card_number, :presence => true, :if => :paid_with_card?
 
   def paid_with_card?
