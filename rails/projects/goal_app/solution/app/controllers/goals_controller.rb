@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-  before_filter :require_current_user!
+  before_action :require_current_user!
 
   def new
     @goal = Goal.new
@@ -18,17 +18,17 @@ class GoalsController < ApplicationController
   end
 
   def edit
-    @goal = Goal.find(params[:id])
+    @goal = current_user.goals.find(params[:id])
   end
 
   def update
-    @goal = Goal.find(params[:id])
-    if @goal.update_attributes(goal_params)
+    @goal = current_user.goals.find(params[:id])
+    if @goal.update(goal_params)
       flash[:notices] = ["Goal updated!"]
       if request.referer == edit_goal_url(@goal)
         redirect_to @goal
       else
-        redirect_to request.referer
+        redirect_back(fallback_location: root_path)
       end
     else
       flash[:errors] = @goal.errors.full_messages
@@ -45,7 +45,7 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    @goal = Goal.find(params[:id])
+    @goal = current_user.goals.find(params[:id])
     @goal.destroy
     flash[:notices] = ["Goal deleted!"]
     redirect_to goals_url

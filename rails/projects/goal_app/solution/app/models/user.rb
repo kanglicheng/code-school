@@ -11,9 +11,7 @@
 #  cheer_count     :integer
 #
 
-require 'bcrypt'
-
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   include Commentable
   # **NB**: comments association is created in Commentable
   # concern

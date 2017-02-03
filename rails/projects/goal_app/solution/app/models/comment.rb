@@ -11,7 +11,7 @@
 #  updated_at       :datetime
 #
 
-class Comment < ActiveRecord::Base
+class Comment < ApplicationRecord
   validates :body, presence: true
 
   belongs_to :commentable, polymorphic: true

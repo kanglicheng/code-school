@@ -3,11 +3,67 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
  */
+
+ .notices {
+   border: 1px solid red;
+   width: 20%;
+   color: red;
+   margin-bottom: 10px;
+   padding: 0 30px;
+ }
+
+
+ .pull-right {
+   border: 1px solid black;
+   width: 20%;
+   padding: 0 30px;
+ }
+
+ .profile-section {
+   border: 1px solid black;
+   width: 90%;
+   padding-left: 30px;
+   margin-bottom: 10px;
+ }
+
+ .profile {
+   border: 1px solid black;
+   padding: 30px;
+   margin: 20px 0px;
+   width: 400px;
+ }
+
+ .goal {
+   border: 1px black solid;
+   padding: 10px;
+   margin: 10px 0;
+   width: 40%;
+ }
+
+ .goal-comments {
+   border: 1px black solid;
+   padding-left: 10px;
+ }
+
+ .cheer {
+   border: 1px solid black;
+   padding: 10px;
+   margin-bottom: 10px;
+ }
+
+ .all-users {
+   border: 1px solid black;
+   padding: 15px;
+   width: 70px;
+   margin-bottom: 30px;
+ }

@@ -9,7 +9,7 @@
 #  updated_at :datetime
 #
 
-class Cheer < ActiveRecord::Base
+class Cheer < ApplicationRecord
   CHEER_LIMIT = 12
   validates :giver_id, :goal_id, presence: true
   validates :goal_id, uniqueness: { scope: :giver_id }
