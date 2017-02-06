@@ -69,7 +69,7 @@ the username/password and then builds/sets a session token. Let's add
 a `find_by_credentials` method:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # ...
 
   def self.find_by_credentials(username, password)
@@ -152,7 +152,7 @@ Next, let's make sure that when we create a `User` it has a
 `session_token`:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   # ...
 
   validates :session_token, presence: true

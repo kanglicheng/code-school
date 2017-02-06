@@ -6,6 +6,8 @@ We test controllers in Rails to make sure that our controller actions are render
 
 Controller testing in Rails is an example of "service level testing" - the middle level of the Testing Pyramid. Controller tests are simpler to write and run faster than integration tests. Solid controller tests are an important part of a strong Rails test suite.
 
+Be sure to add `gem 'rails-controller-testing'` to the test group in your `Gemfile`
+
 ## Creating the spec files
 
 If you've already run `rails generate rspec:install`, then Rails will

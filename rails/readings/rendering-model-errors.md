@@ -23,7 +23,7 @@ When creating a form with the `form_for` helper, you can use the
 validation messages for the current model instance.
 
 ```ruby
-class Product < ActiveRecord::Base
+class Product < ApplicationRecord
   validates :description, :value, :presence => true
   validates :value, :numericality => true, :allow_nil => true
 end

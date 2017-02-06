@@ -4,8 +4,8 @@ There are several things you **must** do when beginning every Rails
 app for the near future.
 
 First off, check your rails version. In this course, we will be
-using Rails `~>4.2.0` (greater than or equal to 4.2.0 but less than
-4.3). Check to see if you have a proper version by running:
+using Rails `~>5.0.1` (greater than or equal to 5.0.1 but less than
+5.2). Check to see if you have a proper version by running:
 
 ```
 rails -v
@@ -14,7 +14,7 @@ rails -v
 If you don't have a new enough version of Rails, run:
 
 ```
-gem install rails -v '~> 4.2.0'
+gem install rails -v '~> 5.0.1'
 ```
 
 Now that you have Rails installed and ready, start your project
@@ -24,11 +24,11 @@ with the following command:
 rails new MyProjectName --database=postgresql
 ```
 
-If you have Rails 5 installed, you can start a Rails 4 project 
+If you have later versions of rails installed, you can start a Rails 5 project
 using the following command:
 
 ```
-rails _4.2.6_ new MyProjectName --database=postgresql
+rails _5.0.1_ new MyProjectName --database=postgresql
 ```
 
 When using postgresql, you should also run the command `rake
@@ -48,8 +48,7 @@ indicated below.
 ```
 
 We're not using JavaScript or CSS yet, so there's no need to load in the default
-JS and CSS that Rails comes with. This will clean up your log if you're not
-already using the `quiet_assets` gem. Additionally, Rails comes with some
+JS and CSS that Rails comes with. Rails comes with some
 dubious JS tricks you can use, but we want you to learn the better way. For
 example, the built-in Rails JS allows you to use plain links to delete
 resources:
@@ -82,10 +81,7 @@ portion of our course.
 You want to use `better_errors` and `binding_of_caller`, which will
 make it much easier to see what is going on in your Rails app. You
 also want to use `pry-rails`, which will provide a nicer console than
-IRB when you run `rails console`. Lastly, you can use the
-`quiet_assets` gem, which will reduce excessive logging of requests
-for CSS/JavaScript files, making it easier for you to read your Rails
-logs:
+IRB when you run `rails console`. s
 
 ```ruby
 # Add to Gemfile
@@ -93,7 +89,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
-  gem 'quiet_assets'
 end
 ```
 

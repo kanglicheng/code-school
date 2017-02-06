@@ -27,7 +27,7 @@ Lets consider the `User` class with basic validations for username and
 password.
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :username, :password, presence: true
   validates :password, length: { minimum: 6 }
 end

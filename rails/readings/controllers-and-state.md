@@ -60,7 +60,7 @@ You know all this from the cookies chapter. Let's talk about how Rails
 lets you set cookies.
 
 Rails does much of the work of implementing the session for us. Within
-our controller, we can use the `ActionController::Base#session` method
+our controller, we can use the `ApplicationRecord#session` method
 to get a hash-like object where we can retrieve and set state
 (e.g. `session[:user_id] = @user.id`). When we call `render` or
 `redirect`, Rails will take the contents of the `session` hash and
@@ -76,7 +76,7 @@ SecretApp::Application.routes.draw do
 end
 
 # app/controllers/sessions_controller.rb
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationRecord
   def create
     username = params[:user_name]
     password = params[:password]
@@ -97,7 +97,7 @@ class SessionsController < ActionController::Base
 end
 
 # app/controllers/feeds_controller.rb
-class FeedsController < ActionController::Base
+class FeedsController < ApplicationRecord
   def show
     # pull the session token out of the client's cookies
     # it will be right where we left it in session[:session_token]
@@ -121,13 +121,13 @@ session. So `session` will contain the values you had set in previous
 requests.
 
 Note that like `params`, `session` is actually a call to
-`ActionController::Base#session`, which returns a hash-like
+`ApplicationRecord#session`, which returns a hash-like
 object.
 
 To remove something from the `session`, set it to `nil`:
 
 ```ruby
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationRecord
   def destroy
     # logout
     session_token = session[:session_token]
@@ -160,7 +160,7 @@ can set a message which will be displayed to the user on the next
 request:
 
 ```ruby
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationRecord
   def destroy
     # logout
     session_token = session[:session_token]
@@ -215,7 +215,7 @@ still want to display a message using the flash. To do this, you can use `flash.
 in the same way you use the normal `flash`:
 
 ```ruby
-class SessionsController < ActionController::Base
+class SessionsController < ApplicationRecord
   def create
     username = params[:user_name]
     password = params[:password]
@@ -276,7 +276,7 @@ client. But it is atypical to store private data in the session,
 anyway...
 
 You can also get/set data to an HTTP cookie directly using
-`ActionController::Base#cookies`. You won't want to do this often
+`ApplicationRecord#cookies`. You won't want to do this often
 (don't fixate too much on it right now), but it does give you a little
 more power:
 

@@ -5,16 +5,16 @@
 Suppose we were building an app to manage a clinic. Our models might look like this to begin with:
 
 ```ruby
-class Office < ActiveRecord::Base
+class Office < ApplicationRecord
   belongs_to :doctor
 end
 
-class Doctor < ActiveRecord::Base
+class Doctor < ApplicationRecord
   has_one :office
   has_many :patients
 end
 
-class Patient < ActiveRecord::Base
+class Patient < ApplicationRecord
   belongs_to :doctor
 end
 ```
@@ -41,7 +41,7 @@ One design pattern to overcome LoD violations is to use _delegation_. We can eit
 hand like this:
 
 ```ruby
-class Patient < ActiveRecord::Base
+class Patient < ApplicationRecord
   belongs_to :doctor
   
   def doctor_name
@@ -64,12 +64,12 @@ method so that we don't have to write these setters by hand.
 We can add a woof method to an owner so that `owner.woof` calls the woof method of their dog by doing this:
 
 ```ruby
-class Owner < ActiveRecord::Base
+class Owner < ApplicationRecord
   has_one :dog
   delegate :woof, to: :dog
 end
 
-class Dog < ActiveRecord::Base
+class Dog < ApplicationRecord
   belongs_to :owner
   
   def woof
@@ -82,11 +82,11 @@ Now let's clean up our models so they delegate enough information to remove all 
 We can use the `:prefix => true` option to sensibly prefix our methods:
 
 ```ruby
-class Office < ActiveRecord::Base
+class Office < ApplicationRecord
   belongs_to :doctor
 end
 
-class Doctor < ActiveRecord::Base
+class Doctor < ApplicationRecord
   has_one :office
   has_many :patients
   delegate :number,
@@ -95,7 +95,7 @@ class Doctor < ActiveRecord::Base
            prefix: true
 end
 
-class Patient < ActiveRecord::Base
+class Patient < ApplicationRecord
   belongs_to :doctor
   delegate :name, 
            :specialty,

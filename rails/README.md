@@ -5,8 +5,8 @@
 * Rails Guides [guides.rubyonrails.org][rails-guides]
 
 [rails-setup]: readings/rails-setup.md
-[rails-api]: http://api.rubyonrails.org/v4.0.2/
-[rails-guides]: http://guides.rubyonrails.org/v4.0.2/
+[rails-api]: http://api.rubyonrails.org/v5.0.1/
+[rails-guides]: http://guides.rubyonrails.org/v5.0.1/
 
 ## w4d1
 

@@ -8,12 +8,12 @@ models:
 
 ```ruby
 # app/models/magazine.rb
-class Magazine < ActiveRecord::Base
+class Magazine < ApplicationRecord
   has_many :articles
 end
 
 # app/models/article.rb
-class Article < ActiveRecord::Base
+class Article < ApplicationRecord
   belongs_to :magazine
 end
 ```

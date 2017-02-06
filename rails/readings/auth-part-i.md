@@ -124,7 +124,7 @@ Let's first write a method that will make it easier to set the
 hash the password themselves. Let's do it for them:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
@@ -141,7 +141,7 @@ Likewise, let's save the programmer from having to do the hard work of
 verifying a password:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)
   end
@@ -262,7 +262,7 @@ Okay, we can now create users through the form. We probably want to
 toss some validations on:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :username, presence: true
   validates :password_digest, presence: { message: "Password can't be blank" }
 
@@ -298,7 +298,7 @@ not** try to save the password to the DB, however. Instead, the
 We can now validate the password:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   attr_reader :password
 
   validates :username, presence: true

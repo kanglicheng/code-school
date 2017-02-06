@@ -71,7 +71,7 @@ Imagine the following models:
 
 ```ruby
 # app/models/user.rb
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   attr_accessible :name, :visited_city_ids
 
   belongs_to :home_city
@@ -81,13 +81,13 @@ class User < ActiveRecord::Base
 end
 
 # app/models/city_visit.rb
-class CityVisit < ActiveRecord::Base
+class CityVisit < ApplicationRecord
   belongs_to :user
   belongs_to :city
 end
 
 # app/models/city.rb
-class City < ActiveRecord::Base
+class City < ApplicationRecord
   attr_accessible :name
 end
 ```
@@ -162,7 +162,7 @@ power for you.
 Let's tighten up our `CityVisit` model:
 
 ```ruby
-class CityVisit < ActiveRecord::Base
+class CityVisit < ApplicationRecord
   belongs_to :user
   belongs_to :city
 
@@ -206,7 +206,7 @@ neither has been inserted into the database.
 The first step of the solution is to modify the validations slightly:
 
 ```ruby
-class CityVisit < ActiveRecord::Base
+class CityVisit < ApplicationRecord
   belongs_to :user
   belongs_to :city
 
@@ -262,13 +262,13 @@ To fix this problem, we specify an inverse on the has_many association:
 
 ```ruby
 # app/models/user.rb
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :city_visits, :inverse_of => :user
   has_many :visited_cities, :through => :city_visits, :source => :city
 end
 
 # app/models/city_visits.rb
-class CityVisit < ActiveRecord::Base
+class CityVisit < ApplicationRecord
   belongs_to :user, :inverse_of => :city_visits
   belongs_to :city, :inverse_of => :city_visits
 

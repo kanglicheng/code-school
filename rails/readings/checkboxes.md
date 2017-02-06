@@ -23,12 +23,12 @@ simply the join table between `Post` and `Tag`. We would write our associations
 as such:
 
 ```ruby
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   has_many :taggings, dependent: :destroy, inverse_of: :post
   has_many :tags, through: :taggings
 end
 
-class Tagging < ActiveRecord::Base
+class Tagging < ApplicationRecord
   # Validate post and tag rather than post_id or tag_id
   validates :post, :tag, presence: true
   validates :tag_id, uniqueness: { scope: :post_id }
@@ -37,7 +37,7 @@ class Tagging < ActiveRecord::Base
   belongs_to :tag
 end
 
-class Tag < ActiveRecord::Base
+class Tag < ApplicationRecord
   has_many :taggings, dependent: :destroy, inverse_of: :tag
   has_many :posts, through: :taggings
 end

@@ -248,7 +248,7 @@ attributes:
 ```ruby
 # in my_app/app/models/cat.rb
 
-class Cat < ActiveRecord::Base
+class Cat < ApplicationRecord
   validates :name, :presence => true, format: { with:  /\A[a-zA-Z\s\.]+\z/,
     message: "only allows letters and spaces" }, length: { minimum: 3 },
     uniqueness: true

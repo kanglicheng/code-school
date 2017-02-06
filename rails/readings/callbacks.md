@@ -12,11 +12,11 @@ be destroyed if the user is destroyed; else the posts are said to be
 *widowed*. To do this, we pass the `:dependent` option to `has_many`:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   has_many :posts, :dependent => :destroy
 end
 
-class Post < ActiveRecord::Base
+class Post < ApplicationRecord
   belongs_to :user
 end
 
@@ -76,7 +76,7 @@ You implement callbacks as ordinary methods and use a macro-style
 class method to register them as callbacks:
 
 ```ruby
-class User < ActiveRecord::Base
+class User < ApplicationRecord
   validates :random_code, :presence => true
   before_validation :ensure_random_code
 
@@ -110,7 +110,7 @@ You can further specify that the callback should only be called when
 performing certain operations:
 
 ```ruby
-class CreditCard < ActiveRecord::Base
+class CreditCard < ApplicationRecord
   # Strip everything but digits, so the user can specify "555 234 34" or
   # "5552-3434" or both will mean "55523434"
   before_validation(:on => :create) do
