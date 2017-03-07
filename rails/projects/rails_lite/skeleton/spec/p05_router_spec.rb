@@ -3,7 +3,7 @@ require 'router'
 require 'controller_base'
 
 describe Route do
-  let(:req) { Rack::Request.new({'rack.input' => {}}) }
+  let(:req) { Rack::Request.new({ 'rack.input' => {} }) }
   let(:res) { Rack::MockResponse.new('200', {}, []) }
 
   before(:each) do
@@ -14,21 +14,18 @@ describe Route do
     it 'matches simple regular expression' do
       index_route = Route.new(Regexp.new('^/users$'), :get, 'x', :x)
       allow(req).to receive(:path) { '/users' }
-      allow(req).to receive(:request_method) { 'GET' }
       expect(index_route.matches?(req)).to be_truthy
     end
 
     it 'matches regular expression with capture' do
       index_route = Route.new(Regexp.new('^/users/(?<id>\\d+)$'), :get, 'x', :x)
       allow(req).to receive(:path) { '/users/1' }
-      allow(req).to receive(:request_method) { 'GET' }
       expect(index_route.matches?(req)).to be_truthy
     end
 
     it 'correctly doesn\'t match regular expression with capture' do
       index_route = Route.new(Regexp.new('^/users/(?<id>\\d+)$'), :get, 'UsersController', :index)
       allow(req).to receive(:path) { '/statuses/1' }
-      allow(req).to receive(:request_method) { 'GET' }
       expect(index_route.matches?(req)).to be_falsey
     end
   end
@@ -44,7 +41,7 @@ describe Route do
       allow(req).to receive(:path) { '/users' }
 
       dummy_controller_class = DummyController
-      dummy_controller_instance = DummyController.new
+      dummy_controller_instance = dummy_controller_class.new
       allow(dummy_controller_instance).to receive(:invoke_action)
       allow(dummy_controller_class).to receive(:new).with(req, res, {}) do
         dummy_controller_instance
