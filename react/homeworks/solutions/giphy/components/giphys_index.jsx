@@ -1,32 +1,14 @@
 import React, { Component } from 'react';
+import GiphyIndexItem from './giphy_index_item';
 
-const giphyIndexItems = (giphys) => {
-  if (giphys) {
-    return giphys.map( (giphy, idx) => (
-        <li key={idx} className='giphy-li'>
-          <img src={giphy.images.fixed_height.url}/>
-        </li>
-      )
-    );
-  } else {
-    return (
-      <div></div>
-    );
-  }
+const GiphysIndex = ({ giphys }) => {
+  return (
+    <div>
+      <ul>
+        {giphys.map((giphy, idx) => <GiphyIndexItem key={idx} giphy={giphy} />)}
+      </ul>
+    </div>
+  );
 };
-
-class GiphysIndex extends Component {
-
-  render() {
-    const { giphys } = this.props;
-    return (
-      <div>
-        <ul>
-          { giphyIndexItems(giphys) }
-        </ul>
-      </div>
-    );
-  }
-}
 
 export default GiphysIndex;
