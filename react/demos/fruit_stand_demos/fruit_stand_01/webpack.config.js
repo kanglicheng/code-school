@@ -12,7 +12,7 @@ module.exports = {
       {
         test: [/\.jsx?$/, /\.js?$/],
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['es2015']
         }
@@ -21,6 +21,6 @@ module.exports = {
   },
   devtool: 'source-maps',
   resolve: {
-    extensions: ["", ".js"]
+    extensions: [".js", ".jsx", "*"]
   }
 };
