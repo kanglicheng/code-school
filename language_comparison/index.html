@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   </head>
   <body>
+    <h1>Language Comparison Chart</h1>
     <table>
       <tr>
         <th></th>
@@ -43,11 +44,11 @@
       <tr>
         <td>Array Destructuring</td>
         <td>
-          <code></code>
+          <code>x, y = [1, 2]</code>
         </td>
         <td>--</td>
         <td>
-          <code></code>
+          <code>const [x, y] = [1, 2];</code>
         </td>
       </tr>
       <tr>
@@ -55,109 +56,329 @@
         <td>--</td>
         <td>--</td>
         <td>
-          <code></code>
+          <code>const {x, z} = {x: 1, y: 2, z: 3};</code>
         </td>
       </tr>
       <tr>
         <td>Property Declaration</td>
         <td>
-          <code></code>
+          <code>hash = {x: x, y: y}</code>
         </td>
         <td>
-          <code></code>
+          <code>var obj = {x: x, y: y};</code>
         </td>
         <td>
-          <code></code>
+          <code>const obj = {x, y};</code>
         </td>
       </tr>
       <tr>
         <td>Functions</td>
         <td>
-          <code></code>
+          <div class="code">
+            def foo(arg1, arg2)
+            <br>
+            end
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            function foo(arg1, arg2){
+            <br>
+            }
+          </div>
+          <br>
+          <div class="code">
+            var foo = function(arg1, arg2){
+            <br>
+            }
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            const foo = (arg1, arg2) => {
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Default Arguments</td>
         <td>
-          <code></code>
+          <div class="code">
+            def foo(arg = 0)
+            <br>
+            end
+          </div>
         </td>
         <td>--</td>
         <td>
-          <code></code>
+          <div class="code">
+            const foo = (arg = 0) => {
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Multiple Arguments</td>
         <td>
-          <code></code>
+          <div class="code">
+            def foo(*array)
+            <br>
+            end
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            function foo(){
+            <br>
+            <span class="tab">
+              var array = Array.prototype.slice.call(arguments);
+            </span>
+            <br>
+            }
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            const foo = (...array) => {
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Classes</td>
         <td>
-          <code></code>
+          <div class="code">
+            class Cat
+            <br>
+            <span class="tab">
+              def initialize(name)
+            </span>
+            <br>
+            <span class="tab2">
+              @name = name
+            </span>
+            <br>
+            <span class="tab">
+              end
+            </span>
+            <br><br>
+            <span class="tab">
+              def meow
+            </span>
+            <br>
+            <span class="tab">
+              end
+            </span>
+            <br>
+            end
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            function Cat(name){
+            <br>
+            <span class="tab">
+              this.name = name;
+            </span>
+            <br>
+            }
+            <br><br>
+            Cat.prototype.meow = function(){
+            <br>
+            }
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            class Cat{
+            <br>
+            <span class="tab">
+              constructor(name){
+            </span>
+            <br>
+            <span class="tab2">
+              this.name = name;
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br><br>
+            <span class="tab">
+              meow(){
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Inheritance</td>
         <td>
-          <code></code>
+          <div class="code">
+            class Animal
+            <br>
+            <span class="tab">
+              def initialize(name)
+            </span>
+            <br>
+            <span class="tab2">
+              @name = name
+            </span>
+            <br>
+            <span class="tab">
+              end
+            </span>
+            <br>
+            end
+            <br><br>
+            class Dog < Animal
+            <br>
+            <span class="tab">
+              def initialize(name)
+            </span>
+            <br>
+            <span class="tab2">
+              super(name)
+            </span>
+            <br>
+            <span class="tab">
+              end
+            </span>
+            <br>
+            end
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            function Animal(name){
+            <br>
+            <span class="tab">
+              this.name = name;
+            </span>
+            <br>
+            }
+            <br><br>
+            function Dog(name){
+            <br>
+            <span class="tab">
+              Animal.call(this, name);
+            </span>
+            <br>
+            }
+            <br><br>
+            Dog.prototype = Object.create(Animal.prototype);
+            <br>
+            Dog.prototype.constructor = Dog;
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            class Animal{
+            <br>
+            <span class="tab">
+              constructor(name){
+            </span>
+            <br>
+            <span class="tab2">
+              this.name = name;
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br>
+            }
+            <br><br>
+            class Dog extends Animal{
+            <br>
+            <span class="tab">
+              constructor(name){
+            </span>
+            <br>
+            <span class="tab2">
+              super(name);
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Method Notation</td>
         <td>--</td>
         <td>
-          <code></code>
+          <div class="code">
+            var obj = {
+            <br>
+            <span class="tab">
+              foo: function(){
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br>
+            }
+          </div>
         </td>
         <td>
-          <code></code>
+          <div class="code">
+            const obj = {
+            <br>
+            <span class="tab">
+              foo() {
+            </span>
+            <br>
+            <span class="tab">
+              }
+            </span>
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>
         <td>Importing</td>
         <td>
-          <code></code>
+          <code>require "byebug"</code>
+          <br><br>
+          <code>require_relative "game"</code>
         </td>
         <td>
-          <code></code>
+          <code>var Game = require("./game");</code>
         </td>
         <td>
-          <code></code>
+          <code>import Game from "./game";</code>
+          <br><br>
+          <code>import { view } from "./game_view";</code>
         </td>
       </tr>
       <tr>
         <td>Exporting</td>
         <td>--</td>
         <td>
-          <code></code>
+          <code>module.exports = Game;</code>
         </td>
         <td>
-          <code></code>
+          <code>export default Game;</code>
+          <br><br>
+          <div class="code">
+            export const view = () => {
+            <br>
+            }
+          </div>
         </td>
       </tr>
       <tr>

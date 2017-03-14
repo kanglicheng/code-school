@@ -2,8 +2,8 @@ body {
   font-family: 'Roboto';
 }
 
-table, th, td {
-  border: 1px solid #ccc;
+h1 {
+  text-align: center;
 }
 
 table {
@@ -12,11 +12,12 @@ table {
 }
 
 th, td {
+  border: 1px solid #ccc;
   padding: 20px;
 }
 
-th, td:first-child {
-  max-width: 200px;
+td:first-child {
+  max-width: 160px;
 }
 
 tr:nth-child(odd) {
@@ -27,9 +28,18 @@ th {
   background-color: white;
 }
 
-code {
+code, .code {
+  font-family: monospace;
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
   padding: 2px 5px;
   font-size: 14px;
+}
+
+.tab {
+  padding-left: 1em;
+}
+
+.tab2 {
+  padding-left: 2em;
 }
