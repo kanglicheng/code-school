@@ -57,7 +57,7 @@
 [rails-screencasts]: https://vimeo.com/album/2953690/sort:alphabetical
 [rails-videos-code]: demos/intro_rails_video_demo
 
-[library-hw]: ./homeworks/questions/library
+[library-hw]: homeworks/library
 
 [routing-i]: readings/routing-part-i.md
 [basic-controllers]: readings/basic-controllers.md
@@ -174,7 +174,7 @@
 
 [99-cats-part-ii]: projects/ninety_nine_cats_ii
 
-[rails-auth-homework]: homeworks/questions/rails_auth.md
+[rails-auth-homework]: homeworks/rails_auth
 
 ## w4d4
 
@@ -203,14 +203,14 @@
 * [:movie_camera: Action Mailer Demo][action-mailer-video] (11 min)
 
 ### Projects
-* **Solo**: [Music App][music-app-project]
+* [Music App][music-app-project]
 
 [action-mailer]: readings/mailing-1.md
 [view-helpers]: readings/helpers.md
 [view-layouts]: readings/layouts.md
 [view-partials]: readings/partials.md
 [rails-nontech]: readings/rails_nontech.md
-[helpers-and-layouts-hw]: homeworks/questions/helpers-layouts-mailer.md
+[helpers-and-layouts-hw]: homeworks/helpers-layouts-mailer
 [14-radio-and-textarea]: http://vimeo.com/groups/appacademy/videos/100729825
 [15-helpers]: http://vimeo.com/groups/appacademy/videos/100780885
 [layout-video]: https://vimeo.com/168822741
@@ -219,47 +219,6 @@
 [music-app-project]: projects/music_app
 
 ## w4d5
-
-### Study Hall 9 - 10am
-
-### Video Lectures (54 min)
-:closed_lock_with_key: `go_video_go`
-* [:movie_camera:  (cc) 16-tag-ids-setter][16-tag-ids-setter] (22 min)
-* [:movie_camera:  (cc) 17-checkboxes-1][17-checkboxes-1] (12 min)
-* [:movie_camera:  (cc) 18-checkboxes-2][18-checkboxes-2] (11 min)
-* [:movie_camera:  (cc) 19-checkboxes-3][19-checkboxes-3] (6 min)
-* [:movie_camera:  (cc) 20-query-string][20-query-string] (3 min)
-
-### Readings (20 min)
-* [Polymorphic Associations][polym-assoc-blurb] (10 min)
-  * **Just section 2.9**
-* [Concerns][concerns-reading] (10 min)
-
-### Homeworks (30 min)
-* [Polymorphism and Concerns][polymorphism-and-concerns-hw] (30 min)
-
-### Additional Resources
-* **Bonus Topic:** [Decorators][decorators]
-* [Checkboxes and Id Setters Reference][checkboxes-id-setters]
-
-### Projects
-* [RedditClone][reddit-clone]
-
-[assessment-prep-4]: https://github.com/appacademy/assessment-prep#assessment-4
-[polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
-[concerns-reading]: readings/concerns.md
-[16-tag-ids-setter]: http://vimeo.com/groups/appacademy/videos/100780886
-[17-checkboxes-1]: http://vimeo.com/groups/appacademy/videos/100780887
-[18-checkboxes-2]: http://vimeo.com/groups/appacademy/videos/100846847
-[19-checkboxes-3]: http://vimeo.com/groups/appacademy/videos/100846848
-[20-query-string]: http://vimeo.com/groups/appacademy/videos/100849678
-[decorators]: readings/decorators.md
-[checkboxes-id-setters]: readings/checkboxes.md
-[polymorphism-and-concerns-hw]: homeworks/questions/polymorphism-concerns/polymorphism-concerns.md
-
-[reddit-clone]: projects/reddit_on_rails
-
-## w5d1
 
 ### Video Lectures (1 hr, 41 min)
 :closed_lock_with_key: `go_video_go`
@@ -298,7 +257,7 @@
 [spring-guard]: readings/guard-spring-setup.md
 [html-nontech]: ../html-css/readings/html_nontech.md
 
-[capybara-hw]: homeworks/questions/capybara.md
+[capybara-hw]: homeworks/capybara
 [bias-quiz]: https://implicit.harvard.edu/implicit/takeatest.html
 
 [goaling-app]: projects/goal_app
@@ -310,6 +269,47 @@
 [rails-testing-controllers]: https://vimeo.com/204477474
 [rails-testing-capybara]: https://vimeo.com/204463650
 [rails-demo-testing]: demos/CapybaraParty
+
+## w5d1
+
+### Study Hall 9 - 10am
+
+### Video Lectures (54 min)
+:closed_lock_with_key: `go_video_go`
+* [:movie_camera:  (cc) 16-tag-ids-setter][16-tag-ids-setter] (22 min)
+* [:movie_camera:  (cc) 17-checkboxes-1][17-checkboxes-1] (12 min)
+* [:movie_camera:  (cc) 18-checkboxes-2][18-checkboxes-2] (11 min)
+* [:movie_camera:  (cc) 19-checkboxes-3][19-checkboxes-3] (6 min)
+* [:movie_camera:  (cc) 20-query-string][20-query-string] (3 min)
+
+### Readings (20 min)
+* [Polymorphic Associations][polym-assoc-blurb] (10 min)
+  * **Just section 2.9**
+* [Concerns][concerns-reading] (10 min)
+
+### Homeworks (30 min)
+* [Polymorphism and Concerns][polymorphism-and-concerns-hw] (30 min)
+
+### Additional Resources
+* **Bonus Topic:** [Decorators][decorators]
+* [Checkboxes and Id Setters Reference][checkboxes-id-setters]
+
+### Projects
+* **Solo**: [RedditClone][reddit-clone]
+
+[assessment-prep-4]: https://github.com/appacademy/assessment-prep#assessment-4
+[polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
+[concerns-reading]: readings/concerns.md
+[16-tag-ids-setter]: http://vimeo.com/groups/appacademy/videos/100780886
+[17-checkboxes-1]: http://vimeo.com/groups/appacademy/videos/100780887
+[18-checkboxes-2]: http://vimeo.com/groups/appacademy/videos/100846847
+[19-checkboxes-3]: http://vimeo.com/groups/appacademy/videos/100846848
+[20-query-string]: http://vimeo.com/groups/appacademy/videos/100849678
+[decorators]: readings/decorators.md
+[checkboxes-id-setters]: readings/checkboxes.md
+[polymorphism-and-concerns-hw]: homeworks/polymorphism-concerns
+
+[reddit-clone]: projects/reddit_on_rails
 
 ## w5d2
 

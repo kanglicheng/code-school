@@ -36,7 +36,7 @@
 - Add your questions and answers from pairboarding today to your Study Notes repo! (15 min)
 
 [getting_started]: homeworks/getting_started
-[react_calculator]: homeworks/questions/calculator.md
+[react_calculator]: homeworks/calculator
 
 ### Additional Resources
 - [Babel][babel_configuration]
@@ -114,7 +114,7 @@
 ### Homeworks (45 min)
 - [Dollar Store][dollar_store_hw] (45 min)
 
-[dollar_store_hw]: homeworks/questions/dollar_store
+[dollar_store_hw]: homeworks/dollar_store
 
 ### Additional Resources
 - [Official `redux` Documentation][redux_docs]
@@ -129,25 +129,23 @@
 
 ## w7d2
 
-### Readings (70 min)
+### Readings (55 min)
 - [Higher-order Functions][higher_order_functions] (15 min)
 - [Middleware][middleware] (15 min)
 - [Thunks][thunks] (15 min)
-- [API Interactions in Redux][redux_api_interactions] (15 min)
 - [Object.freeze][obj-freeze] (10 min)
 - [Namespacing][namespacing] (5 min)
 
 [higher_order_functions]: readings/higher_order_functions.md
 [middleware]: readings/middleware.md
 [thunks]: readings/thunks.md
-[redux_api_interactions]: readings/redux_api_interactions.md
 [obj-freeze]: readings/object_freeze.md
 [namespacing]: readings/rails_router_namespacing.md
 
 ### Homework (45 min)
 - [Middleware Homework][middleware_homework] (45 min)
 
-[middleware_homework]: homeworks/questions/middleware.md
+[middleware_homework]: homeworks/middleware
 
 ### Projects
 - Continue [Todos][todos]
@@ -171,7 +169,7 @@
   - **Due by 9AM Thursday w7d4**
   - You many want to browse our [list of approved apps][approved-apps]
 
-[giphy_homework]: homeworks/questions/giphy
+[giphy_homework]: homeworks/giphy
 [tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [approved-apps]: ../full-stack-project/proposal/projects-to-clone.md
 
@@ -198,30 +196,43 @@
 
 [react_router_intro]: readings/intro_to_react_router.md
 [link]: readings/link.md
-[index_routes]: https://github.com/reactjs/react-router/blob/master/docs/guides/IndexRoutes.md
+[index_routes]: https://github.com/reactjs/react-router/blob/v3/docs/guides/IndexRoutes.md
 [on_enter]: readings/on_enter.md
-[with_router]: https://github.com/reactjs/react-router/blob/master/docs/API.md#withroutercomponent-options
+[with_router]: https://github.com/reactjs/react-router/blob/v3/docs/API.md#withroutercomponent-options
 
 ### Homeworks (40 min)
 - [Submit your tentative full-stack project proposal][tentative-proposal] (10 min)
 - [Rainbow Routes][rainbow_routes] (30 min)
-[rainbow_routes]: homeworks/questions/rainbow_routes/
+[rainbow_routes]: homeworks/rainbow_routes
 
 ### Additional Resources
-- [Route Configuration](https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteConfiguration.md)
-- [Route Matching](https://github.com/ReactTraining/react-router/blob/master/docs/guides/RouteMatching.md)
-- [React Router Documentation][react_router_docs]
+- [Route Configuration](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/RouteConfiguration.md)
+- [Route Matching](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/RouteMatching.md)
+- [React Router 3.0 Documentation][react_router_docs]
   - Check the `API` docs for quick reference
 
 ### Projects
 * Continue [Pokedex][pokedex]
 
-[react_router_docs]: https://github.com/reactjs/react-router/blob/master/docs/
+[react_router_docs]: https://github.com/reactjs/react-router/blob/v3/docs/
 
 ## w7d5
 
 ### Assessment06 Practice
 * [Practice][assessment-prep-6]
+
+### Video Lectures (25 min)
+:closed_lock_with_key: `go_video_go`
+* :movie_camera: [Intro to UI/UX][uiux-intro] (4 min)
+* :movie_camera: [Intro to UX for Web][uiux-web] (6 min)
+* :movie_camera: [UI Affordances and Signifiers][uiux-affordances] (4 min)
+* :movie_camera: [Designing to Look Good][uiux-look-good] (11 min)
+
+[uiux-intro]: https://vimeo.com/album/4453315/video/206661754
+[uiux-web]: https://vimeo.com/album/4453315/video/206661769
+[uiux-affordances]: https://vimeo.com/album/4453315/video/206661839
+[uiux-look-good]: https://vimeo.com/album/4453315/video/206661864 
+
 
 ### Readings (20 min)
 - [`preloadedState`][preloaded_state] (5 min)
@@ -230,10 +241,11 @@
 [preloaded_state]: readings/preloaded_state.md
 [user_authentication]: readings/front_end_auth.md
 
-### Homeworks (60 min)
+### Homeworks (75 min)
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
   * Front-end auth (the main concept in BenchBnB Day 1) builds on top of regular Rails backend auth, so make sure you build on a solid base.
   * You'll be surprised how much of it you've forgotten by now. It's normal.
+* Add your questions and answers from pairboarding to your Study Notes repo! (15 min)
 
 [a04_prep]: https://github.com/appacademy/assessment-prep#assessment-4
 
