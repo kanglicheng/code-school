@@ -160,8 +160,8 @@
 + [Git Cheatsheet][git-cheatsheet]
 
 ### Projects
-+ [Screwedoku][screwedoku]
-+ [Minesweeper][minesweeper]
++ Ice Cream Party!
++ Puppies to play with
 
 [assessment-prep-1]: https://github.com/appacademy/assessment-prep#assessment-1
 [git-add]: readings/git-add.md
@@ -194,12 +194,11 @@
 * :movie_camera: [DFS][dfs-video] (15 min)
 
 ### Readings (15 min)
-+ [Intro data structures][intro-algorithms-and-data-structures] (15 min)
++ Get some rest
 
 ### Homeworks (55 min)
-+ [Homeworks with Git][git-homeworks] (10 min)
-  * **NB:** Do initial setup, then come back after completing **DIY ADTs**
-+ [DIY ADTs][diy-adts] (45 min)
++ Call your mom
++ Play video games
 
 ### Projects
 + [Intro data structures: PolyTreeNode][poly-tree-node]
