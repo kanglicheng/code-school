@@ -27,7 +27,7 @@ APIs are big, friend.
 
 Before we talk about how to convert Ruby objects to JSON, let's go over what JSON is.
 JSON stands for JavaScript Object Notation.
-It is a standardized format developed in the early 2000s to allow JavaScript objects to be store in plain text files so they could be sent and recieved using HTTP.
+It is a standardized format developed in the early 2000s to allow JavaScript objects to be stored in plain text files so they could be sent and recieved using HTTP.
 Since then, the ability to write to and read from JSON has been incorporated into many other languages.
 
 JSON uses two structures: objects and arrays.
