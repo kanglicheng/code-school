@@ -165,15 +165,20 @@
 ### Assessment03 Practice
 + [Practice][assessment-prep-3]
 
-### Readings (65 min)
+### Readings (85 min)
 + [ActiveRecord::Relation][relation] (15 min)
 + [ActiveRecord and Joins][ar-joins] (25 min)
 + [Scopes][scopes] (10 min)
 + [More on Querying][querying-ii] (15 min)
+* [Polymorphic Associations][polym-assoc-blurb] (10 min)
+  * **Just section 2.9**
+* [Concerns][concerns-reading] (10 min)
+
 
 ### Homeworks (60 min)
-+ [Movie Buff in Training][movie-buff-hw] (30 min)
-+ [N+1 Buster][n1-buster] (30 min)
++ [Movie Buff in Training][movie-buff-hw] (20 min)
++ [N+1 Buster][n1-buster] (20 min)
++ [Polymorphism and Concerns][polymorphism-and-concerns-hw] (20 min)
 
 ### Additional Resources
 + [Ternary Logic in SQL][sql-ternary-logic]
@@ -188,6 +193,8 @@
 [scopes]: readings/scopes.md
 [querying-ii]: readings/querying-ii.md
 [sql-ternary-logic]: readings/sql-ternary-logic.md
+[polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
+[concerns-reading]: readings/concerns.md
 
 [n1-buster]: homeworks/n_1_buster
 [movie-buff-hw]: homeworks/active_record_warmup

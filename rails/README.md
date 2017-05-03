@@ -289,14 +289,6 @@
 * [:movie_camera:  (cc) 19-checkboxes-3][19-checkboxes-3] (6 min)
 * [:movie_camera:  (cc) 20-query-string][20-query-string] (3 min)
 
-### Readings (20 min)
-* [Polymorphic Associations][polym-assoc-blurb] (10 min)
-  * **Just section 2.9**
-* [Concerns][concerns-reading] (10 min)
-
-### Homeworks (30 min)
-* [Polymorphism and Concerns][polymorphism-and-concerns-hw] (30 min)
-
 ### Additional Resources
 * **Bonus Topic:** [Decorators][decorators]
 * [Checkboxes and Id Setters Reference][checkboxes-id-setters]
@@ -305,8 +297,6 @@
 * **Solo**: [RedditClone][reddit-clone]
 
 [assessment-prep-4]: https://github.com/appacademy/assessment-prep#assessment-4
-[polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
-[concerns-reading]: readings/concerns.md
 [16-tag-ids-setter]: http://vimeo.com/groups/appacademy/videos/100780886
 [17-checkboxes-1]: http://vimeo.com/groups/appacademy/videos/100780887
 [18-checkboxes-2]: http://vimeo.com/groups/appacademy/videos/100846847
