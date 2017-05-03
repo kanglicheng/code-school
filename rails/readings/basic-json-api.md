@@ -10,8 +10,8 @@ Browsers aren't the only program that can make HTTP requests. When a
 non-browser client makes an API request, the requestor probably
 prefers a raw representation of the data rather than an HTML document
 that includes a lot of extraneous formatting information and is
-difficult to parse. JSON is typically a better format for non-browser
-clients.
+difficult to parse. Instead of HTML, it is often better to use a format called JSON.
+JSON is typically a for non-browser clients to parse.
 
 Consumers of a web API can be third-party developers, but you can also
 consume your own API. Your web app may contain JavaScript code that
@@ -23,10 +23,61 @@ API.
 
 APIs are big, friend.
 
+## What is JSON?
+
+Before we talk about how to convert Ruby objects to JSON, let's go over what JSON is.
+JSON stands for JavaScript Object Notation.
+It is a standardized format developed in the early 2000s to allow JavaScript objects to be store in plain text files so they could be sent and recieved using HTTP.
+Since then, the ability to write to and read from JSON has been incorporated into many other languages.
+
+JSON uses two structures: objects and arrays.
+An object consists of key-value pairs and is bounded by curly braces.
+Object keys must be strings.
+A JSON array is a list of values bounded by square braces.
+
+The values stored in an object or array can themselves be objects or arrays, or they can be one of the following primitive types.
+
+* **Boolean** `true` or `false`.
+* **Null** written as `null`.
+* **Number** such as `15` or `-3.7`
+* **String** such as `"this is a string"`
+
+Here is an example of some JSON data taken from Wikipedia.
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 25,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    },
+    {
+      "type": "mobile",
+      "number": "123 456-7890"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+```
+
 ## JSON & Rails
 
-The key to building a Rails API is to get your controllers to convert
-model objects into JSON, and then return the JSON. This requires
+When building a Rails API it is important to get your controllers to convert
+model objects into JSON and return the JSON. This requires
 support at two layers: the model layer (convert a model to JSON) and
 the controller layer (return the JSON to the user).
 
