@@ -17,6 +17,10 @@
   text-decoration: underline;
 }
 
+.currency-option:hover {
+  font-weight: 700;
+}
+
 .rates-list {
   padding-top: 10px;
 }
