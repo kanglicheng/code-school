@@ -170,9 +170,9 @@
 + [ActiveRecord and Joins][ar-joins] (25 min)
 + [Scopes][scopes] (10 min)
 + [More on Querying][querying-ii] (15 min)
-* [Polymorphic Associations][polym-assoc-blurb] (10 min)
-  * **Just section 2.9**
-* [Concerns][concerns-reading] (10 min)
++ [Polymorphic Associations][polym-assoc-blurb] (10 min)
+  + **Just section 2.9**
++ [Concerns][concerns-reading] (10 min)
 
 
 ### Homeworks (60 min)
@@ -200,6 +200,7 @@
 [movie-buff-hw]: homeworks/active_record_warmup
 [movie-buff]: projects/movie_buff
 [polls-app]: projects/polls_app
+[polymorphism-and-concerns-hw]: homeworks/polymorphism-concerns
 
 ## w3d5
 

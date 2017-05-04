@@ -304,7 +304,6 @@
 [20-query-string]: http://vimeo.com/groups/appacademy/videos/100849678
 [decorators]: readings/decorators.md
 [checkboxes-id-setters]: readings/checkboxes.md
-[polymorphism-and-concerns-hw]: homeworks/polymorphism-concerns
 
 [reddit-clone]: projects/reddit_on_rails
 
