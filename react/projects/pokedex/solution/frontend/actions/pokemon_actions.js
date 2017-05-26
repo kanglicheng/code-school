@@ -8,15 +8,11 @@ export const RECEIVE_POKEMON_ERRORS = 'RECEIVE_POKEMON_ERRORS';
 import * as APIUtil from '../util/api_util';
 
 export const requestAllPokemon = () => dispatch => {
-  dispatch(startLoadingAllPokemon());
-
   return APIUtil.fetchAllPokemon()
     .then(pokemon => dispatch(receiveAllPokemon(pokemon)));
 }
 
 export const requestSinglePokemon = id => dispatch => {
-  dispatch(startLoadingSinglePokemon());
-
   return APIUtil.fetchSinglePokemon(id)
   .then(res => {
     dispatch(receiveSinglePokemon(res));
@@ -32,14 +28,6 @@ export const createPokemon = pokemon => dispatch => (
   })
   .fail(err => dispatch(receivePokemonErrors(err.responseJSON)))
 );
-
-export const startLoadingAllPokemon = () => ({
-  type: START_LOADING_ALL_POKEMON
-});
-
-export const startLoadingSinglePokemon = () => ({
-  type: START_LOADING_SINGLE_POKEMON
-});
 
 export const receiveAllPokemon = pokemon => ({
   type: RECEIVE_ALL_POKEMON,
