@@ -11,14 +11,15 @@ class PokemonDetail extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.pokemonId !== nextProps.match.params.pokemonId) {
+    if (!nextProps.fetched && this.props.match.params.pokemonId !== nextProps.match.params.pokemonId) {
       this.props.requestSinglePokemon(nextProps.match.params.pokemonId);
     }
   }
 
   render() {
-    const { pokemon, loading } = this.props;
-    if (loading) {
+    const { pokemon, items, fetched } = this.props;
+
+    if (!fetched) {
       return <section className="pokemon-detail"><LoadingIcon /></section>;
     }
     return (
@@ -38,7 +39,7 @@ class PokemonDetail extends Component {
         <section className="toys">
           <h3>Items</h3>
           <ul className="toy-list">
-            {pokemon.items.map(item => <Item key={item.name} item={item} />)}
+            {items.map(item => <Item key={item.name} item={item} />)}
           </ul>
         </section>
 

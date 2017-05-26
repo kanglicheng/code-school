@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+
 import PokemonIndexItem from './pokemon_index_item';
 import LoadingIcon from './loading_icon';
 import PokemonFormContainer from './pokemon_form_container';
@@ -11,9 +12,10 @@ class PokemonIndex extends Component {
   }
 
   render() {
-    const { pokemon, loading } = this.props;
+    const { pokemon, fetched } = this.props;
+
     return (
-      loading ?
+      !fetched ?
       <LoadingIcon /> :
       <section className="pokedex">
         <ul>
