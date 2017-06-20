@@ -2,7 +2,7 @@
 
 ## First off, what is a Gem?
 
-A `gem` is a self-contained package of ruby code that someone/team wrote and has made freely available to make your (and their) life easier! Like [`rspec`](https://github.com/rspec/rspec) or [`byebug`](https://github.com/deivid-rodriguez/byebug)! Read more about gems [here](./gems-and-rbenv.md). Interested in [creating your own gem](http://ryanlue.com/posts/2017-02-18-how-to-publish-a-gem)?
+A `gem` is a self-contained package of ruby code that someone wrote and has made freely available to make your (and their) life easier! Like [`rspec`](https://github.com/rspec/rspec) or [`byebug`](https://github.com/deivid-rodriguez/byebug)! Read more about gems [here](./gems-and-rbenv.md). Interested in [creating your own gem](http://ryanlue.com/posts/2017-02-18-how-to-publish-a-gem)?
 
 ## The Bundler gem
 
