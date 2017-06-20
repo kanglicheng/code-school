@@ -4,13 +4,13 @@
 
 A `gem` is a self-contained package of ruby code that someone/team wrote and has made freely available to make your (and their) life easier! Like [`rspec`](https://github.com/rspec/rspec) or [`byebug`](https://github.com/deivid-rodriguez/byebug)! Read more about gems [here](./gems-and-rbenv.md). Interested in [creating your own gem](http://ryanlue.com/posts/2017-02-18-how-to-publish-a-gem)?
 
-## What is a Gemfile?
+## The Bundler gem
 
 The [`bundler`](http://bundler.io/) gem gives us a great way to manage and use different versions of gems. When you run `bundle install`, it references the `Gemfile` in the current directory to download any specified versions of a gem that your computer hasn’t downloaded yet. If no particular version of a gem is specified, the bundler will use the most recently released stable version of the gem.
 
 Bundler will, by default, search and download missing gems and versions you specify in your Gemfile from [RubyGems](https://rubygems.org/). You can specify a different `source` other than RubyGems if needed. Check out how to change the [`source`](http://bundler.io/v1.15/man/gemfile.5.html#GLOBAL-SOURCES).
 
-## Why do we need it?
+## Why do we need Bundler?
 
 New versions of a gem can be released, which might include bug fixes, new features, or complete reworks of the code/API. These new versions might not be compatible with programs that were written expecting to use the old version! For that reason, including a Gemfile in our program allows us to choose which versions of each gem we expect to be used with our program.
 
@@ -63,7 +63,7 @@ When modifying a Gemfile after using `bundle install`, bundler only updates gem 
 
 **You should never have to use [`sudo bundle install`](http://bundler.io/v1.3/man/bundle-install.1.html#SUDO-USAGE).**
 
-## `Gemfile.lock`
+## The `Gemfile.lock` file
 
 Bundling a Gemfile the first time will create a Gemfile.lock in the same directory. This file is a snapshot of your Gemfile the last time you bundled. This file is updated whenever you run `bundle install`.
 
@@ -82,7 +82,7 @@ If you do not use `bundle exec` before running a command like `rspec spec/my_spe
 rails -v
 ```
 
-## Deployment
+## Preparing for Deployment
 
 To ready your app for deployment, use the `--deployment` flag.
 
@@ -92,6 +92,6 @@ bundle install --deployment
 
 Using flag requires and does a number of things, which includes creating a copy of each gem used in a `vendor/bundle` directory. Read more about [deployment](http://bundler.io/v1.3/man/bundle-install.1.html#DEPLOYMENT-MODE).
 
-## Issues
+## Common Issues
 
 Sometimes the `Gemfile.lock` does not update properly. If you are getting any weird bundler errors, remove this file and try running `bundle install` again.
