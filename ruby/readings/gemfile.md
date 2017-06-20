@@ -41,8 +41,8 @@ gem "nokogiri", "< 1.8.0", ">= 1.4.2" # Any version less than 1.8.0 and greater 
 
 # The “Pessimistically Greater Than or Equal To” operator
 gem "nokogiri", "~> 1.0" # Any future version that is 1.x, same as: gem “nokogiri”, ">= 1.0", "< 2.0"
-gem "nokogiri", "~> 1.1" # Any future version that is 1.1 up to anything below 1.2, same as: gem “nokogiri”, ">= 1.1", "< 1.2"
-gem "nokogiri", "~> 1.4.3" # Any future version that is 1.4.3 up to anything below 1.4.4, same as: gem “nokogiri”, ">= 1.4.3", "< 1.4.4"
+gem "nokogiri", "~> 1.1" # Any future version that is 1.1.x, same as: gem “nokogiri”, ">= 1.1", "< 1.2"
+gem "nokogiri", "~> 1.4.3" # Any future version that is 1.4.3.x, same as: gem “nokogiri”, ">= 1.4.3", "< 1.4.4"
 ```
 
 To specify a particular version of ruby:
