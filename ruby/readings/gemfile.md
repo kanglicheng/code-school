@@ -60,9 +60,9 @@ bundle install
 
 _(Note: This requires internet access!)_
 
-**You should never have to use [`sudo bundle install`](http://bundler.io/v1.3/man/bundle-install.1.html#SUDO-USAGE).**
+By default, the above code installs gems to the same location as `gem install`.
 
-By default, the above installs gems to the same location as `gem install`.
+**You should never have to use [`sudo bundle install`](http://bundler.io/v1.3/man/bundle-install.1.html#SUDO-USAGE).**
 
 When modifying a Gemfile after using `bundle install`, bundler only updates gem versions that have been modified by the user. It will NOT auto-update gems to the most recent version. Read more about [conservative-updating](http://bundler.io/v1.3/man/bundle-install.1.html#CONSERVATIVE-UPDATING).
 
