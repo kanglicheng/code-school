@@ -44,6 +44,7 @@ gem "nokogiri", "~> 1.0" # Any future version that is 1.x, same as: gem “nokog
 gem "nokogiri", "~> 1.1" # Any future version that is 1.1.x, same as: gem “nokogiri”, ">= 1.1", "< 1.2"
 gem "nokogiri", "~> 1.4.3" # Any future version that is 1.4.3.x, same as: gem “nokogiri”, ">= 1.4.3", "< 1.4.4"
 ```
+[Pessimistically Greater Than or Equal To](http://tosbourn.com/what-is-the-gemfile/)
 
 To specify a particular version of ruby:
 ```ruby
