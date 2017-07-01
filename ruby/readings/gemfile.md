@@ -62,13 +62,15 @@ _(Note: This requires internet access!)_
 
 By default, the above code installs gems to the same location as `gem install`.
 
-**You should never have to use [`sudo bundle install`](http://bundler.io/v1.3/man/bundle-install.1.html#SUDO-USAGE).**
+** NB: You should never have to use [`sudo bundle install`](http://bundler.io/v1.3/man/bundle-install.1.html#SUDO-USAGE).**
 
 When modifying a Gemfile after using `bundle install`, bundler only updates gem versions that have been modified by the user. It will NOT auto-update gems to the most recent version. Read more about [conservative-updating](http://bundler.io/v1.3/man/bundle-install.1.html#CONSERVATIVE-UPDATING).
 
 ## The `Gemfile.lock` file
 
 Bundling a Gemfile the first time will create a Gemfile.lock in the same directory. This file is a snapshot of your Gemfile the last time you bundled. This file is updated whenever you run `bundle install`.
+
+**NB:** Sometimes the `Gemfile.lock` does not update properly. If you are getting any weird bundler errors, remove this file and try running `bundle install` again.
 
 ## `bundle exec`
 
@@ -79,7 +81,7 @@ bundle exec rspec spec/my_spec.rb
 bundle exec rails g migration AddIndexToUserIdOnTasks
 ```
 
-If you do not use `bundle exec` before running a command like `rspec spec/my_spec.rb`, your shell will use the current global version of that gem. You can find out the global version of a gem with the `-v` flag.
+If you do not use `bundle exec` before running a command like `rspec spec/my_spec.rb`, your shell will use the current global version of that gem instead of the one specified in `Gemfile.lock`. You can find out the global version of a gem with the `-v` flag.
 
 ```
 rails -v
@@ -87,14 +89,10 @@ rails -v
 
 ## Preparing for Deployment
 
-To ready your app for deployment, use the `--deployment` flag.
+To ready your app for deployment, use the `--deployment` flag!
 
 ```
 bundle install --deployment
 ```
 
-Using flag requires and does a number of things, which includes creating a copy of each gem used in a `vendor/bundle` directory. Read more about [deployment](http://bundler.io/v1.3/man/bundle-install.1.html#DEPLOYMENT-MODE).
-
-## Common Issues
-
-Sometimes the `Gemfile.lock` does not update properly. If you are getting any weird bundler errors, remove this file and try running `bundle install` again.
+This flag requires and does a number of things, which includes creating a copy of each gem used into a `vendor/bundle` directory inside your current directory. Read more about [deployment](http://bundler.io/v1.3/man/bundle-install.1.html#DEPLOYMENT-MODE).
