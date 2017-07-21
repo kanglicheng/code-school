@@ -22,12 +22,12 @@ Here you can find links to all the articles that are part of the culture curricu
 
 ## Unconscious Bias and Stereotype Threat
 
-+ [Stereotype Threat][stereotype-threat]
-+ [Unconscious Bias in Tech][unconscious-bias]
-+ [When Algorithms Discriminate][algos-discriminate]
-+ [Implicit Association Test][iap-test]
-+ [You're More Biased Than You Think][more-biased]
-+ [Seven Day Bias Cleanse][bias-cleanse]
++ [Stereotype Threat][stereotype-threat] (5 min)
++ [Unconscious Bias in Tech][unconscious-bias] (8 min)
++ [When Algorithms Discriminate][algos-discriminate] (5 min)
++ [Implicit Association Test][iap-test] (~5 min per test)
++ [You're More Biased Than You Think][more-biased] (7 min)
++ [Seven Day Bias Cleanse][bias-cleanse] (~1 min per day)
 
 [stereotype-threat]: http://www.nytimes.com/2012/10/07/opinion/sunday/intelligence-and-the-stereotype-threat.html
 [unconscious-bias]: https://medium.com/@aldynchwelos/unconscious-bias-in-tech-why-women-leave-their-engineering-careers-f9653185d17b
