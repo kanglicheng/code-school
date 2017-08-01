@@ -52,11 +52,11 @@ Here you can find links to all the articles that are part of the culture curricu
 
 ## Gender Discrimination
 
-+ [True Diversity is Intersectional][intersectional]
-+ [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs]
-+ [VCs and Female Entrepreneurs][vc-entrepreneurs]
-+ [This Tweet Speaks Multitudes About Sexism][tweet]
-+ [When Bias in Product Design Means Life or Death][bias-product]
++ [True Diversity is Intersectional][intersectional] (9 min)
++ [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs] (4 min)
++ [VCs and Female Entrepreneurs][vc-entrepreneurs] (5 min)
++ [This Tweet Speaks Multitudes About Sexism][tweet] (8 min)
++ [When Bias in Product Design Means Life or Death][bias-product] (6 min)
 
 [intersectional]: https://medium.com/projectinclude/true-diversity-is-intersectional-2282b8da8882
 [gendered-beliefs]: https://www.theatlantic.com/science/archive/2017/01/six-year-old-girls-already-have-gendered-beliefs-about-intelligence/514340/
