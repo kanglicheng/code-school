@@ -9,7 +9,29 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a:visited {
+  color: #657786;
+}
+
 form {
   padding: 0px;
+}
+
+.page-header {
+  font-family: 'Fredoka One', cursive;
+  font-size: 35px;
+  color: #1da1f2;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.errors {
+  color: red;
+  padding: 10px;
+
+  li {
+    padding-bottom: 10px;
+  }
 }
 

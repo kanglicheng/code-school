@@ -17,13 +17,14 @@ img {
   width: 100%
 }
 
-a {
-  color: black;
-}
-
 input[type='submit'] {
   border: none;
   background-color: white;
   font-size: 100%;
   cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
 }
