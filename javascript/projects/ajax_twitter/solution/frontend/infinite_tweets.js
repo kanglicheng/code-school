@@ -9,6 +9,8 @@ class InfiniteTweets {
 
     this.$el.on('click', '.fetch-more', this.fetchTweets.bind(this));
     this.$el.on('insert-tweet', this.insertTweet.bind(this));
+    // we want to initiate a fetch on page load
+    this.$el.children('.fetch-more').click();
   }
 
   fetchTweets(event) {
