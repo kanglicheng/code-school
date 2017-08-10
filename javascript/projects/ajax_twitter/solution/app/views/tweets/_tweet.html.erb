@@ -1,5 +1,5 @@
 <div class='tweet'>
-  <h3>
+  <h3 class='tweeter'>
     <a href='<%= user_url(tweet.user) %>'>
       @<%= tweet.user.username %>
     </a>
@@ -9,7 +9,7 @@
 
   <ul>Mentions
     <% tweet.mentioned_users.each do |mention| %>
-      <li>
+      <li class='tweetee'>
         <a href='<%= user_url(mention) %>'>@<%= mention.username %></a>
       </li>
     <% end %>

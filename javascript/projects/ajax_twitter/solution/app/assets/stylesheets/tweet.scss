@@ -1,0 +1,31 @@
+.tweet {
+  height: 200px;
+  width: 300px;
+  background-color: white;
+  border-bottom: 1px #E6ECF0 solid;
+  padding: 20px;
+
+  &:first-child {
+    border-top: 1px grey solid;
+  }
+
+  a {
+    color: #1da1f2; 
+  }
+
+  .tweeter {
+    font-size: 20px;
+  }
+
+  .tweetee {
+    font-size: 16px; 
+  }
+
+  p {
+    font-size: 25px;
+    color: black;
+    padding: 20px;
+    margin: 20px;
+  }
+
+}
