@@ -142,8 +142,13 @@
 [obj-freeze]: readings/object_freeze.md
 [namespacing]: readings/rails_router_namespacing.md
 
-### Homework (45 min)
+### Homework (55 min)
 * [Middleware Homework][middleware_homework] (45 min)
+* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
+  * **Due by 9AM Tuesday w7d2**
+  * Check out the [list of approved apps][approved-apps]
+
+[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 
 [middleware_homework]: homeworks/middleware
 
@@ -202,13 +207,9 @@
 [with_router]: readings/with_router.md
 [redirect]: readings/redirect.md
 
-### Homeworks (40 min)
-* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
-  * **Due by 9AM Thursday w7d4**
-  * Check out the [list of approved apps][approved-apps]
+### Homeworks (30 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
 
-[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [rainbow_routes]: homeworks/rainbow_routes
 
 ### Additional Resources
