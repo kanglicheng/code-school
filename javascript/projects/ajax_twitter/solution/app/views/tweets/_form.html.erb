@@ -1,7 +1,8 @@
-<h2>New Tweet!</h2>
-<form class="tweet-compose" data-tweets-ul="<%= tweets_ul %>">
-  <textarea name="tweet[content]"></textarea><br>
-  <strong class="char-left"></strong><br>
+<form class="simple-form tweet-compose" data-tweets-ul="<%= tweets_ul %>">
+  <label for='tweet-textarea'>What's on your mind?</label>
+  <textarea id='tweet-textarea' 
+    name="tweet[content]" placeholder="What's on your mind?"></textarea>
+  <strong class="char-left"></strong>
 
   <div class="mentioned-users">
     <script type="text/template">
@@ -18,7 +19,12 @@
 
     <ul></ul>
   </div>
-  <a class="add-mentioned-user" href="#">Add mention</a><br>
-
-  <input type="submit" value="Post Tweet!">
+  <ul class='tweet-actions'>
+    <li>
+      <button class="add-mentioned-user" href="#">Add mention</button>
+    </li>
+    <li>
+      <input type="submit" value="Post Tweet!">
+    </li>
+  </ul>
 </form>
