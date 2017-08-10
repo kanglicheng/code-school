@@ -1,0 +1,19 @@
+.users {
+
+  flex-direction: column;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+    a {
+      font-size: 20px;
+    }
+
+    button {
+      margin: 0px;
+    }
+  }
+}
