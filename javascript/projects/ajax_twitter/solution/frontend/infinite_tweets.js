@@ -9,8 +9,6 @@ class InfiniteTweets {
 
     this.$el.on('click', '.fetch-more', this.fetchTweets.bind(this));
     this.$el.on('insert-tweet', this.insertTweet.bind(this));
-    // we want to initiate a fetch on page load
-    this.$el.children('.fetch-more').click();
   }
 
   fetchTweets(event) {
@@ -24,8 +22,9 @@ class InfiniteTweets {
       infiniteTweets.insertTweets(data);
 
       if (data.length < 20) {
-        infiniteTweets.$el.find('.fetch-more')
-                          .replaceWith('<b>No more tweets!</b>');
+        infiniteTweets.$el
+          .find('.fetch-more')
+          .replaceWith('<b>No more tweets!</b>');
       }
 
       if (data.length > 0) {
@@ -35,10 +34,7 @@ class InfiniteTweets {
   }
 
   insertTweet(event, data) {
-    const tmpl = _.template(this.$el.find('script').html());
-    this.$el.find('ul.tweets').prepend(tmpl({
-      tweets: [data]
-    }));
+    this.$el.find('ul.tweets').prepend(this.tweetElement(data));
 
     if (!this.lastCreatedAt) {
       this.lastCreatedAt = data.created_at;
@@ -46,10 +42,32 @@ class InfiniteTweets {
   }
 
   insertTweets(data) {
-    const tmpl = _.template(this.$el.find('script').html());
-    this.$el.find('ul.tweets').append(tmpl({
-      tweets: data
-    }));
+    this.$el.find('ul.tweets').append(data.map(this.tweetElement));
+  }
+
+  tweetElement(tweet) {
+    const mentions = tweet.mentions.map(mention =>
+      `<li class='tweetee'>
+        <a href='/users/${mention.id}'>@${mention.username}</a>
+      </li>`)
+      .join('');
+
+    const elementString = `
+    <div class='tweet'>
+      <h3 class='tweeter'>
+        <a href='/users/${tweet.user.id}'>
+          @${tweet.user.username}
+        </a>
+      </h3>
+      
+      <p>${tweet.content}</p>
+      
+      <ul>Mentions
+        ${mentions}
+      </ul>
+    </div>`
+
+    return $(elementString);
   }
 
 }
