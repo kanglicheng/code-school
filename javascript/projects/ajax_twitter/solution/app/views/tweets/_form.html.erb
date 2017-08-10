@@ -4,24 +4,15 @@
     name="tweet[content]" placeholder="What's on your mind?"></textarea>
   <strong class="char-left"></strong>
 
-  <div class="mentioned-users">
-    <script type="text/template">
-      <div>
-        <select name="tweet[mentioned_user_ids][]">
-          <% User.all.each do |user| %>
-            <option value="<%= user.id %>"><%= user.username %></option>
-          <% end %>
-        </select>
+  <script type='text/javascript'>
+    window.users = <%= render("users/users.json.jbuilder", users: User.all).html_safe %>; 
+  </script>
 
-        <a class="remove-mentioned-user" href="javascript:void(0)">Remove</a>
-      </div>
-    </script>
+    <ul class="mentioned-users"></ul>
 
-    <ul></ul>
-  </div>
   <ul class='tweet-actions'>
     <li>
-      <button class="add-mentioned-user" href="#">Add mention</button>
+      <button class="add-mentioned-user">Add mention</button>
     </li>
     <li>
       <input type="submit" value="Post Tweet!">
