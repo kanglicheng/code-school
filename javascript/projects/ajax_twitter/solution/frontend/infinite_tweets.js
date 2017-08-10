@@ -48,7 +48,7 @@ class InfiniteTweets {
   tweetElement(tweet) {
     const mentions = tweet.mentions.map(mention =>
       `<li class='tweetee'>
-        <a href='/users/${mention.id}'>@${mention.username}</a>
+        <a href='/users/${mention.user.id}'>@${mention.user.username}</a>
       </li>`)
       .join('');
 

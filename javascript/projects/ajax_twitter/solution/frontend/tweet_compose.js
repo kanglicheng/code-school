@@ -68,7 +68,7 @@ class TweetCompose {
   submit(event) {
     event.preventDefault();
     const data = this.$el.serializeJSON();
-    debugger
+    
     this.$el.find(':input').prop('disabled', true);
 
     APIUtil.createTweet(data).then(tweet => this.handleSuccess(tweet));
