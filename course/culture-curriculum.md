@@ -78,9 +78,9 @@ Here you can find links to all the articles that are part of the culture curricu
 [other-side-diversity]: https://medium.com/this-is-hard/the-other-side-of-diversity-1bb3de2f053e
 [ai-impulses]: https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses
 
-## Gentrification and Social Class
-
 ## LGBTQ Discrimination
+
+## Gentrification and Social Class
 
 ## Disability, Age, and Immigration Status
 
