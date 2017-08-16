@@ -80,6 +80,18 @@ Here you can find links to all the articles that are part of the culture curricu
 
 ## LGBTQ Discrimination
 
++ [LGBT Workplace Fact Sheet][lgbt-stats] (3 min)
++ [It is Bigger Than Microaggressions][bigger-microaggressions] (7 min)
++ [LGBT Minorities Face Job Discrimination][lgbt-minorities] (5 min)
++ [Out in Tech][out-in-tech] (8 min)
++ [Transitioning in the Digital Age][transitioning-digital] (7 min)
+
+[lgbt-stats]: http://outandequal.org/2017-workplace-equality-fact-sheet/
+[bigger-microaggressions]: https://modelviewculture.com/pieces/it-is-bigger-than-microaggressions
+[lgbt-minorities]: https://www.bna.com/lgbt-minorities-face-high-unemployment-job-discrimination-low-wages-study-finds/
+[out-in-tech]: https://www.geekwire.com/2015/out-in-tech-what-its-like-to-be-lgbt-in-an-industry-struggling-with-diversity/
+[transitioning-digital]: https://modelviewculture.com/pieces/transitioning-in-the-digital-age
+
 ## Gentrification and Social Class
 
 ## Disability, Age, and Immigration Status
