@@ -10,7 +10,7 @@
 + Be able to change the backend of an app by sending an AJAX request
 + Be able to change the frontend of an app with data from an AJAX response
 + Be able to write AJAX requests in an API Util file
-+ Be able to write basic JBuilder views
++ Be able to write basic Jbuilder views
 + Know the basics of how promises work
 
 ## Phase 0: Setup
@@ -264,6 +264,14 @@ class FollowToggle {
 }
 ```
 
+#### Style it!
+
+Time to move our app styling into the 2010s. Let's make a few changes:
+
+- Change the default page font
+- Add headers for your app and the search results page
+- Style those buttons!
+
 ## Phase III: `TweetCompose`
 
 First, we're going to update our `TweetsController` to handle JSON requests,
@@ -341,6 +349,10 @@ Finally, let's add a counter that will show the number of characters remaining
 for a tweet (starting at 140). Add a `strong` tag with class `.chars-left` to
 the form. In the `TweetCompose` `constructor`, add an `input` event handler on the
 `textarea`. In it, update the `strong` tag with the number of characters remaining.
+
+#### Style it!
+
+* Hide your `label`
 
 **Call your TA over to check your work!**
 
@@ -544,7 +556,7 @@ its id. It will look like the following:
 ```
 
 Write a `tweets/index.json.jbuilder` that returns an object full of tweets.
-Create a `Tweets#index` method and route, and render your new index view in it. 
+Create a `Tweets#index` method and route, and render your new index view in it.
 Test your new code by navigating to `localhost:3000/tweets`.
 
 Next, include the tweeter's username along with each tweet. Prevent n+1 queries
