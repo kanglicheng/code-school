@@ -352,7 +352,9 @@ the form. In the `TweetCompose` `constructor`, add an `input` event handler on t
 
 #### Style it!
 
-* Hide your `label`
+* Hide your `label` and use a `placeholder` attribute on your tweet form's `textarea`
+* Add some padding to your `textarea`
+* Center your form on the page and give it a fixed `height` and `width`
 
 **Call your TA over to check your work!**
 
@@ -364,64 +366,50 @@ more select tags so we can tag more users.
 
 #### Adding mentions
 
-Rather than have just one select tag visible all the time, we want to have no
-select tags to start. Instead, we want to show an "Add mention" link which will
-let us add multiple select tags to the page.
+Rather than have just one select tag visible all the time, we want to have no select tags to start.
+Instead, we want to show an "Add mention" link which will let us add multiple select tags to the page.
 
-To do this, first move the `select` tag into a `<script type="text/template">`
-tag. This tells the browser not to put the `select` in the DOM. If you reload,
-you should see no select tag.
+To do this, create a `newUserSelect` helper function to create a new `select` element with all of the users as `option`s. You can get the users by "bootstrapping" them to the global `window` from our backend.
 
-Write an "Add mention" anchor tag. Give it a placeholder `href`.
-`href="#"` is fine, but make sure to return `false` from the event handler to
-prevent being scrolled to the top of the page. Also give it a class
-`add-mentioned-user`. I also added a `div.mentioned-users` that will house all
-these newly generated select tags.
+In `application.html.erb`, inside a `<script>` and in JavaScript, assign a json array of all of our users (you will have to render a partial) to `window.users`. This will give us access to `window.users` from our frontend code.
 
-* In the `TweetCompose` `constructor`, add a listener for a click on
-`a.add-mentioned-user`.
-* Write a `TweetCompose#addMentionedUser` method.
-* Use jQuery to find the `script` tag, grab the HTML from within using
-`$scriptTag.html()`, then append it into the `mentioned-users` div.
-* Don't forget to return false from `addMentionedUser`!
+Now add a button below our `textarea` that will add a new `select` element. We can click it more than once to "mention" multiple users.
 
 Test this out and make sure you can create new `select` tags by clicking the link.
 
 #### Removing mentions
 
-Next, I also want to be able to **remove** select tags. Say we clicked "add"
-accidentally and want to remove the `select`.
+Next, I also want to be able to **remove** select tags.
+Say we clicked "add" accidentally and want to remove the `select`.
 * To do this, modify the script template by putting the `select` in a `div`.
 * Write an anchor tag inside with class `remove-mentioned-user`.
 * Give it a similar bogus `href` attribute.
 
-* In the `TweetCompose` `constructor`, listen for `click` events on
-`a.remove-mentioned-user`. **You have to use event delegation here: why?**
-* Write a `TweetCompose#removeMentionedUser` and use `event.currentTarget`
-to learn which remove anchor tag was clicked, and removed the parent `div`
-element. This removes both the anchor tag and the select, too.
+* In the `TweetCompose` `constructor`, listen for `click` events on `a.remove-mentioned-user`. **You have to use event delegation here: why?**
+* Write a `TweetCompose#removeMentionedUser` and use `event.currentTarget` to learn which remove anchor tag was clicked, and removed the parent `div` element. This removes both the anchor tag and the select, too.
 
 Make sure it works!
 
-Lastly, we want to update `TweetCompose#clearInput` to clear out all the selects
-after form submission succeeds.
+Lastly, we want to update `TweetCompose#clearInput` to clear out all the selects after form submission succeeds.
 * Put all your select tags into a div with class `.mentioned-users`.
 * In `#clearInput`, grab this div and `empty()` it.
 
+#### Style it!
+
+You know the drill. Pretty up your mentions by adding some styles to it.
+
 ## Phase V: Infinite Tweets
 
-Right now we send all the tweets down when the user requests `/feed`. If there
-are many, many tweets in the feed, this will send a huge amount of data to the
-user. Moreover, the user is likely to be interested in only the most recent
+Right now we send all the tweets down when the user requests `/feed`.
+If there are many, many tweets in the feed, this will send a huge amount of data to the user.
+Moreover, the user is likely to be interested in only the most recent
 tweets.
 
 #### User Model
 
-Let's **paginate** the sending of tweets. To start, open up
-`app/models/user.rb`. Modify the `#feed_tweets` method to send only up to
-`limit` tweets. Also, modify it not to return any tweets created after
-`max_created_at`. Test this out in your Rails console before moving to the
-JavaScript portion.
+Let's **paginate** the sending of tweets.
+To start, open up `app/models/user.rb`. Modify the `#feed_tweets` method to send only up to `limit` tweets.
+Also, modify it not to return any tweets created after `max_created_at`. Test this out in your Rails console before moving to the JavaScript portion.
 
 #### Views
 
