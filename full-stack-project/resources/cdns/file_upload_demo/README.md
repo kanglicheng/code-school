@@ -5,8 +5,27 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 
 #### 🚨 **NB:** Important Changes! 🚨
 - The AWS S3 user interface has changed, please follow this [official demo][aws-bucket-demo] to create a bucket.
-- It is not a requirement to create a bucket policy. Please skip this step.
+- You will need to create a policy for each bucket. You can use the following (make sure to use _your_ bucket name!):
 
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1420751757000",
+      "Effect": "Allow",
+      "Action": [
+        "s3:*"
+      ],
+      "Resource": [
+        "arn:aws:s3:::BUCKET-NAME",
+        "arn:aws:s3:::BUCKET-NAME/*",
+      ],
+      "Principal": "*"
+    }
+  ]
+}
+```
 
 #### Videos
 - [Part One (paperclip, aws)](https://vimeo.com/169111348)
@@ -34,7 +53,7 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 - Now we have space set aside on AWS, but we don't have permission to access it. We need to create a user, and a policy for them to access your buckets. Go back to the main page and click 'Identity and Access Management' then click 'Users' on the left. We'll make a new user, named whatever you like.
 - You'll be directed to a page with your brand new security credentials, DOWNLOAD AND SAVE THEM NOW, you will not have access to them again. If you do lose them, just delete the user and make a new one.
 - The keys you just saved give you access to your AWS server space, **don't give push them to GitHub, or put them anywhere public!**
-- Now we need to set up the security policy for our new user. This is how they will be allowed to connect. Click 'Attach an existing policies directly' and then 'Create Policy'. You can use this sensible default and not worry too much about what it's doing for you (borrrrriing). Remember to switch out bucket-name for your bucket.
+- Now we need to set up the security policy for our new user. This is how they will be allowed to connect. Click 'Attach existing policies directly' and then 'Create Policy'. You can use this sensible default and not worry too much about what it's doing for you (borrrrriing). Remember to switch out bucket-name for your bucket.
 
 ```json
 {
@@ -76,7 +95,7 @@ end
 - Add `gem 'figaro'` and then run `bundle exec figaro install`
 - Figaro has created a new application.yml file and added it to your gitignore. All your secret app keys can be stored in this file, and we will reference them using syntax like `ENV["secret_key"]` throughout our app.
 - Be careful to save this file to your email or dropbox, because it will not be pushed to github.
-- Double check that application.yml is gitignored. **People will scrape GitHub for S3 keys and exploit your account if they can.**
+- Double check that `application.yml` is gitignored. **People will scrape GitHub for S3 keys and exploit your account if they can.**
 - Now we can add our secret keys. It should look something like this.
 
 ```ruby
