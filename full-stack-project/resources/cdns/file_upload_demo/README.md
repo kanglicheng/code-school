@@ -1,9 +1,18 @@
 # React File Upload Demo
 This demo shows how to upload images using React, Paperclip, and AWS S3.
 
-# Video Demo
+## Demo
+
+#### 🚨 **NB:** Important Changes! 🚨
+- The AWS S3 user interface has changed, please follow this [official demo][aws-bucket-demo] to create a bucket.
+- It is not a requirement to create a bucket policy. Please skip this step.
+
+
+#### Videos
 - [Part One (paperclip, aws)](https://vimeo.com/169111348)
 - [Part Two (uploading files via a form)](https://vimeo.com/169111248)
+
+[aws-bucket-demo]: http://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-bucket.html
 
 ## Key Files
 - [application.rb](./config/application.rb)
@@ -21,11 +30,11 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 
 ### Setting up AWS
 
-- The first thing we need to set up is our buckets. This is where amazon will actually store our files. Click on 'S3' and then 'Create Bucket'. We should make a separate bucket for development and production. I would use something like `app-name-dev`, and `app-name-pro`. Set the region to 'US Standard'.
-- Now we have space set aside on AWS, but we don't have permission to access it. We need to create a user, and a policy for them to access your buckets. Go back to the main page and click 'Identity and Access Managment' then click 'Users' on the left. We'll make a new user, named whatever you like.
+- The first thing we need to set up is our buckets. This is where amazon will actually store our files. Click on 'S3' and then 'Create Bucket'. We should make a separate bucket for development and production. I would use something like `app-name-dev`, and `app-name-pro`. Set the region to the one closest to you.
+- Now we have space set aside on AWS, but we don't have permission to access it. We need to create a user, and a policy for them to access your buckets. Go back to the main page and click 'Identity and Access Management' then click 'Users' on the left. We'll make a new user, named whatever you like.
 - You'll be directed to a page with your brand new security credentials, DOWNLOAD AND SAVE THEM NOW, you will not have access to them again. If you do lose them, just delete the user and make a new one.
-- The keys you just saved give you access to your AWS server space, **don't give push them to github, or put them anywhere public!**
-- Now we need to set up the security policy for our new user. This is how they will be allowed to connect. Click 'Inline Policies' and then create one, then choose 'Custom Policy'. You can use this sensible default and not worry too much about what it's doing for you (borrrrriing). Remember to switch out bucket-name for your bucket.
+- The keys you just saved give you access to your AWS server space, **don't give push them to GitHub, or put them anywhere public!**
+- Now we need to set up the security policy for our new user. This is how they will be allowed to connect. Click 'Attach an existing policies directly' and then 'Create Policy'. You can use this sensible default and not worry too much about what it's doing for you (borrrrriing). Remember to switch out bucket-name for your bucket.
 
 ```json
 {
@@ -67,8 +76,9 @@ end
 - Add `gem 'figaro'` and then run `bundle exec figaro install`
 - Figaro has created a new application.yml file and added it to your gitignore. All your secret app keys can be stored in this file, and we will reference them using syntax like `ENV["secret_key"]` throughout our app.
 - Be careful to save this file to your email or dropbox, because it will not be pushed to github.
-- Double check that application.yml is gitignored. **People will scrape github for S3 keys and exploit your account if they can.**
+- Double check that application.yml is gitignored. **People will scrape GitHub for S3 keys and exploit your account if they can.**
 - Now we can add our secret keys. It should look something like this.
+
 ```ruby
 
 # config/application.yml
@@ -82,6 +92,10 @@ s3_region:  "us-east-1"
 s3_access_key_id: "XXXX"
 s3_secret_access_key: "XXXX"
 ```
+
+Double check that your `s3_region` [here][aws-regions] (scroll down to **API Gateways**).
+
+[aws-regions]: http://docs.aws.amazon.com/general/latest/gr/rande.html
 
 - Now that we have a safe way to access our secret keys, we need to update our application.rb file to configure paperclip to use s3. Let's add one more gem for this. `gem 'aws-sdk', '>= 2.0'`
 
@@ -99,6 +113,7 @@ config.paperclip_defaults = {
 }
 ```
 - We did it! You should be able to attach files through the console, test it out.
+
 ```ruby
 post = Post.first
 file = File.open('app/assets/images/sennacy.jpg')
@@ -111,12 +126,12 @@ post.image.url #=> "http://s3.amazonaws.com/YOUR-BUCKET-NAME/something/images/00
 - Okay so what if we don't want our users to upload files via rails console? We need to be able to attach files from a form. Lets add something to our post form.
 - To preview the file, we need to extract a url for it. On change of the file input component we instantiate a new [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader) object. set a success function for when it loads
 Then we ask it to read the file with [`FileReader#readAsDataURL(file)`](https://developer.mozilla.org/en-US/docs/Web/API/FileReader.readAsDataURL)
+
 ```javascript
-var reader = new FileReader();
-var file = e.currentTarget.files[0];
-reader.onloadend = function() {
+const reader = new FileReader();
+const file = e.currentTarget.files[0];
+reader.onloadend = () =>
   this.setState({ imageUrl: reader.result, imageFile: file});
-}.bind(this);
 
 if (file) {
   reader.readAsDataURL(file);
@@ -133,10 +148,11 @@ We then use the [append](https://developer.mozilla.org/en-US/docs/Web/API/FormDa
 method to add key/values to send to the server. One of the key/value pairs will be the binary
 file we grab from `this.state.file`. Be mindful to have your keys match whatever your Rails
 controller is expecting in the params. In our case this is `post[image]`.
-```javascript
-var file = this.state.imageFile;
 
-var formData = new FormData();
+```javascript
+const file = this.state.imageFile;
+
+const formData = new FormData();
 formData.append("post[title]", title);
 formData.append("post[image]", file);
 

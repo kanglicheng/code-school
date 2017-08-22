@@ -24,8 +24,8 @@ var TweetForm = React.createClass({
   },
 
   updateFile: function (e) {
-    var file = e.currentTarget.files[0];
-    var fileReader = new FileReader();
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
     }.bind(this);
@@ -36,7 +36,7 @@ var TweetForm = React.createClass({
   },
 
   handleSubmit: function (e) {
-    var formData = new FormData();
+    const formData = new FormData();
     formData.append("tweet[body]", this.state.body);
     formData.append("tweet[image]", this.state.imageFile);
     TweetApi.createTweet(formData, this.goBack);
