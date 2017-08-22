@@ -69,9 +69,7 @@ maps, Cloudinary and AWS.
     * [Video demo][figaro-video]
   * [Cloudinary video demo][cloudinary-video] work with images
     * [Code demo][cloudinary-demo]
-  * [AWS part 1][aws1] work with music or other large files
-    * [AWS part 2][aws2]
-    * [Code demo][aws-demo]
+  * [Paperclip and AWS S3 Hosting Demo][paperclip-aws-demo]
   * [Google maps][google-maps-demo]
 * **Other tools**
   * [Redux dev tools][redux-dev-tools] view your react state live and
@@ -87,11 +85,9 @@ resources][additional-resources].
 [heroku-deployment]: resources/helpful_tools/heroku-deployment.md
 [figaro]: resources/security/figaro.md
 [figaro-video]: https://vimeo.com/164602277
+[paperclip-aws-demo]: resources/cdns/file_upload_demo
 [cloudinary-video]: https://vimeo.com/164612621
 [cloudinary-demo]: https://github.com/appacademy/react_cloudinary_demo
-[aws1]: https://vimeo.com/169111348
-[aws2]: https://vimeo.com/169111248
-[aws-demo]: resources/cdns/file_upload_demo
 [google-maps-demo]: https://github.com/appacademy/curriculum/tree/master/react/demos/react_map_demo
 [redux-dev-tools]: https://github.com/appacademy/curriculum/blob/c280e51a978c9a67243a2bb2d5f4650d9f53d387/react/readings/redux_dev_tools.md
 [redux-dev-tools-video]: https://vimeo.com/194738174

@@ -12,7 +12,8 @@
         "arn:aws:s3:::BUCKET-NAME-DEV/*",
         "arn:aws:s3:::BUCKET-NAME-PRO",
         "arn:aws:s3:::BUCKET-NAME-PRO/*"
-      ]
+      ],
+      "Principal": "*"
     }
   ]
 }
