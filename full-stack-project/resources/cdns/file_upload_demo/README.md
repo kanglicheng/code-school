@@ -173,7 +173,8 @@ const file = this.state.imageFile;
 
 const formData = new FormData();
 formData.append("post[title]", title);
-formData.append("post[image]", file);
+// our backend can't handle a null image, so why even
+if (file) formData.append("post[image]", file);
 
 ApiUtil.createPost(formData, this.resetForm);
 ```

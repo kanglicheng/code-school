@@ -38,7 +38,7 @@ var TweetForm = React.createClass({
   handleSubmit: function (e) {
     const formData = new FormData();
     formData.append("tweet[body]", this.state.body);
-    formData.append("tweet[image]", this.state.imageFile);
+    if (this.state.imageFile) formData.append("tweet[image]", this.state.imageFile);
     TweetApi.createTweet(formData, this.goBack);
   },
 
