@@ -16,14 +16,14 @@ containing an intermediary class called `ApplicationRecord`, which
 inherits from `ActiveRecord::Base`. In Rails 4, each of our models
 directly inherited from `ActiveRecord::Base`.
 
-In Rails 5, we have this:
+In Rails 5, we would declare a model like this:
 
 ```ruby
 class Cat < ApplicationRecord
 end
 ```
 
-In Rails 4, we would have this:
+Whereas in Rails 4, we would inherit from ActiveRecord directly:
 
 ```ruby
 class Cat < ActiveRecord::Base
@@ -73,7 +73,7 @@ class Cat < ApplicationRecord
     primary_key: :id,
     foreign_key: :home_id,
     class_name: :Home,
-    optional: true
+    optional: true 
 end
 ```
 
@@ -96,7 +96,7 @@ class Cat < ApplicationRecord
 end
 ```
 
-If we try to `save` and invalid cat, we'll get the following:
+If we try to `save` an invalid cat, we'll get the following errors:
 
 ```
 irb(main):001:0> c = Cat.new(name: 'Callie')
@@ -110,8 +110,7 @@ ActiveRecord::RecordInvalid: Validation failed: Home can't be blank, Home must e
 Notice the `Home can't be blank` and the `Home must exist`.
 That's problematic when users see these errors.
 
-However, if we just leave out the `validate :home, presence: true`, then
-we get the correct, single error:
+However, if we remove the superfluous `validate :home, presence: true`:
 
 ```ruby
 class Cat < ApplicationRecord
@@ -122,7 +121,7 @@ class Cat < ApplicationRecord
 end
 ```
 
-Now we're all good:
+We get the correct, single error:
 
 ```
 irb(main):001:0> c = Cat.new(name: 'Callie')
@@ -150,8 +149,8 @@ class Cat < ApplicationRecord
 end
 ```
 
-I'll get a warning about placing the `:friends` before the `:owner`.
-I should instead of have this:
+I'll get a warning about placing the `:friends` association before the `:owner`.
+I should instead order my associations like this:
 
 ```ruby
 class Cat < ApplicationRecord
@@ -189,14 +188,16 @@ commands in the terminal.
 
 ### Migrations
 
-Previously, migrations inherited from this: `ActiveRecord::Migration`.
-Now, they inherit from this: `ActiveRecord::Migration[5.1]`.
+Previously, migrations inherited from `ActiveRecord::Migration`.
+In Rails 5, migrations are versioned. If your project is using Rails 5.1, migrations you generate will inherit from  `ActiveRecord::Migration[5.1]`. 
+
+Whenever Rails 5 runs migrations, it checks the class of the current migration file being run. If it’s 5.0+, it uses the new migration API which has changes like automatically adding null: false to timestamps. You can read more [here](http://blog.bigbinary.com/2016/03/01/migrations-are-versioned-in-rails-5.html)
 
 ### Gems for Testing
 
 #### `shoulda-matchers`
 
-Currently, `shoulda-matchers` requires a specific branch.
+Currently, the `shoulda-matchers` gem requires a specific branch.
 If you're using `shoulda-matchers`, make sure your `Gemfile` has this:
 
 ```
