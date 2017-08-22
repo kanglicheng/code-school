@@ -81,10 +81,11 @@ Build a `new` form page to create a new `Cat`:
 
 * Use text for name.
 * Use radio buttons for sex.
-* Use a drop down for color (hint: keep your code DRY by using the
+* Use a dropdown for color (hint: keep your code DRY by using the
   constant you defined on the `Cat` class.
-* Use a blank `<option>` as the default color; this will force the
-  user to consciously pick one.
+* Use a blank `<option>` as the default color. You may want to add the text
+  '-- select a color --' (or similar) so users know what this dropdown is
+  for. This will force the user to consciously pick one.
 * You can use the `date` input type to prompt the user to pick a birth
   date. Look this up on MDN.
 * Use a `textarea` tag for the description.

@@ -21,7 +21,9 @@
 
   <label for="cat_color">Color</label>
   <select name="cat[color]" id="cat_color">
-    <option></option>
+    <% if @cat.id.nil? %>
+      <option disabled selected>-- select a color --</option>
+    <% end %>
     <% Cat::CAT_COLORS.each do |color| %>
       <option
         <%= cat.color == color ? "selected" : "" %>
