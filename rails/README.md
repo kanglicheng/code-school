@@ -10,7 +10,7 @@
 
 [rails-setup]: readings/rails-setup.md
 [rails-api]: http://api.rubyonrails.org/v5.1.3/
-[rails-guides]: http://guides.rubyonrails.org/v4.0.2/
+[rails-guides]: http://guides.rubyonrails.org/v5.1.3/
 [rails-diagram]: assets/rails_diagram.png
 [rails-5-updates]: readings/rails-5-updates.md
 
