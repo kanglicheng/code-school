@@ -116,7 +116,7 @@ configuration file look like this:
 If you are interested in customizing RSpec further, check out
 [the documentation here][rspec-doc].
 
-[rspec-doc]: http://rubydoc.info/github/rspec/rspec-core/RSpec/Core/Configuration
+[rspec-doc]: https://github.com/rspec/rspec-core
 
 ## Auto-Generate Test Files
 
