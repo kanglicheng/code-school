@@ -52,7 +52,7 @@ Bringing user input to your HTML with Form and Input elements.
 
 + :book: [Forms][html-forms]
 
-[html-forms]: reading/forms.md
+[html-forms]: readings/forms.md
 
 #### Exercise
 
