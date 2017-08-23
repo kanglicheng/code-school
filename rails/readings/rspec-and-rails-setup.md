@@ -114,9 +114,9 @@ configuration file look like this:
 --format documentation
 ```
 If you are interested in customizing RSpec further, check out
-[the documentation here][rspec-doc].
+[the documentation here][rspec-doc] (see the `Command Line` section).
 
-[rspec-doc]: https://github.com/rspec/rspec-core
+[rspec-doc]: https://relishapp.com/rspec/rspec-core/docs
 
 ## Auto-Generate Test Files
 
