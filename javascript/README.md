@@ -290,7 +290,7 @@ we highly encourage you to read the whole book.
 * :book: [Vanilla JavaScript][vanilla-js] (10 min)
 * :book: Effective JavaScript: Items 46, 50, 52 (15 min)
 
-[backbone-14-vid]: https://vimeo.com/groups/appacademy/videos/85221706
+[backbone-14-vid]: https://vimeo.com/85221706
 [jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 [jquery-07-triggering]: readings/jquery-07-triggering.md
 [event-propagation]: readings/event-propagation.md
