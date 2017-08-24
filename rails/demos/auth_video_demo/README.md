@@ -1,7 +1,5 @@
 # Videos
 
-[Vimeo Album](https://vimeo.com/album/2953694/sort:alphabetical)
-
 * [00-user-models](https://vimeo.com/93097977)
   ([DIFF](https://github.com/appacademy/AuthVideoDemo/compare/init-commit...00-user-models))
 * [01-basic-sessions](https://vimeo.com/93097978)
