@@ -379,7 +379,7 @@ Test this out and make sure you can create new `select` tags by clicking the lin
 
 #### Removing mentions
 
-Next, I also want to be able to **remove** select tags.
+Next, we also want to be able to **remove** select tags.
 Say we clicked "add" accidentally and want to remove the `select`.
 * To do this, modify the script template by putting the `select` in a `div`.
 * Write an anchor tag inside with class `remove-mentioned-user`.
