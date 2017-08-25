@@ -12,7 +12,7 @@ calls; the UI backend, which draws widgets like dropdown lists and windows; the
 JavaScript interpreter; and data storage, which manages cookies and
 localStorage, among other things. 
 
-![parts of a browser](layers.png)
+[![parts of a browser](layers.png)](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#The_browser_high_level_structure)
 
 Browsers are large and complicated - modern browsers are made up of millions
 (yes, you read that correctly) of lines of C++ code.
