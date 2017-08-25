@@ -69,6 +69,7 @@
 + :book: [Basic Controllers][basic-controllers]
 + :book: [Basic JSON API][basic-json-api]
 + :book: [Routing II: Nested Collections][routing-ii]
++ :book: [Routing III: Adding non-default routes][routing-iii]
 + :movie_camera: [Rails Screencasts (3 thru 11)][rails-screencasts]
   + :computer: [Code from demos][rails-videos-code]
 
@@ -76,6 +77,7 @@
 [basic-controllers]: readings/basic-controllers.md
 [basic-json-api]: readings/basic-json-api.md
 [routing-ii]: readings/routing-part-ii.md
+[routing-iii]: readings/routing-part-iii.md
 [rails-screencasts]: https://vimeo.com/album/2953690/sort:alphabetical
 [rails-videos-code]: demos/intro_rails_video_demo
 
