@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
 
-  resource :user, only: [:show, :new, :create] do
+  resources :users, only: [:show, :new, :create] do
     get :activate, on: :collection
   end
 
