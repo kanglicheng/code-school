@@ -92,9 +92,9 @@ Here you can find links to all the articles that are part of the culture curricu
 [out-in-tech]: https://www.geekwire.com/2015/out-in-tech-what-its-like-to-be-lgbt-in-an-industry-struggling-with-diversity/
 [transitioning-digital]: https://modelviewculture.com/pieces/transitioning-in-the-digital-age
 
-## Gentrification and Social Class
-
 ## Disability, Age, and Immigration Status
+
+## Gentrification and Social Class
 
 ## Hiring Practices
 
