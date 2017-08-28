@@ -78,7 +78,7 @@ group :test do
 end
 ```
 
-Next, make sure you have the following lines in your `rails_helper.rb`.
+Next, make sure you have the following lines in your `rails_helper.rb`. Don't forget to `require 'shoulda/matchers'` at the top!
 
 ```ruby
 #rails_helper.rb
