@@ -92,7 +92,17 @@ Here you can find links to all the articles that are part of the culture curricu
 [out-in-tech]: https://www.geekwire.com/2015/out-in-tech-what-its-like-to-be-lgbt-in-an-industry-struggling-with-diversity/
 [transitioning-digital]: https://modelviewculture.com/pieces/transitioning-in-the-digital-age
 
-## Disability, Age, and Immigration Status
+## Age, Mental Health, and Disability
+
++ [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
++ [Building Accessibility Culture][accessibility] (8 min)
++ [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
++ [“Brilliance,” “Pride” and “Genius”: How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+
+[ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
+[accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
+[adhd]: https://modelviewculture.com/pieces/building-better-tech-cultures-for-people-with-adhd
+[mental-illness]: https://modelviewculture.com/pieces/brilliance-pride-and-genius-how-tech-culture-hides-mental-illness
 
 ## Gentrification and Social Class
 
