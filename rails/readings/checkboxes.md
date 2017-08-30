@@ -77,7 +77,7 @@ post = Post.first
 post.tag_ids = [1,2,3,4]
 ```
 
-This creates new `Tagging` objects linking the pos to tags with IDs 1, 2, 3, and
+This creates new `Tagging` objects linking the post to tags with IDs 1, 2, 3, and
 4 and deletes any `Tagging`s for `Post`s whose ids are not in the array.
 
 We could also pass in an array of tag ids when we create a new post like such:
