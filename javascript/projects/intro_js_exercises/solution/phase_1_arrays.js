@@ -41,7 +41,7 @@ Array.prototype.twoSum = function() {
   }
 
   return pairs;
-}
+};
 
 // This time we've reduced the time complexity from N^2 to N
 // by using a hash
