@@ -40,34 +40,15 @@ it.
 0. Setup a remote repository on Github.
 0. Commit your files and push to your remote.
 
-## Set up your `docs` directory
+## Set up your proposal
 
-Your project is going to have a directory that stores all your planning
-materials. The main document there will be a development README that outlines
+We are going to use Github's built-in project management to store all your planning
+materials. The main document will be a wiki that outlines
 all the major facets of your development process.
-
-0. Create a `docs` folder in your project directory.
-0. The `docs` directory must contain the following:
-
-	0. A `README.md` file. This is your Development README, which will:
-		- show wireframes,
-		- describe features, and
-		- outline a development timeline for your application.
-
-		**Note:** this README is NOT the same as the Production README that lives at
-		the project's root directory.
-
-	0. The following files, which should be linked to in the Development README:
-		- `api-endpoints.md`
-		- `component-hierarchy.md`
-		- `sample-state.md`
-		- `schema.md`
-
-0. Create a `docs/wireframes` folder to hold wireframe images.
 
 ## Fleshing Out the Proposal
 
-The Development README of your project repo MUST include the following:
+The Github wiki of your project repo MUST include the following:
 
 ### Heroku Link
 
@@ -81,6 +62,46 @@ Write a one-sentence summary of the project and a list of the features that
 would be absolutely necessary for the app to be marketable. Your MVP section must follow the format outlined [here][mvp-features].
 
 [mvp-features]: mvp-list.md
+
+### DB Schema
+
+- `schema`
+
+Link to a document outlining the database schema for your app. Build up the
+schema by walking through your app's wireframes. Think carefully about what data
+will be needed for each view and the best way to store that data. Make note
+of any database-level validations and foreign key relationships.
+
+### API Endpoints
+
+- `api-endpoints`
+
+Link to a page that lists your Rails API endpoints. Break these up between HTML
+and JSON endpoints. Discuss what params, if any, will be needed for each
+endpoint, and what information will be returned.
+
+### Sample State
+
+- `sample-state`
+
+Create a basic illustration of your state shape. Think about what information
+you need to store for your app to work, and how best to organize it to minimize
+duplication and maximize ease of access.
+
+### React Components
+
+- `component-hierarchy`
+
+In addition to the wireframes, you should diagram a tree indicating your
+application's overall component structure.
+
+Discuss how you will nest your components. If components will need containers,
+indicate what state and dispatch props they will need. For presentational
+components, discuss what props and state they will need.
+
+Map out your React Routes with their respective components and paths.
+
+See the sample project proposal for an example of this.
 
 ### Wireframes
 
@@ -101,54 +122,7 @@ paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
 
 [draw.io]: https://www.draw.io/
 
-### React Components
-
-- `component-hierarchy.md`
-
-In addition to the wireframes, you should diagram a tree indicating your
-application's overall component structure.
-
-Discuss how you will nest your components. If components will need containers,
-indicate what state and dispatch props they will need. For presentational
-components, discuss what props and state they will need.
-
-Map out your React Routes with their respective components and paths.
-
-See the sample project proposal for an example of this.
-
-### Sample State
-
-- `sample-state.md`
-
-Create a basic illustration of your state shape. Think about what information
-you need to store for your app to work, and how best to organize it to minimize
-duplication and maximize ease of access.
-
-### DB Schema
-
-- `schema.md`
-
-Link to a document outlining the database schema for your app. Build up the
-schema by walking through your app's wireframes. Think carefully about what data
-will be needed for each view and the best way to store that data. Make note
-of any database-level validations and foreign key relationships.
-
-### API Endpoints
-
-- `api-endpoints.md`
-
-Link to a page that lists your Rails API endpoints. Break these up between HTML
-and JSON endpoints. Discuss what params, if any, will be needed for each
-endpoint, and what information will be returned.
-
 ### Implementation Timeline
-
-Create a section in your proposal README for each `phase` of your project to develop an implementation timeline.
-
-Refer back to your MVP and group the features into logical phases. Rather than
-building the entire project all at once, you're going to implement one feature
-at a time. You should have a working app at the end of each phase (even if not
-all of your features are in yet).
 
 This is crucial both here and in the industry. The truth is, one never knows
 how long implementing any particular phase will take. Constraints change.
@@ -157,10 +131,7 @@ to stand on it's on. We call this building in 'slices' instead of 'layers'.
 
 ## Submission
 
-When you've finished setting up your full-stack project repo, create your [Trello board][trello-setup], add your project to Progress
-Tracker and email your Project Manager (instructors-sf@appacademy.io or
+Email the repo link to your Instructional team (instructors-sf@appacademy.io or
 instructors-ny@appacademy.io).  A TA will review each proposal and leave their
 comments in issues on the project repo. Be prepared to respond to feedback, and
-keep your README up to date as you make progress. Happy hunting!
-
-[trello-setup]: using-trello.md
+keep your wiki up to date as you make progress. Happy hunting!
