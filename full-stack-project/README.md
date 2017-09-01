@@ -19,7 +19,6 @@ deadlines for this part of the curriculum.
     * [Full-stack proposal guidelines][fsp]
     * [MVP Checklist][mvp-checklist]
     * [Sample Proposal][sample-proposal]
-    * [Trello setup][trello]
 
 [tentative-proposal]: proposal/tentative-project-proposal.md
 [good-projects]: proposal/projects-to-clone.md
