@@ -24,9 +24,8 @@ deadlines for this part of the curriculum.
 [tentative-proposal]: proposal/tentative-project-proposal.md
 [good-projects]: proposal/projects-to-clone.md
 [fsp]: proposal/full-stack-project-proposal.md
-[sample-proposal]: proposal/sample_project_proposal
+[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
 [mvp-checklist]: proposal/mvp-list.md
-[trello]: proposal/using-trello.md
 
 ## Project
 
