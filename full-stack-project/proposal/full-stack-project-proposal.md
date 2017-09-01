@@ -20,9 +20,8 @@ it.
 ## Setting up the Project Repo
 
 0. Create a new Rails project.
-	-	`--skip-turbolinks=true`
+	- `--skip-turbolinks=true`
 	- `--database=postgresql`
-0. `git init` a repository for your project.
 0. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
 	```
 	// .gitignore
@@ -44,7 +43,10 @@ it.
 
 We are going to use Github's built-in project management to store all your planning
 materials. The main document will be a wiki that outlines
-all the major facets of your development process.
+all the major facets of your development process. Read the rest of this document and then
+[follow the instructions][fsp-instructions] to set up your proposal.
+
+[fsp-instructions]: ./README.md
 
 ## Fleshing Out the Proposal
 
