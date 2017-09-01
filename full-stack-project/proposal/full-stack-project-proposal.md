@@ -15,7 +15,7 @@ have already thought carefully about the functionality and scope of each
 feature, allowing your future self to focus completely on writing the code for
 it.
 
-[sample-proposal]: ./sample_project_proposal
+[sample-proposal]: http://www.github.com/appacademy/bluebird/wiki
 
 ## Setting up the Project Repo
 
