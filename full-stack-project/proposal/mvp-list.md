@@ -73,9 +73,10 @@ Make sure outline your MVP features using the following structure when writing y
 
 #### Behance
 * Portfolio Viewing
+* Create Portfolio
 * Explore Portfolios
 * Likes
-* Comments
+* **Bonus**: Comments
 * **Bonus**: Tags
 * **Bonus**: Follows
 * **Bonus**: Views
