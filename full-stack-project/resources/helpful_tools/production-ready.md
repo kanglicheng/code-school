@@ -109,7 +109,7 @@ Example `package.json`:
     "webpack": "^2.2.1"
   },
   "devDependencies": {
-    "redux-logger": "^2.8.1"
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
