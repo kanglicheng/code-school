@@ -110,7 +110,7 @@ See the sample project proposal for an example of this.
 Annotate your wireframes. Which React component corresponds to
 each element? Keep grids in mind while roughly drafting your layout.
 
-- `/wireframes`
+- `wireframes`
 
 Links to wireframes of your application's UI views. Each wireframe should be a
 basic representation of the layout and information presented in a view. Since you will
