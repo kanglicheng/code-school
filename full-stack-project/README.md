@@ -34,7 +34,7 @@ full-stack project Here are the important deadlines.
 * **W8D2**: Start work on your full-stack project after you finish A06
 * **W9D2**: [Peer Review][peer-review]
 * **W9D5**: Turn in Full Stack Project
-  * [Production readme instructions][production-readme]
+  * [Production README instructions][production-readme]
   * [How to Turn in Your Project][turn-in-fullstack]
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 
