@@ -104,7 +104,7 @@ in separate scopes and variables/mixins can't see each other.
 ## Compilation
 
 When you deploy your application to Heroku environment, Heroku will
-precompile your asset files to `public/assets` by running the `rake
+precompile your asset files to `public/assets` by running the `rails
 assets:precompile` task.
 
 The precompilation task involves:
@@ -199,4 +199,3 @@ itself.
 ## Resources
 
 * http://railscasts.com/episodes/279-understanding-the-asset-pipeline?view=asciicast
-

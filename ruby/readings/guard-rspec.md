@@ -1,6 +1,6 @@
 # Automating Automated Testing with Guard
 
-So running `rake` every 45 seconds doesn't seem very automated.
+So running `rails` every 45 seconds doesn't seem very automated.
 Thankfully, Guard exists. Guard is a library that watches files
 for modifications and allows us to specify tasks to run when certain
 files are modified.

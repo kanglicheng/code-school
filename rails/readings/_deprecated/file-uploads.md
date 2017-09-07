@@ -14,13 +14,13 @@ The following two forms would both upload a file on submission.
 ```erb
 <%= form_tag(secret(@secret, :method => :post), :multipart => true) do %>
   <%= file_field_tag :photo %>
-  
+
   <!-- ... -->
 <% end %>
 
 <%= form_for @secret do |f| %>
   <%= f.file_field :photo %>
-  
+
   <!-- ... -->
 <% end %>
 ```
@@ -45,7 +45,7 @@ class SecretsController
     photo_io = params[:secret].delete(:photo)
     photo_filename = photo_io.original_filename
     photo_blob = photo_io.read
-    
+
     # ...
   end
 end
@@ -74,12 +74,12 @@ class SecretsController
     # remove the file parameter and slurp in the data. must remove
     # attribute from params; attached files can't be mass-assigned.
     photo_blob = params[:secret].delete(:photo).read
-    
+
     secret = Secret.new(params[:secret])
     secret.photo_blob = photo_blob
-    
+
     secret.save
-    
+
     redirect_to secret_path(secret)
   end
 end
@@ -115,7 +115,7 @@ end
 This adds a new route:
 
 ```
-~/SecretApp$ rake routes
+~/SecretApp$ rails routes
 photo_secret GET    /secrets/:id/photo(.:format) secrets#photo
      secrets GET    /secrets(.:format)           secrets#index
              POST   /secrets(.:format)           secrets#create

@@ -20,7 +20,7 @@ production.
 
 While signed into Amazon AWS, you also want to retrieve your `AWS
 Access Key ID` and your `AWS Secret Access Key`. You can find them on
-the site under [Security 
+the site under [Security
 Credentials](https://console.aws.amazon.com/iam/home?#security_credential)
 
 ## Setting up Paperclip & S3
@@ -34,7 +34,7 @@ convert`. If this gives you a path, you're golden.
 To install ImageMagick using Homebrew use the following command.
 
     brew install imagemagick
-    
+
 If that doesn't work and you don't feel like spending considerable
 time figuring out why, [try the installer from here](http://cactuslab.com/imagemagick/).
 I found it to be a much less painful process.
@@ -127,7 +127,7 @@ hand. You should end up with the following.
       end
     end
 ```
-Run `rake db:migrate` and you're good to go!
+Run `rails db:migrate` and you're good to go!
 
 ## Upload and display images in your views
 
@@ -148,10 +148,10 @@ To display your image, use the image tag helper.
 
 
 ## Backbone.js Gotchas
-When submitting a form using the `enctype="multipart/form-data"` attribute, 
-the file will be encoded to the correct format. If you are manually submitting 
-an $.ajax request via backbone or otherwise you will need to ensure the file 
-is correctly encoded. Use javascript `FileReader` object to properly encode 
+When submitting a form using the `enctype="multipart/form-data"` attribute,
+the file will be encoded to the correct format. If you are manually submitting
+an $.ajax request via backbone or otherwise you will need to ensure the file
+is correctly encoded. Use javascript `FileReader` object to properly encode
 your file.
 
 Here is how the FileReader is used to `readAsDataURL` the file.

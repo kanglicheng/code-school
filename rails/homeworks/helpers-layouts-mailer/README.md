@@ -1,6 +1,6 @@
 # Helpers, Layouts, and Partials Homework
 
-We will be working off of the solutions for *99 Cats II: Auth* for today's homework assignment. Download the [zipped solution][99-cats-2-solution-zip], extract, `bundle install` and `bundle exec rake db:setup` to set it up.
+We will be working off of the solutions for *99 Cats II: Auth* for today's homework assignment. Download the [zipped solution][99-cats-2-solution-zip], extract, `bundle install` and `bundle exec rails db:setup` to set it up.
 
 ## Topic 1: View Helpers
 

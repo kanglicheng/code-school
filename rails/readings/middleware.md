@@ -13,7 +13,7 @@ variable in the application. There is no rule for what a middleware must do to
 be considered a middleware.
 
 Let's take a look at some of the middlewares that Rails uses. Go into an old
-Rails project (or just make a new one) and run `rake middleware`. This will
+Rails project (or just make a new one) and run `rails middleware`. This will
 output the list of middleware used by Rails. As you can see many of Rails'
 features are actually implemented as middlewares.
 
@@ -23,7 +23,7 @@ When we have an application with more than one middleware (as Rails does), we
 refer the group of middlewares as a stack. In particular, this representation
 reinforces the fact that each middleware will be run one at time, in the order
 specified. To see how this works, let's analyze what happens in a typical Rails
-application. Start by looking back at the results of `rake middleware`. The first
+application. Start by looking back at the results of `rails middleware`. The first
 middleware listed is `Rack::Sendfile`. This means that this middleware processes
 the request before any other part of Rails ever sees it. This particular
 middleware is responsible for efficiently serving files.
@@ -36,7 +36,7 @@ middleware in the stack.
 
 If none of the middlewares returns a response early, then eventually all of the
 middlewares will have been used and Rack will run the application. We can see
-what the application being run is by looking at the last line of `rake
+what the application being run is by looking at the last line of `rails
 middleware`. In our Rails example, this is `run Rails.application.routes`, which
 starts the Rails application itself.
 
