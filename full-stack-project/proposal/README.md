@@ -90,6 +90,8 @@ For the example above, you should create an issue called `PA Review: Chirps`, an
 
 After you have finished all of the issues for an MVP, your project advisor will review your MVP and provide feedback. Your project advisor will close the 'PA Review' issues when they are satisfied with your work for that milestone.
 
+Don't forget to add issues for `Production README` and `Hosting on Heroku`!
+
 ![Assign issue][pm_review_issue]
 
 From the 'Issues' tab, you can view all open issues.
