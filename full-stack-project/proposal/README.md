@@ -13,7 +13,7 @@ Copy the git url, if you need it.
 
 ![Screenshot: git url][copy_git_url]
 
-Lastly, add your project manager as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
 
 ![Add Collaborators][add_project_manager]
 
@@ -33,7 +33,7 @@ Create a new page. The basic pages are:
 * API Endpoints
 * Sample State
 
-Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project manager will review your proposal and give you feedback on any major issues.
+Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project advisor will review your proposal and give you feedback on any major issues.
 
 ![Screenshot: add page in wiki][proposal_wiki]
 
@@ -51,7 +51,7 @@ Click on 'Milestones', and then click 'New Milestone'.
 
 The title of each milestone should be the main goal of your MVP. You can add a brief description as well.
 
-Make sure to set a due date for each milestone. Your project manager will hold you to these dates, and let you know if you need to make adjustments.
+Make sure to set a due date for each milestone. Your project advisor will hold you to these dates, and let you know if you need to make adjustments.
 
 ![create a milestone][create_milestone]
 
@@ -75,11 +75,11 @@ You can apply the appropriate labels and set the issue to be part a particular m
 
 ![Create Github issue][create_issues]
 
-For every MVP, you will need an issue called PM Review (Project Manager Review) set up to be part of the coresponding milestone for that MVP.
+For every MVP, you will need an issue called PA Review (Project Advisor Review) set up to be part of the coresponding milestone for that MVP.
 
-For example: If one of your MVPs is 'Front-end Authentication', you should create an issue called 'PM Review: Front-end Authentication', and you should _assign_ that issue to your project manager.
+For example: If one of your MVPs is 'Front-end Authentication', you should create an issue called 'PA Review: Front-end Authentication', and you should _assign_ that issue to your project advisor.
 
-After you have finshed all of the issues for an MVP, your project manager will review your MVP and provide feedback. Your project manager will close the 'PM Review' issues when they are satisfied with your work.
+After you have finshed all of the issues for an MVP, your project advisor will review your MVP and provide feedback. Your project advisor will close the 'PA Review' issues when they are satisfied with your work.
 
 ![Assign issue][pm_review_issue]
 

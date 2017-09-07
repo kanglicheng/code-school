@@ -23,11 +23,10 @@ Here's an example for _Bluebird_, a Twitter clone (with wireframes).
 # Bluebird Component Hierarchy
 
 ## General
-+ `Root`
-  + `App`
-    + `NavBar`
-    + `MainPage` (all other Components are rendered inside here)
-    + `Footer`
++ `App`
+  + `NavBar`
+  + `MainPage` (all other Components are rendered inside here)
+  + `Footer`
 
 ## Session Form
 + `SessionFormContainer`
