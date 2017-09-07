@@ -195,7 +195,7 @@ Next we need to configure Webpack to compile our `bundle.js` file.
         }
       ]
     },
-    devtool: 'source-maps'
+    devtool: 'source-map'
   };
   ```
 
