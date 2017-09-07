@@ -73,7 +73,7 @@ Here's another example from _Bluebird_, our Twitter clone:
   },
   errors: {
     login: ["Incorrect username/password combination"],
-    tweetForm: ["Chirp body cannot be blank"],
+    chirpForm: ["Chirp body cannot be blank"],
   },
   session: {
     id: 57,
