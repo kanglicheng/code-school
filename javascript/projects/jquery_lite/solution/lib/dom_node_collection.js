@@ -119,13 +119,15 @@ class DomNodeCollection {
 
   parent() {
     const parentNodes = [];
-    
-    this.each({ parentNode } => 
+
+    this.each(({ parentNode }) => {
       // we apply 'visited' property to prevent adding duplicate parents
       parentNode.visited ? parentNodes.push(parentNode) : parentNode.visited = true;
-    )
+    });
 
-    parentNodes.forEach(node => node.visited = false)
+    parentNodes.forEach(node => {
+      node.visited = false;
+    });
     return new DomNodeCollection(parentNodes);
   }
 }
