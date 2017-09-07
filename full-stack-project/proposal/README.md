@@ -75,16 +75,18 @@ You can apply the appropriate labels and set the issue to be part a particular m
 
 ![Create Github issue][create_issues]
 
-The issues you assign to each of your MVPs may vary depending on the task at hand, but here is an example for `chirps` that you can use to guide you:
+The issues you assign to each of your MVPs will vary depending on the task at hand, but here is an example for `chirps` that you can use to guide you:
 
 + Chirps Backend (can be split into: DB, model, controller, views if desired)
 + Chirps Redux Loop (can be split up into: ajax, actions, reducer if desired)
 + Chirps Presentational Components
 + Chirps Styling
++ Chirps Smooth, bug-free navigation
++ Chirps Adequate and appropriate seeds
 
 For every MVP, you will need an issue called `PA Review: {task}` (Project Advisor Review) set up to be part of the corresponding milestone for that MVP.
 
-For the example above, you should create an issue called 'PA Review: Chirps', and you should _assign_ that issue to your project advisor.
+For the example above, you should create an issue called `PA Review: Chirps`, and you should _assign_ that issue to your project advisor.
 
 After you have finished all of the issues for an MVP, your project advisor will review your MVP and provide feedback. Your project advisor will close the 'PA Review' issues when they are satisfied with your work for that milestone.
 
