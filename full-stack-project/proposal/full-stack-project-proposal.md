@@ -28,7 +28,7 @@ it.
 
 	// ... a bunch of preloaded ignores
 
-	// To add:	
+	// To add:
 	node_modules/
 	bundle.js
 	bundle.js.map
@@ -60,6 +60,8 @@ there. Push to Heroku ASAP!
 
 ### Minimum Viable Product
 
+- `mvp-list`
+
 Write a one-sentence summary of the project and a list of the features that
 would be absolutely necessary for the app to be marketable. Your MVP section must follow the format outlined [here][mvp-features].
 
@@ -74,13 +76,13 @@ schema by walking through your app's wireframes. Think carefully about what data
 will be needed for each view and the best way to store that data. Make note
 of any database-level validations and foreign key relationships.
 
-### API Endpoints
+### Routes
 
-- `api-endpoints`
+- `routes`
 
-Link to a page that lists your Rails API endpoints. Break these up between HTML
-and JSON endpoints. Discuss what params, if any, will be needed for each
-endpoint, and what information will be returned.
+Link to a page that lists your Rails API endpoints and frontend React Router
+routes. Break these up between HTML and JSON endpoints. Discuss what params,
+if any, will be needed for each route, and what information will be returned.
 
 ### Sample State
 
@@ -94,7 +96,7 @@ duplication and maximize ease of access.
 
 - `component-hierarchy`
 
-In addition to the wireframes, you should diagram a tree indicating your
+In conjunction with the wireframes, diagram a tree indicating your
 application's overall component structure.
 
 Discuss how you will nest your components. If components will need containers,
@@ -112,11 +114,10 @@ each element? Keep grids in mind while roughly drafting your layout.
 
 - `wireframes`
 
-Links to wireframes of your application's UI views. Each wireframe should be a
-basic representation of the layout and information presented in a view. Since you will
-certainly use nested React components, clearly indicate the hierarchy in your
-wireframes. We should be able to see every view of your website using your
-wireframes, and how each view is reached.
+Each wireframe should be a basic representation of the layout and information
+presented in a view. Since you will certainly use nested React components,
+clearly indicate the hierarchy in your wireframes. We should be able to see
+every view of your website using your wireframes, and how each view is reached.
 
 **NB**: Your wireframes will be viewed not only by yourself and the App Academy
 staff, but potentially future employers. If you are going to use pen and
@@ -129,7 +130,8 @@ paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
 This is crucial both here and in the industry. The truth is, one never knows
 how long implementing any particular phase will take. Constraints change.
 Timelines are shortened without warning. An app after any phase must be able
-to stand on it's on. We call this building in 'slices' instead of 'layers'.
+to stand on it's on. We call this building in 'slices' instead of 'layers'. To
+create your timeline, add due dates to each of your milestones on Github.
 
 ## Submission
 
