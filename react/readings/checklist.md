@@ -13,7 +13,7 @@ list.
   * `annotate`
   * `jquery-rails` (When using rails 5.1+)
 * [ ] `bundle install`
-* [ ] When using rails 5.1+, update your application.js manifest to include: 
+* [ ] When using Rails 5.1+, update your `application.js` manifest to include: 
   * `//= require jquery`
   * `//= require jquery_ujs`
 * [ ] `git init`
