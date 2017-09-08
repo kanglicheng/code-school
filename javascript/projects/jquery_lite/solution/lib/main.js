@@ -60,7 +60,7 @@ $l.ajax = (options) => {
 toQueryString = (obj) => {
   let result = "";
   for (const prop in obj) {
-    if (Object.prototype.hasOwnProperty(prop)) {
+    if (Object.prototype.hasOwnProperty.call(obj, prop)) {
       result += `${prop}=${obj[prop]}&`;
     }
   }
