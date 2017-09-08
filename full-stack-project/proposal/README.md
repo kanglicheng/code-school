@@ -2,39 +2,36 @@
 
 ## Phase 1: Create the Repo
 
-1. Create a new repo.
+1. Create a new Rails project.
+  - `--skip-turbolinks=true`
+  - `--database=postgresql`
+2. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
+
+```
+// .gitignore
+
+// ... a bunch of preloaded ignores
+
+// To add:
+node_modules/
+bundle.js
+bundle.js.map
+.byebug_history
+.DS_Store
+npm-debug.log
+```
+
+3. Create a new repo.
 
 ![Screenshot: creating new repo][create_new_repo]
 
-2. Give it a good name.
+4. Give it a good name.
 
 ![Screenshot: naming repo][name_repo]
 
-3. Copy the git url, if you need it.
+5. Commit your files and push to your remote.
 
-![Screenshot: git url][copy_git_url]
-
-4. Create a new Rails project.
-	- `--skip-turbolinks=true`
-	- `--database=postgresql`
-5. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
-	```
-	// .gitignore
-
-	// ... a bunch of preloaded ignores
-
-	// To add:
-	node_modules/
-	bundle.js
-	bundle.js.map
-	.byebug_history
-	.DS_Store
-	npm-debug.log
-	```
-6. Setup a remote repository on Github.
-7. Commit your files and push to your remote.
-
-Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+6. Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
 
 ![Add Collaborators][add_project_manager]
 
