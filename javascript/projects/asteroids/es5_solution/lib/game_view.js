@@ -1,4 +1,4 @@
-const GameView = function GameView(game, ctx) {
+function GameView(game, ctx) {
   this.ctx = ctx;
   this.game = game;
   this.ship = this.game.addShip();
