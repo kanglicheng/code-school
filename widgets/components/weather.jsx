@@ -40,7 +40,6 @@ const Weather = React.createClass({
       //ready state of DONE means this is complete
       if (xmlhttp.status === 200 && xmlhttp.readyState === XMLHttpRequest.DONE) {
         const data = JSON.parse(xmlhttp.responseText);
-        console.log(data);
         this.setState({weather: data});
       }
     };
