@@ -123,7 +123,7 @@
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
 * [Building Accessibility Culture][accessibility] (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* ["Brilliance," "Pride" and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+* ["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
