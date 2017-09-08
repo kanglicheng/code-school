@@ -2,6 +2,17 @@
 
 const React = require('react');
 
+
+const toQueryString = (obj) => {
+  let parts = [];
+  for (let i in obj) {
+      if (obj.hasOwnProperty(i)) {
+          parts.push(`${encodeURIComponent(i)}=${encodeURIComponent(obj[i])}`);
+      }
+  }
+  return parts.join('&');
+};
+
 const Weather = React.createClass({
   getInitialState() {
     return {weather: null};
@@ -14,22 +25,22 @@ const Weather = React.createClass({
   pollWeather(location) {
     let lat = location.coords.latitude;
     let long = location.coords.longitude;
-    let url = 'https://crossorigin.me/https://api.darksky.net/forecast/';
+    let url = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?';
     let params = {
       lat: location.coords.latitude,
       lon: location.coords.longitude
     };
+    url += toQueryString(params);
     // This is our API key; please use your own!
-    const apiKey = '33ae65481642d588cf0890b4ae858cc0';
-    url += apiKey;
-
-    url += `/${params.lat},${params.lon}`;
+    const apiKey = 'f816d7f39052e3a98b21952097a43076';
+    url += `&APPID=${apiKey}`;
 
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = () => {
       //ready state of DONE means this is complete
       if (xmlhttp.status === 200 && xmlhttp.readyState === XMLHttpRequest.DONE) {
         const data = JSON.parse(xmlhttp.responseText);
+        console.log(data);
         this.setState({weather: data});
       }
     };
@@ -43,7 +54,7 @@ const Weather = React.createClass({
 
     if (this.state.weather) {
       let weather = this.state.weather;
-      let temp = weather.currently.temperature;
+      let temp = (weather.main.temp - 273.15) * 1.8 + 32;
       content = <div>
                   <p>San Francisco</p>
                   <p>{temp.toFixed(1)} degrees</p>
