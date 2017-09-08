@@ -106,6 +106,18 @@ Here you can find links to all the articles that are part of the culture curricu
 
 ## Gentrification and Social Class
 
++ [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
++ [How Tech Campuses Hinder Diversity and Help Gentrification][tech-campuses] (4 min)
++ [Silicon Valley's Poorest Workers][poor-workers] (3 min)
++ [Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities] (7 min)
++ [The Accidental Classism and Unintentional Racism Of iOS Development for Children][ios-classism] (8 min)
+
+[gentrification]: https://thetempest.co/2017/05/01/now-beyond/tech-money/tech-industry-gentrification/
+[tech-campuses]: https://www.wired.com/2017/02/tech-campuses-hinder-diversity-help-gentrification/
+[poor-workers]: https://www.theguardian.com/technology/2016/jan/28/silicon-valley-service-workers-poor-intel-tech-facebook
+[underserved-communities]: https://modelviewculture.com/pieces/tech-in-underserved-communities-beyond-feel-good-stories
+[ios-classism]: https://modelviewculture.com/pieces/the-accidental-classism-and-unintentional-racism-of-ios-development-for-children
+
 ## Hiring Practices
 
 ## Positive Social Impact
