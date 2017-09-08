@@ -5,6 +5,10 @@ represents the culmination of your education at App Academy. Now that you've
 chosen your project, we want to help you build the best projects possible; so
 we'll help you come up with a road map to keep yourself on track.
 
+We are going to use Github's built-in project management to store all your
+planning materials. The main document will be a wiki that outlines all the major
+facets of your development process.
+
 ## Sample Proposal
 
 To get started, take a look at this [sample proposal repo][sample-proposal].
@@ -17,45 +21,14 @@ it.
 
 [sample-proposal]: http://www.github.com/appacademy/bluebird/wiki
 
-## Setting up the Project Repo
-
-0. Create a new Rails project.
-	- `--skip-turbolinks=true`
-	- `--database=postgresql`
-0. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
-	```
-	// .gitignore
-
-	// ... a bunch of preloaded ignores
-
-	// To add:
-	node_modules/
-	bundle.js
-	bundle.js.map
-	.byebug_history
-	.DS_Store
-	npm-debug.log
-	```
-0. Setup a remote repository on Github.
-0. Commit your files and push to your remote.
-
-## Set up your proposal
-
-We are going to use Github's built-in project management to store all your planning
-materials. The main document will be a wiki that outlines
-all the major facets of your development process. Read the rest of this document and then
-[follow the instructions][fsp-instructions] to set up your proposal.
-
-[fsp-instructions]: ./README.md
-
 ## Fleshing Out the Proposal
 
 The Github wiki of your project repo MUST include the following:
 
 ### Heroku Link
 
-At the end of the first day of full-stack projects, you should have a link to the
-live version of your site. It doesn't have to be pretty, but it has to be
+At the end of the first day of full-stack projects, you should have a link to
+the live version of your site. It doesn't have to be pretty, but it has to be
 there. Push to Heroku ASAP!
 
 ### Minimum Viable Product
@@ -63,7 +36,8 @@ there. Push to Heroku ASAP!
 - `mvp-list`
 
 Write a one-sentence summary of the project and a list of the features that
-would be absolutely necessary for the app to be marketable. Your MVP section must follow the format outlined [here][mvp-features].
+would be absolutely necessary for the app to be marketable. Your MVP section
+must follow the format outlined [here][mvp-features].
 
 [mvp-features]: mvp-list.md
 
@@ -109,10 +83,10 @@ See the sample project proposal for an example of this.
 
 ### Wireframes
 
+- `wireframes`
+
 Annotate your wireframes. Which React component corresponds to
 each element? Keep grids in mind while roughly drafting your layout.
-
-- `wireframes`
 
 Each wireframe should be a basic representation of the layout and information
 presented in a view. Since you will certainly use nested React components,
@@ -139,3 +113,8 @@ Email the repo link to your Instructional team (instructors-sf@appacademy.io or
 instructors-ny@appacademy.io).  A TA will review each proposal and leave their
 comments in issues on the project repo. Be prepared to respond to feedback, and
 keep your wiki up to date as you make progress. Happy hunting!
+
+## Set up your proposal
+[Follow these instructions][fsp-instructions] to set up your proposal!
+
+[fsp-instructions]: ./README.md
