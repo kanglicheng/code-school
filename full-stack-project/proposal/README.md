@@ -27,6 +27,7 @@ In your new fullstack repo, create a new wiki.
 
 Create these pages:
 * Home (the initial wiki page)
+* MVP List
 * Database Schema
 * Routes
 * Sample State
