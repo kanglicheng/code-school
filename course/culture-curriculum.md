@@ -125,7 +125,7 @@ Here you can find links to all the articles that are part of the culture curricu
 + [Hiring, Rock Stars, and How Camaraderie Fails Us][rock-stars] (10 min)
 + [Improving Diversity Does Not Mean Lowering the Bar][lowering-bar] (8 min)
 + [Tech is Not a Meritocracy][meritocracy] (6 min)
-+ [Wage Inequality][wage-inequality] (5 min)
++ [Wage Inequality Statistics][wage-inequality] (5 min)
 
 [intersectional-diversifying]: https://modelviewculture.com/pieces/intersectional-approaches-to-diversifying-the-tech-sector
 [the-best]: https://modelviewculture.com/pieces/we-hire-the-best
