@@ -105,3 +105,21 @@ app to add technical depth. Here are a few directions you could take.
 [performance-and-scaling]: bonus/performance.md
 [testing]: bonus/testing.md
 [accessibility]: bonus/accessibility.md
+
+## Culture
+
+### W9D1
+
+* [Intersectional Approaches to Diversifying the Tech Sector][intersectional-diversifying] (6 min)
+* [We Hire The Best][the-best] (8 min)
+* [Hiring, Rock Stars, and How Camaraderie Fails Us][rock-stars] (10 min)
+* [Improving Diversity Does Not Mean Lowering the Bar][lowering-bar] (8 min)
+* [Tech is Not a Meritocracy][meritocracy] (6 min)
+* [Wage Inequality Statistics][wage-inequality] (5 min)
+
+[intersectional-diversifying]: https://modelviewculture.com/pieces/intersectional-approaches-to-diversifying-the-tech-sector
+[the-best]: https://modelviewculture.com/pieces/we-hire-the-best
+[rock-stars]: https://modelviewculture.com/pieces/hiring-rock-stars-and-how-camaraderie-fails-us
+[lowering-bar]: https://kateheddleston.com/blog/improving-diversity-does-not-mean-lowering-the-bar
+[meritocracy]: https://qz.com/66866/once-and-for-all-tech-is-not-a-meritocracy/
+[wage-inequality]: https://hired.com/gender-wage-gap-2017
