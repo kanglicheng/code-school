@@ -105,7 +105,7 @@ The issues you assign to each of your MVPs will vary depending on the task at ha
 
 For every MVP, you will need an issue called `PA Review: {task}` (Project Advisor Review) set up to be part of the corresponding milestone for that MVP.
 
-For the example above, you should create an issue called `PA Review: Chirps`, and you should _assign_ that issue to your project advisor.
+For the example above, you should create an issue called `PA Review: Chirps`. When you have fully completed an MVP, _assign_ that issue to your project advisor. Upon assigning them, they will receive a notification and know to review your work (both the code and Heroku!).
 
 After you have finished all of the issues for an MVP, your project advisor will review your MVP and provide feedback. Your project advisor will close the 'PA Review' issues when they are satisfied with your work for that milestone.
 
@@ -117,15 +117,13 @@ From the 'Issues' tab, you can view all open issues.
 
 ![Issues overview][issues_overview]
 
-As you create your app, you will be able to close issues. There are two main ways to do this:
-1. Click on the issue, scroll to the bottom, and click "Close Issue"
-2. Close the issue when you commit working code.
+As you create your app, you will write code that satisfies an issue. Make sure that you have tested that part of your code thoroughly! If this issue is a `core-feature` or PA-created, you should:
+1. Comment on the issue mentioning that you have completed it. Make sure to include your PA's username!
+2. They will review your code and Heroku site.
+  + If they are satisfied, your PA will close the issue.
+  + If there are any additional changes to be made, your PA will leave a comment describing the them. At which point, you should make those changes and then leave a new comment with your PA's Github username when it is completed for another review.
 
-Once you have tested the part of your code that fulfills the needs of the issue, you can include a [special command][git_keywords] in your git commit message telling GitHub to automatically close the issue. Simply include the keyword and the number of the issue that you are closing, and GitHub does the rest!
-
-![terminal][gcm_resolves_issue]
-
-After you have closed an issue, any milestones associated with that issue will be updated. You can click on any milestone to see the remaining issues for that milestone.
+After your PA has closed an issue, any milestones associated with that issue will be updated. You can click on any milestone to see the remaining issues for that milestone.
 
 ![50% completed milestone][milestones_overview]
 
