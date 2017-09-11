@@ -19,14 +19,12 @@ deadlines for this part of the curriculum.
     * [Full-stack proposal guidelines][fsp]
     * [MVP Checklist][mvp-checklist]
     * [Sample Proposal][sample-proposal]
-    * [Trello setup][trello]
 
 [tentative-proposal]: proposal/tentative-project-proposal.md
 [good-projects]: proposal/projects-to-clone.md
 [fsp]: proposal/full-stack-project-proposal.md
-[sample-proposal]: proposal/sample_project_proposal
+[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
 [mvp-checklist]: proposal/mvp-list.md
-[trello]: proposal/using-trello.md
 
 ## Project
 
@@ -36,7 +34,7 @@ full-stack project Here are the important deadlines.
 * **W8D2**: Start work on your full-stack project after you finish A06
 * **W9D2**: [Peer Review][peer-review]
 * **W9D5**: Turn in Full Stack Project
-  * [Production readme instructions][production-readme]
+  * [Production README instructions][production-readme]
   * [How to Turn in Your Project][turn-in-fullstack]
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 
