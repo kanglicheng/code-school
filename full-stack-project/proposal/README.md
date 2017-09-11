@@ -21,17 +21,13 @@ bundle.js.map
 npm-debug.log
 ```
 
-3. Create a new repo.
-
-![Screenshot: creating new repo][create_new_repo]
-
-4. Give it a good name.
+3. Create a new repo and give it a good name.
 
 ![Screenshot: naming repo][name_repo]
 
-5. Commit your files and push to your remote.
+4. Commit your files and push to your remote.
 
-6. Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+5. Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
 
 ![Add Collaborators][add_project_manager]
 
@@ -117,11 +113,17 @@ From the 'Issues' tab, you can view all open issues.
 
 ![Issues overview][issues_overview]
 
-As you create your app, you will write code that satisfies an issue. Make sure that you have tested that part of your code thoroughly! If this issue is a `core-feature` or PA-created, you should:
+As you create your app, you will write enough code to satisfy an issue. Make sure that you have tested that part of your code thoroughly!
+
+If this issue is a `core-feature` or was created by your PA, you should:
 1. Comment on the issue mentioning that you have completed it. Make sure to include your PA's username!
 2. They will review your code and Heroku site.
   + If they are satisfied, your PA will close the issue.
   + If there are any additional changes to be made, your PA will leave a comment describing the them. At which point, you should make those changes and then leave a new comment with your PA's Github username when it is completed for another review.
+
+If you created the issue and it is **not** a `core-feature`, feel free to close it yourself! You can include a [special command][git_keywords] in your git commit message telling GitHub to automatically close the issue. Simply include the keyword and the number of the issue that you are closing, and GitHub does the rest!
+
+![GCM resolves issue][gcm_resolves_issue]
 
 After your PA has closed an issue, any milestones associated with that issue will be updated. You can click on any milestone to see the remaining issues for that milestone.
 
