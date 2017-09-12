@@ -73,7 +73,7 @@ Again, monkey-patch the following methods to the `Array` class using swell new l
     ```
   * should also use `myEach`
 
-**NB** `[, initialValue]` is the conventional way for documentation to express that the args between `[` and `]` are optional inputs. Your function definition will not include these square brackets.
+**NB** `[initialValue]` is the conventional way for documentation to express that the args between `[` and `]` are optional inputs. Your function definition will not include these square brackets.
 
 ### Recap
 
