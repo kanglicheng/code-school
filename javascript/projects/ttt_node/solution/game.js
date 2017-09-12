@@ -20,7 +20,7 @@ class Game {
     const game = this;
 
     this.board.print();
-    console.log(`Current Turn: ${this.currentPlayer}`)
+    console.log(`Current Turn: ${this.currentPlayer}`);
 
     reader.question('Enter rowIdx: ', rowIdxStr => {
       const rowIdx = parseInt(rowIdxStr);

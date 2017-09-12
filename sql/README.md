@@ -40,9 +40,9 @@
 [sql-bolt]: https://sqlbolt.com/
 
 ### Culture
-+ [What is Privilege?][privilege] (6 min)
++ **[What is Privilege?][privilege]** (6 min)
 + [What is Intersectionality?][Intersectionality] (5 min)
-+ [12 Things Allies Can Do][allies] (5 min)
++ **[12 Things Allies Can Do][allies]** (5 min)
 + [How Do I Ally?][allies-2] (7 min)
 + [Getting Started in Social Justice][social-justice] (8 min)
 
@@ -85,7 +85,7 @@
 [sqlite3]: readings/sqlite3.md
 [heredocs]: readings/heredocs.md
 [xkcd-bobby-tables]: http://xkcd.com/327/
-[css-display-video]: https://vimeo.com/album/3732382/video/151190176
+[css-display-video]: https://vimeo.com/151190176
 [css-display]: ../html-css/readings/display.md
 
 ### Homeworks (35 min)
@@ -122,6 +122,7 @@
 + :movie_camera: [Indices][indices-video] (7 min)
 + :movie_camera: [CSS Inherits][css-inherits] (4 min)
 + :movie_camera: [CSS Reset][css-reset] (16 min)
++ **NB**: Video lectures are using Rails 4, but we will be using Rails 5 everywhere else. If you would like to read about some of the more important differences between Rails 4 and Rails 5, check out [this reading][rails-5-updates].
 
 [rails-intro-video]: https://vimeo.com/167799435
 [migrations-video]: https://vimeo.com/167799434
@@ -130,8 +131,8 @@
 [associations-2-video]: https://vimeo.com/167799430
 [validations-video]: https://vimeo.com/167799437
 [indices-video]: https://vimeo.com/167799431
-[css-inherits]: https://vimeo.com/album/3732382/video/151190179
-[css-reset]: https://vimeo.com/album/3732382/video/151190181
+[css-inherits]: https://vimeo.com/151190179
+[css-reset]: https://vimeo.com/151190181
 
 ### Homeworks (45 min)
 + [Intro to Rails][intro-rails-homework] (45 min)
@@ -139,6 +140,7 @@
 [intro-rails-homework]: homeworks/intro_rails
 
 ### Additional Resources
++ [Rails 4 vs Rails 5][rails-5-updates]
 + [Creating a new Rails project][first-rails-project]
 + [Migrations][ar-migrations]
 + [ORM Review and Intro to Active Record][ar-orm]
@@ -152,6 +154,7 @@
   + [Miscellaneous][validations-misc]
 + [ActiveRecord and Indexes][ar-indexing]
 
+[rails-5-updates]: readings/rails-5-updates.md
 [first-rails-project]: readings/first-rails-project.md
 [ar-migrations]: readings/migrations.md
 [ar-orm]: readings/orm.md
@@ -193,7 +196,7 @@
 [ar-joins]: readings/joins.md
 [scopes]: readings/scopes.md
 [querying-ii]: readings/querying-ii.md
-[css-float-video]: https://vimeo.com/album/3732382/video/151190182
+[css-float-video]: https://vimeo.com/151190182
 [css-grid-video]: https://vimeo.com/170320160
 [css-float]: ../html-css/readings/floats_clear_fix.md
 

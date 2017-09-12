@@ -37,7 +37,7 @@ information as it executes.
 
 ## Example
 
-### Static HTML Implementation (The old way)
+### Static HTML Implementation (The Old Way)
 
 Take a look at this `CatsController`:
 
@@ -45,10 +45,10 @@ Take a look at this `CatsController`:
 # app/controllers/cats_controller.rb
 
 class CatsController < ApplicationController
-	def index
-		@cats = Cat.all
-		render :index
-	end
+  def index
+    @cats = Cat.all
+    render :index
+  end
 end
 ```
 
@@ -57,9 +57,10 @@ It should render the following template whenever we visit `localhost:3000/cats`:
 ```erb
 <!-- app/views/cats/index.html.erb -->
 <h1> Cats </h1>
+
 <ul>
 <% @cats.each do |cat| %>
-	<li><%= cat.name %>: <%= cat.color %></li>
+  <li><%= cat.name %>: <%= cat.color %></li>
 <% end %>
 </ul>
 ```
@@ -103,8 +104,8 @@ this:
 
 ```json
 [
-	{"id": 1, "name": "Amitabh", "color": "Gray"},
-	{"id": 2, "name": "Fabio", "color": "Calico"}
+  {"id": 1, "name": "Amitabh", "color": "Gray"},
+  {"id": 2, "name": "Fabio", "color": "Calico"}
 ]
 ```
 
@@ -125,14 +126,14 @@ which format our response should be populated in and then act accordingly.
 # app/controllers/cats_controller.rb
 
 class CatsController < ApplicationController
-	def index
-		@cats = Cat.all
-
-		respond_to do |format|
-			format.html { render :index }
-			format.json { render :index }
-		end
-	end
+  def index
+    @cats = Cat.all
+    
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render :index }
+    end
+  end
 end
 ```
 

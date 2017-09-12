@@ -1,16 +1,18 @@
 # Rails
 
-:link: *[w4d1](#w4d1) :: [w4d2](#w4d2) :: [w4d3](#w4d3) :: [w4d4](#w4d4) :: [w4d5](#w4d5) :: [w5d1](#w5d1) :: [w5d2](#w5d2)* :link:
+:link: *[w4d1](#w4d1) :: [w4d2](#w4d2) :: [w4d3](#w4d3) :: [w4d4](#w4d4) :: [w4d5](#w4d5) :: [w5d1](#w5d1) :: [w5d2](#w5d2) :: [w5d3](#w5d3)* :link:
 
 * [Setup][rails-setup]
 * [Rails API (api.rubyonrails.org)][rails-api]
 * [Rails Guides (guides.rubyonrails.org)][rails-guides]
 * [Diagram of Rails][rails-diagram]
+* [Rails 4 vs Rails 5][rails-5-updates]
 
 [rails-setup]: readings/rails-setup.md
-[rails-api]: http://api.rubyonrails.org/v4.0.2/
-[rails-guides]: http://guides.rubyonrails.org/v4.0.2/
+[rails-api]: http://api.rubyonrails.org/v5.1.3/
+[rails-guides]: http://guides.rubyonrails.org/v5.1.3/
 [rails-diagram]: assets/rails_diagram.png
+[rails-5-updates]: readings/rails-5-updates.md
 
 ## w4d1
 
@@ -18,34 +20,6 @@
 + [Practice][assessment-prep-3]
 
 [assessment-prep-3]: http://github.com/appacademy/assessment-prep#assessment-3
-
-### Materials (20 min)
-* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Resposive Design][css-responsive] (10 min)
-
-[css-nontech]: ../html-css/readings/css_nontech.md
-[css-responsive]: ../html-css/readings/responsive_design.md
-
-### Homeworks (150 min)
-* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
-* [CSS Warm Up][css-warmup] (60 min)
-
-[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
-[css-warmup]: ../html-css/projects/css_warm_up
-
-### Additional Resources
-* :book: **(BONUS)** [CSS Transform property][css-transform]
-
-[css-transform]: http://css-tricks.com/almanac/properties/t/transform/
-
-### Projects (Solo in SF)
-* [AA Times][aa-times]
-* **(BONUS)** [Google Homepage][google-homepage]
-
-[aa-times]: ../html-css/projects/aa_times
-[google-homepage]: ../html-css/projects/google_homepage
-
-## w4d2
 
 ### Materials (80 min)
 :closed_lock_with_key: `go_video_go`
@@ -71,6 +45,20 @@
 [dns_reading]: readings/dns.md
 [postman]: readings/postman.md
 
+### Culture
+* **[True Diversity is Intersectional][intersectional]** (9 min)
+* [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs] (4 min)
+* [VCs and Female Entrepreneurs][vc-entrepreneurs] (5 min)
+* **[Elephant in the Valley][elephant]** (3 min, longer if you read the stories)
+* [When Bias in Product Design Means Life or Death][bias-product] (6 min)
+
+[intersectional]: https://medium.com/projectinclude/true-diversity-is-intersectional-2282b8da8882
+[gendered-beliefs]: https://www.theatlantic.com/science/archive/2017/01/six-year-old-girls-already-have-gendered-beliefs-about-intelligence/514340/
+[vc-entrepreneurs]: https://hbr.org/2017/05/we-recorded-vcs-conversations-and-analyzed-how-differently-they-talk-about-female-entrepreneurs
+[elephant]: https://www.elephantinthevalley.com/
+[bias-product]: https://techcrunch.com/2016/11/16/when-bias-in-product-design-means-life-or-death/
+
+
 ### Homeworks (125 min)
 * [Library Controller][library-hw] (45 min)
 
@@ -81,6 +69,7 @@
 + :book: [Basic Controllers][basic-controllers]
 + :book: [Basic JSON API][basic-json-api]
 + :book: [Routing II: Nested Collections][routing-ii]
++ :book: [Routing III: Adding non-default routes][routing-iii]
 + :movie_camera: [Rails Screencasts (3 thru 11)][rails-screencasts]
   + :computer: [Code from demos][rails-videos-code]
 
@@ -88,6 +77,7 @@
 [basic-controllers]: readings/basic-controllers.md
 [basic-json-api]: readings/basic-json-api.md
 [routing-ii]: readings/routing-part-ii.md
+[routing-iii]: readings/routing-part-iii.md
 [rails-screencasts]: https://vimeo.com/album/2953690/sort:alphabetical
 [rails-videos-code]: demos/intro_rails_video_demo
 
@@ -98,7 +88,7 @@
 [first-routes]: projects/first_routes
 [artshare-api]: projects/art_share_api
 
-## w4d3
+## w4d2
 
 ### Materials (2 hr, 3 min)
 :closed_lock_with_key: `go_video_go`
@@ -135,6 +125,36 @@
 
 [99-cats]: projects/ninety_nine_cats_i
 
+## w4d3
+
+### Materials (20 min)
+* :book: [CSS Nontechnical Overview][css-nontech] (20 min)
+* :book: [CSS Resposive Design][css-responsive] (10 min)
+
+[css-nontech]: ../html-css/readings/css_nontech.md
+[css-responsive]: ../html-css/readings/responsive_design.md
+
+### Homeworks (150 min)
+* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
+* [CSS Warm Up][css-warmup] (60 min)
+
+[css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
+[css-warmup]: ../html-css/projects/css_warm_up
+
+### Additional Resources
+* :movie_camera: [CSS Review][css-review-vid]
+* :book: **(BONUS)** [CSS Transform property][css-transform]
+
+[css-review-vid]: https://vimeo.com/214597789
+[css-transform]: http://css-tricks.com/almanac/properties/t/transform/
+
+### Projects (Solo in SF)
+* [AA Times][aa-times]
+* **(BONUS)** [Google Homepage][google-homepage]
+
+[aa-times]: ../html-css/projects/aa_times
+[google-homepage]: ../html-css/projects/google_homepage
+
 ## w4d4
 
 ### :clock10: Class will start at 10am! :clock10:
@@ -164,9 +184,9 @@
 [auth-session]: https://vimeo.com/160824886
 [auth-pattern]: https://vimeo.com/160826910
 [auth-05-bcrypt]: https://vimeo.com/groups/appacademy/videos/93104232
-[auth-06-csrf-attack]: https://vimeo.com/groups/appacademy/videos/93114286
-[auth-07-csrf-protection]: https://vimeo.com/groups/appacademy/videos/93114288
-[auth-08-csrf-methods]: https://vimeo.com/groups/appacademy/videos/93114287
+[auth-06-csrf-attack]: https://vimeo.com/93114286
+[auth-07-csrf-protection]: https://vimeo.com/93114288
+[auth-08-csrf-methods]: https://vimeo.com/93114287
 
 ### Homeworks (60 min)
 * [Rails Auth][rails-auth-homework] (30 min)
@@ -211,8 +231,8 @@
 * :book: [View partials][view-partials] (15 min)
 * :book: [Nontechnical Overview of Rails][rails-nontech] (15 min)
 
-[14-radio-and-textarea]: http://vimeo.com/groups/appacademy/videos/100729825
-[15-helpers]: http://vimeo.com/groups/appacademy/videos/100780885
+[14-radio-and-textarea]: http://vimeo.com/100729825
+[15-helpers]: http://vimeo.com/100780885
 [layout-video]: https://vimeo.com/168822741
 [action-mailer]: readings/mailing-1.md
 [view-helpers]: readings/helpers.md
@@ -259,6 +279,19 @@
 
 [capybara-hw]: homeworks/capybara
 
+### Culture
+* [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
+* [Diversity in Tech Remains Elusive][diversity-elusive] (7 min)
+* [Commoditization and Exploitation of Asians in Tech][asian-racism] (11 min)
+* **[The Other Side of Diversity][other-side-diversity]** (11 min)
+* **[How AI is Learning All of Our Worst Impulses][ai-impulses]** (9 min)
+
+[racism-stats]: https://www.comparably.com/guest/culture/tech/all-departments/109-have-you-ever-experienced-racism-in-the-workplace
+[diversity-elusive]: https://modelviewculture.com/pieces/diversity-in-tech-remains-elusive-due-to-racism-lack-of-representation-and-cultural-differences
+[asian-racism]: https://modelviewculture.com/pieces/damaged-karma-commoditization-and-exploitation-of-asians-in-tech
+[other-side-diversity]: https://medium.com/this-is-hard/the-other-side-of-diversity-1bb3de2f053e
+[ai-impulses]: https://www.theguardian.com/inequality/2017/aug/08/rise-of-the-racist-robots-how-ai-is-learning-all-our-worst-impulses
+
 ### Additional Resources
 * [Integration Testing][integration-testing]
 * [RSpec and Rails Setup][rspec-setup]
@@ -298,11 +331,11 @@
   * **Just section 2.9**
 * :book: [Concerns][concerns-reading] (10 min)
 
-[16-tag-ids-setter]: http://vimeo.com/groups/appacademy/videos/100780886
-[17-checkboxes-1]: http://vimeo.com/groups/appacademy/videos/100780887
-[18-checkboxes-2]: http://vimeo.com/groups/appacademy/videos/100846847
-[19-checkboxes-3]: http://vimeo.com/groups/appacademy/videos/100846848
-[20-query-string]: http://vimeo.com/groups/appacademy/videos/100849678
+[16-tag-ids-setter]: http://vimeo.com/100780886
+[17-checkboxes-1]: http://vimeo.com/100780887
+[18-checkboxes-2]: http://vimeo.com/100846847
+[19-checkboxes-3]: http://vimeo.com/100846848
+[20-query-string]: http://vimeo.com/100849678
 [polym-assoc-blurb]: http://guides.rubyonrails.org/association_basics.html#polymorphic-associations
 [concerns-reading]: readings/concerns.md
 
@@ -318,7 +351,7 @@
 [decorators]: readings/decorators.md
 [checkboxes-id-setters]: readings/checkboxes.md
 
-### Projects (Solo)
+### Projects
 * [RedditClone][reddit-clone]
 
 [reddit-clone]: projects/reddit_on_rails
@@ -372,9 +405,9 @@
 [middleware-demo-code]: https://github.com/appacademy/lecture-notes/blob/master/rails/w5d2/video/demos/rack_middleware/middleware.rb
 [tcp-video]: https://vimeo.com/161382361
 [dns-video]: https://vimeo.com/161381921
-[00-webserver]: http://vimeo.com/groups/appacademy/videos/100169899
-[01-protocols]: http://vimeo.com/groups/appacademy/videos/100169898
-[02-http]: http://vimeo.com/groups/appacademy/videos/100267302
+[00-webserver]: http://vimeo.com/100169899
+[01-protocols]: http://vimeo.com/100169898
+[02-http]: http://vimeo.com/100267302
 [http]: readings/http.md
 [rack]: readings/rack.md
 [middleware]: readings/middleware.md

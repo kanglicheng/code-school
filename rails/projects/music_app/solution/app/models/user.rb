@@ -1,31 +1,17 @@
-# Monkey-patch ActiveRecord::Base to have a cool unique token method!
-class ActiveRecord::Base
-  def generate_unique_token_for_field(field)
-    token = SecureRandom.base64(16)
+class User < ApplicationRecord
 
-    while self.class.exists?(field => token)
-      token = SecureRandom.base64(16)
-    end
+  validates :activation_token, :email, :session_token, uniqueness: true
+  validates :password, length: { minimum: 6, allow_nil: true }
+  validates :email,
+            :password_digest,
+            :session_token,
+            :activation_token,
+            presence: true
 
-    token
-  end
-end
-
-class User < ActiveRecord::Base
   attr_reader :password
 
   after_initialize :ensure_session_token
   after_initialize :set_activation_token
-
-  validates :activation_token, :email, :session_token, uniqueness: true
-  validates :password, length: { minimum: 6, allow_nil: true }
-  validates(
-    :activation_token,
-    :email,
-    :password_digest,
-    :session_token,
-    presence: true
-  )
 
   has_many :notes
 
@@ -36,13 +22,12 @@ class User < ActiveRecord::Base
   end
 
   def set_activation_token
-    self.activation_token =
-      generate_unique_token_for_field(:activation_token)
+    self.activation_token = generate_unique_activation_token
   end
 
   def password=(password)
     @password = password
-    self.password_digest = BCrypt::Password.create(password).to_s
+    self.password_digest = BCrypt::Password.create(password)
   end
 
   def is_password?(password)
@@ -50,13 +35,39 @@ class User < ActiveRecord::Base
   end
 
   def reset_session_token!
-    self.session_token = generate_unique_token_for_field(:session_token)
+    self.session_token = generate_unique_session_token
     self.save!
+
     self.session_token
   end
 
   def ensure_session_token
-    self.session_token ||= generate_unique_token_for_field(:session_token)
+    self.session_token ||= generate_unique_session_token
+  end
+
+  def generate_unique_session_token
+    token = SecureRandom.urlsafe_base64(16)
+
+    ##
+    # Just in case there is a session_token conflict, make sure
+    # not to throw a validation error at the user!
+    ##
+    while self.class.exists?(session_token: token)
+      token = SecureRandom.urlsafe_base64(16)
+    end
+
+    token
+  end
+
+  ##
+  # This method is for the mailer!
+  ##
+  def generate_unique_activation_token
+    token = SecureRandom.urlsafe_base64(16)
+    while self.class.exists?(activation_token: token)
+      token = SecureRandom.urlsafe_base64(16)
+    end
+    token
   end
 
   def activate!

@@ -95,7 +95,7 @@
 [selectors]: readings/selectors.md
 [react-nontech]: readings/react_nontech.md
 
-### Fruit Stand App Demo (120 min)
+### (optional) Fruit Stand App Demo (75 min)
 * :movie_camera: Fruit Stand Demo (75 min)
   * :movie_camera: [Phase I - Redux only][fruit-stand-01-live] (15 min)   
     * :computer: [Source code][fruit-stand-01-source]
@@ -109,10 +109,26 @@
 [fruit-stand-02-live]: http://appacademy.github.io/curriculum/react/fruit_stand_02/index.html
 [fruit-stand-02-source]: ./demos/fruit_stand_demos/fruit_stand_02
 
-### Homeworks (45 min)
-* [Dollar Store][dollar_store_hw] (45 min)
+### Homeworks (50 min)
+- [Dollar Store][dollar_store_hw] (45 min)
+- [Selecting a Full-stack Project][selecting-a-fsp] (5 min)
+- Check out the [list of approved full-stack apps][approved-apps]
 
 [dollar_store_hw]: homeworks/dollar_store
+[selecting-a-fsp]:  ../full-stack-project/proposal/selecting-a-fsp.md
+[approved-apps]: ../full-stack-project/proposal/projects-to-clone.md
+
+### Culture
+
+* [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
+* **[Building Accessibility Culture][accessibility]** (8 min)
+* [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
+
+[ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
+[accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
+[adhd]: https://modelviewculture.com/pieces/building-better-tech-cultures-for-people-with-adhd
+[mental-illness]: https://modelviewculture.com/pieces/brilliance-pride-and-genius-how-tech-culture-hides-mental-illness
 
 ### Additional Resources
 * :book: [Official `redux` Documentation][redux_docs]
@@ -142,9 +158,13 @@
 [obj-freeze]: readings/object_freeze.md
 [namespacing]: readings/rails_router_namespacing.md
 
-### Homework (45 min)
+### Homework (55 min)
+* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
+  * **Due by 9AM Tuesday w7d2**
+  * Check out the [list of approved apps][approved-apps]
 * [Middleware Homework][middleware_homework] (45 min)
 
+[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [middleware_homework]: homeworks/middleware
 
 ### Projects
@@ -168,12 +188,10 @@
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
 [redux-nontech]: readings/redux_nontech.md
 
-### Homeworks (100 min)
+### Homeworks (90 min)
 * [Giphy Homework][giphy_homework] (90 min)
-* Check out the [list of approved full-stack apps][approved-apps]
 
 [giphy_homework]: homeworks/giphy
-[approved-apps]: ../full-stack-project/proposal/projects-to-clone.md
 
 ### Additional Resources
 * :book: [Redux Developer Tools][redux_dev_tools]
@@ -202,14 +220,15 @@
 [with_router]: readings/with_router.md
 [redirect]: readings/redirect.md
 
-### Homeworks (40 min)
-* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
-  * **Due by 9AM Thursday w7d4**
-  * Check out the [list of approved apps][approved-apps]
+### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
+* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
+* [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
-[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [rainbow_routes]: homeworks/rainbow_routes
+[prep-component-hierarchy]: ../full-stack-project/homeworks/proposal-prep/component-hierarchy.md
+[prep-state-shape]: ../full-stack-project/homeworks/proposal-prep/state-shape.md
+
 
 ### Additional Resources
 * :book: [React Router docs](https://reacttraining.com/react-router/web/guides/quick-start)
@@ -231,10 +250,10 @@
 * :book: [`preloadedState`][preloaded_state] (5 min)
 * :book: [Front End Authentication][user_authentication] (15 min)
 
-[uiux-intro]: https://vimeo.com/album/4453315/video/206661754
-[uiux-web]: https://vimeo.com/album/4453315/video/206661769
-[uiux-affordances]: https://vimeo.com/album/4453315/video/206661839
-[uiux-look-good]: https://vimeo.com/album/4453315/video/206661864
+[uiux-intro]: https://vimeo.com/206661754
+[uiux-web]: https://vimeo.com/206661769
+[uiux-affordances]: https://vimeo.com/206661839
+[uiux-look-good]: https://vimeo.com/206661864
 [frontend_auth_1]: https://vimeo.com/210683007
 [frontend_auth_2]: https://vimeo.com/210683951
 [frontend_auth_3]: https://vimeo.com/210684312
@@ -245,8 +264,10 @@
 * Do the auth part of [A04 Prep][a04_prep] (60 min)
   * Front-end auth (the main concept in BenchBnB Day 1) builds on top of regular Rails backend auth, so make sure you build on a solid base.
   * You'll be surprised how much of it you've forgotten by now. It's normal.
+* [Full-stack Proposal Prep: Routes][prep-routes] (15 min)
 
 [a04_prep]: https://github.com/appacademy/assessment-prep#assessment-4
+[prep-routes]: ../full-stack-project/homeworks/proposal-prep/routes.md
 
 ### Additional Resources
 * :book: [Rails/React/Redux Configuration Checklist][checklist]
@@ -268,7 +289,7 @@
 
 ### Materials (35 min)
 *	:book: [React Map Demo][react_map_demo] (15 min)
-* :book: [Think in React][think_in_react] (20 min)
+* :book: [Thinking in React][thinking_in_react] (20 min)
 
 [react_map_demo]: demos/react_map_demo
 
@@ -279,6 +300,19 @@
 
 [full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
 [uxhw]: ../full-stack-project/homeworks/ux
+
+### Culture
+* [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
+* [How Tech Campuses Hinder Diversity and Help Gentrification][tech-campuses] (4 min)
+* **[Silicon Valley's Poorest Workers][poor-workers]** (3 min)
+* **[Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities]** (7 min)
+* [The Accidental Classism and Unintentional Racism Of iOS Development for Children][ios-classism] (8 min)
+
+[gentrification]: https://thetempest.co/2017/05/01/now-beyond/tech-money/tech-industry-gentrification/
+[tech-campuses]: https://www.wired.com/2017/02/tech-campuses-hinder-diversity-help-gentrification/
+[poor-workers]: https://www.theguardian.com/technology/2016/jan/28/silicon-valley-service-workers-poor-intel-tech-facebook
+[underserved-communities]: https://modelviewculture.com/pieces/tech-in-underserved-communities-beyond-feel-good-stories
+[ios-classism]: https://modelviewculture.com/pieces/the-accidental-classism-and-unintentional-racism-of-ios-development-for-children
 
 ### Additional Resources
 * :book: See [full-stack project curriculum][full_stack_project_curriculum] for additional information and readings related to full-stack projects

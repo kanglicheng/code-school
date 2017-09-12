@@ -2,7 +2,7 @@
 Array.prototype.uniq = function() {
   let uniqueArray = [];
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < this.length; i++) {
     if (uniqueArray.indexOf(this[i]) === -1) {
       uniqueArray.push(this[i]);
     }
@@ -41,7 +41,7 @@ Array.prototype.twoSum = function() {
   }
 
   return pairs;
-}
+};
 
 // This time we've reduced the time complexity from N^2 to N
 // by using a hash

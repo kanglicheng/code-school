@@ -7,7 +7,7 @@ Make sure outline your MVP features using the following structure when writing y
 ## MVP Checklist Format
 
 1. New account creation, login, and guest/demo login
-2. A production README, replacing this README (NB: check out the sample [production README][production-readme] -- you'll write this later)
+2. A production README (NB: check out the sample [production README][production-readme] -- you'll write this later)
 3. Hosting on Heroku
 4. Feature 1
   * Adequate styling

@@ -65,7 +65,7 @@ equivalent would be:
 ```
 
 Here we are calling the method `abs` on the `Math` object and passing in the
-number `5` as an argument.
+number `-5` as an argument.
 
 It is important to understand not just the syntactic difference between these
 two examples, but to also understand the fundamental difference between how the

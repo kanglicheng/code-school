@@ -29,17 +29,18 @@ merit and that you have a game plan for making it happen.
 
 ### Example
 
-#### Project: Trello Clone
+#### Project: Twitter Clone
 
-**Summary:** Trello is a todo list app for team collaboration.
+**Summary:** Twitter is a social media app that allows users to
+publicly share short 'chirps' of text.
 
 **Key Feature Set:**
 
-0. Users can create and view boards
-0. Users can create lists, and lists are shown on the associated board - lists can be marked as complete
-0. Users can create cards, and cards are shown on the associated list - cards can be marked as complete
-0. Clicking on a card triggers a modal view with details and comments
-0. Bonus: Lists and cards are draggable
+0. Users can create, view, and edit chirps
+0. Users have a private dashboard of other user's chirps and a public profile view of their own chirps
+0. Users can follow other users to filter the chirps on their dashboard
+0. Users can search for other users
+0. Bonus: hashtag incorporation in text and rechirps (retweets)
 
 
 [clone-link]: projects-to-clone.md

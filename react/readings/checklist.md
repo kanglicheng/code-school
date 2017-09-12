@@ -11,7 +11,11 @@ list.
   * `binding_of_caller`
   * `pry-rails`
   * `annotate`
+  * `jquery-rails` (When using rails 5.1+)
 * [ ] `bundle install`
+* [ ] When using Rails 5.1+, update your `application.js` manifest to include: 
+  * `//= require jquery`
+  * `//= require jquery_ujs`
 * [ ] `git init`
   * Update your `.gitignore`.
     * `node_modules/`
@@ -25,7 +29,7 @@ list.
   * `webpack`
   * `react`
   * `react-dom`
-  * `react-router`
+  * `react-router-dom`
   * `redux`
   * `react-redux`
   * `babel-core`

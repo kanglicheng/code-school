@@ -109,7 +109,7 @@ Example `package.json`:
     "webpack": "^2.2.1"
   },
   "devDependencies": {
-    "redux-logger": "^2.8.1"
+    "redux-logger": "^3.0.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -135,8 +135,8 @@ const middlewares = [thunk];
 
 if (process.env.NODE_ENV !== 'production') {
   // must use 'require' (import only allowed at top of file)
-  const createLogger = require('redux-logger');
-  middlewares.push(createLogger());
+  const logger = require('redux-logger');
+  middlewares.push(logger);
 }
 
 const configureStore = (preloadedState = {}) => (
