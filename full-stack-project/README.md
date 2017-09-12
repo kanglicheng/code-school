@@ -32,6 +32,7 @@ You will spend the next two weeks working full-time on your
 full-stack project Here are the important deadlines.
 
 * **W8D2**: Start work on your full-stack project after you finish A06
+* **W9D1**: [Culture Readings](#w9d1)
 * **W9D2**: [Peer Review][peer-review]
 * **W9D5**: Turn in Full Stack Project
   * [Production README instructions][production-readme]
