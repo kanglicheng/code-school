@@ -38,6 +38,7 @@ full-stack project Here are the important deadlines.
   * [Production README instructions][production-readme]
   * [How to Turn in Your Project][turn-in-fullstack]
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
+* **W10D1**: [Culture Readings](#w10d1)
 
 [peer-review]: project/peer-review.md
 [production-readme]: project/production-readme.md
@@ -122,3 +123,15 @@ app to add technical depth. Here are a few directions you could take.
 [lowering-bar]: https://kateheddleston.com/blog/improving-diversity-does-not-mean-lowering-the-bar
 [meritocracy]: https://qz.com/66866/once-and-for-all-tech-is-not-a-meritocracy/
 [wage-inequality]: https://hired.com/gender-wage-gap-2017
+
+### W10D1
+
+* [Social Media: a tool for minorities, safe spaces and communities][social-media] (4 min)
+* [Technological Advancements To Improve Accessibility In Museums][museum-accessibility] (7 min)
+* [10 Great Ways the Internet Is Empowering Women Around the World][empowering-women] (6 min)
+* [Syrian woman explains why refugees need smartphones][smartphones] (4 min)
+
+[social-media]: http://www.lovefromberlin.net/social-media-a-tool-for-minorities-safe-spaces-and-communities/
+[museum-accessibility]: http://amt-lab.org/blog/2016/4/accessibility-rebooted-technological-advancements-to-improve-accessibility-in-museums
+[empowering-women]: http://www.huffingtonpost.com/kathy-brown/10-great-ways-the-interne_b_6817738.html
+[smartphones]: https://www.independent.co.uk/news/world/europe/why-do-refugees-have-smartphones-syrian-woman-explains-perfectly-refugee-crisis-a7025356.html
