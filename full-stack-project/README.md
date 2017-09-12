@@ -111,11 +111,11 @@ app to add technical depth. Here are a few directions you could take.
 ### W9D1
 
 * [Intersectional Approaches to Diversifying the Tech Sector][intersectional-diversifying] (6 min)
-* [We Hire The Best][the-best] (8 min)
+* **[We Hire The Best][the-best]** (8 min)
 * [Hiring, Rock Stars, and How Camaraderie Fails Us][rock-stars] (10 min)
 * [Improving Diversity Does Not Mean Lowering the Bar][lowering-bar] (8 min)
 * [Tech is Not a Meritocracy][meritocracy] (6 min)
-* [Wage Inequality Statistics][wage-inequality] (5 min)
+* **[Wage Inequality Statistics][wage-inequality]** (5 min)
 
 [intersectional-diversifying]: https://modelviewculture.com/pieces/intersectional-approaches-to-diversifying-the-tech-sector
 [the-best]: https://modelviewculture.com/pieces/we-hire-the-best
@@ -126,8 +126,8 @@ app to add technical depth. Here are a few directions you could take.
 
 ### W10D1
 
-* [Social Media: a tool for minorities, safe spaces and communities][social-media] (4 min)
-* [Technological Advancements To Improve Accessibility In Museums][museum-accessibility] (7 min)
+* **[Social Media: a tool for minorities, safe spaces and communities][social-media]** (4 min)
+* **[Technological Advancements To Improve Accessibility In Museums][museum-accessibility]** (7 min)
 * [10 Great Ways the Internet Is Empowering Women Around the World][empowering-women] (6 min)
 * [Syrian woman explains why refugees need smartphones][smartphones] (4 min)
 
