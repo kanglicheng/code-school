@@ -121,9 +121,9 @@
 ### Culture
 
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
-* [Building Accessibility Culture][accessibility] (8 min)
+* **[Building Accessibility Culture][accessibility]** (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* ["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
@@ -304,8 +304,8 @@
 ### Culture
 * [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
 * [How Tech Campuses Hinder Diversity and Help Gentrification][tech-campuses] (4 min)
-* [Silicon Valley's Poorest Workers][poor-workers] (3 min)
-* [Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities] (7 min)
+* **[Silicon Valley's Poorest Workers][poor-workers]** (3 min)
+* **[Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities]** (7 min)
 * [The Accidental Classism and Unintentional Racism Of iOS Development for Children][ios-classism] (8 min)
 
 [gentrification]: https://thetempest.co/2017/05/01/now-beyond/tech-money/tech-industry-gentrification/
