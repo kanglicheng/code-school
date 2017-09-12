@@ -104,7 +104,7 @@ paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
 This is crucial both here and in the industry. The truth is, one never knows
 how long implementing any particular phase will take. Constraints change.
 Timelines are shortened without warning. An app after any phase must be able
-to stand on it's on. We call this building in 'slices' instead of 'layers'. To
+to stand on its own. We call this building in 'slices' instead of 'layers'. To
 create your timeline, add due dates to each of your milestones on Github.
 
 ## Submission
