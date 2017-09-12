@@ -4,7 +4,7 @@ const _docReadyCallbacks = [];
 let _docReady = false;
 
 window.$l = (arg) => {
-  switch (typeof (arg)) {
+  switch (typeof arg) {
     case "function":
       return registerDocReadyCallback(arg);
     case "string":
