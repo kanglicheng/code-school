@@ -8,9 +8,9 @@
   <p><%= tweet.content %></p>
 
   <ul>Mentions
-    <% tweet.mentioned_users.each do |mention| %>
+    <% tweet.mentions.each do |mention| %>
       <li class='tweetee'>
-        <a href='<%= user_url(mention) %>'>@<%= mention.username %></a>
+        <a href='<%= user_url(mention.user) %>'>@<%= mention.user.username %></a>
       </li>
     <% end %>
   </ul>
