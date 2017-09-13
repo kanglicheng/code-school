@@ -10,7 +10,7 @@ As we progress through the course you will be prompted to complete a few install
 
 ## Phase 0: Preparing your machine
 
-Here we will install basic developer tools, such as [homebrew][homebrew] (a 3rd party package manager for MacOS), Xcode (a library of developer tools provided by Apple), and Atom (a full-featured text-editor).
+Here we will install basic developer tools, such as [homebrew][homebrew] (a 3rd party package manager for MacOS), Xcode (a library of developer tools provided by Apple), git (a version control system we will be using throughout the course), and Atom (a full-featured text-editor).
 
 ### Xcode
 Let's start with Xcode. First download and install Xcode from the App Store.
@@ -25,12 +25,24 @@ Homebrew is kind of like a low-tech App Store. It allows us access to and the ab
 
 Enter the following in your terminal to download and install Homebrew:
 ```sh
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 Check out the [Homebrew website][homebrew] to learn the basic commands.
 
 [homebrew]: https://brew.sh/
+
+### Git
+Git is a version control system that allows us to track, commit and revert changes to files within a directory. Here we will install it and add global user info.
+
+```sh
+brew install git
+git config --global color.ui true
+# this will mark you as the 'author' of each committed change
+git config --global user.name "your name here"
+# use the email associated with your GitHub account
+git config --global user.email your_email_here
+```
 
 ### Atom
 This one is super easy. Go to [atom.io](atom.io), then download and install Atom.
@@ -45,7 +57,36 @@ apm install linter linter-eslint linter-rubocop react rspec
 
 Here we will be setting up Ruby with the help of [rbenv][rbenv], a Ruby environment manager. We like rbenv because it allows us to switch between versions of Ruby easily and setup default versions to use within project directories.
 
+### Rbenv + Ruby
+First we will install rbenv, then use it to install our desired version of Ruby.
 
+```sh
+# isntall rbenv
+brew install rbenv
+# add to the PATH (rbenv commands are now available from terminal)
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+# initialize rbenv everytime you open a new console window
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+# update current console window with new settings
+source ~/.bashrc
+# install and use ruby version 2.3.1
+rbenv install 2.3.1
+rbenv global 2.3.1
+# the 'rehash' command updates the environment to your configuration
+rbenv rehash
+
+# and let's verify everything is correct
+# check the version
+ruby -v # => 2.3.1
+# check that we are using rbenv (this tells you where the version of ruby you are using is installed)
+which ruby # => /Users/your-username/.rbenv/shims/ruby
+```
+
+### Gems
+There are a few gems we will want access to globally, let's install them.
+```sh
+gem install bundler pry byebug
+```
 
 [rbenv]: https://github.com/rbenv/rbenv
 
