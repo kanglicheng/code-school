@@ -172,8 +172,6 @@
 
 ## w7d3
 
-### Study Hall 9 - 10am
-
 ### Materials (50 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
 * :book: [Jbuilder][jbuilder_docs] (20 min)
