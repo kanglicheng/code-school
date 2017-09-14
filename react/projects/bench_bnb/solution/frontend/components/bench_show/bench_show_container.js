@@ -6,7 +6,7 @@ import BenchShow from './bench_show';
 
 const mapStateToProps = (state, { match }) => {
   const benchId = parseInt(match.params.benchId);
-  const bench = selectBench(state, match.params.benchId);
+  const bench = selectBench(state.entities, match.params.benchId);
   return {
     benchId,
     bench

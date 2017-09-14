@@ -5,7 +5,7 @@ import { asArray } from '../../reducers/selectors';
 import Search from './search';
 
 const mapStateToProps = state => ({
-  benches: asArray(state),
+  benches: asArray(state.entities),
   minSeating: state.filters.minSeating,
   maxSeating: state.filters.maxSeating
 });
