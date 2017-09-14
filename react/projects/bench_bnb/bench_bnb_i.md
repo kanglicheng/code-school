@@ -133,7 +133,9 @@ App's state might look something like this:
 {
   session: {
     currentUser: null,
-    errors: ["Invalid credentials"]
+  },
+  errors: {
+    session: ["Invalid credentials"]
   }
 }
 ```
@@ -146,8 +148,10 @@ or this:
     currentUser: {
       id: 1,
       username: 'breakfast'
-    },
-    errors: []
+    }
+  },
+  errors: {
+    session: []
   }
 }
 ```
@@ -173,16 +177,51 @@ All other action creators accept a user object. On logout success dispatch `rece
 
 ### `SessionReducer`
 
-+ Create a new reducer in a new file `reducers/session_reducer.js` to keep track of our current user and error messages.
++ Create a new reducer in a new file `reducers/session_reducer.js` to keep track of our current user.
 
-The `SessionReducer` should listen for 2 action types and respond to each like so:
-  * `RECEIVE_CURRENT_USER` - sets `currentUser` to the action's user and clears `errors`
-  * `RECEIVE_ERRORS` - sets `errors` to the action's errors and clears the `currentUser`
+The `SessionReducer` should listen for 1 action type and respond to it like so:
+  * `RECEIVE_CURRENT_USER` - sets `currentUser` to the action's user
 
 Your `SessionReducer` should maintain its own default state.
 To do that pass in an object as a default argument to SessionReducer with `currentUser` set to `null` and `errors` set to an empty array.
 
 Remember to use both `Object.freeze()` and `Object.assign` or `lodash/merge` to prevent the state from being accidentally mutated.
+
+### `SessionErrorReducer`
+
++ Create a new reducer in a new file `reducers/session_error_reducer.js` to keep track of any error messages.
+
+The `SessionErrorReducer` should listen for 2 action type and respond to it like so:
++ `RECEIVE_SESSION_ERRORS` - sets `errors` to the action's errors
++ `RECEIVE_CURRENT_USER` - clears the `errors`
+
+### `ErrorReducer`
+
++ Create a new reducer in a new file `reducers/error_reducer.js` to keep track of any error messages.
+
+This file will be responsible for combining our reducers that handle errors.
+
+* Import `combineReducers` from the `redux` library.
+* Also import the `SessionErrorReducer` function we just created!
+* The `ErrorReducer` should use `combineReducers` and will only have a single key-value pair for now named `session` which points to the `SessionErrorReducer`. We will add more error reducers to this later.
+  * Remember, the `combineReducers` function accepts a single argument: an object whose properties will represent properties of our application state, and values that correspond to domain-specific reducing functions.
+* `export default ErrorReducer`.
+
+Your `ErrorReducer` should look something like this:
+
+```javascript
+// frontend/reducers/error_reducer.jsx
+
+import { combineReducers } from 'redux';
+
+import SessionErrorReducer from './session_error_reducer';
+
+const ErrorReducer = combineReducers({
+  session: SessionErrorReducer
+});
+
+export default ErrorReducer;
+```
 
 ### `rootReducer`
 
@@ -190,35 +229,17 @@ Create a new file, `reducers/root_reducer.js`.
 This file will be responsible for combining our multiple, domain-specific reducers.
 It will export a single `rootReducer`.
 
-  * Import `combineReducers` from the `redux` library.
-  * Also import the `SessionReducer` function we just created!
-  * Create a `rootReducer` using the `combineReducers` function.
-    * Remember, the `combineReducers` function accepts a single argument: an object whose properties will represent properties of our application state, and values that correspond to domain-specific reducing functions.
-  * `export default rootReducer`.
-
-Your `rootReducer` should look like this:
-
-```javascript
-// frontend/reducers/root_reducer.jsx
-
-import { combineReducers } from 'redux';
-
-import SessionReducer from './session_reducer';
-
-const rootReducer = combineReducers({
-  session: SessionReducer
-});
-
-export default rootReducer;
-```
+Use `combineReducers` to create the `rootReducer` with keys for the `SessionReducer` and `ErrorReducer`, similarly to how you created the `ErrorReducer`.
 
 So far, our default application state should look something like this:
 
-```
+```js
 {
   session: {
     currentUser: null,
-    errors: []
+  },
+  errors: {
+    session: []
   }
 }
 ```
