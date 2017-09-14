@@ -15,47 +15,55 @@ Create a rough-draft of your component hierarchy (starting from `App`) which inc
 
 ## Example
 
-Here's an example for a _super_ basic Twitter clone (with wireframes):
+Here's an example for _Bluebird_, a Twitter clone (with wireframes).
+
+**NB** Any component ending in `Container` will `connect` its nested component to the Redux store.
 
 ---
-# Tweeeter Component Hierarchy
+# Bluebird Component Hierarchy
 
-## Views
+## General
++ `App`
+  + `NavBar`
+  + `MainPage` (all other Components are rendered inside here)
+  + `Footer`
 
+## Session Form
++ `SessionFormContainer`
+  + `SessionForm`
 
-### Login/Signup
+![session-form](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_session_page.png)
 
-![login](./assets/wireframes/login.jpg)
+---
 
-* App
-  * Navbar - `connect`s to `session`
-  * Login/signup form - `connect`s to `errors`
+## Dashboard / Profile
++ `ChirpIndexContainer` / `ProfileIndexContainer`
+  + `ChirpIndex` (can be reused!)
+    + `ChirpIndexItem`
 
-### Home
+![dashboard](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_dashboard_page.png)
 
-![home](./assets/wireframes/home.jpg)
+---
 
-* App
-  * Navbar - `connect`s to `session`
-  * TweetForm - `connect`s to `errors`
-  * TweetIndex - `connect`s to `tweets`
-    * TweetItem - receives `tweet` as `prop` from parent component
+## Chirp Show
++ `ChirpShowContainer`
+  + `ChirpShow`
 
-### User
+![chirp-show](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_show_chirp_page.png)
 
-![user](./assets/wireframes/user.jpg)
+---
 
-* App
-  * Navbar - `connect`s to `session`
-  * UserInfo - `connect`s to `users`
-  * TweetIndex - `connect`s to `tweets`
-    * TweetItem - received `tweet` from parent component
+## Chirp Form
++ `ChirpFormContainer`
+  + `ChirpForm`
 
-### Users
+![chirp-form](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_chirp_form_page.png)
 
-![users](./assets/wireframes/users.jpg)
+---
 
-* App
-  * Navbar - `connect`s to `session`
-  * UserIndex - `connect`s to `users`
-    * UserItem - receives `user` as `prop` from parent component
+## User Search
++ `UserSearchIndexContainer`
+  + `UserSearchIndex`
+    + `UserSearchIndexItem`
+
+![user-search](https://raw.githubusercontent.com/appacademy/bluebird/master/wiki/bluebird_user_search.png)

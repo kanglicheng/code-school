@@ -17,26 +17,37 @@ Create a rough-draft of your frontend and backend routes. For the frontend, try 
 
 ## Example
 
-Here's yet another example from our _super_ basic Twitter  clone:
+Here's yet another example from _Bluebird_, a Twitter clone:
 
 ---
-# Tweeeter Routes
+# Bluebird Routes
 
-## Frontend
+## Frontend Routes
++ `/login`
++ `/signup`
++ `/feed` - chirp feed, homepage
++ `/users/:userId` - user profile
++ `/chirps/new` - create a chirp
++ `/chirps/:chirpId` - chirp show
++ `/chirps/:chirpId/edit` - update a chirp
 
-- `/` - home/tweet index
-- `/login` - login (obviously)
-- `/signup` - signup (obviously)
-- `/users` - users index
-- `/users/:id` - user detail
+---
 
-## Backend
+## API Endpoints
 
-- `GET /` - serves up our `root.html`
-- `POST /session` - login
-- `DELETE /session` - logout
-- `POST /users` - signup
-- `GET /users` - users index
-- `GET /users/:id` - user detail
-- `POST /tweets` - tweet form
-- `GET /tweets` - tweet index
+### `users`
++ `GET /api/users` - returns the user information for the User Search feature
++ `POST /api/users` - sign up
+
+### `chirps`
++ `GET /api/chirps` - returns relevant chirps (filtered by `data`/`params`)
++ `GET /api/chirps/:id` - returns chirp
++ `POST /api/chirps` - creates a chirp
++ `PATCH /api/chirps/:id` - edit a chirp
++ `DELETE /api/chirps/:id` - remove a chirp
+
+### `likes`
++ `POST /api/likes` - like a chirp
++ `DELETE /api/likes` - unlike a chirp
+
+Note: likes does not include a `GET` route because these routes will render `'api/chirps/show'`. See [Sample State](sample-state).

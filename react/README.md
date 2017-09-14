@@ -121,9 +121,9 @@
 ### Culture
 
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
-* [Building Accessibility Culture][accessibility] (8 min)
+* **[Building Accessibility Culture][accessibility]** (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* [“Brilliance,” “Pride” and “Genius”: How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
@@ -171,8 +171,6 @@
 * Continue [Todos][todos]
 
 ## w7d3
-
-### Study Hall 9 - 10am
 
 ### Materials (50 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
@@ -300,6 +298,19 @@
 
 [full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
 [uxhw]: ../full-stack-project/homeworks/ux
+
+### Culture
+* [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
+* [How Tech Campuses Hinder Diversity and Help Gentrification][tech-campuses] (4 min)
+* **[Silicon Valley's Poorest Workers][poor-workers]** (3 min)
+* **[Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities]** (7 min)
+* [The Accidental Classism and Unintentional Racism Of iOS Development for Children][ios-classism] (8 min)
+
+[gentrification]: https://thetempest.co/2017/05/01/now-beyond/tech-money/tech-industry-gentrification/
+[tech-campuses]: https://www.wired.com/2017/02/tech-campuses-hinder-diversity-help-gentrification/
+[poor-workers]: https://www.theguardian.com/technology/2016/jan/28/silicon-valley-service-workers-poor-intel-tech-facebook
+[underserved-communities]: https://modelviewculture.com/pieces/tech-in-underserved-communities-beyond-feel-good-stories
+[ios-classism]: https://modelviewculture.com/pieces/the-accidental-classism-and-unintentional-racism-of-ios-development-for-children
 
 ### Additional Resources
 * :book: See [full-stack project curriculum][full_stack_project_curriculum] for additional information and readings related to full-stack projects

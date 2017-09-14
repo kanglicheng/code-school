@@ -162,11 +162,11 @@ we highly encourage you to read the whole book.
 [canvas-demo]: demos/drunken_circles
 
 ### Culture
-* [LGBT Workplace Fact Sheet][lgbt-stats] (3 min)
+* **[LGBT Workplace Fact Sheet][lgbt-stats]** (3 min)
 * [It is Bigger Than Microaggressions][bigger-microaggressions] (7 min)
 * [LGBT Minorities Face Job Discrimination][lgbt-minorities] (5 min)
 * [Out in Tech][out-in-tech] (8 min)
-* [Transitioning in the Digital Age][transitioning-digital] (7 min)
+* **[Transitioning in the Digital Age][transitioning-digital]** (7 min)
 
 [lgbt-stats]: http://outandequal.org/2017-workplace-equality-fact-sheet/
 [bigger-microaggressions]: https://modelviewculture.com/pieces/it-is-bigger-than-microaggressions

@@ -40,9 +40,9 @@
 [sql-bolt]: https://sqlbolt.com/
 
 ### Culture
-+ [What is Privilege?][privilege] (6 min)
++ **[What is Privilege?][privilege]** (6 min)
 + [What is Intersectionality?][Intersectionality] (5 min)
-+ [12 Things Allies Can Do][allies] (5 min)
++ **[12 Things Allies Can Do][allies]** (5 min)
 + [How Do I Ally?][allies-2] (7 min)
 + [Getting Started in Social Justice][social-justice] (8 min)
 
