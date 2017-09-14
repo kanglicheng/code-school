@@ -192,13 +192,23 @@ we highly encourage you to read the whole book.
 
 ## w6d2
 
-### Materials (75 min)
+### Assessment05 Practice
++ In-class practice assessment at 9am. Please bring your own machine if
+possible.
+* [Practice][assessment-prep-5]
+
+[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
+
+### Materials (115 min)
 * :book: [The Document Object Model][dom] (10 min)
 * :book: [jQuery I: Selection and Manipulation][jquery-01-selection] (15 min)
 * :book: [jQuery II: Events][jquery-02-events] (10 min)
 * :book: [jQuery III: Ready][jquery-03-ready] (10 min)
 * :book: [jQuery IV: All The Ways][jquery-04-all-the-ways] (5 min)
 * :book: [jQuery V: Data Attributes][jquery-05-data-attributes] (10 min)
+* :movie_camera:[backbone-14: jQuery event delegation (cc)][backbone-14-vid] (25 min)
+  * You can ignore the last part, which has Backbone code
+* :book: [jQuery VI: Event Delegation][jquery-06-event-delegation] (15 min)
 * :book: Effective JavaScript: Items 34 - 37 (15 min)
 
 [dom]: readings/document-object-model.md
@@ -207,6 +217,8 @@ we highly encourage you to read the whole book.
 [jquery-03-ready]: readings/jquery-03-ready.md
 [jquery-04-all-the-ways]: readings/jquery-04-all-the-ways.md
 [jquery-05-data-attributes]: readings/jquery-05-data-attributes.md
+[backbone-14-vid]: https://vimeo.com/groups/appacademy/videos/85221706
+[jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 
 ### Homeworks (45 min)
 * [Wacky jQuery][wacky-project] (45 min)
@@ -277,21 +289,14 @@ we highly encourage you to read the whole book.
 ### Assessment05
 * [Practice Assessment][assessment-prep-5]
 
-[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
-
-### Materials (70 min)
+### Materials (60 min)
 :closed_lock_with_key: `go_video_go`
-* :movie_camera:[backbone-14: jQuery event delegation (cc)][backbone-14-vid] (30 min)
-  * You can ignore the last part, which has Backbone code
-* :book: [jQuery VI: Event Delegation][jquery-06-event-delegation] (15 min)
 * :book: [jQuery VII: Triggering][jquery-07-triggering] (5 min)
 * :book: [Event Propagation][event-propagation] (5 min)
 * :book: [History and Location][history-location] (5 min)
 * :book: [Vanilla JavaScript][vanilla-js] (10 min)
 * :book: Effective JavaScript: Items 46, 50, 52 (15 min)
 
-[backbone-14-vid]: https://vimeo.com/85221706
-[jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 [jquery-07-triggering]: readings/jquery-07-triggering.md
 [event-propagation]: readings/event-propagation.md
 [history-location]: readings/history-location.md
