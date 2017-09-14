@@ -1,27 +1,18 @@
-<h1>Welcome <%= current_user.username %>!</h1>
-
-<b>Your Feed!</b>
-<div class="infinite-tweets">
-  <script type="text/template">
-    <%% tweets.forEach(function (tweet) { %>
-      <li>
-        <%%= tweet.content %>
-        -- <a href="<%%= "/users/" + tweet.user.id %>"><%%= tweet.user.username %></a>
-        -- <%%= tweet.created_at %>
-        <ul>
-          <%% tweet.mentions.forEach(function (mention) { %>
-            <li>
-              <a href="<%%= "/users/" + mention.user_id %>"><%%= mention.user.username %></a>
-            </li>
-          <%% }); %>
-        </ul>
-      </li>
-    <%% }); %>
-  </script>
-
-  <ul class="tweets" id="feed"></ul>
-
-  <a href="javascript:void(0)" class="fetch-more">Fetch more tweets!</a>
-</div>
+<h2 class='page-header'>Your Feed!</h2>
 
 <%= render 'tweets/form', tweets_ul: '#feed' %>
+
+<div class="infinite-tweets">
+
+  <% if @feed_tweets.empty? %>
+    <p>No tweets... yet! Follow someone!</p>
+  <% else %>
+    <ul class="tweets" id="feed">
+      <% @feed_tweets.each do |tweet| %>
+        <li><%= render "tweets/tweet", tweet: tweet %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <button class="fetch-more">Fetch more tweets!</button>
+</div>
