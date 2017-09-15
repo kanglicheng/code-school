@@ -322,5 +322,11 @@
 
 ## w8d2
 
+### Assessment06
++ [Practice][assessment-prep-6]
+
+[assessment-prep-6]: https://github.com/appacademy/assessment-prep#assessment-6
+
+
 ### Homework
 * Begin work on projects
