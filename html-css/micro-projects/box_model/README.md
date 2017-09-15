@@ -6,12 +6,13 @@ Download this [skeleton][skeleton]
 
 The purpose of this exercise is to learn the box model and start developing an
 ability to visualize the structure and organization of HTML elements on a web
-page. Every element in an HTML document is enclosed in a box, even those that
-don't look like boxes. A circular image, for example, will still be nested
-inside its own box when rendered to the page.
+page. The focus should be on experimentation; think of the steps below as 
+suggestions for what to experiment with. Every element in an HTML document 
+is enclosed in a box, even those that don't look like boxes. A circular image, 
+for example, will still be nested inside its own box when rendered to the page.
 
 Update box_model.css as follows to see how different properties can affect these
-boxes.
+boxes. 
 
 ### Warmup
 
