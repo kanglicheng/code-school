@@ -52,29 +52,31 @@ As before, put this function on the window for testing, and make sure it works b
 We want to build a bench state that has the following shape:
 
 ```js
-benches: {
-  1: {
-    id: 1,
-    description: "...",
-    lat: 0.0,
-    lng: 0.0
-  },
-  2: {
-    id: 2,
-    description: "...",
-    lat: 0.0,
-    lng: 0.0
-  },
-  3: {
-    id: 3,
-    description: "...",
-    lat: 0.0,
-    lng: 0.0
+entities: {
+  benches: {
+    1: {
+      id: 1,
+      description: "...",
+      lat: 0.0,
+      lng: 0.0
+    },
+    2: {
+      id: 2,
+      description: "...",
+      lat: 0.0,
+      lng: 0.0
+    },
+    3: {
+      id: 3,
+      description: "...",
+      lat: 0.0,
+      lng: 0.0
+    }
   }
 }
 ```
 
-Note that our benches object use each bench's id as a primary key.
+Note that our benches object use each bench's id as a primary key. The `benches` key is also nested under an `entities` key. Even though there are no other `entities` in this app, we're going to practice good convention since most apps you'll build are going to have more than a single entity.
 
 ### Action Creators
 
@@ -103,15 +105,15 @@ dispatch(fetchBenches()).then(console.log); //=> { "1": { id: 1, description: ..
 
 Remember to require `fetchBenches` for testing.
 
-### Bench Reducer
+### Benches Reducer
 In this step, we're going to create a reducer that manages the `benches` section of our application state.
 
-* Create a file, `reducers/benches_reducer.js` that exports a `benchesReducer` function.
+* Create a file, `reducers/benches_reducer.js` that exports a `BenchesReducer` function.
 
-Let's start by just setting up our `benchesReducer` to return its default state:
+Let's start by just setting up our `BenchesReducer` to return its default state:
 Remember to use `Object.freeze` to prevent the state from being mutated.
 
-Have your `benchesReducer` update the `benches` in your state when it receives the `RECEIVE_BENCHES` action.
+Have your `BenchesReducer` update the `benches` in your state when it receives the `RECEIVE_BENCHES` action.
 Your reducer should look like this:
 
 ```js
@@ -119,7 +121,7 @@ Your reducer should look like this:
 
 import { RECEIVE_BENCHES } from '../actions/bench_actions';
 
-const benchesReducer = (state = {}, action) => {
+const BenchesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_BENCHES:
@@ -130,18 +132,24 @@ const benchesReducer = (state = {}, action) => {
 };
 ```
 
-Then add `benchesReducer` to your `root_reducer.js`
+### Entities Reducer
+In this step, we are going to write an `EntitiesReducer` that is responsible for combining any of the reducers that hold relational data from our database. This app only has a single entity, `benches`, but again, we will follow convention since most apps worth using will have multiple `entities`.
+
+* Create a file, `reducers/entities_reducer.js` that exports a `EntitiesReducer` function.
+* Use `combineReducers` to incorporate the `BenchesReducer` into the `EntitiesReducer`.
+
+Then add the `EntitiesReducer` to your `root_reducer.js`.
 
 ```javascript
 // frontend/reducers/root_reducer.jsx
 
 import { combineReducers } from 'redux';
 
-import benchesReducer from './benches_reducer';
+import EntitiesReducer from './entities_reducer';
 import SessionReducer from './session_reducer';
 
 const RootReducer = combineReducers({
-  benches: benchesReducer,
+  entities: EntitiesReducer,
   session: SessionReducer
 });
 
@@ -154,10 +162,13 @@ At this point, our default application state should look like this.
 {
   session: {
     currentUser: null,
-    errors: []
   },
-
-  benches: {}
+  errors: {
+    session: []
+  },
+  entities: {
+    benches: {}
+  }
 }
 ```
 
@@ -472,12 +483,14 @@ In addition to our benches and session, we'll also add a new slice of state to k
 
 ```js
 {
-  benches: {
-    1: {
-      id: 1,
-      description: "...",
-      lat: 0.0,
-      lng: 0.0
+  entities: {
+    benches: {
+      1: {
+        id: 1,
+        description: "...",
+        lat: 0.0,
+        lng: 0.0
+      }
     }
   },
   filters: {
@@ -487,8 +500,10 @@ In addition to our benches and session, we'll also add a new slice of state to k
     currentUser: {
       id: 1,
       username: 'breakfast'
-    },
-    errors: []
+    }.
+    errors: {
+      session: []
+    }
   }
 }
 ```
@@ -524,9 +539,15 @@ We need to build out our application state to reflect the map's `bounds`.
 
 * Create a new file, `reducers/filter_reducer.js`
 * Build and export a `FilterReducer`
-  * You're reducer should update the application state when an
-`UPDATE_BOUNDS` action is dispatched
-* Update your `RootReducer`
+  * You're reducer should update the application state when an `UPDATE_BOUNDS` action is dispatched
+
+### `uiReducer`
+
+The `uiReducer` will be used to combine any reducers in charge of managing information that influences our user's interactions, but is not relational data from our backend. For this project, it will just contain the `FilterReducer`, but there are many other uses of this slice of state, for instance toggling a loading screen while waiting for an ajax request. Let's continue to follow our conventions.
+
+* Create a new file, `reducers/ui_reducer.js`
+* Use `combineReducers` to combine just the `FilterReducer` and export it
+* Update your `RootReducer` to contain the `uiReducer`
 
 **Test** that the application is being successfully updated by moving the map around and then calling `window.getState()` in the console.
 
@@ -671,9 +692,9 @@ Make the input tags disabled so that our users don't try to edit them!
     * `createBench` (thunk action creator)
   * Add a `mapDispatchToProps` function to your `BenchFormContainer`; this should pass a `createBench` prop to `BenchForm`
 
-### `BenchReducer`
+### `BenchesReducer`
 
-Now, update your `BenchReducer` to respond to the `RECEIVE_BENCH` action.
+Now, update your `BenchesReducer` to respond to the `RECEIVE_BENCH` action.
 
 #### `BenchMap`
 
