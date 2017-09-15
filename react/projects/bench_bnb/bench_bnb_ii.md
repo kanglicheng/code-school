@@ -496,13 +496,13 @@ In addition to our benches and session, we'll also add a new slice of state to k
   filters: {
     bounds: {}
   },
+  errors: {
+    session: []
+  }
   session: {
     currentUser: {
       id: 1,
       username: 'breakfast'
-    }.
-    errors: {
-      session: []
     }
   }
 }
