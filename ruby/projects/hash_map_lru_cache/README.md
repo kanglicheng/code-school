@@ -43,7 +43,7 @@ Sound cool yet? Now let's go build a Set.
 We'll start with the first stage. In this version of a set, we can only
 store integers that live in a predefined range. So I tell you the
 maximum integer I'll ever want to store, and you give me a set that can
-store it and any smaller positive number.
+store it and any smaller non-negative number.
 
 * Initialize your MaxIntSet with an integer called `max` to define the
   range of integers that we're keeping track of.
