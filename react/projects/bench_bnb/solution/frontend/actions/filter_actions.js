@@ -10,5 +10,5 @@ export const changeFilter = (filter, value) => ({
 
 export const updateFilter = (filter, value) => (dispatch, getState) => {
   dispatch(changeFilter(filter, value));
-  return fetchBenches(getState().filters)(dispatch);
+  return fetchBenches(getState().ui.filters)(dispatch);
 };

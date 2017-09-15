@@ -17,6 +17,8 @@ As always:
 
 The new parts:
   * Session Reducer
+  * Errors Reducer (combineReducer)
+    * Session Errors Reducer
   * Session Actions / Constants
   * Session API Util
   * LoginForm / SignupForm Components
@@ -28,30 +30,57 @@ The new parts:
 
 ```js
 const _nullUser = {
-  currentUser: null,
-  errors: []
+  currentUser: null
 };
 
 const SessionReducer = (state = _nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, _nullUser, {currentUser});
+      return merge({}, { currentUser });
     case LOGOUT:
       return _nullUser;
-    case RECEIVE_ERRORS:
-      const errors = action.errors;
-      return merge({}, _nullUser, {errors});
     default:
       return state;
   }
 };
 ```
 
-The `currentUser` property will be used to show things like a custom
-welcome message and the profile picture. The `errors` property will be
-used to tell our users that they have filled out a form incorrectly.
-(e.g. 'Password is too short').
+The `currentUser` property will be used to show things like a custom welcome message and the profile picture.
+
+## `Session Errors Reducer`
+```js
+const _nullErrors = [];
+
+export default (state = _nullErrors, action) => {
+  Object.freeze(state);
+  switch(action.type) {
+    case RECEIVE_SESSION_ERRORS:
+      return action.errors;
+    case RECEIVE_CURRENT_USER:
+      return _nullErrors;
+    case CLEAR_ERRORS:
+      return _nullErrors;
+    default:
+      return state;
+  }
+};
+```
+
+The `errors` property will be used to tell our users that they have filled out a form incorrectly. (e.g. 'Password is too short'). We can clear the errors when we successfully receive the `currentUser` object or we can clear errors manually using the `CLEAR_ERRORS` action when we navigate away from the form.
+
+## `Errors Reducer`
+```js
+import { combineReducers } from 'redux';
+import sessionErrorsReducer from './chirps';
+
+export default combineReducers({
+  session: sessionErrorsReducer,
+  // We can add as many reducers as we need here.
+});
+```
+
+We'll nest the `sessionErrorsReducer` under the `errorsReducer`, so that we can add additional error reducers for other components in our app.
 
 ## Action-Creators & API
 
@@ -63,7 +92,7 @@ We'll need the following action-creators:
   * logout
 * Synchronous:
   * receiveCurrentUser
-  * receiveErrors
+  * receiveSessionErrors
 
 We'll also need some API utility functions that will actually make the
 AJAX requests:
