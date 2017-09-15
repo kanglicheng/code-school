@@ -297,7 +297,7 @@
   * **Due by 9am on Monday w8d1**
 
 [full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
-[uxhw]: ../full-stack-project/homeworks/ux
+[uxhw]: homeworks/ux
 
 ### Culture
 * [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
