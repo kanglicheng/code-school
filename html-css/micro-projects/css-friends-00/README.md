@@ -64,7 +64,7 @@ in no time.
   strike-through, to show which rules apply, and which are overridden.
 
 [specs]: ./SPECIFICATIONS.md
-[shots]: ./screenshots
+[shots]: ../css-friends-docs/screenshots
 [specificity]: http://cssguidelin.es/#specificity
 [test-hover-1]: http://i.stack.imgur.com/IlVMn.png
 [test-hover-2]: http://i.imgur.com/evzZ2.png
@@ -99,7 +99,7 @@ input elements by setting their appearance to none (see [here][appearance-info])
 pointer hand on buttons to make it obvious you can click. Finally
 include the clearfix in your code. We'll be using it a lot!
 
-[ss-00-a]: ./screenshots/00-reset-a.png
+[ss-00-a]: ../css-friends-docs/screenshots/00-reset-a.png
 [live-00]: http://appacademy.github.io/css-friends/solution/00-reset.html
 
 [t-reset]: https://github.com/appacademy/css-demos/#user-agent-styles

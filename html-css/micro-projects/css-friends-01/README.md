@@ -73,8 +73,8 @@ and gratifying feedback for the user.
 Pixel perfect? Do not move on before calling over a **TA** to check your
 work!
 
-[ss-01-a]: ./screenshots/01-header-a.png
-[ss-01-b]: ./screenshots/01-header-b.png
+[ss-01-a]: ../css-friends-docs/screenshots/01-header-a.png
+[ss-01-b]: ../css-friends-docs/screenshots/01-header-b.png
 [live-01]: http://appacademy.github.io/css-friends/solution/01-header.html
 
 [t-webfonts]: http://en.wikipedia.org/wiki/Web_typography

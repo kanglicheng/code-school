@@ -45,8 +45,8 @@ pseudo-content. Fortunately, we have two injection points, `:before` and
 If you'd like an additional hint, check out this [tool tip][t-tooltip]
 demo. But give it a shot yourself first!
 
-[ss-08-a]: ./screenshots/08-thumbs-a.png
-[ss-08-b]: ./screenshots/08-thumbs-b.png
+[ss-08-a]: ../css-friends-docs/screenshots/08-thumbs-a.png
+[ss-08-b]: ../css-friends-docs/screenshots/08-thumbs-b.png
 [live-08]: http://appacademy.github.io/css-friends/solution/08-thumbs.html
 
 [t-triangles]: http://appacademy.github.io/css-demos/triangle.html

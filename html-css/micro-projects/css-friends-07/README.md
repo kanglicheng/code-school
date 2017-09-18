@@ -18,7 +18,7 @@ typography and don't forget to add a tiny `box-shadow`.
 Ask a **TA** to high-five you for your CSS mastery and give you a review
 of everything so far!
 
-[ss-07-a]: ./screenshots/07-online-a.png
+[ss-07-a]: ../css-friends-docs/screenshots/07-online-a.png
 [live-07]: http://appacademy.github.io/css-friends/solution/07-online.html
 
 [t-transform]: https://developer.mozilla.org/en-US/docs/Web/CSS/transform

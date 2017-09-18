@@ -51,9 +51,9 @@ core concepts of CSS. Things will just get easier and *way* more fun!
 
 Show off your dropdown to a **TA**.
 
-[ss-02-a]: ./screenshots/02-notifications-a.png
-[ss-02-b]: ./screenshots/02-notifications-b.png
-[ss-02-c]: ./screenshots/02-notifications-c.png
+[ss-02-a]: ../css-friends-docs/screenshots/02-notifications-a.png
+[ss-02-b]: ../css-friends-docs/screenshots/02-notifications-b.png
+[ss-02-c]: ../css-friends-docs/screenshots/02-notifications-c.png
 [live-02]: http://appacademy.github.io/css-friends/solution/02-notifications.html
 
 [t-border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius

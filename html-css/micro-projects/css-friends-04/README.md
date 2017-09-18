@@ -14,6 +14,6 @@ nested inside the `.content` container, but may be top level. You should
 be getting the hang of this by now! Floats in floats. Pay close
 attention to colors and typography.
 
-[ss-04-a]: ./screenshots/04-footer-a.png
-[ss-04-b]: ./screenshots/04-footer-b.png
+[ss-04-a]: ../css-friends-docs/screenshots/04-footer-a.png
+[ss-04-b]: ../css-friends-docs/screenshots/04-footer-b.png
 [live-04]: http://appacademy.github.io/css-friends/solution/04-footer.html

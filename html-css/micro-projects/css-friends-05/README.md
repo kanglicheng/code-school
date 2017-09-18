@@ -24,8 +24,8 @@ additional space above and below the words, which is only needed if we
 have multiple lines. Let's get rid of that space by setting
 `line-height` to `1` on our header.
 
-[ss-05-a]: ./screenshots/05-cats-a.png
-[ss-05-b]: ./screenshots/05-cats-b.png
+[ss-05-a]: ../css-friends-docs/screenshots/05-cats-a.png
+[ss-05-b]: ../css-friends-docs/screenshots/05-cats-b.png
 [live-05]: http://appacademy.github.io/css-friends/solution/05-cats.html
 
 [t-background-size]: https://developer.mozilla.org/en-US/docs/Web/CSS/background-size

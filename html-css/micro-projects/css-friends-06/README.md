@@ -32,7 +32,7 @@ To get the divider lines between all the `.profile-nav` list elements,
 but also at the top and bottom, you'll want to use a pseudo selector
 like `:first-child`, `:last-child`, or `:nth-child()`.
 
-[ss-06-a]: ./screenshots/06-sidebar-a.png
-[ss-06-b]: ./screenshots/06-sidebar-b.png
+[ss-06-a]: ../css-friends-docs/screenshots/06-sidebar-a.png
+[ss-06-b]: ../css-friends-docs/screenshots/06-sidebar-b.png
 [live-06]: http://appacademy.github.io/css-friends/solution/06-sidebar.html
 [t-pseudo-selectors]: http://css-tricks.com/pseudo-class-selectors/

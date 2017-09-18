@@ -72,8 +72,8 @@ Go ahead and add empty `<i>` tags with icons classes inside of links on
 the page. You'd end up with something like this:
 `<a href="#"><i class="icon-small-wall"></i> Wall</a>`.
 
-[ss-11-a]: ./screenshots/11-icons-a.png
-[ss-11-b]: ./screenshots/11-icons-b.png
+[ss-11-a]: ../css-friends-docs/screenshots/11-icons-a.png
+[ss-11-b]: ../css-friends-docs/screenshots/11-icons-b.png
 [live-11]: http://appacademy.github.io/css-friends/solution/11-icons.html
 
 [sprite]: ./shared/img/sprite.png
