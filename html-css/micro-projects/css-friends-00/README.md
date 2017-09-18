@@ -51,8 +51,6 @@ in no time.
 - You can do it!
 
 ## Common Gotchas
-- Clear your floats. Always add a clearfix class to the parent of
-  floated elements.
 - When positioning something absolute, make sure what coordinate system
   you are working in. Most likely you will want to set the parent
   container to be `relative`, if it isn't already positioned.
@@ -77,7 +75,7 @@ in no time.
 ## Phase 0: Reset
 
 **Topics:** [Reset][t-reset], [Appearance][t-appearance],
-[Clearfix][t-clearfix], [Box-model][t-box-model],
+[Box-model][t-box-model],
 [Box-sizing][t-box-sizing], [Cursor][t-cursor]
 
 - [Screenshot A][ss-00-a]
@@ -96,15 +94,13 @@ Let's make all images `block` elements, have them expand to the full
 
 Remove the bullets from list items, strip the default styling from form
 input elements by setting their appearance to none (see [here][appearance-info]), and show the little
-pointer hand on buttons to make it obvious you can click. Finally
-include the clearfix in your code. We'll be using it a lot!
+pointer hand on buttons to make it obvious you can click.
 
 [ss-00-a]: ../css-friends-docs/screenshots/00-reset-a.png
 [live-00]: http://appacademy.github.io/css-friends/solution/00-reset.html
 
 [t-reset]: https://github.com/appacademy/css-demos/#user-agent-styles
 [t-appearance]: http://css-tricks.com/almanac/properties/a/appearance/
-[t-clearfix]: https://github.com/appacademy/css-demos/#clearfix
 [t-box-model]: https://github.com/appacademy/css-demos/#box-model
 [t-box-sizing]: http://appacademy.github.io/css-demos/box-sizing.html
 [t-cursor]: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor

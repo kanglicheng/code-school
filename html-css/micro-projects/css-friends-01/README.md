@@ -54,13 +54,12 @@ grow by experimenting!
 
 To center a smaller block element inside a larger block element, you'll
 want to set its left and right margins to `auto`. Since block elements
-cannot sit next to each other normally, you're going to need floats.
-Whenever you float, you will need to clearfix. It's OK to float things
-inside of floated things.
+cannot sit next to each other normally, you're going to need to use `flex`.
+It's OK to flex things inside of flexed things.
 
-You'll want to float your logo `<h1>` to the left, and the `<ul>` list
+You'll want to justify your logo `<h1>` to the left, and the `<ul>` list
 of links to the right. To get the individual `<li>` next to each other
-you'll want to float those left.
+you'll want to again use `flex`.
 
 It can be helpful to give elements a temporary background color, to see
 their appearance while debugging.
