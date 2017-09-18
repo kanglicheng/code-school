@@ -1,6 +1,8 @@
 /* PHASE 4: Footer */
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   width: 900px;
   margin: 0 auto 50px auto;
   background: #fff;
@@ -16,16 +18,14 @@
 .footer-copy {
   display: block;
   padding: 20px;
-  float: left;
 }
 
 .footer-links {
+  display: flex;
   padding: 20px;
-  float: right;
 }
 
 .footer-links > li {
-  float: left;
   padding: 0 0 0 20px;
 }
 

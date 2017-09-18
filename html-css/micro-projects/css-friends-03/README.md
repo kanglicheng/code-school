@@ -2,14 +2,14 @@
 
 ## Phase 3: Layout
 
-**Topics:** [Float][t-float], [Clearfix][t-clearfix],
+**Topics:** [Flex][flex],
 [Pseudo-content][t-pseudo-content], [Positioning][t-positioning]
 
 - [Screenshot A][ss-03-a]
 - [Live][live-03]
 
 Make a `.content` container, with a `.content-sidebar` section and a
-`.content-main` section in it. Give them widths and paddings and float
+`.content-main` section in it. Give them widths and paddings and position
 them next to each other. As they do not have content yet, set a
 `min-height` property to `200px` to ensure they have some height, even
 when empty. Set temporary background colors on the elements to verify
@@ -45,6 +45,7 @@ coordinate system we are working in. We like to control the coordinate
 system by setting a parent element to `relative`, if it is not already
 positioned. In our case of injected pseudo-content, what is the parent?
 
+[flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [ss-03-a]: ../css-friends-docs/screenshots/03-layout-a.png
 [live-03]: http://appacademy.github.io/css-friends/solution/03-layout.html
 
