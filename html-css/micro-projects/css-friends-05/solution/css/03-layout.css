@@ -22,14 +22,12 @@
 }
 
 .content-sidebar {
-  float: left;
   width: 200px;
   min-height: 200px;
   padding: 20px;
 }
 
 .content-main {
-  float: left;
   width: 620px;
   min-height: 200px;
   padding: 20px;

@@ -21,10 +21,6 @@
   background: #ccc;
 }
 
-.content {
-  display: flex;
-}
-
 .content-sidebar {
   width: 200px;
   min-height: 200px;
