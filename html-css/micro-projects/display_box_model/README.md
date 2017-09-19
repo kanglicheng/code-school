@@ -9,7 +9,7 @@ The purpose of this exercise is to learn the box model and the differences betwe
 Update box_model.css as follows to practice styling with different display and spacing properties.
 
 1. Make our list elements in the nav menu into `inline-block` elements.
-2. Give the links in those list elements a padding on all sides of 20px and change their display property to correct their inherent behavior.
+2. Give the links in those list elements a padding on all sides of 20px. By default `a` tags are inline and cannot have any `padding` applied to them. Change their `display` property to correct this default behavior.
 3. Pick the correct display property to position the nav next to the logo.
 4. Set our main content region by giving the body a width of 900px.
 5. Use the classic centering trick `margin: 0 auto` to center the body.
