@@ -28,7 +28,8 @@ const Weather = React.createClass({
     let url = 'https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?';
     let params = {
       lat: location.coords.latitude,
-      lon: location.coords.longitude
+      lon: location.coords.longitude,
+      units: 'imperial'
     };
     url += toQueryString(params);
     // This is our API key; please use your own!
@@ -52,8 +53,7 @@ const Weather = React.createClass({
     let content = <div></div>;
 
     if (this.state.weather) {
-      let weather = this.state.weather;
-      let temp = (weather.main.temp - 273.15) * 1.8 + 32;
+      let temp = this.state.weather.main.temp;
       content = <div>
                   <p>San Francisco</p>
                   <p>{temp.toFixed(1)} degrees</p>
