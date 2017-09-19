@@ -2,7 +2,7 @@
 
 Being a developer isn't just hacking away into the wee hours of the morning or debugging a new feature. In order to become a well-rounded developer we should also understand what tools we need and a minimum understanding of how they work. This includes setting up our computers for development.
 
-Here at App Academy we work with a Ruby on Rails, JavaScript, React, Redux, and PostgresSQL stack. A [stack][stack-defn] is simply a collection of software and hardware used in development of an application. For our specific purposes we are using Ruby on Rails on the backend/server, PostgresSQL to house our databse, and JavaScript + React + Redux for frontend rendering and logic.
+Here at App Academy we work with a Ruby on Rails, JavaScript, React, Redux, and PostgresSQL stack. A [stack][stack-defn] is simply a collection of software and hardware used in development of an application. For our specific purposes we are using Ruby on Rails on the backend/server, PostgresSQL to house our database, and JavaScript + React + Redux for frontend rendering and logic.
 
 [stack-defn]: https://en.wikipedia.org/wiki/Solution_stack
 
@@ -47,7 +47,7 @@ git config --global user.email your_email_here
 ### Atom
 This one is super easy. Go to [atom.io](atom.io), then download and install Atom.
 
-Next install a few packages that will provide linting and syntax highlighting:
+Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting:
 ```sh
 # apm is the 'atom package manager'
 apm install linter linter-eslint linter-rubocop react rspec
@@ -61,11 +61,11 @@ Here we will be setting up Ruby with the help of [rbenv][rbenv], a Ruby environm
 First we will install rbenv, then use it to install our desired version of Ruby.
 
 ```sh
-# isntall rbenv
+# install rbenv
 brew install rbenv
 # add to the PATH (rbenv commands are now available from terminal)
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-# initialize rbenv everytime you open a new console window
+# initialize rbenv every time you open a new console window
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 # update current console window with new settings
 source ~/.bashrc
