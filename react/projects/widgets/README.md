@@ -142,7 +142,7 @@ API using a raw, "vanilla" JavaScript `XMLHttpRequest`.
   * Common pitfall: You need to include `http://` in your request URI
   * If you're spending more than 25 minutes setting up your request, ask a TA for help!
 * Render the current city and temperature on the page.
-  * **NB**: By default, the OpenWeatherMap API will return the temperature in Standard units (Kelvin). Convert **OR** peruse the API docs for a way to request the weather in Imperial units (Fahrenheit)!
+  * **NB**: By default, the OpenWeatherMap API will return the temperature in Standard units (Kelvin). Convert to Fahrenheit **OR** peruse the API docs for a way to request the weather in Imperial units (Fahrenheit)!
 * Give the weather box a nice border and make sure the elements inside are
 spaced evenly.
 
