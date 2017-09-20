@@ -36,6 +36,7 @@ list.
   * `babel-loader`
   * `babel-preset-react`
   * `babel-preset-es2015`
+  * `lodash` (optional)
 * [ ] Create a `webpack.config.js` file.
   * The entry point should be in frontend, e.g. `entry: 'frontend/index.jsx'`.
   * The output path should be `'app/assets/javascripts'`.
