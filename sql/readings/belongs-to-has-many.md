@@ -136,9 +136,8 @@ Note that when we defined the association, we used the singular form
 foreign key that refers to a single `Professor`. Name your association
 accordingly: in the singular.
 
-NB: As of Rails 5, `belongs_to` associations are validated by default. You can
-opt-out of this behavior by adding the key-value pair `optional: true` to your
-association like so:
+NB: As of Rails 5, `belongs_to` associations are validated for presence by default.
+You can opt-out of this behavior (ie. allow the association to be null) by adding the key-value pair `optional: true` to your association like so:
 
 ```ruby
 class Course < ApplicationRecord
