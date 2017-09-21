@@ -2,7 +2,7 @@
 
 [class*="icon-"] {
   display: inline-block;
-  background-image: url("../../shared/img/sprite.png");
+  background-image: url(".././images/sprite.png");
   background-size: 25px 250px;
   background-repeat: no-repeat;
   vertical-align: bottom;

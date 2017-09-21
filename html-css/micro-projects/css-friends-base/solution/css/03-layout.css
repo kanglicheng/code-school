@@ -2,6 +2,7 @@
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   background: #fff;
   width: 900px;
@@ -13,6 +14,8 @@
   width: 200px;
   min-height: 200px;
   padding: 20px;
+  padding-right: 19px;
+  border-right: 1px solid #ccc;
 }
 
 .content-main {
