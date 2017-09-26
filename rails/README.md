@@ -157,9 +157,6 @@
 
 ## w4d4
 
-### :clock10: Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
-
 ### Materials (2 hr, 38 min)
 :closed_lock_with_key: `go_video_go`
 * :movie_camera: [Secure State][auth-secure-state] (11 min)
