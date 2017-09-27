@@ -34,10 +34,9 @@ process - also known as your application server - is waiting for it and
 processes it. The server process is the one that has loaded up and is
 actually running all the code in your Rails app.
 
-There are a variety of application servers to choose from. Rails ships
+There are a variety of application servers to choose from. Before Rails 5, Rails shipped
 with WEBrick, but WEBrick is not considered to be a good choice for
-production. Some popular production app servers are Thin, Unicorn, and
-Phusion Passenger.
+production. Rails 5 ships with Puma, which is more suitable for production. Some other popular production app servers are Thin, Unicorn, and Phusion Passenger.
 
 Thin is the easiest to swap in: just put `gem 'thin'` in your Gemfile.
 

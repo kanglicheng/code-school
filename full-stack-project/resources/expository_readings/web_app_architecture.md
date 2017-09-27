@@ -46,7 +46,7 @@ able to process multiple requests simultaneously.
 
 ### Webrick
 
-Webrick is the default Rails app server; it is written in Ruby and
+Before Rails 5, Webrick was the default Rails app server. It is written in Ruby and
 designed to be simple and functional. It's fine for debugging and
 low-traffic apps.
 
