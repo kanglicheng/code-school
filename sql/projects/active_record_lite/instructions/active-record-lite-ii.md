@@ -173,12 +173,14 @@ There's a common mistake that most people make:
 ```ruby
 module Associatable
   def has_one_through(name, through_name, source_name)
-    through_options = self.class.assoc_options[through_name]
+    # "self" is the class
+    through_options = self.assoc_options[through_name]
     # no! too early!
     source_options =
       through_options.model_class.assoc_options[source_name]
 
     define_method(name) do
+      # "self" is the instance
       # ...
     end
   end
