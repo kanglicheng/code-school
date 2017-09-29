@@ -483,7 +483,7 @@ Make the request again. You should see the error message displayed in Postman.
 Now build some other controller actions:
 
 * show
-* update (you'll want to use `ActiveRecord::Base#update_attributes`)
+* update (you'll want to use `ActiveRecord::Base#update`)
 * destroy
 
 Think about what each action's purpose is, what

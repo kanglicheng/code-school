@@ -19,7 +19,7 @@ have already thought carefully about the functionality and scope of each
 feature, allowing your future self to focus completely on writing the code for
 it.
 
-[sample-proposal]: http://www.github.com/appacademy/bluebird/wiki
+[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
 
 ## Fleshing Out the Proposal
 

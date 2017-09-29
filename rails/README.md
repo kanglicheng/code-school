@@ -46,10 +46,10 @@
 [postman]: readings/postman.md
 
 ### Culture
-* [True Diversity is Intersectional][intersectional] (9 min)
+* **[True Diversity is Intersectional][intersectional]** (9 min)
 * [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs] (4 min)
 * [VCs and Female Entrepreneurs][vc-entrepreneurs] (5 min)
-* [Elephant in the Valley][elephant] (3 min, longer if you read the stories)
+* **[Elephant in the Valley][elephant]** (3 min, longer if you read the stories)
 * [When Bias in Product Design Means Life or Death][bias-product] (6 min)
 
 [intersectional]: https://medium.com/projectinclude/true-diversity-is-intersectional-2282b8da8882
@@ -156,9 +156,6 @@
 [google-homepage]: ../html-css/projects/google_homepage
 
 ## w4d4
-
-### :clock10: Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
 
 ### Materials (2 hr, 38 min)
 :closed_lock_with_key: `go_video_go`
@@ -286,8 +283,8 @@
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
 * [Diversity in Tech Remains Elusive][diversity-elusive] (7 min)
 * [Commoditization and Exploitation of Asians in Tech][asian-racism] (11 min)
-* [The Other Side of Diversity][other-side-diversity] (11 min)
-* [How AI is Learning All of Our Worst Impulses][ai-impulses] (9 min)
+* **[The Other Side of Diversity][other-side-diversity]** (11 min)
+* **[How AI is Learning All of Our Worst Impulses][ai-impulses]** (9 min)
 
 [racism-stats]: https://www.comparably.com/guest/culture/tech/all-departments/109-have-you-ever-experienced-racism-in-the-workplace
 [diversity-elusive]: https://modelviewculture.com/pieces/diversity-in-tech-remains-elusive-due-to-racism-lack-of-representation-and-cultural-differences

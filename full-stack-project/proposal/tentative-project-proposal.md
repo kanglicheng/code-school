@@ -32,7 +32,7 @@ merit and that you have a game plan for making it happen.
 #### Project: Twitter Clone
 
 **Summary:** Twitter is a social media app that allows users to
-publicly share short 'chirps' of text.
+publicly share short 'chirps' (tweets) of text.
 
 **Key Feature Set:**
 

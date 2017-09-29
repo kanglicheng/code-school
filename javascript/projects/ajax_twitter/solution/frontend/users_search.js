@@ -27,7 +27,7 @@ class UsersSearch {
       let user = users[i];
 
       let $a = $('<a></a>');
-      $a.text(user.username);
+      $a.text(`@${user.username}`);
       $a.attr('href', `/users/${user.id}`);
 
       let $followToggle = $('<button></button>');

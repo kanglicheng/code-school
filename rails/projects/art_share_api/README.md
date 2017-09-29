@@ -1,4 +1,4 @@
-# Art Share Api
+# Art Share API
 
 We're going to continue building on the API we built in the first
 routes project. Our goal is to build an application to store, share, and
@@ -143,9 +143,9 @@ and permits each of the user attributes as keys in the nested hash.
 
 * `create` (POST `/users`)
 
-Remember to use `if @user.save` to check if validations passed. On
+Remember to use `if user.save` to check if validations passed. On
 error, this action should render validation errors using
-`@user.errors.full_messages`. Set the status code to indicate error.
+`user.errors.full_messages`. Set the status code to indicate error.
 
 * `destroy` (DELETE `/users:id`)
 
@@ -167,7 +167,7 @@ Renders a single user, using the `:id` in `params[:id]`.
 
 Finds the requested user. Use `update` with `user_params` to do a
 mass-assignment update and save. Render validation errors using
-`@user.errors.full_messages`.  *Don't forget the status code!*
+`user.errors.full_messages`.  *Don't forget the status code!*
 
 Now let's move to the `routes.rb` file. You should already have routes
 for the `users` controller from the previous project. Use the `only:`

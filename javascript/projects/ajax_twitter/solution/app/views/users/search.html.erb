@@ -1,11 +1,16 @@
-<h1>Search!</h1>
+<h2 class='page-header'>Search!</h2>
 
-<nav class="users-search">
-  <label>
-    Username
-    <input type="text" name="username">
-  </label>
+<div class='users-search'>
+<form class="simple-form">
+  <div>
+    <label for='user-search-input'>Username</label>
+    <input class='user-search-input' 
+      type="text" 
+      name="username"
+      placeholder='Enter a username'>
+  </div>
+</form>
 
-  <h4>Result</h4>
-  <ul class="users"></ul>
-</nav>
+<h4>Results</h4>
+<ul class="users"></ul>
+</div>
