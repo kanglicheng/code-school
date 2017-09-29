@@ -2,21 +2,19 @@
 
 ## Phases
 
-<ol start="0">
-<li>[Reset](./css-friends-00/)</li>
-<li>[Header](./css-friends-01/)</li>
-<li>[Notifications](./css-friends-02/)</li>
-<li>[Layout](./css-friends-03/)</li>
-<li>[Footer](./css-friends-04/)</li>
-<li>[Cats](./css-friends-05/)</li>
-<li>[Sidebar](./css-friends-06/)</li>
-<li>[Online](./css-friends-07/)</li>
-<li>[Thumbs](./css-friends-08/)</li>
-<li>[Forms](./css-friends-09/)</li>
-<li>[Posts](./css-friends-10/)</li>
-<li>[Icons](./css-friends-11/)</li>
-<li>[Modal](./css-friends-12/)</li>
-</ol>
+0. [Reset](./css-friends-00/)
+0. [Header](./css-friends-01/)
+0. [Notifications](./css-friends-02/)
+0. [Layout](./css-friends-03/)
+0. [Footer](./css-friends-04/)
+0. [Cats](./css-friends-05/)
+0. [Sidebar](./css-friends-06/)
+0. [Online](./css-friends-07/)
+0. [Thumbs](./css-friends-08/)
+0. [Forms](./css-friends-09/)
+0. [Posts](./css-friends-10/)
+0. [Icons](./css-friends-11/)
+0. [Modal](./css-friends-12/)
 
 ## Introduction
 
