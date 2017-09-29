@@ -34,8 +34,8 @@ Make sure to allot at least 3 hours to write your readme.
 
 
 ### Helpful links
-* You can find an example readme [here][example-readme].  Do not copy /
-paste any portion of this readme!
+* You can find some examples of great readmes [here][example-readme].  Do not copy /
+paste any portion of them!
 * There is a very helpful markdown cheatsheet
 [here][markdown-cheatsheet]. To preview your markdown in Atom, type
 ctrl-shift-m.
@@ -43,5 +43,5 @@ ctrl-shift-m.
 
 
 [screenshots]: https://support.apple.com/en-us/HT201361
-[example-readme]: https://github.com/appacademy/curriculum/blob/master/full-stack-project/proposal/sample_project_proposal/docs/production_readme.md
+[example-readme]: https://github.com/matiassingers/awesome-readme
 [markdown-cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
