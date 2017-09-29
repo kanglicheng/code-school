@@ -19,6 +19,8 @@ body {
 }
 
 .header-nav {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   width: 900px;
   border-left: 1px solid #ccc;
@@ -26,7 +28,6 @@ body {
 }
 
 .header-logo {
-  float: left;
   border-right: 1px solid #ccc;
   font-weight: 700;
 }
@@ -36,11 +37,10 @@ body {
 }
 
 .header-list {
-  float: right;
+  display: flex;
 }
 
 .header-list > li {
-  float: left;
   border-left: 1px solid #ccc;
 }
 
