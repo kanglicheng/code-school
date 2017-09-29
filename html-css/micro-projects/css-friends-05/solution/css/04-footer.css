@@ -8,9 +8,8 @@
   background: #fff;
   color: #aaa;
   font-size: 14px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
+  border-top: 0;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
