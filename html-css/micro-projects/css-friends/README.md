@@ -31,6 +31,8 @@ Check out the [end goal][live-12]. With some clear
 broken down in 12 phases, you will make a pixel perfect mock-up in code
 in no time.
 
+For each phase, you should start with the provided `skeleton.zip` file, unzip it and begin working through all the instructions.
+
 ## A Few Thoughts Before You Start...
 
 - Make sure to keep the [specs][specs] at your side at all times.
