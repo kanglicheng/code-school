@@ -64,9 +64,11 @@
   [react_docs]: https://facebook.github.io/react/docs/getting-started.html
 
 ### Projects
+* [CSS Friends Phase 12][css-friends]
 * [Widgets][widgets]
 * [Minesweeper][minesweeper]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [widgets]: projects/widgets
 [minesweeper]: projects/react_minesweeper
 
