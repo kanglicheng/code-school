@@ -276,8 +276,11 @@
 
 ### Homeworks (45 min)
 * [Capybara][capybara-hw] (45 min)
+* [Read CSS Friends Intro][css-friends]
+* [CSS Friends Phase 0: Reset][css-friends]
 
 [capybara-hw]: homeworks/capybara
+[css-friends]: ../html-css/micro-projects/css-friends/
 
 ### Culture
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
@@ -310,6 +313,7 @@
 [spring-guard]: readings/guard-spring-setup.md
 
 ### Projects
+* [CSS Friends Phase 1][css-friends]
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
 
@@ -352,6 +356,7 @@
 [checkboxes-id-setters]: readings/checkboxes.md
 
 ### Projects
+* [CSS Friends Phase 2][css-friends]
 * [RedditClone][reddit-clone]
 
 [reddit-clone]: projects/reddit_on_rails

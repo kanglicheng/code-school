@@ -69,9 +69,11 @@ we highly encourage you to read the whole book.
 [mdn-js-doc]: readings/mdn-js.md
 
 ### Projects
+* [CSS Friends Phases 3-4][css-friends]
 * [Intro JavaScript Exercises][intro-javascript-problems]
 * [Reversi][reversi]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [intro-javascript-problems]: projects/intro_js_exercises
 [reversi]: projects/js_reversi
 
@@ -122,6 +124,7 @@ we highly encourage you to read the whole book.
 [taggings]: readings/tagged-templates.md
 
 ### Projects
+* [CSS Friends Phases 5-6][css-friends]
 * [Intro to Callbacks Exercises][functions_exercises]
 * [Towers of Hanoi][hanoi_node]
 * [Tic-Tac-Toe][ttt_node]
@@ -182,6 +185,7 @@ we highly encourage you to read the whole book.
 [client-side-js]: readings/client-side-javascript.md
 
 ### Projects  
+* [CSS Friends Phases 7-8][css-friends]
 * [`arguments` Exercises][arguments-exercises]
 * [Prototypal Inheritance Exercises][inheritance-exercises]
 * [Asteroids][asteroids-project]
@@ -228,6 +232,7 @@ we highly encourage you to read the whole book.
 [jquery-fundamentals]: http://jqfundamentals.com/
 
 ### Projects
+* [CSS Friends Phases 9-10][css-friends]
 * [jQuery Tic Tac Toe][ttt-jquery]
 * [jQuery Towers of Hanoi][hanoi-jquery]
 * **(BONUS)** [Snake][snake-project]
@@ -268,6 +273,7 @@ we highly encourage you to read the whole book.
 [jquery-fundamentals-ajax]: http://jqfundamentals.com/chapter/ajax-deferreds
 
 ### Projects
+* [CSS Friends Phase 11][css-friends]
 * [AJAXTwitter][ajax-twitter]
 
 [ajax-twitter]: projects/ajax_twitter

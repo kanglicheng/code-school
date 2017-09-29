@@ -64,9 +64,11 @@
   [react_docs]: https://facebook.github.io/react/docs/getting-started.html
 
 ### Projects
+* [CSS Friends Phase 12][css-friends]
 * [Widgets][widgets]
 * [Minesweeper][minesweeper]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [widgets]: projects/widgets
 [minesweeper]: projects/react_minesweeper
 
@@ -123,7 +125,7 @@
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
 * [Building Accessibility Culture][accessibility] (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* ["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+* ["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min)
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
