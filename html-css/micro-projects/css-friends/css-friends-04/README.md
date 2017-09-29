@@ -2,8 +2,7 @@
 
 ## Phase 4: Footer
 
-**Topics:** [Flex][flex], [Clearfix][t-clearfix],
-[Border-radius][t-border-radius]
+**Topics:** [Flex][flex], [Border-radius][t-border-radius]
 
 - [Screenshot A][ss-04-a]
 - [Screenshot B][ss-04-b]
@@ -17,4 +16,5 @@ attention to colors and typography.
 [flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [ss-04-a]: ../docs/screenshots/04-footer-a.png
 [ss-04-b]: ../docs/screenshots/04-footer-b.png
+[t-border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
 [live-04]: http://appacademy.github.io/css-friends/solution/04-footer.html

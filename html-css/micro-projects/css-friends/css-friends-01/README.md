@@ -3,8 +3,7 @@
 ## Phase 1: Header
 
 **Topics:** [Webfonts][t-webfonts], [Font-weight][t-font-weight],
-[Block][t-block], [Float][t-float], [Clearfix][t-clearfix],
-[Border][t-border]
+[Block][t-block], [Float][t-float], [Border][t-border]
 
 - [Screenshot A][ss-01-a]
 - [Screenshot B][ss-01-b]

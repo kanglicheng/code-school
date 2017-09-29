@@ -2,8 +2,7 @@
 
 ## Phase 8: Thumbs
 
-**Topics:** [Float][t-float], [Clearfix][t-clearfix],
-[Border-radius][t-border-radius], [Pseudo-content][t-pseudo-content],
+**Topics:** [Border-radius][t-border-radius], [Pseudo-content][t-pseudo-content],
 [Positioning][t-positioning], [Transform][t-transform],
 [Triangles][t-triangles]
 
@@ -51,3 +50,7 @@ demo. But give it a shot yourself first!
 
 [t-triangles]: http://appacademy.github.io/css-demos/triangle.html
 [t-tooltip]: http://appacademy.github.io/css-demos/tooltip.html
+[t-border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+[t-positioning]: https://github.com/appacademy/css-demos/#positioning
+[t-transform]: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+[t-pseudo-content]: https://github.com/appacademy/css-demos/#pseudo-content

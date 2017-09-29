@@ -13,7 +13,7 @@ Divide the sidebar up into three sections: `.profile-picture`,
 `.profile-info`, and `.profile-nav`.
 
 Have the `.profile-picture` be a link that contains an image tag with
-the provided `../docs/images/cat.jpg` picture. Make the link a `block`
+the provided `./images/cat.jpg` picture. Make the link a `block`
 element and style it. Thanks to your earlier reset, the image will now
 expand to fill the full width of the link.
 
@@ -36,3 +36,4 @@ like `:first-child`, `:last-child`, or `:nth-child()`.
 [ss-06-b]: ../docs/screenshots/06-sidebar-b.png
 [live-06]: http://appacademy.github.io/css-friends/solution/06-sidebar.html
 [t-pseudo-selectors]: http://css-tricks.com/pseudo-class-selectors/
+[t-positioning]: https://github.com/appacademy/css-demos/#positioning

@@ -26,24 +26,7 @@ case. When that is the case, it makes sense to pick the most DRY
 solution, and add padding to these sections, rather than the child
 elements inside.
 
-Since there might be cases where either the sidebar or the main
-container could be longer, we cannot simply add a border to one of their
-sides to create the divider line in the middle. We want the line always
-to be the full height of parent `.content` container. We're going to
-flex our CSS muscles and combine pseudo-content with absolute
-positioning to accomplish this.
-
-Use `:before` pseudo-content to inject an element inside the `.content`
-container. Make it a `block` element and `position` it `absolute`. Give
-it a `width` of `1px`, set the `left` coordinate appropriately, but set
-the `top` and `bottom` simultaneously to `0`. This will nicely stretch
-out the element to the top and bottom. Don't forget the gray background
-color. Voila!
-
-**Hint**: Anytime we position something, we need to be mindful of what
-coordinate system we are working in. We like to control the coordinate
-system by setting a parent element to `relative`, if it is not already
-positioned. In our case of injected pseudo-content, what is the parent?
+Add a border to visually separate `.content-sidebar` and `.content-main`.
 
 [flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [ss-03-a]: ../docs/screenshots/03-layout-a.png

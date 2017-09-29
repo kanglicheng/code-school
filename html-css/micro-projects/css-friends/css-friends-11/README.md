@@ -73,6 +73,9 @@ the page. You'd end up with something like this:
 [ss-11-a]: ../docs/screenshots/11-icons-a.png
 [ss-11-b]: ../docs/screenshots/11-icons-b.png
 [live-11]: http://appacademy.github.io/css-friends/solution/11-icons.html
-
+[specs]: ../docs/SPECIFICATIONS.md
 [sprite]: ../docs/images/sprite.png
 [t-background-position]: https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+[t-pseudo-selectors]: http://css-tricks.com/pseudo-class-selectors/
+[t-background-size]: https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+[t-overflow]: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow

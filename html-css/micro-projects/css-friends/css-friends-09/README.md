@@ -2,8 +2,7 @@
 
 ## Phase 9: Forms
 
-**Topics:** [Float][t-float], [Clearfix][t-clearfix],
-[Border-radius][t-border-radius],
+**Topics:**
 [Pseudo-selectors][t-pseudo-selectors], [Box-shadow][t-box-shadow],
 [Border-radius][t-border-radius], [Calc][t-calc]
 
@@ -39,3 +38,6 @@ parentheses to denote order.
 [ss-09-d]: ../docs/screenshots/09-forms-d.png
 [live-09]: http://appacademy.github.io/css-friends/solution/09-forms.html
 [t-calc]: https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+[t-border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+[t-pseudo-selectors]: http://css-tricks.com/pseudo-class-selectors/
+[t-box-shadow]: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow

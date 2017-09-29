@@ -58,3 +58,5 @@ $(function(){
 [ss-12-b]: ../docs/screenshots/12-modal-b.png
 [ss-12-c]: ../docs/screenshots/12-modal-c.png
 [live-12]: http://appacademy.github.io/css-friends/solution/12-modal.html
+[t-border-radius]: https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius
+[t-positioning]: https://github.com/appacademy/css-demos/#positioning

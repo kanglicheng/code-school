@@ -25,3 +25,5 @@ of everything so far!
 [t-letter-spacing]: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
 [t-text-transform]: https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform
 [t-box-shadow]: https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+[t-positioning]: https://github.com/appacademy/css-demos/#positioning
+[t-overflow]: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow
