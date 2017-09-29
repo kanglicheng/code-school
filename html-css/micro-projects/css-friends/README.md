@@ -1,5 +1,25 @@
 # CSS Friends
 
+## Phases
+
+<ol start="0">
+<li>[Reset](./css-friends-00/)</li>
+<li>[Header](./css-friends-01/)</li>
+<li>[Notifications](./css-friends-02/)</li>
+<li>[Layout](./css-friends-03/)</li>
+<li>[Footer](./css-friends-04/)</li>
+<li>[Cats](./css-friends-05/)</li>
+<li>[Sidebar](./css-friends-06/)</li>
+<li>[Online](./css-friends-07/)</li>
+<li>[Thumbs](./css-friends-08/)</li>
+<li>[Forms](./css-friends-09/)</li>
+<li>[Posts](./css-friends-10/)</li>
+<li>[Icons](./css-friends-11/)</li>
+<li>[Modal](./css-friends-12/)</li>
+</ol>
+
+## Introduction
+
 We're going to build a social network for App Academy! A mock-up, that
 is.
 
