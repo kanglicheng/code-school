@@ -15,6 +15,6 @@ be getting the hang of this by now! Hint, hint, use `display` and `justify-conte
 attention to colors and typography.
 
 [flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-[ss-04-a]: ../css-friends-docs/screenshots/04-footer-a.png
-[ss-04-b]: ../css-friends-docs/screenshots/04-footer-b.png
+[ss-04-a]: ../docs/screenshots/04-footer-a.png
+[ss-04-b]: ../docs/screenshots/04-footer-b.png
 [live-04]: http://appacademy.github.io/css-friends/solution/04-footer.html

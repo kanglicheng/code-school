@@ -17,7 +17,7 @@ pseudo-selectors to add some left and right margin to the middle of
 every three `<li>`s.
 
 Create a `.thumb` class to style the links that contain the thumbnails.
-You can use the same `./shared/img/cat.jpg` picture for the `<img>` tag.
+You can use the same `../docs/images/cat.jpg` picture for the `<img>` tag.
 We will want to reuse this `.thumb` class later. Note that we're not
 using this `.thumb` class to float or space the grid, that task is left
 to the `<li>`s.
@@ -45,8 +45,8 @@ pseudo-content. Fortunately, we have two injection points, `:before` and
 If you'd like an additional hint, check out this [tool tip][t-tooltip]
 demo. But give it a shot yourself first!
 
-[ss-08-a]: ../css-friends-docs/screenshots/08-thumbs-a.png
-[ss-08-b]: ../css-friends-docs/screenshots/08-thumbs-b.png
+[ss-08-a]: ../docs/screenshots/08-thumbs-a.png
+[ss-08-b]: ../docs/screenshots/08-thumbs-b.png
 [live-08]: http://appacademy.github.io/css-friends/solution/08-thumbs.html
 
 [t-triangles]: http://appacademy.github.io/css-demos/triangle.html

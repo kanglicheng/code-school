@@ -54,7 +54,7 @@ $(function(){
 </script>
 ```
 
-[ss-12-a]: ../css-friends-docs/screenshots/12-modal-a.png
-[ss-12-b]: ../css-friends-docs/screenshots/12-modal-b.png
-[ss-12-c]: ../css-friends-docs/screenshots/12-modal-c.png
+[ss-12-a]: ../docs/screenshots/12-modal-a.png
+[ss-12-b]: ../docs/screenshots/12-modal-b.png
+[ss-12-c]: ../docs/screenshots/12-modal-c.png
 [live-12]: http://appacademy.github.io/css-friends/solution/12-modal.html

@@ -46,7 +46,7 @@ system by setting a parent element to `relative`, if it is not already
 positioned. In our case of injected pseudo-content, what is the parent?
 
 [flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-[ss-03-a]: ../css-friends-docs/screenshots/03-layout-a.png
+[ss-03-a]: ../docs/screenshots/03-layout-a.png
 [live-03]: http://appacademy.github.io/css-friends/solution/03-layout.html
 
 [t-pseudo-content]: https://github.com/appacademy/css-demos/#pseudo-content

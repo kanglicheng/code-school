@@ -33,9 +33,9 @@ width, by setting `width: calc(100% - 100px)`. You can do addition,
 subtraction, multiplication, and division. You can even use
 parentheses to denote order.
 
-[ss-09-a]: ../css-friends-docs/screenshots/09-forms-a.png
-[ss-09-b]: ../css-friends-docs/screenshots/09-forms-b.png
-[ss-09-c]: ../css-friends-docs/screenshots/09-forms-c.png
-[ss-09-d]: ../css-friends-docs/screenshots/09-forms-d.png
+[ss-09-a]: ../docs/screenshots/09-forms-a.png
+[ss-09-b]: ../docs/screenshots/09-forms-b.png
+[ss-09-c]: ../docs/screenshots/09-forms-c.png
+[ss-09-d]: ../docs/screenshots/09-forms-d.png
 [live-09]: http://appacademy.github.io/css-friends/solution/09-forms.html
 [t-calc]: https://developer.mozilla.org/en-US/docs/Web/CSS/calc
