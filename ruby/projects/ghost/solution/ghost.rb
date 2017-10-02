@@ -9,7 +9,7 @@ class GhostGame
     words = File.readlines("dictionary.txt").map(&:chomp)
     @dictionary = Set.new(words)
     @players = players
-    @losses = Hash.new { |losses, player| losses[player] = 0 } 
+    @losses = Hash.new { |losses, player| losses[player] = 0 }
   end
 
   def run
@@ -18,6 +18,7 @@ class GhostGame
   end
 
   private
+  
   attr_reader :fragment, :dictionary, :losses, :players
 
   def game_over?
@@ -36,7 +37,7 @@ class GhostGame
     update_standings
   end
 
-  # helper methods 
+  # helper methods
   def add_letter(letter)
     fragment << letter
   end
@@ -55,7 +56,7 @@ class GhostGame
   def round_over?
     is_word?(fragment)
   end
-  
+
   def current_player
     players.first
   end
@@ -84,7 +85,7 @@ class GhostGame
     "GHOST".slice(0, count)
   end
 
-  # UI methods (display game status and prompts to players) 
+  # UI methods (display game status and prompts to players)
   def welcome
     system("clear")
     puts "Let's play a round of Ghost!"
@@ -98,7 +99,7 @@ class GhostGame
 
     until letter
       letter = current_player.guess(fragment)
-      
+
       unless valid_play?(letter)
         current_player.alert_invalid_move(letter)
         letter = nil
@@ -137,7 +138,7 @@ class GhostGame
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   game = GhostGame.new(Player.new("Gizmo"), Player.new("Breakfast"))
   game.run
 end
