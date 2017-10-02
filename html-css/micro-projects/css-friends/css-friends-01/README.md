@@ -3,7 +3,7 @@
 ## Phase 1: Header
 
 **Topics:** [Webfonts][t-webfonts], [Font-weight][t-font-weight],
-[Block][t-block], [Float][t-float], [Border][t-border]
+[Block][t-block], [Flex][t-flex], [Border][t-border]
 
 - [Screenshot A][ss-01-a]
 - [Screenshot B][ss-01-b]
@@ -79,5 +79,5 @@ work!
 [t-google-fonts]: https://www.google.com/fonts
 [t-font-weight]: http://css-tricks.com/almanac/properties/f/font-weight/
 [t-block]: https://github.com/appacademy/css-demos/#display-block
-[t-float]: https://github.com/appacademy/css-demos/#floats
+[t-flex]: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 [t-border]: http://css-tricks.com/almanac/properties/b/border/
