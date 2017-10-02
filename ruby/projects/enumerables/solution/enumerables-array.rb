@@ -94,7 +94,7 @@ class Array
     reversed = []
 
     self.my_each do |el|
-     reversed.unshift(el)
+      reversed.unshift(el)
     end
 
     reversed
