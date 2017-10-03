@@ -69,9 +69,11 @@ we highly encourage you to read the whole book.
 [mdn-js-doc]: readings/mdn-js.md
 
 ### Projects
+* [CSS Friends Phases 3-4][css-friends]
 * [Intro JavaScript Exercises][intro-javascript-problems]
 * [Reversi][reversi]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [intro-javascript-problems]: projects/intro_js_exercises
 [reversi]: projects/js_reversi
 
@@ -122,6 +124,7 @@ we highly encourage you to read the whole book.
 [taggings]: readings/tagged-templates.md
 
 ### Projects
+* [CSS Friends Phases 5-6][css-friends]
 * [Intro to Callbacks Exercises][functions_exercises]
 * [Towers of Hanoi][hanoi_node]
 * [Tic-Tac-Toe][ttt_node]
@@ -162,11 +165,11 @@ we highly encourage you to read the whole book.
 [canvas-demo]: demos/drunken_circles
 
 ### Culture
-* [LGBT Workplace Fact Sheet][lgbt-stats] (3 min)
+* **[LGBT Workplace Fact Sheet][lgbt-stats]** (3 min)
 * [It is Bigger Than Microaggressions][bigger-microaggressions] (7 min)
 * [LGBT Minorities Face Job Discrimination][lgbt-minorities] (5 min)
 * [Out in Tech][out-in-tech] (8 min)
-* [Transitioning in the Digital Age][transitioning-digital] (7 min)
+* **[Transitioning in the Digital Age][transitioning-digital]** (7 min)
 
 [lgbt-stats]: http://outandequal.org/2017-workplace-equality-fact-sheet/
 [bigger-microaggressions]: https://modelviewculture.com/pieces/it-is-bigger-than-microaggressions
@@ -182,6 +185,7 @@ we highly encourage you to read the whole book.
 [client-side-js]: readings/client-side-javascript.md
 
 ### Projects  
+* [CSS Friends Phases 7-8][css-friends]
 * [`arguments` Exercises][arguments-exercises]
 * [Prototypal Inheritance Exercises][inheritance-exercises]
 * [Asteroids][asteroids-project]
@@ -192,13 +196,23 @@ we highly encourage you to read the whole book.
 
 ## w6d2
 
-### Materials (75 min)
+### Assessment05 Practice
++ In-class practice assessment at 9am. Please bring your own machine if
+possible.
+* [Practice][assessment-prep-5]
+
+[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
+
+### Materials (115 min)
 * :book: [The Document Object Model][dom] (10 min)
 * :book: [jQuery I: Selection and Manipulation][jquery-01-selection] (15 min)
 * :book: [jQuery II: Events][jquery-02-events] (10 min)
 * :book: [jQuery III: Ready][jquery-03-ready] (10 min)
 * :book: [jQuery IV: All The Ways][jquery-04-all-the-ways] (5 min)
 * :book: [jQuery V: Data Attributes][jquery-05-data-attributes] (10 min)
+* :movie_camera:[backbone-14: jQuery event delegation (cc)][backbone-14-vid] (25 min)
+  * You can ignore the last part, which has Backbone code
+* :book: [jQuery VI: Event Delegation][jquery-06-event-delegation] (15 min)
 * :book: Effective JavaScript: Items 34 - 37 (15 min)
 
 [dom]: readings/document-object-model.md
@@ -207,6 +221,8 @@ we highly encourage you to read the whole book.
 [jquery-03-ready]: readings/jquery-03-ready.md
 [jquery-04-all-the-ways]: readings/jquery-04-all-the-ways.md
 [jquery-05-data-attributes]: readings/jquery-05-data-attributes.md
+[backbone-14-vid]: https://vimeo.com/groups/appacademy/videos/85221706
+[jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 
 ### Homeworks (45 min)
 * [Wacky jQuery][wacky-project] (45 min)
@@ -228,6 +244,7 @@ we highly encourage you to read the whole book.
 [jquery-fundamentals]: http://jqfundamentals.com/
 
 ### Projects
+* [CSS Friends Phases 9-10][css-friends]
 * [jQuery Tic Tac Toe][ttt-jquery]
 * [jQuery Towers of Hanoi][hanoi-jquery]
 * **(BONUS)** [Snake][snake-project]
@@ -268,6 +285,7 @@ we highly encourage you to read the whole book.
 [jquery-fundamentals-ajax]: http://jqfundamentals.com/chapter/ajax-deferreds
 
 ### Projects
+* [CSS Friends Phase 11][css-friends]
 * [AJAXTwitter][ajax-twitter]
 
 [ajax-twitter]: projects/ajax_twitter
@@ -277,21 +295,14 @@ we highly encourage you to read the whole book.
 ### Assessment05
 * [Practice Assessment][assessment-prep-5]
 
-[assessment-prep-5]: http://github.com/appacademy/assessment-prep#assessment-5
-
-### Materials (70 min)
+### Materials (60 min)
 :closed_lock_with_key: `go_video_go`
-* :movie_camera:[backbone-14: jQuery event delegation (cc)][backbone-14-vid] (30 min)
-  * You can ignore the last part, which has Backbone code
-* :book: [jQuery VI: Event Delegation][jquery-06-event-delegation] (15 min)
 * :book: [jQuery VII: Triggering][jquery-07-triggering] (5 min)
 * :book: [Event Propagation][event-propagation] (5 min)
 * :book: [History and Location][history-location] (5 min)
 * :book: [Vanilla JavaScript][vanilla-js] (10 min)
 * :book: Effective JavaScript: Items 46, 50, 52 (15 min)
 
-[backbone-14-vid]: https://vimeo.com/85221706
-[jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 [jquery-07-triggering]: readings/jquery-07-triggering.md
 [event-propagation]: readings/event-propagation.md
 [history-location]: readings/history-location.md

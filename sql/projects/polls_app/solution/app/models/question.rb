@@ -64,10 +64,15 @@ class Question < ApplicationRecord
     # less efficient solutions are given above ^
     acs = self.answer_choices
       .select("answer_choices.text, COUNT(responses.id) AS num_responses")
-      .joins(<<-SQL).group("answer_choices.id")
-        LEFT OUTER JOIN responses
-          ON answer_choices.id = responses.answer_choice_id
-      SQL
+      .left_outer_joins(:responses).group("answer_choices.id")
+    
+# In rails 4, there is no left_outer_joins method so this is how it would look
+#     acs = self.answer_choices
+#       .select("answer_choices.text, COUNT(responses.id) AS num_responses")
+#       .joins(<<-SQL).group("answer_choices.id")
+#         LEFT OUTER JOIN responses
+#           ON answer_choices.id = responses.answer_choice_id
+#       SQL
 
     acs.inject({}) do |results, ac|
       results[ac.text] = ac.num_responses; results

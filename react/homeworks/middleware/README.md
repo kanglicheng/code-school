@@ -123,7 +123,7 @@ Then, restore `todo_redux.jsx` to its original state.
 
 ## Bonus Phase: More Middleware!
 
-Writing a second middleware and pass it to `applyMiddleware` in `store.js`. Try
+Write a second middleware and pass it to `applyMiddleware` in `store.js`. Try
 logging what `next` is in each of your middlewares. Also, notice when the state
 is getting updated. How do these middlewares fit in to the Redux cycle?
 

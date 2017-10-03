@@ -72,11 +72,13 @@ end
 ```
 
 ### Routes
-+ Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
-+ Nest your routes under [namespace][namespace-docs] `api`.
-+ In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
+
+* Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
+* Nest your routes under [namespace][namespace-docs] `api`.
+* In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
 
 **Test your routes** - You should get the following when you run `rails routes`.
+
 ```
 api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
           POST   /api/todos(.:format)     api/todos#create {format: :json}
@@ -87,15 +89,24 @@ api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
 ```
 
 ### StaticPages
-+ Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
-+ Update `routes.rb` to `root to: 'static_pages#root'`.
 
+* Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
+* Update `routes.rb` to `root to: 'static_pages#root'`.
+
+Since Rails 5 doesn't include jQuery for us, we're going to need to do one more thing to get jQuery's `ajax` to work.
+To add jQuery to your project:
+
+1. Add `gem jquery-rails` to your `Gemfile`.
+2. Run `bundle install`.
+3. Add `//= require jquery` and `//= require jquery_ujs` to your `application.js`
+4. If your Rails server was previously running, restart it.
 
 You're almost ready to go!
-+ Seed your database with a few todos for testing.
-+ Start your server (`rails s`) so that it can respond to HTTP requests.
-+ Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
-  + Inspect the page and double check that `<div id="content"></div>` is present.
+
+* Seed your database with a few todos for testing.
+* Start your server (`rails s`) so that it can respond to HTTP requests.
+* Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
+  * Inspect the page and double check that `<div id="content"></div>` is present.
 
 **Test your API** - Try out your API endpoints using `$.ajax`. You should be able
 to send `POST`, `GET`, `PATCH`, and `DELETE` requests and receive the appropriate
@@ -103,7 +114,7 @@ responses in the console.
 
 For example, try:
 
-```
+```js
 $.ajax({
   method: 'GET',
   url: '/api/todos'
@@ -149,8 +160,8 @@ so that the caller of the function can handle success and failure however they s
 
 Let's write our Todo API Util.
 
-+ Create a file `util/todo_api_util.js`.
-+ Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
+* Create a file `util/todo_api_util.js`.
+* Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
 
 **Test your code** - Try running your function in the console and make sure
 you can resolve the promise by passing a function to `then`.
@@ -217,8 +228,8 @@ Since our thunk middleware returns the promise back to the caller, we can take o
 
 ```js
 // inside of handleSubmit
-this.props.createTodo({ todo }).then(
-  () => this.setState({ title: '', body: '' })
+this.props.createTodo({todo}).then(
+  () => this.setState({title: '', body: ''})
 );
 ```
 
@@ -238,15 +249,13 @@ Now that we have somewhere to store errors, when todo creation fails, dispatch t
 You will need to update your `createTodo` action like this.
 
 ```js
-export function createTodo(todo) {
-  return (dispatch) => (
-    APIUtil.createTodo(todo)
-      .then(
-        todo => dispatch(receiveTodo(todo)),
-        err => dispatch(receiveErrors(err.responseJSON))
-      )
-  );
-}
+const createTodo = todo => dispatch => (
+  APIUtil.createTodo(todo)
+    .then(
+      todo => dispatch(receiveTodo(todo)),
+      err => dispatch(receiveErrors(err.responseJSON))
+    )
+);
 ```
 
 Verify that your error state is populated if you try to create a todo with invalid params.
