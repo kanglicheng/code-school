@@ -4,12 +4,12 @@ const Ship = require("./ship");
 const Bullet = require("./bullet");
 
 const DEFAULTS = {
-	COLOR: "#505050",
-	RADIUS: 25,
-	SPEED: 4
+  COLOR: "#505050",
+  RADIUS: 25,
+  SPEED: 4
 };
 
-const Asteroid = function (options = {}) {
+const Asteroid = function Asteroid(options = {}) {
   options.color = DEFAULTS.COLOR;
   options.pos = options.pos || options.game.randomPosition();
   options.radius = DEFAULTS.RADIUS;
@@ -20,15 +20,16 @@ const Asteroid = function (options = {}) {
 
 Util.inherits(Asteroid, MovingObject);
 
-Asteroid.prototype.collideWith = function (otherObject) {
+Asteroid.prototype.collideWith = function collideWith(otherObject) {
   if (otherObject instanceof Ship) {
     otherObject.relocate();
-		return true;
+    return true;
   } else if (otherObject instanceof Bullet) {
-		this.remove();
-		otherObject.remove();
-		return true;
-	}
+    this.remove();
+    otherObject.remove();
+    return true;
+  }
+  return false;
 };
 
 

@@ -34,7 +34,7 @@ class FollowToggle {
   }
 
   render() {
-    switch(this.followState){
+    switch (this.followState) {
       case 'followed':
         this.$el.prop('disabled', false);
         this.$el.html('Unfollow!');

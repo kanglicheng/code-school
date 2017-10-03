@@ -1,42 +1,42 @@
-const GameView = function (game, ctx) {
+const GameView = function GameView(game, ctx) {
   this.ctx = ctx;
   this.game = game;
   this.ship = this.game.addShip();
 };
 
 GameView.MOVES = {
-  "w": [ 0, -1],
-  "a": [-1,  0],
-  "s": [ 0,  1],
-  "d": [ 1,  0],
+  w: [0, -1],
+  a: [-1, 0],
+  s: [0, 1],
+  d: [1, 0],
 };
 
-GameView.prototype.bindKeyHandlers = function () {
+GameView.prototype.bindKeyHandlers = function bindKeyHandlers() {
   const ship = this.ship;
 
   Object.keys(GameView.MOVES).forEach((k) => {
-    let move = GameView.MOVES[k];
+    const move = GameView.MOVES[k];
     key(k, function () { ship.power(move); });
   });
 
-  key("space", function () { ship.fireBullet() });
+  key("space", function () { ship.fireBullet(); });
 };
 
-GameView.prototype.start = function () {
+GameView.prototype.start = function start() {
   this.bindKeyHandlers();
   this.lastTime = 0;
-  //start the animation
+  // start the animation
   requestAnimationFrame(this.animate.bind(this));
 };
 
-GameView.prototype.animate = function(time){
+GameView.prototype.animate = function animate(time) {
   const timeDelta = time - this.lastTime;
 
   this.game.step(timeDelta);
   this.game.draw(this.ctx);
   this.lastTime = time;
 
-  //every call to animate requests causes another call to animate
+  // every call to animate requests causes another call to animate
   requestAnimationFrame(this.animate.bind(this));
 };
 
