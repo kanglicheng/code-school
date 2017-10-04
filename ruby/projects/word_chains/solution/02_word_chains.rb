@@ -56,7 +56,7 @@ class WordChainer
     new_current_words = []
     @current_words.each do |current_word|
       adjacent_words(current_word).each do |adjacent_word|
-        next if @all_seen_words.has_key?(adjacent_word)
+        next if @all_seen_words.key?(adjacent_word)
 
         new_current_words << adjacent_word
         @all_seen_words[adjacent_word] = current_word
@@ -78,7 +78,7 @@ class WordChainer
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   # provide file name on command line
   p WordChainer.new(ARGV.shift).run("duck", "ruby")
 end
