@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   include Votable
 
-  validates :author, :title, presence: true
+  validates :title, presence: true
   validates :subs, presence: { message: 'must have at least one sub' }
 
   has_many :post_subs, inverse_of: :post, dependent: :destroy

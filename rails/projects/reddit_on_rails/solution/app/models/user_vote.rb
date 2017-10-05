@@ -1,5 +1,4 @@
 class UserVote < ApplicationRecord
-  validates :user, presence: true
   # don't let the user vote twice!
   validates :user_id, uniqueness: { scope: [:votable_id, :votable_type] }
 
