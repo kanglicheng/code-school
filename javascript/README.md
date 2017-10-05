@@ -79,7 +79,7 @@ we highly encourage you to read the whole book.
 
 ## w5d5
 
-### :clock10: Class will start at 10am! :clock10:
+### (SF ONLY) :clock10: Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
 ### Materials (105 min)
