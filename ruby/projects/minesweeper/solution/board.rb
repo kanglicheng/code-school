@@ -36,6 +36,7 @@ class Board
   end
 
   private
+
   def generate_board
     @grid = Array.new(@grid_size) do |row|
       Array.new(@grid_size) { |col| Tile.new(self, [row, col]) }
