@@ -11,6 +11,6 @@ const pokemonDisplayReducer = (state = null, action) => {
     default:
       return state;
   }
-}
+};
 
 export default pokemonDisplayReducer;
