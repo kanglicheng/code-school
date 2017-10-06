@@ -327,7 +327,7 @@
 
 ### Study Hall 9 - 10am
 
-* Ask questions or feel our wroth!
+* Ask questions or feel our wrath!
 
 ### Projects
 
