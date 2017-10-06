@@ -26,7 +26,7 @@ class MinimaxNode
   def minimax(take_maximum = true)
     if leaf_node?
       @minimax_value = get_score
-      return @action #game is already over
+      @action #game is already over
     else
       choose_best_action(take_maximum)
     end

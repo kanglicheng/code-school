@@ -1,7 +1,33 @@
-require_relative '00_tree_node'
+require_relative '../../poly_tree_node/solution/lib/00_tree_node'
 
 class KnightPathFinder
   attr_reader :start_pos
+
+  MOVES = [
+    [-2, -1],
+    [-2,  1],
+    [-1, -2],
+    [-1,  2],
+    [ 1, -2],
+    [ 1,  2],
+    [ 2, -1],
+    [ 2,  1]
+  ].freeze
+
+  def self.valid_moves(pos)
+    valid_moves = []
+
+    cur_x, cur_y = pos
+    MOVES.each do |(dx, dy)|
+      new_pos = [cur_x + dx, cur_y + dy]
+
+      if new_pos.all? { |coord| coord.between?(0, 7) }
+        valid_moves << new_pos
+      end
+    end
+
+    valid_moves
+  end
 
   def initialize(start_pos)
     @start_pos = start_pos
@@ -18,35 +44,11 @@ class KnightPathFinder
       .map(&:value)
   end
 
+  private_constant :MOVES
+
   private
 
-  MOVES = [
-    [-2, -1],
-    [-2,  1],
-    [-1, -2],
-    [-1,  2],
-    [ 1, -2],
-    [ 1,  2],
-    [ 2, -1],
-    [ 2,  1]
-  ]
-
   attr_accessor :root_node, :visited_positions
-
-  def self.valid_moves(pos)
-    valid_moves = []
-
-    cur_x, cur_y = pos
-    MOVES.each do |(dx, dy)|
-      new_pos = [cur_x + dx, cur_y + dy]
-
-      if new_pos.all? { |coord| coord.between?(0, 7) }
-        valid_moves << new_pos
-      end
-    end
-
-    valid_moves
-  end
 
   def build_move_tree
     self.root_node = PolyTreeNode.new(start_pos)
@@ -84,7 +86,7 @@ class KnightPathFinder
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   kpf = KnightPathFinder.new([0, 0])
   p kpf.find_path([7, 7])
 end

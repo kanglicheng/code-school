@@ -50,7 +50,6 @@ class Board
     end
   end
 
-
   def cols
     cols = [[], [], []]
 
@@ -85,7 +84,7 @@ class Board
     return false if won?
 
     # no empty space?
-    @rows.all? { |row| row.all? }
+    @rows.all?(&:all?)
   end
 
   def over?
@@ -97,8 +96,8 @@ class Board
 
   def winner
     (rows + cols + diagonals).each do |triple|
-      return :x if triple == [:x, :x, :x]
-      return :o if triple == [:o, :o, :o]
+      return :x if triple == %i(x x x)
+      return :o if triple == %i(o o o)
     end
 
     nil
@@ -122,7 +121,7 @@ class TicTacToe
 
   def initialize(player1, player2)
     @board = Board.new
-    @players = { :x => player1, :o => player2 }
+    @players = { x: player1, o: player2 }
     @turn = @board.next_mark
   end
 
@@ -145,6 +144,7 @@ class TicTacToe
   end
 
   private
+
   def place_mark(pos, mark)
     if self.board.empty?(pos)
       self.board[pos] = mark
@@ -174,7 +174,7 @@ class HumanPlayer
     @name = name
   end
 
-  def move(game, mark)
+  def move(game, _mark)
     game.show
 
     loop do
@@ -192,9 +192,8 @@ class HumanPlayer
     end
   end
 
-  private
   def self.valid_coord?(row, col)
-    [row, col].all? { |coord| (0..2).include?(coord) }
+    [row, col].all? { |coord| (0..2).cover?(coord) }
   end
 end
 
@@ -210,6 +209,7 @@ class ComputerPlayer
   end
 
   private
+
   def winner_move(game, mark)
     (0..2).each do |row|
       (0..2).each do |col|
@@ -239,7 +239,7 @@ class ComputerPlayer
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   puts "Play the dumb computer!"
   hp = HumanPlayer.new("Ned")
   cp = ComputerPlayer.new
