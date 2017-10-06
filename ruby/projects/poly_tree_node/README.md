@@ -23,7 +23,7 @@ tree. We'll write a tree node class that can have an arbitrary number
 of children (not just two left/right children). It should have the
 following interface:
 
-## Phase 1: Implement a TreeNode class
+## Phase 1: Implement a PolyTreeNode class
 
 * Write a class with four methods:
     * An `#initialize(value)` method that sets the value, and starts
