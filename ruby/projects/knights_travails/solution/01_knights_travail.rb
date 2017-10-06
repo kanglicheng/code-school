@@ -1,4 +1,4 @@
-require_relative '../../poly_tree_node/solution/lib/00_tree_node'
+require_relative '00_tree_node'
 
 class KnightPathFinder
   attr_reader :start_pos
