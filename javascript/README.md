@@ -149,7 +149,7 @@ we highly encourage you to read the whole book.
 [proto-inherit-vid]: https://vimeo.com/162131042
 [inherit-demo-vid]: https://vimeo.com/162115223
 [js-browser-vid]: https://vimeo.com/162115224
-[chrome-debugging-vid]: http://vimeo.com/groups/appacademy/videos/95551777
+[chrome-debugging-vid]: https://vimeo.com/95551777
 [prototypal-inheritance]: readings/prototypal-inheritance.md
 [browser-modules]: readings/browser-modules.md
 [basic-canvas-drawing]: https://web-beta.archive.org/web/20170201183210/joshondesign.com/p/books/canvasdeepdive/chapter01.html
