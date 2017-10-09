@@ -5,7 +5,7 @@
 
 ## w6d5
 
-### :clock10: Class will start at 10am! :clock10:
+### :clock10: (SF Only!) Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
 ### Materials (126 min)
