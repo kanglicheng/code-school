@@ -221,7 +221,7 @@ possible.
 [jquery-03-ready]: readings/jquery-03-ready.md
 [jquery-04-all-the-ways]: readings/jquery-04-all-the-ways.md
 [jquery-05-data-attributes]: readings/jquery-05-data-attributes.md
-[backbone-14-vid]: https://vimeo.com/groups/appacademy/videos/85221706
+[backbone-14-vid]: https://vimeo.com/85221706
 [jquery-06-event-delegation]: readings/jquery-06-event-delegation.md
 
 ### Homeworks (45 min)
