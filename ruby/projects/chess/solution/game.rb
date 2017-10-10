@@ -45,10 +45,10 @@ class Game
   end
 
   def swap_turn!
-    @current_player = (current_player == :white) ? :black : :white
+    @current_player = current_player == :white ? :black : :white
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   Game.new.play
 end

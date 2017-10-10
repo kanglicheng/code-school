@@ -38,6 +38,7 @@ class Manager < Employee
   end
 
   protected
+  
   def total_subsalary
     total_subsalary = 0
     self.employees.each do |employee|

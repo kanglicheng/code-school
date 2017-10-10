@@ -4,14 +4,14 @@ module Slideable
     [0, -1],
     [0, 1],
     [1, 0]
-  ]
+  ].freeze
 
   DIAGONAL_DIRS = [
     [-1, -1],
     [-1, 1],
     [1, -1],
     [1, 1]
-  ]
+  ].freeze
 
   def horizontal_dirs
     HORIZONTAL_DIRS
