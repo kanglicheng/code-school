@@ -22,7 +22,7 @@ class List extends React.Component {
   // and fetches items from the API to be rendered as a list
     $.ajax({
       url: '/items',
-      success: items => this.setState(items: items);
+      success: items => this.setState({ items });
     });
   }
 
@@ -58,7 +58,7 @@ const List = React.createClass({
   componentDidMount() {
     $.ajax({
       url: '/items',
-      success: items => this.setState(items: items);
+      success: items => this.setState({ items });
     });
   },
 
