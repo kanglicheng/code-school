@@ -55,7 +55,7 @@ that gets updated via our front-end JavaScript.
 * Replace the contents of the button form with a single `<button>`.  
 * Give the button a class of `follow-toggle`.  
 * We'll also need to let the button know the `user-id` and `initial-follow-state`
-("followed" or "unfollowed") by storing
+("followed" or "unfollowed") by storing. We can determing the `initial-follow-state` using the `User#follows?` method.
 these in [`data-*`][data-*] attributes.
 * Leave the inner HTML of the button empty: the FollowToggle class will be
 responsible for setting this.
