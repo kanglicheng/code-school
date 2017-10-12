@@ -49,7 +49,7 @@ It renders to HTML:
 ### Don't Change Props!
 
 A component should never change its own props. 
-Props are intended to be used to by a parent component to trigger a change or re-render in the child component.
+Props are intended to be used by a parent component to trigger a change or re-render in the child component.
 When new props are received by a component, lifecycle methods will be triggered to handle the change and (by default) a re-rendering of the component. If we need to trigger a re-render within the component, we will use component state. 
 
 # State
