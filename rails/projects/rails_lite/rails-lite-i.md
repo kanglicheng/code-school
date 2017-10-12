@@ -327,7 +327,7 @@ by 2 each time, don't worry - it means your session hash is working.
 ## Phase V: Routing
 
 In this section we'll be writing a `Router` class and a `Route` class.
-A `Route` object is like a single row of `rake routes`:
+A `Route` object is like a single row of `rails routes`:
 
 ```
 user    PUT     /users/:id      users#update

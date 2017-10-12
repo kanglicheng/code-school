@@ -70,17 +70,17 @@ should include this; you'll put shared helper code in here.
 Don't forget to migrate the database if you have new models:
 
 ```
-~/TempProject$ rake db:test:prepare
+~/TempProject$ rails db:test:prepare
 You have 1 pending migrations:
   20130204182856 CreateSecrets
-Run `rake db:migrate` to update your database then try again.
-~/TempProject$ rake db:migrate
+Run `rails db:migrate` to update your database then try again.
+~/TempProject$ rails db:migrate
 ==  CreateSecrets: migrating ==================================================
 -- create_table(:secrets)
    -> 0.0065s
 ==  CreateSecrets: migrated (0.0065s) =========================================
 
-~/TempProject$ rake db:test:prepare
+~/TempProject$ rails db:test:prepare
 ```
 
 ## Controller layer
