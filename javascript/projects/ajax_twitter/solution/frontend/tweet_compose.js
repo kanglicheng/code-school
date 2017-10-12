@@ -8,10 +8,10 @@ class TweetCompose {
     this.$input.on('input', this.handleInput.bind(this));
 
     this.$mentionedUsersDiv = this.$el.find('.mentioned-users');
-    this.$el.find('a.add-mentioned-user').on(
+    this.$el.find('.add-mentioned-user').on(
       'click', this.addMentionedUser.bind(this));
     this.$mentionedUsersDiv.on(
-      'click', 'a.remove-mentioned-user', this.removeMentionedUser.bind(this));
+      'click', '.remove-mentioned-user', this.removeMentionedUser.bind(this));
 
     this.$el.on('submit', this.submit.bind(this));
   }
@@ -19,9 +19,7 @@ class TweetCompose {
   addMentionedUser(event) {
     event.preventDefault();
 
-    const $mentionedUserSelect = $(this.$mentionedUsersDiv.find('script').html());
-    this.$mentionedUsersDiv.find('ul').append($mentionedUserSelect);
-    return false;
+    this.$mentionedUsersDiv.append(this.newUserSelect());
   }
 
   clearInput() {
@@ -44,6 +42,24 @@ class TweetCompose {
     this.clearInput();
   }
 
+  newUserSelect() {
+    const userOptions = window.users
+      .map(user =>
+        `<option value='${user.id}'>${user.username}</option>`)
+      .join('');
+
+    const html = `
+      <div>
+        <select name='tweet[mentioned_user_ids][]'>
+          ${userOptions}
+        </select>
+
+        <button class='remove-mentioned-user'>Remove</button>
+      </div>`;
+
+    return $(html); 
+  }
+
   removeMentionedUser(event) {
     event.preventDefault();
     $(event.currentTarget).parent().remove();
@@ -52,6 +68,7 @@ class TweetCompose {
   submit(event) {
     event.preventDefault();
     const data = this.$el.serializeJSON();
+    
     this.$el.find(':input').prop('disabled', true);
 
     APIUtil.createTweet(data).then(tweet => this.handleSuccess(tweet));

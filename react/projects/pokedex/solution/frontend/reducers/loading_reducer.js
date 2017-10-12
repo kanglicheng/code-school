@@ -13,7 +13,7 @@ const initialState = {
   detailLoading: false
 };
 
-const LoadingReducer = (state = initialState, action) => {
+const loadingReducer = (state = initialState, action) => {
   Object.freeze(state);
   switch(action.type){
     case RECEIVE_ALL_POKEMON:
@@ -32,4 +32,4 @@ const LoadingReducer = (state = initialState, action) => {
   }
 };
 
-export default LoadingReducer;
+export default loadingReducer;

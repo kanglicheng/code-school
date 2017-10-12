@@ -91,13 +91,6 @@ describe ResizingIntSet do
       3.times { set.insert(1) }
       expect(set.count).to eq(1)
     end
-
-    it "should do nothing when removing an item that hasn't been added" do
-      set.insert(1)
-      expect(set.count).to eq(1)
-      set.remove(2)
-      expect(set.count).to eq(1)
-    end
   end
 
   describe "#remove" do
@@ -105,6 +98,13 @@ describe ResizingIntSet do
       set.insert(1)
       set.remove(1)
       expect(set).to_not include(1)
+    end
+
+    it "should do nothing when removing an item that hasn't been added" do
+      set.insert(1)
+      expect(set.count).to eq(1)
+      set.remove(2)
+      expect(set.count).to eq(1)
     end
   end
 

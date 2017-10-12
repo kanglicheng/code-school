@@ -7,7 +7,7 @@ class FeedsController < ApplicationController
     @feed_tweets =
       current_user
         .feed_tweets(LIMIT, params[:max_created_at])
-        .includes(:user, :mentions)
+        .includes(:user, :mentions, mentions: [:user])
 
     respond_to do |format|
       format.html { render :show }

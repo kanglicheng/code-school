@@ -31,8 +31,15 @@ MESSAGES = [
 ]
 
 User.all.each do |user|
+
+  user
+    .followers
+    .concat(User.order('RANDOM()').limit(4))
+
   40.times do
     msg = MESSAGES.sample
     Tweet.create!(user_id: user.id, content: msg, created_at: rand(3000).days.ago)
   end
 end
+
+

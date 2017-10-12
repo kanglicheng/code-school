@@ -1,6 +1,6 @@
 # LRU Cache
 
-Tonight we're going to implement a basic [LRU Cache][lru-cache] using an array.  We will assume our input is limited to Fixnums, Strings, Arrays, Symbols, and Hashes. We will allow the user to set the size of the cache.  
+Tonight we're going to implement a basic [LRU Cache][lru-cache] using an array. This will be a simple implementation that doesn't use a hash-map or linked list.  We will assume our input is limited to Fixnums, Strings, Arrays, Symbols, and Hashes. We will allow the user to set the size of the cache.  
 
 [lru-cache]: http://mcicpc.cs.atu.edu/archives/2012/mcpc2012/lru/lru.html
 
