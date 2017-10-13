@@ -142,8 +142,7 @@ make it clear that the tabs are interactive.
 
 At this point, you should have a widget that displays the content of a selected
 tab. The selected tab's label should be bold and the content pane should update
-when a different tab is selected. Finally, move on to the bonus phase to make
-your widgets even better.
+when a different tab is selected. Move on to the next phase. :smiley_cat:
 
 ## Phase 4: Weather Widget
 
@@ -254,7 +253,8 @@ name.
 
 Great job! The Autocomplete Widget uses an event handler to update the state of
 the component when letters are typed into the input field. Once the autocomplete
-widget is sufficiently styled, move on to your fourth and final widget.
+widget is sufficiently styled, move on to the bonus phase to make
+your widgets even better.
 
 ### Bonus phase 1: React-Transitions
 
