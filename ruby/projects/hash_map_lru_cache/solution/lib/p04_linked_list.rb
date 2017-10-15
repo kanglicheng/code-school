@@ -73,7 +73,7 @@ class LinkedList
     each do |node|
       if node.key == key
         node.val = val
-        return node;
+        return node
       end
     end
   end

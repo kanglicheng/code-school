@@ -28,6 +28,7 @@ class LRUCache
   end
 
   private
+  
   attr_reader :store, :map
 
   def calc!(key)

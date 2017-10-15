@@ -39,7 +39,7 @@ class DynamicArray
     if i >= @count
       return nil
     elsif i < 0
-      return nil if i < -(@count)
+      return nil if i < -@count
       return self[@count + i]
     end
 
@@ -50,7 +50,7 @@ class DynamicArray
     if i >= @count
       (i - @count).times { push(nil) }
     elsif i < 0
-      return nil if i < -(@count)
+      return nil if i < -@count
       return self[@count + i] = val
     end
 
@@ -127,7 +127,7 @@ class DynamicArray
   end
 
   alias_method :<<, :push
-  [:length, :size].each { |method| alias_method method, :count }
+  %i(length size).each { |method| alias_method method, :count }
 
   private
 
