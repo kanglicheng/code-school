@@ -10,7 +10,7 @@ We will also learn to use and implement thunk middleware to handle asynchronous 
 
 ## Phase 0
 
-If you haven't already, finish part one of the project through phase 5 (up to, but not including, steps). You will not need to have steps implemented to work with most of today's project, but you will need a working todo form.
+If you haven't already, finish [Part 1][todos-i] of the project through Phase 4 (up to, but not including, updating/deleting todos). You will not need to have update/delete functionality to work with most of today's project, but you will need a working todo form.
 
 ## Phase 1: Rails API
 
@@ -267,6 +267,9 @@ Then, inside your todo form component, display the errors. You will need to pass
 
 #### Updating Todos
 
+**NB:** If you did not finish [Phase 5][todos-i-phase-5] from yesterday (Updating and Deleting Todos), please complete it. You will need the actions and reducer logic before proceeding.
+
+
 This will be very similar to creating todos, (the resulting action will still be `receiveTodo`)
 but we need a different action because we will hit a different route on the back end.
 Add `APIUtil.updateTodo(todo)` and a new thunk action creator `updateTodo(todo)`
@@ -369,6 +372,8 @@ Consider adding a `fetching` boolean to state and new sync actions like
   * Sort by due date
   * Item pops up when it is due
 
+[todos-i]: ./todos_i.md
+[todos-i-phase-5]: ./todos_i.md#phase-5
 [store_reading]: ../../readings/store.md
 [thunks_reading]: ../../readings/thunks.md
 [middleware_reading]: ../../readings/middleware.md
