@@ -422,8 +422,7 @@ Now, let's refactor this `<ul>`/`<li>` structure so that each list item is a
 `TodoListItem` will render the title of its item inside an `<li>`.  
 
 * Create a file `components/todo_list/todo_list_item.jsx`
-* Create a React Component called a `TodoListItem`
-* Write a `render` function for that component that returns an `<li>` with `this.props.todo.title` inside it
+* Create a React Component called a `TodoListItem` that returns an `<li>` with `props.todo.title` inside it
 * The `TodoList` component should render `TodoListItem`s and give them the necessary props.
 
 **Test your code** - Refresh your page - everything should look the same!
