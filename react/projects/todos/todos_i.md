@@ -285,7 +285,7 @@ being stored correctly. **Test again.**
 
 ## Phase 3: Todos Components
 
-In this phase, you will create React components to display your todo list and its items
+In this phase, you will create React components to display your todo list and its items.
 
 ### `App`
 
@@ -359,7 +359,7 @@ default state. Does it format the data into an array of `todos`? Once your selec
 
 This component will display the items in our todo list.
 
-**NB**: Because we're using the react/redux design principle of separating
+**NB**: Because we're using the React/Redux design principle of separating
 container and presentational components, this will actually be two components!
 
 #### `TodoListContainer`
@@ -372,10 +372,16 @@ presentational component.
 Refer to the [components][components_reading] and [connect][connect_reading]
 reading if you need a refresher on container components.
 
-* Create a file `components/todo_list/todo_list_container.jsx`
-* Import both the `connect` function and the (as of yet unwritten) `TodoList` presentational component
+##### Create file structure
+* Create a new sub-directory in `components`, `todos`, to store all todo related components
+* Create a file to house the container component: `components/todos/todo_list_container.jsx`
+* Create a file to house the presentational component: `components/todos/todo_list.jsx`
+* Stub in a simple React component in `todo_list.jsx` (ex. `module.exports = () => <h3>Todo List goes here!</h3>`)
+
+##### Build it!
+* Import both the `connect` function and the `TodoList` presentational component
 * Create a `mapStateToProps` function
-  * Create a prop called `todos` whose value is the return value of your `allTodos` selector passed the `state`
+  * Create a prop called `todos` set to the return value of your `allTodos` selector passed the `state`
 * Create a `mapDispatchToProps` function
   * Create a prop called `receiveTodo` that accepts a `todo` and invokes a call to `dispatch` with the action returned from the `receiveTodo` action creator
 * Pass your `mapStateToProps` and `mapDispatchToProps` functions to `connect`
@@ -399,9 +405,12 @@ export default connect(
 )(TodoList);
 ```
 
+**Test your code** - Add `TodoListContainer` to your `App` component. Reload your app and see `Todo List goes here!`.
+
+
 #### `TodoList` and `TodoListItem`
 
-Create your `TodoList` presentational component.
+Build out your `TodoList` presentational component.
 
 If we've done our job with our container component, all this presentational
 component will have to do is render the titles of its `todos` prop as list items inside of a `<ul>`
