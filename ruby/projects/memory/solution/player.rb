@@ -1,7 +1,7 @@
-class HumanPlayer 
+class HumanPlayer
   attr_accessor :previous_guess
 
-  def initialize(size)
+  def initialize(_size)
     @previous_guess = nil
   end
 
@@ -23,12 +23,12 @@ class HumanPlayer
     # duck typing
   end
 
-  def receive_match(pos1, pos2)
+  def receive_match(_pos1, _pos2)
     puts "It's a match!"
   end
 end
 
-class ComputerPlayer 
+class ComputerPlayer
   attr_accessor :previous_guess, :board_size
 
   def initialize(size)
@@ -38,8 +38,8 @@ class ComputerPlayer
     @previous_guess = nil
   end
 
-  def receive_revealed_card(pos,value)
-    @known_cards[pos] = value 
+  def receive_revealed_card(pos, value)
+    @known_cards[pos] = value
   end
 
   def receive_match(pos1, pos2)
@@ -49,7 +49,7 @@ class ComputerPlayer
 
   def get_input
     if previous_guess
-      second_guess 
+      second_guess
     else
       first_guess
     end
