@@ -8,7 +8,7 @@ class Tile
     [ 1, -1],
     [ 1,  0],
     [ 1,  1]
-  ]
+  ].freeze
 
   attr_reader :pos
 
@@ -44,7 +44,7 @@ class Tile
 
     @explored = true
     if !bombed? && adjacent_bomb_count == 0
-      neighbors.each { |adj_tile| adj_tile.explore }
+      neighbors.each(&:explore)
     end
 
     self
@@ -53,10 +53,10 @@ class Tile
   def inspect
     # don't show me the whole board when inspecting a Tile; that's
     # information overload.
-    { :pos => pos,
-      :bombed => bombed?,
-      :flagged => flagged?,
-      :explored => explored? }.inspect
+    { pos: pos,
+      bombed: bombed?,
+      flagged: flagged?,
+      explored: explored? }.inspect
   end
 
   def neighbors

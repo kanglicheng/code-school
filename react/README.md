@@ -190,6 +190,7 @@
 
 ### Homeworks (90 min)
 * [Giphy Homework][giphy_homework] (90 min)
+* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 
 [giphy_homework]: homeworks/giphy
 
@@ -222,7 +223,6 @@
 
 ### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
-* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes

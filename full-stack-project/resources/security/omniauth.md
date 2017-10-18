@@ -30,7 +30,7 @@ OmniAuth uses uid, provider, token, secret (`Authorization`) and name (`User`) a
 ```sh
 rails g migration add_name_to_users name:string
 rails g model authorization provider:string uid:string user_id:integer token:string secret:string name:string link:string
-rake db:migrate
+rails db:migrate
 ```
 
 Ensure the `omniauth` gem and all of the supporting provider/strategy gems are also included (`omniauth-facebook`) in your *Gemfile*.

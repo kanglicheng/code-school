@@ -38,7 +38,7 @@ class MemoryGame
 
   def make_guess(pos)
     revealed_value = board.reveal(pos)
-    player.receive_revealed_card(pos, revealed_value) 
+    player.receive_revealed_card(pos, revealed_value)
     board.render
 
     compare_guess(pos)
@@ -68,11 +68,12 @@ class MemoryGame
   end
 
   private
+
   attr_accessor :previous_guess
   attr_reader :board
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME = __FILE__
   size = ARGV.empty? ? 4 : ARGV.shift.to_i
   MemoryGame.new(ComputerPlayer.new(size), size).play
 end

@@ -46,12 +46,11 @@ It renders to HTML:
 <div>Name: Fido, Breed: Greyhound</div>
 ```
 
-### Immutability of Props
+### Don't Change Props!
 
-Props are immutable, i.e., they cannot be changed by a component itself.
-However, a component can receive new props if its parent re-renders. In that
-case, the component will re-render with the new props it received from the
-parent.
+A component should never change its own props. 
+Props are intended to be used by a parent component to trigger a change or re-render in the child component.
+When new props are received by a component, lifecycle methods will be triggered to handle the change and (by default) a re-rendering of the component. If we need to trigger a re-render within the component, we will use component state. 
 
 # State
 

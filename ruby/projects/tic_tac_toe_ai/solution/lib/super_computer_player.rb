@@ -15,7 +15,7 @@ class SuperComputerPlayer < ComputerPlayer
     # If any move results in a #winning_node? we want to choose that
     # one. Find picks the first of the winning moves in
     # `possible_moves`.
-    node = possible_moves.find{ |child| child.winning_node?(mark) }
+    node = possible_moves.find { |child| child.winning_node?(mark) }
 
     # Stop if we found a winner. `node` may be `nil` if there are no
     # winning moves to make.
@@ -23,7 +23,7 @@ class SuperComputerPlayer < ComputerPlayer
 
     # Maybe there is no winning move. Then at least don't pick a
     # loser.
-    node =  possible_moves.find{ |child| !child.losing_node?(mark) }
+    node = possible_moves.find { |child| !child.losing_node?(mark) }
 
     return node.prev_move_pos if node
 
@@ -33,7 +33,7 @@ class SuperComputerPlayer < ComputerPlayer
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   puts "Play the brilliant computer!"
   hp = HumanPlayer.new("Jeff")
   cp = SuperComputerPlayer.new

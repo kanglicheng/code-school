@@ -29,13 +29,13 @@ describe TicTacToeNode do
     end
 
     it "all their #prev_mov_pos values are their parents'" do
-      child_prev_moves = empty_board_node.children.map{ |kid| kid.prev_move_pos }
+      child_prev_moves = empty_board_node.children.map(&:prev_move_pos)
       positions = [0, 1, 2].product([0, 1, 2])
       expect(child_prev_moves).to match_array(positions)
     end
 
     it "the children's boards are dups of the parents'" do
-      kid_boards = empty_board_node.children.map{ |kid| kid.board }
+      kid_boards = empty_board_node.children.map(&:board)
       expect(
         kid_boards.none? do |kid_board|
           kid_board.object_id == empty_board_node.board.object_id
@@ -46,7 +46,7 @@ describe TicTacToeNode do
     it "doesn't produce children that include non-empty squares" do
       empty_board_node.board[[0, 0]] = :x
       empty_board_node.board[[0, 1]] = :o
-      kids = empty_board_node.children.map{ |kid| kid.prev_move_pos }
+      kids = empty_board_node.children.map(&:prev_move_pos)
       expect(kids.include?([0, 0])).to eq(false)
       expect(kids.include?([0, 1])).to eq(false)
     end

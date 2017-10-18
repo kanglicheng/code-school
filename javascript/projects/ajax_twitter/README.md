@@ -55,8 +55,7 @@ that gets updated via our front-end JavaScript.
 * Replace the contents of the button form with a single `<button>`.  
 * Give the button a class of `follow-toggle`.  
 * We'll also need to let the button know the `user-id` and `initial-follow-state`
-("followed" or "unfollowed") by storing
-these in [`data-*`][data-*] attributes.
+("followed" or "unfollowed") by storing these in [`data-*`][data-*] attributes. We can determine the `initial-follow-state` using the `User#follows?` method.
 * Leave the inner HTML of the button empty: the FollowToggle class will be
 responsible for setting this.
 
@@ -80,9 +79,9 @@ variable.
 Using this class, we can now build a `FollowToggle` instance for each
 `follow-toggle` button on the page.
 
-**NB:** Though the follow state is stored in the Rails API as a **_boolean_**, on the
-client side, we'll keep track of the follow state as a **_string_**. This is
-because later we'll add more states in addition to followed/unfollowed.
+**NB:** Though the follow state is stored in the our database as a **_row_** (or lack thereof) in a join table, on the
+client side, we'll keep track of the follow state as a **_string_**. To do this we've bootstrapped the the user's `id` and `follow-state` to the `user-id` and `initial-follow-state` `data-` attributes respectively.
+Later we'll add more states in addition to `followed`/`unfollowed`.
 
 You'll probably want to start testing this out about now. But if you run Webpack
 at this point, nothing will get transpiled because `twitter.js` (the entry point)

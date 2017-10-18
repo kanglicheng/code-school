@@ -1,14 +1,14 @@
 # Advanced Deployment
 
 So you think you're all that and a bag of chips throwing around
-`git push heroku master`? Well, that is pretty cool, but let's 
+`git push heroku master`? Well, that is pretty cool, but let's
 dig a bit deeper into what the deployment process is really all
 about.
 
 Here you'll see an overview of the basic components of deployment,
-and you'll be introuced to two gems that make the process a bit 
+and you'll be introuced to two gems that make the process a bit
 smoother: Capistrano and Rubber. Rubber helps you easily deploy to
-Amazon EC2. 
+Amazon EC2.
 
 ---
 
@@ -24,7 +24,7 @@ application to serve those requests.
 First things first: There's your server box somewhere out in the world
 with an IP address. That's the box you'll be running your application
 on. That box will receive requests through the interwebs (which find it
-by IP address, of course). You usually have this box through some hosting 
+by IP address, of course). You usually have this box through some hosting
 company - DigitalOcean, Linode, Amazon Web Services, etc.
 
 ### Application Server
@@ -69,7 +69,7 @@ running any caching layers, those will also have to be started.
 ## Preparing and Launching Rails
 
 All your code is ready to go. Your app is ready to meet the world. What
-now? Let's get an overview of all the things that need to happen. 
+now? Let's get an overview of all the things that need to happen.
 
 It's not important for you to be able to do or know each of these things
 in detail since you'll see how to use Rubber (which uses Capistrano) to
@@ -97,8 +97,8 @@ First, you would start your database server, and once that's up, you'd
 create and migrate your database in production mode.
 
 ```
-$ rake db:create RAILS_ENV=production
-$ rake db:migrate RAILS_ENV=production
+$ rails db:create RAILS_ENV=production
+$ rails db:migrate RAILS_ENV=production
 ```
 
 ### Assets
@@ -110,7 +110,7 @@ does in production is precompile the assets into just two files:
 `application.css` and `application.js`.
 
 ```
-$ rake assets:precompile
+$ rails assets:precompile
 ```
 
 ### Rails Production Environment

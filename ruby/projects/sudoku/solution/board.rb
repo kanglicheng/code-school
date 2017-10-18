@@ -37,9 +37,9 @@ class Board
   end
 
   def render
-    puts "  #{(0..8).to_a.join(" ")}"
+    puts "  #{(0..8).to_a.join(' ')}"
     grid.each_with_index do |row, i|
-      puts "#{i} #{row.join(" ")}"
+      puts "#{i} #{row.join(' ')}"
     end
   end
 
@@ -82,12 +82,13 @@ class Board
 
   def dup
     duped_grid = grid.map do |row|
-      row.map {|tile| Tile.new(tile.value)}
+      row.map { |tile| Tile.new(tile.value) }
     end
 
     Board.new(duped_grid)
   end
 
   private
+
   attr_reader :grid
 end

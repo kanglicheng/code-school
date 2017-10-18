@@ -13,7 +13,7 @@ function randomColor() {
   return color;
 }
 
-var Ship = function Ship(options) {
+function Ship(options) {
   options.radius = Ship.RADIUS;
   options.vel = options.vel || [0, 0];
   options.color = options.color || randomColor();

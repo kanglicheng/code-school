@@ -48,7 +48,7 @@ copy of the resource we are updating.
 
 In Rails, `PUT` and `PATCH` both mean the same thing. The `resources`
 method creates routes for `PUT` and `PATCH` that both map to `#update`
-(type in `rake routes` and see for yourself). This is not technically
+(type in `rails routes` and see for yourself). This is not technically
 "correct" according to API purists (ah, the meaningless ideological
 debates of the internet!). For this reason, you should avoid `PUT` and
 always use `PATCH`. If you want to know why, just do a quick Google

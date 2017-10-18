@@ -101,7 +101,50 @@ You should now have a clock that displays the current time date. We used
 `clearInterval` to clear the timer that `setInterval` set. Once you have
 sufficiently styled your clock, move on to the next widget.
 
-## Phase 3: Weather Widget
+## Phase 3: Tabs Widget
+
+### Overview
+
+We are going to add a tabs widget that the user can interact with. The tabs
+should each be labeled with their own title. The selected tab should be in
+**bold** font. Below the tabs, display the contents of the selected tab. The
+content pane should update when the user selects different tabs.
+
+### Instructions
+
+* Make a `Tabs` component. `Root` should pass the `Tabs` component an array of
+Javascript objects that each have `title` and `content` as keys.
+* Keep track of the selected tab's index in your `Tabs` component's state. Set
+it initially to zero.
+* In the render method of `Tabs`, render a collection of `<h1>`s (with titles)
+in a `<ul>` and the content of the selected tab in an `<article>`.
+  * Consider creating a `Header` subcomponent for the tabs.
+* Add a click handler to each header that updates the selected index in the
+`Tabs` component.
+* Remember that JSX interpolation is just syntactic sugar for passing an
+argument to a function, which means that it only supports _expressions_, so
+you can't use `if`/`else` inside `{ }`. (This is also why you can't end with a
+semicolon.)
+
+#### Styling
+
+* Add a border around each tab header and the whole section. Use `border-radius`
+to add nicely curved corners to the top of your tabs.
+* Use a flexbox to ensure that the tabs all take up the same amount of space.
+Add `display: flex` to your CSS for your tab headers.
+* Center the tab content, both horizontally and vertically.
+* Add a hover effect to change the background color of the tab that's being
+moused over.
+* Change the `cursor` to be a `pointer` when you're mousing over the tabs to
+make it clear that the tabs are interactive.
+
+### Recap
+
+At this point, you should have a widget that displays the content of a selected
+tab. The selected tab's label should be bold and the content pane should update
+when a different tab is selected. Move on to the next phase. :smiley_cat:
+
+## Phase 4: Weather Widget
 
 ### Overview
 
@@ -164,7 +207,7 @@ that displays the weather. We used the `navigator.geolocation` API to get our
 current location, which we then passed to our `XMLHttpRequest` to get the
 weather from the Open Weather Map API.
 
-## Phase 4: Autocomplete Widget
+## Phase 5: Autocomplete Widget
 
 ### Overview
 
@@ -210,50 +253,7 @@ name.
 
 Great job! The Autocomplete Widget uses an event handler to update the state of
 the component when letters are typed into the input field. Once the autocomplete
-widget is sufficiently styled, move on to your fourth and final widget.
-
-## Phase 5: Tabs Widget
-
-### Overview
-
-We are going to add a tabs widget that the user can interact with. The tabs
-should each be labeled with their own title. The selected tab should be in
-**bold** font. Below the tabs, display the contents of the selected tab. The
-content pane should update when the user selects different tabs.
-
-### Instructions
-
-* Make a `Tabs` component. `Root` should pass the `Tabs` component an array of
-Javascript objects that each have `title` and `content` as keys.
-* Keep track of the selected tab's index in your `Tabs` component's state. Set
-it initially to zero.
-* In the render method of `Tabs`, render a collection of `<h1>`s (with titles)
-in a `<ul>` and the content of the selected tab in an `<article>`.
-  * Consider creating a `Header` subcomponent for the tabs.
-* Add a click handler to each header that updates the selected index in the
-`Tabs` component.
-* Remember that JSX interpolation is just syntactic sugar for passing an
-argument to a function, which means that it only supports _expressions_, so
-you can't use `if`/`else` inside `{ }`. (This is also why you can't end with a
-semicolon.)
-
-#### Styling
-
-* Add a border around each tab header and the whole section. Use `border-radius`
-to add nicely curved corners to the top of your tabs.
-* Use a flexbox to ensure that the tabs all take up the same amount of space.
-Add `display: flex` to your CSS for your tab headers.
-* Center the tab content, both horizontally and vertically.
-* Add a hover effect to change the background color of the tab that's being
-moused over.
-* Change the `cursor` to be a `pointer` when you're mousing over the tabs to
-make it clear that the tabs are interactive.
-
-### Recap
-
-At this point, you should have a widget that displays the content of a selected
-tab. The selected tab's label should be bold and the content pane should update
-when a different tab is selected. Finally, move on to the bonus phase to make
+widget is sufficiently styled, move on to the bonus phase to make
 your widgets even better.
 
 ### Bonus phase 1: React-Transitions

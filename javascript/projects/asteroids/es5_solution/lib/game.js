@@ -3,7 +3,7 @@ const Bullet = require("./bullet");
 const Ship = require("./ship");
 const Util = require("./util");
 
-const Game = function Game() {
+function Game() {
   this.asteroids = [];
   this.bullets = [];
   this.ships = [];
