@@ -3,7 +3,7 @@ require_relative 'player'
 
 class HumanPlayer < Player
 
-  def make_move(board)
+  def make_move(_board)
     start_pos, end_pos = nil, nil
 
     until start_pos && end_pos

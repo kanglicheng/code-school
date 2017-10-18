@@ -7,7 +7,7 @@ class Display
 
   def initialize(board)
     @board = board
-    @cursor = Cursor.new([0,0], board)
+    @cursor = Cursor.new([0, 0], board)
     @notifications = {}
   end
 
@@ -25,9 +25,9 @@ class Display
   end
 
   def colors_for(i, j)
-    if [i, j] == cursor.cursor_pos && cursor.selected
+    if cursor.cursor_pos == [i, j] && cursor.selected
       bg = :light_green
-    elsif [i, j] == cursor.cursor_pos
+    elsif cursor.cursor_pos == [i, j]
       bg = :light_red
     elsif (i + j).odd?
       bg = :light_blue
@@ -54,8 +54,8 @@ class Display
     puts "Arrow keys, WASD, or vim to move, space or enter to confirm."
     build_grid.each { |row| puts row.join }
 
-    @notifications.each do |key, val|
-      puts "#{val}"
+    @notifications.each do |_key, val|
+      puts val
     end
   end
 

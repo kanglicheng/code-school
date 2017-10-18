@@ -12,7 +12,7 @@ def convert_to_int(str)
 end
 
 # PHASE 3
-FRUITS = ["apple", "banana", "orange"]
+FRUITS = ["apple", "banana", "orange"].freeze
 
 class CoffeeError < StandardError
   def message
