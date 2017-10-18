@@ -26,10 +26,13 @@ class Course < ApplicationRecord
   # Remember, belongs_to is just a method where the first argument is
   # the name of the association, and the second argument is an options
   # hash.
+  # In rails 5 we must specify this association to be optional, because some
+  # courses will not have a prerequisite.
   belongs_to :prerequisite,
     class_name: 'Course',
     foreign_key: :prereq_id,
-    primary_key: :id
+    primary_key: :id,
+    optional: true
 
   belongs_to :instructor,
     class_name: 'User',
