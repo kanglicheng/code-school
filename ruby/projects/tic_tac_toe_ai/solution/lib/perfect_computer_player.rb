@@ -45,7 +45,7 @@ class PerfectComputerPlayer < ComputerPlayer
   end
 end
 
-if __FILE__ == $PROGRAM_NAME
+if $PROGRAM_NAME == __FILE__
   puts "Play the perfect computer!"
   hp = HumanPlayer.new("Asher")
   cp = PerfectComputerPlayer.new
