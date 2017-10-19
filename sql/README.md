@@ -212,7 +212,7 @@
 
 [sql-ternary-logic]: readings/sql-ternary-logic.md
 
-### Study Hall 9 - 10am
+### Study Hall 9 - 10am (NY only)
 
 ### Projects
 + [CSS Float Exercise][css-float-exercise]
