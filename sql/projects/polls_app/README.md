@@ -153,6 +153,21 @@ later improve this.  **Don't** spend too much time trying to refactor the
 method right now.  Many students have gone down this deep, dark rabbit hole
 and you'll have time to explore it later.
 
+
+**NB** If you are having trouble with this portion, read the following. Don't
+read it until you've attempted it yourself!!
+
+If you are creating a `through` association that uses another `through`
+association, there is a [Rails bug][rails-bug] that makes this return `nil` if
+the record is unsaved. Even Rails has its own list of bugs! To fix this,
+explicitly use `response.question.poll`. You might ask, why has Rails not fixed
+this yet? It is extremely rare to make such tenuous associations in real app
+development, so it hasn't been a priority. You'll come to see that there are
+bugs and issues in all code, even in your operating system and the
+implementations of Ruby! There is a limited amount of developers and time.
+
+[rails-bug]: https://github.com/rails/rails/issues/20827
+
 ## Poll results
 
 Write a method `Question#results` that returns a hash of choices and
