@@ -44,13 +44,13 @@ rendering, plus waiting for DB requests to be returned).
 Different application servers work differently, but they may not be
 able to process multiple requests simultaneously.
 
-### Webrick
+### WEBrick
 
-Before Rails 5, Webrick was the default Rails app server. It is written in Ruby and
+Before Rails 5, WEBrick was the default Rails app server. It is written in Ruby and
 designed to be simple and functional. It's fine for debugging and
 low-traffic apps.
 
-A major limitation is that Webrick will only process one request at a
+A major limitation is that WEBrick will only process one request at a
 time. This means your app cannot serve requests in parallel, which
 means requests routed to it may pile up, waiting to be processed. This
 is frustrating because a majority of the time it takes to process a
@@ -75,12 +75,12 @@ CPU utilization (less CPU time idle means higher efficiency).
 
 ### Thin
 
-Thin is an improvement over Webrick. Parts of it (the parts that parse
+Thin is an improvement over WEBrick. Parts of it (the parts that parse
 the HTTP request) are written in C code to speed up performance. Thin
 is still single-threaded; out of the box it still handles one request
 at a time.
 
-Thin is a simple improvement to drop in to replace Webrick (just add
+Thin is a simple improvement to drop in to replace WEBrick (just add
 `gem 'thin'` to your Gemfile). The same trick of running multiple
 instances behind a load balancer works.
 
@@ -104,10 +104,10 @@ Unicorn will use more memory than other approaches.
 
 ### Puma
 
-Puma is a *multi-threaded* web server (technically, it also runs
-multiple processes, too). Both *threads* and *processes* can run code
-simultaneously. But threads *share memory*; which means you can run
-many more worker threads without running out of memory.
+Puma is now the default Rails app server; it is a *multi-threaded* web server
+(technically, it also runs multiple processes, too). Both *threads* and
+*processes* can run code simultaneously. But threads *share memory*; which
+means you can run many more worker threads while using less memory.
 
 There is a downside to multi-threading is that when threads share
 memory, they can interfere with what other threads are working on. For
@@ -214,7 +214,7 @@ Python framework. It works, but it also forces you to very unnaturally
 pass callbacks around *every damn time* you make a DB query.
 
 Thin doesn't solve the single-threaded problem, but it is
-significantly faster than Webrick. You should probably be using Thin
+significantly faster than WEBrick. You should probably be using Thin
 in prod.
 
 
