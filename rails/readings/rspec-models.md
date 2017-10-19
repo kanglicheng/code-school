@@ -74,7 +74,7 @@ Make sure it's in your Gemfile and run `bundle install`.
 #Gemfile
 
 group :test do
-  gem 'shoulda-matchers', '~> 3.1'
+  gem 'shoulda-matchers'
 end
 ```
 
