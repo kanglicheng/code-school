@@ -121,9 +121,7 @@ To do this, you can import these functions in your entry file and save them to t
 
 ### State Shape
 
-We want our app state to hold two pieces of information concerning user auth which we'll nest under `session`:
-1) the `current user` and
-2) an array of `errors`.
+We want our app state to hold the `current user` which we'll nest under `session`
 
 If no user is signed in, `session.currentUser` is `null`.
 If a user is signed in `session.currentUser` returns information on the user.
@@ -157,7 +155,7 @@ or this:
 ```
 
 By default, no user is signed in.
-Thus `session` should return a `null` `currentUser`, and an empty array of `errors`.
+Thus `session` should return a `null` `currentUser`.
 
 Hint: Use this default application state as a template for any session information we might receive.
 
