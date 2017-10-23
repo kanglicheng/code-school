@@ -58,7 +58,6 @@ Remember that all a route does is match on the **HTTP method** and the
 what that is already). The matched route then instantiates an instance of the
 specified controller and calls the specified action on it.
 
-
 We have our initial routes now and have the endpoints necessary to
 manage a `User` resource. Notice though that our routes point to a
 `UsersController`, which we don't actually have yet. Nor do we have a
