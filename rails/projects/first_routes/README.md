@@ -55,8 +55,9 @@ listed in the left-most column); You can name your routes by adding an
 
 Remember that all a route does is match on the **HTTP method** and the
 **url path** (it does this with a **regular expression**, if you know
-what that is already). The controller then sends the request on to the
-specified action on the specified controller.
+what that is already). The matched route then instantiates an instance of the
+specified controller and calls the specified action on it.
+
 
 We have our initial routes now and have the endpoints necessary to
 manage a `User` resource. Notice though that our routes point to a
