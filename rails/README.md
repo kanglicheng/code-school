@@ -129,7 +129,7 @@
 
 ### Materials (20 min)
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Resposive Design][css-responsive] (10 min)
+* :book: [CSS Responsive Design][css-responsive] (10 min)
 
 [css-nontech]: ../html-css/readings/css_nontech.md
 [css-responsive]: ../html-css/readings/responsive_design.md
