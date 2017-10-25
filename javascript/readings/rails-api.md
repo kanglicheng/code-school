@@ -75,7 +75,7 @@ to render a dynamic view.
 Our application needs to be able to respond to client-side requests for JSON.
 Lucky for us, Rails is smart enough to route HTTP requests for different data
 types to the corresponding views for that type. If a request with a header for
-`Content-Type: application/json` comes in, `CatsController#index` will
+[`Accept: application/json`][http-accept] comes in, `CatsController#index` will
 automatically try to render `app/views/cats/index.json.jbuilder` instead of the
 `app/views/cats/index.html.erb` view we wrote earlier. All we have to do is
 write that view:
@@ -91,8 +91,13 @@ the Jbuilder's `json.array!` method.
 
 Don't worry if you've never heard of [Jbuilder][jbuilder]. It's just a gem that
 lets us write Ruby code to create JSON objects, much like how ERB is used to
-create HTML. We'll continue learning more about and using it soon!
+create HTML. We'll be learning more about it soon!
 
+If you're interested in how Rails resolves the response type, check out
+[this blog post][blog].
+
+[http-accept]: https://github.com/rails/rails/blob/master/actionpack/lib/action_controller/metal/mime_responds.rb#L35
+[blog]: http://blog.bigbinary.com/2010/11/23/mime-type-resolution-in-rails.html
 [jbuilder]: https://github.com/rails/jbuilder
 
 ## Using the API

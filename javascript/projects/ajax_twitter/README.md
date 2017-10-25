@@ -111,18 +111,20 @@ re-render.
 you can have jQuery automatically parse the response as JSON. Read the
 documentation [here][$.ajax-docs]
 
-#### Content-Types and `respond_to`
+#### The `Accept` header and `respond_to`
 
 You may also be wondering what's going on with the `respond_to` inside the
 `FollowsController`. Well, when we make an HTTP request to a server, we can
-specify the `Content-Type` to ask for HTML, XML, JSON, text, etc. Until now, our
-controllers were serving HTML by default.
+specify a value for the `Accept` header to ask for HTML, XML, JSON, text, etc.
+Until now, our controllers were serving HTML by default.
 
-The browser sets this `Content-Type` header for us based on how we make the
-request. When we use the `$.ajax` method, we will (by default) request JSON. The
-controller can then react to this `Content-Type` request by using the
-[`respond_to` method][respond-to-docs].
+JQuery ajax ([by default][default]) sets the `Accept` header based on the
+`dataType` of the request. We can manually set the `dataType` to JSON. The
+controller can then react to this `Accept` header by using the
+[`respond_to` method][respond-to-docs]. If we do not specify a `dataType`,
+`$.ajax` will return the first `respond_to` type specified in the controller.
 
+[default]: http://api.jquery.com/jQuery.ajax/#jQuery-ajax-settings
 [respond-to-docs]: http://apidock.com/rails/ActionController/MimeResponds/InstanceMethods/respond_to
 [$.ajax-docs]: http://api.jquery.com/jquery.ajax/
 
