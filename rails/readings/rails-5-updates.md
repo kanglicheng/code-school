@@ -199,7 +199,7 @@ Whenever Rails 5 runs migrations, it checks the class of the current migration f
 
 Previously, the `shoulda-matchers` gem required a specific branch to be
 compatible with Rails 5.
-As of October 2017, `shoulda-matchers` master branch is now compatible!
+As of version `3.1.1`, `shoulda-matchers` master branch is now compatible!
 
 #### `rails-controller-testing`
 
