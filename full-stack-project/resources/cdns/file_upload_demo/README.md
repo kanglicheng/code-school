@@ -4,6 +4,7 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 ## Demo
 
 #### 🚨 **NB:** Important Changes! 🚨
+- The `paperclip` gem currently does not support the newest version of the `aws-sdk` gem. Add this line to your gemfile to specify a lower version: `gem 'aws-sdk', '< 3.0'`.
 - The AWS S3 user interface has changed, please follow this [official demo][aws-bucket-demo] to create a bucket.
 - You will need to create a policy for each bucket. You can use the following (make sure to use _your_ bucket name!):
 
@@ -80,7 +81,7 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
 ### Setting up Paperclip
 
 - ImageMagick is a dependency of paperclip. It is installed on the a/A machines but you will need to install it at home. `brew install imagemagick`
-- Add the gem of course `gem "paperclip", '~> 5.0.0'`. The video references the beta because it was the only version compatible with the latest version of AWS at the time it was filmed, but you should not need the beta anymore.
+- Add the gem with `gem "paperclip", '~> 5.0.0'`. The video references the beta because it was the only version compatible with the latest version of AWS at the time it was filmed, but you should not need the beta anymore.
 - We need to create a migration to add the attached file columns. We'll add them to posts for the demo. `rails generate paperclip post image`
 - We also need to add code to the model to tell it how to handle attached files. Check the [Paperclip docs](https://github.com/thoughtbot/paperclip#paperclip) for more info!
 
@@ -116,7 +117,7 @@ Double check that your `s3_region` [here][aws-regions] (scroll down to **API Gat
 
 [aws-regions]: http://docs.aws.amazon.com/general/latest/gr/rande.html
 
-- Now that we have a safe way to access our secret keys, we need to update our application.rb file to configure paperclip to use s3. Let's add one more gem for this. `gem 'aws-sdk', '>= 2.0'`
+- Now that we have a safe way to access our secret keys, we need to update our application.rb file to configure paperclip to use s3. Let's add one more gem for this. `gem 'aws-sdk', '< 3.0'`
 
 ```ruby
 # config/application.rb
