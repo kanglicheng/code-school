@@ -135,8 +135,8 @@
 [css-responsive]: ../html-css/readings/responsive_design.md
 
 ### Homeworks (150 min)
-* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
 * [CSS Warm Up][css-warmup] (60 min)
+* [CSS Curriculum 6: Positioning & Media Queries][css-6] (90 min)
 
 [css-6]: ../html-css/micro-projects/positioning_media_queries/exercise.md
 [css-warmup]: ../html-css/projects/css_warm_up
