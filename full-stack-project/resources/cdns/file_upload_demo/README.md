@@ -20,7 +20,7 @@ This demo shows how to upload images using React, Paperclip, and AWS S3.
       ],
       "Resource": [
         "arn:aws:s3:::BUCKET-NAME",
-        "arn:aws:s3:::BUCKET-NAME/*",
+        "arn:aws:s3:::BUCKET-NAME/*"
       ],
       "Principal": "*"
     }
