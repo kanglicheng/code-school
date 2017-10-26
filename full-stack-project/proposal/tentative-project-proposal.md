@@ -19,7 +19,10 @@ projects on the [approved list][clone-link].
 This is required if you're proposing a unique project, but it's a good
 exercise even if you're planning a straight, no-frills clone. You should
 write a bulleted list of the features you will need to implement for
-your Minimum Viable Product (MVP). Your MVP list should contain **four key features** for your app. Any additional features should be marked `bonus`. For projects from the approved clones list, please see the [MVP List][mvp-list] document for required features.
+your Minimum Viable Product (MVP). Your MVP list should contain **four key
+features** for your app. Any additional features should be marked `bonus`. For
+projects from the approved clones list, please see the [MVP List][mvp-list]
+document for required features.
 
 Think carefully about this, but don't
 spend more than 30 minutes actually writing the outline. The idea is not

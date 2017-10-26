@@ -1,27 +1,33 @@
 # Full-Stack Curriculum
 
-## Proposal
+## Tentative Project Proposal
 
 Before you can start working on your full-stack project you need to pick
 an app to build. You will start by submitting a list of three possible
 apps you would be interested in creating. This is your _tentative
-proposal_. You will assigned one of them.
+proposal_. You will assigned one of them. Important deadline for the tentative
+proposal:
 
-Before you start on your full-stack project you will create a detailed
-proposal in which you carefully plan out the app you are going to build.
-This is your _full-stack project proposal_. Here are the important
-deadlines for this part of the curriculum.
 
   * **W7D2**: Submit your tentative proposal by 9am
     * [Tentative proposal guidelines][tentative-proposal]
     * [List of approved apps][good-projects]
+
+[tentative-proposal]: proposal/tentative-project-proposal.md
+[good-projects]: proposal/projects-to-clone.md
+
+## Design Documents
+
+Before you start on your full-stack project you will create a set of detailed
+documents, in which you carefully plan out the app you are going to build.
+These are your _full-stack design documents_. Important deadline for the
+design documents:
+
   * **W8D1**: Submit your full-stack proposal by 9am
     * [Full-stack proposal guidelines][fsp]
     * [MVP Checklist][mvp-checklist]
     * [Sample Proposal][sample-proposal]
 
-[tentative-proposal]: proposal/tentative-project-proposal.md
-[good-projects]: proposal/projects-to-clone.md
 [fsp]: proposal/full-stack-project-proposal.md
 [sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
 [mvp-checklist]: proposal/mvp-list.md
@@ -29,7 +35,8 @@ deadlines for this part of the curriculum.
 ## Project
 
 You will spend the next two weeks working full-time on your
-full-stack project Here are the important deadlines.
+full-stack project Here are the important deadlines. Read the rest of this
+document before starting.
 
 * **W8D2**: Start work on your full-stack project after you finish A06
 * **W9D1**: [Culture Readings](#w9d1)
