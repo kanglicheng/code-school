@@ -225,8 +225,7 @@ def expensive_tastes
     GROUP BY
       styles.style
     ORDER BY
-      (SUM(album_track_counts.price) / SUM(album_track_counts.count)) DESC,
-      styles.style ASC
+      (SUM(album_track_counts.price) / SUM(album_track_counts.count)) DESC
     LIMIT 5
   SQL
 end
