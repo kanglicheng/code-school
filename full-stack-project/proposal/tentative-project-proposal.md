@@ -9,25 +9,35 @@ is good for the class as a whole.
 
 To facilitate this, we're going to have you submit to us your top three
 choices of project. You'll do this through a Google form we send to your
-email. At most one of your choices can be a project of your own design;
-in this case, select "Other" and write a brief outline in the provided
-text field (details below). Your other choices should be clones of
-projects on the [approved list][clone-link].
+email. Your choices for clones are available in this [approved list][clone-link].
+At most, one of your choices can be a project of your own design; in this case,
+select "Other" and write a brief outline in the provided text field (details
+below). Slight modifications to a website are not considered your own design.
+It will be considered your own design if either there is no current precedent
+for that content or the site you want to clone is not on the approved list.
+
+**NB** We highly encourage you to save your own brilliant website idea for
+the Flex project in two weeks, or even after that. Full stack (also Flex, for
+that matter) is a huge learning experience and you will make many mistakes
+along the way. And you probably don't want your idea littered with learning
+opportunities. Also, not having a website to copy adds a _lot_ of extra
+planning and design. Keep these things in mind. 
 
 ## Project Outline
 
-This is required if you're proposing a unique project, but it's a good
+This is only required if you're proposing a unique project, but it's a good
 exercise even if you're planning a straight, no-frills clone. You should
-write a bulleted list of the features you will need to implement for
-your Minimum Viable Product (MVP). Your MVP list should contain **four key
-features** for your app. Any additional features should be marked `bonus`. For
-projects from the approved clones list, please see the [MVP List][mvp-list]
+write a bulleted list of the features you will need to implement for your
+Minimum Viable Product (MVP). Your MVP list should contain **four key
+features** for your app. Any additional features should be marked `bonus`.
+
+For projects from the approved clones list, please see the [MVP List][mvp-list]
 document for required features.
 
-Think carefully about this, but don't
-spend more than 30 minutes actually writing the outline. The idea is not
-to sit down and plan everything out in minute detail. Instead, consider
-this a sales pitch. Give us enough detail to show that the project has
+Think carefully about this, but don't spend more than 30 minutes actually
+writing the outline. The idea is not to sit down and plan everything out in
+minute detail. That will come in the next part of the project. Instead,
+consider this a sales pitch. Give us enough detail to show that the project has
 merit and that you have a game plan for making it happen.
 
 ### Example
