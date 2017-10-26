@@ -1,6 +1,6 @@
 import { RECEIVE_SEARCH_GIPHYS } from '../actions/giphy_actions';
 
-const GiphysReducer = (state = [], action) => {
+const giphysReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_SEARCH_GIPHYS:
       return action.giphys;
@@ -9,4 +9,4 @@ const GiphysReducer = (state = [], action) => {
   }
 };
 
-export default GiphysReducer;
+export default giphysReducer;

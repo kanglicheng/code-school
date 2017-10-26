@@ -108,12 +108,12 @@ Remember to require `fetchBenches` for testing.
 ### Benches Reducer
 In this step, we're going to create a reducer that manages the `benches` section of our application state.
 
-* Create a file, `reducers/benches_reducer.js` that exports a `BenchesReducer` function.
+* Create a file, `reducers/benches_reducer.js` that exports a `benchesReducer` function.
 
-Let's start by just setting up our `BenchesReducer` to return its default state:
+Let's start by just setting up our `benchesReducer` to return its default state:
 Remember to use `Object.freeze` to prevent the state from being mutated.
 
-Have your `BenchesReducer` update the `benches` in your state when it receives the `RECEIVE_BENCHES` action.
+Have your `benchesReducer` update the `benches` in your state when it receives the `RECEIVE_BENCHES` action.
 Your reducer should look like this:
 
 ```js
@@ -121,7 +121,7 @@ Your reducer should look like this:
 
 import { RECEIVE_BENCHES } from '../actions/bench_actions';
 
-const BenchesReducer = (state = {}, action) => {
+const benchesReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_BENCHES:
@@ -133,27 +133,27 @@ const BenchesReducer = (state = {}, action) => {
 ```
 
 ### Entities Reducer
-In this step, we are going to write an `EntitiesReducer` that is responsible for combining any of the reducers that hold relational data from our database. This app only has a single entity, `benches`, but again, we will follow convention since most apps worth using will have multiple `entities`.
+In this step, we are going to write an `entitiesReducer` that is responsible for combining any of the reducers that hold relational data from our database. This app only has a single entity, `benches`, but again, we will follow convention since most apps worth using will have multiple `entities`.
 
-* Create a file, `reducers/entities_reducer.js` that exports a `EntitiesReducer` function.
-* Use `combineReducers` to incorporate the `BenchesReducer` into the `EntitiesReducer`.
+* Create a file, `reducers/entities_reducer.js` that exports a `entitiesReducer` function.
+* Use `combineReducers` to incorporate the `benchesReducer` into the `entitiesReducer`.
 
-Then add the `EntitiesReducer` to your `root_reducer.js`.
+Then add the `entitiesReducer` to your `root_reducer.js`.
 
 ```javascript
 // frontend/reducers/root_reducer.jsx
 
 import { combineReducers } from 'redux';
 
-import EntitiesReducer from './entities_reducer';
-import SessionReducer from './session_reducer';
+import entitiesReducer from './entities_reducer';
+import sessionReducer from './session_reducer';
 
-const RootReducer = combineReducers({
-  entities: EntitiesReducer,
-  session: SessionReducer
+const rootReducer = combineReducers({
+  entities: entitiesReducer,
+  session: sessionReducer
 });
 
-export default RootReducer;
+export default rootReducer;
 ```
 
 At this point, our default application state should look like this.
@@ -533,21 +533,21 @@ Update your `Search` presentational component to pass the `updateBounds` prop to
   * Package these coordinates into a `bounds` object.
   * Invoke `this.props.updateBounds()`, and pass your newly constructed bounds object
 
-### `FilterReducer`
+### `filterReducer`
 
 We need to build out our application state to reflect the map's `bounds`.
 
 * Create a new file, `reducers/filter_reducer.js`
-* Build and export a `FilterReducer`
+* Build and export a `filterReducer`
   * You're reducer should update the application state when an `UPDATE_BOUNDS` action is dispatched
 
 ### `uiReducer`
 
-The `uiReducer` will be used to combine any reducers in charge of managing information that influences our user's interactions, but is not relational data from our backend. For this project, it will just contain the `FilterReducer`, but there are many other uses of this slice of state, for instance toggling a loading screen while waiting for an ajax request. Let's continue to follow our conventions.
+The `uiReducer` will be used to combine any reducers in charge of managing information that influences our user's interactions, but is not relational data from our backend. For this project, it will just contain the `filterReducer`, but there are many other uses of this slice of state, for instance toggling a loading screen while waiting for an ajax request. Let's continue to follow our conventions.
 
 * Create a new file, `reducers/ui_reducer.js`
-* Use `combineReducers` to combine just the `FilterReducer` and export it
-* Update your `RootReducer` to contain the `uiReducer`
+* Use `combineReducers` to combine just the `filterReducer` and export it
+* Update your `rootReducer` to contain the `uiReducer`
 
 **Test** that the application is being successfully updated by moving the map around and then calling `window.getState()` in the console.
 
@@ -692,9 +692,9 @@ Make the input tags disabled so that our users don't try to edit them!
     * `createBench` (thunk action creator)
   * Add a `mapDispatchToProps` function to your `BenchFormContainer`; this should pass a `createBench` prop to `BenchForm`
 
-### `BenchesReducer`
+### `benchesReducer`
 
-Now, update your `BenchesReducer` to respond to the `RECEIVE_BENCH` action.
+Now, update your `benchesReducer` to respond to the `RECEIVE_BENCH` action.
 
 #### `BenchMap`
 
@@ -754,10 +754,10 @@ export const updateFilter = (filter, value) => ({
 //...
 ```
 
-The first parameter, `filter`, will tell our `FilterReducer` which property to update, and the second parameter, `value`, will specify the value of that filter.
+The first parameter, `filter`, will tell our `filterReducer` which property to update, and the second parameter, `value`, will specify the value of that filter.
 
-Start by refactoring the `FilterReducer` and `SearchContainer` to use this new action creator instead of `updateBounds`.
-Your `FilterReducer` should have a default state that looks like:
+Start by refactoring the `filterReducer` and `SearchContainer` to use this new action creator instead of `updateBounds`.
+Your `filterReducer` should have a default state that looks like:
 
 ```
 {

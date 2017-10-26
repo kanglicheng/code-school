@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
-import RootReducer from '../reducers/root_reducer';
+import rootReducer from '../reducers/root_reducer';
 
 const configureStore = (preloadedState = {}) => {
   const store = createStore(
-    RootReducer,
+    rootReducer,
     preloadedState,
 
     // Phase 3: Using Redux applyMiddleware
