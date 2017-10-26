@@ -33,7 +33,7 @@ const _nullUser = {
   currentUser: null
 };
 
-const SessionReducer = (state = _nullUser, action) => {
+const sessionReducer = (state = _nullUser, action) => {
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;

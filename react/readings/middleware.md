@@ -34,12 +34,12 @@ middleware:
 // store/store.js
 
 import { createStore, applyMiddleware } from 'redux';
-import RootReducer from 'reducers';
+import rootReducer from 'reducers';
 import logger from 'redux-logger';
 
 let configureStore = (preloadedState = {}) => (
   createStore(
-    RootReducer,
+    rootReducer,
     preloadedState,
     applyMiddleware(logger)
   )
@@ -144,13 +144,13 @@ Follow the example below to include it in your projects:
 	// store/store.js
 
 	import { createStore, applyMiddleware } from 'redux';
-	import RootReducer from 'reducers';
+	import rootReducer from 'reducers';
 	import thunk from 'redux-thunk';
 	import logger from 'redux-logger';
 
   let configureStore = (preloadedState = {}) => (
     createStore(
-      RootReducer,
+      rootReducer,
       preloadedState,
       applyMiddleware(thunk, logger)
     )
