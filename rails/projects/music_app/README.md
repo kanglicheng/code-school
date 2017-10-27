@@ -84,8 +84,8 @@ Your app should have routes for:
 
 ```
     session POST   /session(.:format)                     sessions#create
-new_session GET    /session/new(.:format)                 sessions#new
             DELETE /session(.:format)                     sessions#destroy
+new_session GET    /session/new(.:format)                 sessions#new
       users POST   /users(.:format)                       users#create
    new_user GET    /users/new(.:format)                   users#new
        user GET    /users/:id(.:format)                   users#show
