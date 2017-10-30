@@ -12,7 +12,7 @@
 require 'rails_helper'
 
 RSpec.describe Party, type: :model do
-  let(:party) { FactoryGirl.build(:party) }
+  let(:party) { FactoryBot.build(:party) }
 
   it { should belong_to(:capy) }
 end

@@ -1,4 +1,4 @@
-# Better Fixtures with FactoryBot and Faker
+# Better Fixtures with FactoryGirl and Faker
 
 ## Motivation
 
@@ -23,9 +23,9 @@ each time we need to work with a cat for testing purposes. One solution
 to this problem is Rails's built-in fixtures, but they have [some
 downsides][factories-bad] of their own.
 
-## FactoryBot
+## FactoryGirl
 
-The best solution is to use factories. **FactoryBot** is [the top
+The best solution is to use factories. **FactoryGirl** is [the top
 library][factories-good] for replacing fixtures. It allows us to write:
 
 [factories-bad]: https://semaphoreapp.com/blog/2014/01/14/rails-testing-antipatterns-fixtures-and-factories.html
@@ -33,7 +33,7 @@ library][factories-good] for replacing fixtures. It allows us to write:
 
 ```ruby
 # GOOD
-cat = FactoryBot.build(:cat)
+cat = FactoryGirl.build(:cat)
 ```
 
 The cat object will be created using default values for its attributes,
@@ -42,7 +42,7 @@ which are defined by a factory like so:
 ```ruby
 # my_app/spec/factories/cats.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :cat do # The name matters. :cat factory returns a Cat object.
     name 'Fluffy'
     color 'Dark Brown'
@@ -57,7 +57,7 @@ end
 These default values can be selectively overridden:
 
 ```ruby
-evil_cat = FactoryBot.build(:cat, temperament: 'malicious')
+evil_cat = FactoryGirl.build(:cat, temperament: 'malicious')
 # evil_cat.temperament => "malicious"
 # evil_cat.name => "Fluffy"
 ```
@@ -69,12 +69,12 @@ This allows us to write to-the-point tests:
 
 RSpec.describe Cat do
   it 'is valid when required attributes are present' do
-    expect(FactoryBot.build(:cat)).to be_valid
+    expect(FactoryGirl.build(:cat)).to be_valid
   end
 
   context 'is invalid' do
     specify 'when name is blank' do
-      expect(FactoryBot.build(:cat, name: '')).not_to be_valid
+      expect(FactoryGirl.build(:cat, name: '')).not_to be_valid
     end
     # ...
   end
@@ -91,7 +91,7 @@ factories dynamic rather than static.
 
 We'll see more examples soon, but, first, let's get set up.
 
-## Setting Up FactoryBot and Faker
+## Setting Up FactoryGirl and Faker
 
 *In just three steps:*
 
@@ -142,26 +142,26 @@ config.generators do |g|
 end
 ```
 
-Lastly, if you don't want to need to prefix each FactoryBot method call
-with `FactoryBot`, add `config.include FactoryBot::Syntax::Methods` in
+Lastly, if you don't want to need to prefix each FactoryGirl method call
+with `FactoryGirl`, add `config.include FactoryGirl::Syntax::Methods` in
 your `rails_helper.rb` file:
 
 ```ruby
 RSpec.configure do |config|
-  config.include FactoryBot::Syntax::Methods
+  config.include FactoryGirl::Syntax::Methods
 end
 ```
 
 Then you can do things like call `build(:user)` instead of
-`FactoryBot.build(:user)` in your specs.
+`FactoryGirl.build(:user)` in your specs.
 
 [rspec-setup]: rspec-and-rails-setup.md
 
-## Using FactoryBot and Faker
+## Using FactoryGirl and Faker
 
 ### Setting up Factories
 
-To use FactoryBot with RSpec, you will create a file called
+To use FactoryGirl with RSpec, you will create a file called
 `factories.rb` in the directory `my_app/spec`.  The factories you define
 in that file can be used in your RSpec test files. You can also
 define each factory in a separate file if you create the directory
@@ -173,7 +173,7 @@ Suppose we have a `Post` model, and its attributes are `title`,
 ```ruby
 # my_app/spec/factories/posts.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :post do
     title 'It\'s a title!'
     subtitle '~also has a subtitle~'
@@ -221,7 +221,7 @@ factory could look like this:
 ```ruby
 # in my_app/spec/factories/cats.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :cat do
   end
 end
@@ -236,7 +236,7 @@ require 'spec_helper'
 
 describe Cat do
   it 'has no required attributes' do
-    expect(FactoryBot.build(:cat)).to be_valid
+    expect(FactoryGirl.build(:cat)).to be_valid
   end
 end
 ```
@@ -266,7 +266,7 @@ which satisfy the validations, like this:
 ```ruby
 # in my_app/spec/factories/cats.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :cat do
     name 'Garfield'
     color 'orange'
@@ -284,13 +284,13 @@ instances of the model:
 ```ruby
 # ...
 it 'must have a name' do
-  expect(FactoryBot.build(:cat, name: nil)).not_to be_valid
+  expect(FactoryGirl.build(:cat, name: nil)).not_to be_valid
 end
 # ...
 ```
 
 Passing in a hash of attributes and values for the second argument of
-`FactoryBot#build`, `FactoryBot#create`, and similar methods will
+`FactoryGirl#build`, `FactoryGirl#create`, and similar methods will
 overwrite those attributes for the model.
 
 ```ruby
@@ -301,15 +301,15 @@ overwrite those attributes for the model.
 describe Cat do
   context 'when name is invalid' do
     it 'should require a name' do
-      expect(FactoryBot.build(:cat, name: '')).not_to be_valid
+      expect(FactoryGirl.build(:cat, name: '')).not_to be_valid
     end
 
     it 'should only accept letters and spaces in name' do
-      expect(FactoryBot.build(:cat, name: '1337-H4x0r')).not_to be_valid
+      expect(FactoryGirl.build(:cat, name: '1337-H4x0r')).not_to be_valid
     end
 
     it 'should require a name longer than 2 letters' do
-      expect(FactoryBot.build(:cat, name: "Bo")).not_to be_valid
+      expect(FactoryGirl.build(:cat, name: "Bo")).not_to be_valid
     end
   end
  # (... more validation tests would follow.)
@@ -331,7 +331,7 @@ instead of passing the string value itself.
 ```ruby
 # in my_app/spec/factories/puppies.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :puppy do
     name { Faker::Name.name }
   end
@@ -359,16 +359,16 @@ between cats and  hats set up.)
 ```ruby
 # in my_app/spec/factories/cats.rb
 
-FactoryBot.define do
+FactoryGirl.define do
   factory :cat do
     sequence :hat do |n|
-      FactoryBot.build(:hat, hat_name: "top-hat #{n}")
+      FactoryGirl.build(:hat, hat_name: "top-hat #{n}")
     end
   end
 end
 ```
 
-This example also uses FactoryBot
+This example also uses FactoryGirl
 [sequences][seqs], to add an iterator.
 
 You can test the association in this case by calling `#hat` on the
@@ -382,15 +382,15 @@ describe Cat do
  # ...
 
   it 'may wear a hat' do
-    expect(FactoryBot.build(:cat).hat).to be_instance_of(Hat)
+    expect(FactoryGirl.build(:cat).hat).to be_instance_of(Hat)
   end
 
 end
 ```
 
-### `FactoryBot.build` vs. `FactoryBot.create`
+### `FactoryGirl.build` vs. `FactoryGirl.create`
 
-`FactoryBot.build(:factory_name)` returns an object that is not written
-to the database. `FactoryBot.create(:factory_name)` will write the
+`FactoryGirl.build(:factory_name)` returns an object that is not written
+to the database. `FactoryGirl.create(:factory_name)` will write the
 created record to the database; it is therefore slower than `build`.
 Prefer `build` unless you have a need to write to the database.

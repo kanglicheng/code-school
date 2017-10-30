@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   subject(:user) do
-    FactoryGirl.build(:user,
+    FactoryBot.build(:user,
       name: 'jonathan',
       password: 'good_password')
   end

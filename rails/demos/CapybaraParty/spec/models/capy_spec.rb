@@ -19,7 +19,7 @@ RSpec.describe Capy, type: :model do
   #   Error Messages
 
   # subject(:capy) { Capy.new(name: 'carlo', color: 'yellow') }
-  subject(:capy) { FactoryGirl.build(:capy) }
+  subject(:capy) { FactoryBot.build(:capy) }
 
   describe 'validations' do
     it { should validate_presence_of(:name) }
@@ -28,8 +28,8 @@ RSpec.describe Capy, type: :model do
 
     it 'should validate color is not green' do
       # green_capy = Capy.new(name: 'barbara', color: 'green')
-      # green_capy = FactoryGirl.build(:capy, color: 'green')
-      green_capy = FactoryGirl.build(:green_capy)
+      # green_capy = FactoryBot.build(:capy, color: 'green')
+      green_capy = FactoryBot.build(:green_capy)
       green_capy.valid?
       expect(green_capy.errors[:color]).to eq(['cannot be green!!'])
     end
