@@ -21,7 +21,7 @@ Add the following to the Gemfile of your Ruby on Rails application:
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
 end
 
 group :test do
