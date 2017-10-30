@@ -22,6 +22,7 @@ Add the following to the Gemfile of your Ruby on Rails application:
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :test do
