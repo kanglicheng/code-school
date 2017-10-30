@@ -5,6 +5,7 @@ class Goal < ApplicationRecord
   # has_many :comments, as: :commentable
 
   validates :title, presence: true, length: { minimum: 6 }
+  validates :details, presence: true 
 
   belongs_to :author,
     class_name: :User,
