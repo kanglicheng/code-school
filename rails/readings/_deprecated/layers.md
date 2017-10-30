@@ -65,7 +65,7 @@ end
 Notice that we've included `spec_helper` at the top; every spec file
 should include this; you'll put shared helper code in here.
 
-**TODO**: describe FactoryGirl
+**TODO**: describe FactoryBot
 
 Don't forget to migrate the database if you have new models:
 

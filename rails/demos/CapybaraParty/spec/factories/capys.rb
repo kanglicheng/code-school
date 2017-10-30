@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :capy do
     name { Faker::Name.name }
     color { Faker::Color.hex_color }

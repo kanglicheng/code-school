@@ -298,7 +298,7 @@
 * [Integration Testing][integration-testing]
 * [RSpec and Rails Setup][rspec-setup]
 * [Testing Models][rspec-models]
-* [FactoryGirl and Faker Gems][fac-grl-faker]
+* [FactoryBot and Faker Gems][fac-grl-faker]
 * [Testing Controllers][rspec-controllers]
 * [Testing with Capybara][capybara]
 * [Spring and Guard Setup][spring-guard]
@@ -307,7 +307,7 @@
 [rspec-setup]: readings/rspec-and-rails-setup.md
 [rspec-models]: readings/rspec-models.md
 [rspec-controllers]: readings/rspec-controllers.md
-[fac-grl-faker]: readings/factorygirl-and-faker.md
+[fac-grl-faker]: readings/factorybot-and-faker.md
 [capybara]: readings/capybara.md
 [spring-guard]: readings/guard-spring-setup.md
 
