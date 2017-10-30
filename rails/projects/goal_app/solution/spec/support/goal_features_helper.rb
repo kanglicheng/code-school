@@ -9,9 +9,9 @@ module GoalFeaturesHelper
   end
 
   def build_three_goals(user)
-    FactoryGirl.create(:goal, title: "pickle a pepper", author: user)
-    FactoryGirl.create(:goal, title: "get octocat's autograph", author: user)
-    FactoryGirl.create(:goal, title: "bake a cake", author: user)
+    FactoryBot.create(:goal, title: "pickle a pepper", author: user)
+    FactoryBot.create(:goal, title: "get octocat's autograph", author: user)
+    FactoryBot.create(:goal, title: "bake a cake", author: user)
   end
 
   def verify_three_goals

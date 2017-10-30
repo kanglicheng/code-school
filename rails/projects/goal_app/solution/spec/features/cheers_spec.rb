@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 feature "giving cheers" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let!(:foo_bar) { FactoryGirl.create(:user_foo) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let!(:foo_bar) { FactoryBot.create(:user_foo) }
 
-  let!(:hw_goal) { FactoryGirl.create(:goal, author: hello_world) }
-  let!(:foo_goal) { FactoryGirl.create(:goal, author: foo_bar) }
+  let!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
+  let!(:foo_goal) { FactoryBot.create(:goal, author: foo_bar) }
 
   before(:each) do
     login_as(foo_bar)
@@ -31,12 +31,12 @@ feature "giving cheers" do
 end
 
 feature "viewing my cheers" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let!(:foo_bar) { FactoryGirl.create(:user_foo) }
-  let!(:hw_goal) { FactoryGirl.create(:goal, author: hello_world) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let!(:foo_bar) { FactoryBot.create(:user_foo) }
+  let!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
   before(:each) do
-    FactoryGirl.create(:cheer, giver: foo_bar, goal: hw_goal)
+    FactoryBot.create(:cheer, giver: foo_bar, goal: hw_goal)
     login_as(hello_world)
   end
 
@@ -55,9 +55,9 @@ feature "viewing my cheers" do
 end
 
 feature "limit on cheers" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let!(:foo_bar) { FactoryGirl.create(:user_foo) }
-  let!(:hw_goal) { FactoryGirl.create(:goal, author: hello_world) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let!(:foo_bar) { FactoryBot.create(:user_foo) }
+  let!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
   before(:each) do
     login_as(foo_bar)

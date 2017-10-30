@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 feature "goal completeness tracking" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let(:foo_bar) { FactoryGirl.create(:user_foo) }
-  let!(:hw_goal) { FactoryGirl.create(:goal, author: hello_world) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let(:foo_bar) { FactoryBot.create(:user_foo) }
+  let!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
   before(:each) do
     login_as(hello_world)

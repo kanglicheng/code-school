@@ -13,7 +13,7 @@ feature "the signup process" do
 end
 
 feature "logging in" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
 
   it "shows username on the homepage after login" do
     login_as(hello_world)
@@ -22,7 +22,7 @@ feature "logging in" do
 end
 
 feature "logging out" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
 
   it "begins with logged out state" do
     visit root_url
