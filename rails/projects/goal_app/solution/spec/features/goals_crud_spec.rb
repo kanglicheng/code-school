@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "CRUD of goals" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
 
   before(:each) do
     login_as(hello_world)
@@ -28,7 +28,7 @@ feature "CRUD of goals" do
   end
 
   feature "updating goals" do
-    let(:goal) { FactoryGirl.create(:goal, author: hello_world) }
+    let(:goal) { FactoryBot.create(:goal, author: hello_world) }
 
     it "should have a page for updating an existing goal" do
       visit edit_goal_url(goal)

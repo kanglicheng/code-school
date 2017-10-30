@@ -233,9 +233,9 @@ $ git merge "polymorphic-comments"
  * Leaderboards (whose goals have the most cheers?)
  * Go back and add integration tests to previous day's project
  * Write unit tests for your models using [shoulda-matchers][shoulda-matchers]
-   and [FactoryGirl][factory-girl].
+   and [factory_bot_rails][factory-bot-rails].
  * Style your app.
 
 [railsguides-polymorph-assoc]: http://guides.rubyonrails.org/v3.2.14/association_basics.html#polymorphic-associations
 [shoulda-matchers]: https://github.com/thoughtbot/shoulda-matchers
-[factory-girl]: https://github.com/thoughtbot/factory_girl/blob/master/GETTING_STARTED.md
+[factory-bot-rails]: https://github.com/thoughtbot/factory_bot_rails

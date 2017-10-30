@@ -5,8 +5,8 @@ module CheerFeaturesHelper
   end
 
   def give_another_cheer
-    next_user = FactoryGirl.create(:user)
-    FactoryGirl.create(:goal, author: next_user)
+    next_user = FactoryBot.create(:user)
+    FactoryBot.create(:goal, author: next_user)
     visit user_url(next_user)
     click_button "Cheer!"
   end

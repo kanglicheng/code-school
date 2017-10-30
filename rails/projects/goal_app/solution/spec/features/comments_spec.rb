@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 feature "commenting" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let!(:foo_bar) { FactoryGirl.create(:user, username: "foo_bar") }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let!(:foo_bar) { FactoryBot.create(:user, username: "foo_bar") }
   let!(:foo_goal) do
-    FactoryGirl.create(:goal, author: foo_bar)
+    FactoryBot.create(:goal, author: foo_bar)
   end
 
   before(:each) do

@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 feature "goal privacy" do
-  let!(:hello_world) { FactoryGirl.create(:user_hw) }
-  let!(:foo_bar) { FactoryGirl.create(:user_foo) }
+  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let!(:foo_bar) { FactoryBot.create(:user_foo) }
 
   describe "public goals" do
-    let!(:hw_goal) { FactoryGirl.create(:goal, author: hello_world) }
+    let!(:hw_goal) { FactoryBot.create(:goal, author: hello_world) }
 
     it "should create public goals by default" do
       login_as(hello_world)
@@ -26,9 +26,9 @@ feature "goal privacy" do
   end
 
   describe "private goals" do
-    let!(:private_goal) { FactoryGirl.create(:hw_goal, private: true) }
+    let!(:private_goal) { FactoryBot.create(:hw_goal, private: true) }
     let!(:private_goal) do
-      FactoryGirl.create(:goal, author: hello_world, private: true)
+      FactoryBot.create(:goal, author: hello_world, private: true)
     end
 
     it "allows creating private goals" do
