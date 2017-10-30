@@ -13,7 +13,7 @@ feature "the signup process" do
 end
 
 feature "logging in" do
-  let!(:hello_world) { FactoryBot.create(:user_hw) }
+  let(:hello_world) { FactoryBot.create(:user_hw) }
 
   it "shows username on the homepage after login" do
     login_as(hello_world)

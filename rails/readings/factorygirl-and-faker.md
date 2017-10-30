@@ -96,7 +96,7 @@ We'll see more examples soon, but, first, let's get set up.
 *In just three steps:*
 
 1. [Set up RSpec][rspec-setup] for your Rails application
-2. In the `Gemfile`, add `gem 'factory_girl_rails'` under `group
+2. In the `Gemfile`, add `gem 'factory_bot_rails'` under `group
    :development, :test`, and add `gem 'faker'` under the `group :test`.
 
   Your new `Gemfile` should include the following gems:
@@ -105,7 +105,7 @@ We'll see more examples soon, but, first, let's get set up.
   # my_app/Gemfile
   group :development, :test do
     gem 'rspec-rails'
-    gem 'factory_girl_rails'
+    gem 'factory_bot_rails'
   end
 
   group :test do
