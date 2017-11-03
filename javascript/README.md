@@ -152,7 +152,7 @@ we highly encourage you to read the whole book.
 [chrome-debugging-vid]: https://vimeo.com/95551777
 [prototypal-inheritance]: readings/prototypal-inheritance.md
 [browser-modules]: readings/browser-modules.md
-[basic-canvas-drawing]: https://web-beta.archive.org/web/20170201183210/joshondesign.com/p/books/canvasdeepdive/chapter01.html
+[basic-canvas-drawing]: https://joshondesign.com/p/books/canvasdeepdive/chapter01.html
 
 ### Homeworks (55 min)
 * [Webpack Tutorial][webpack] (20 min)
