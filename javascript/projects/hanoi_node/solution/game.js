@@ -42,7 +42,7 @@ class Game {
         const startTowerIdx = parseInt(start);
         reader.question("Enter an ending tower: ", end => {
           const endTowerIdx = parseInt(end);
-          callback(startTowerIdx, endTowerIdx)
+          callback(startTowerIdx, endTowerIdx);
         });
       });
   }
