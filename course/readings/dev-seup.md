@@ -171,3 +171,34 @@ rbenv rehash
 [rails]: http://rubyonrails.org/
 
 ## Phase 3: Frontend Development
+
+### Node.js & NPM
+[Node.js][node] will be our local JavaScript runtime. This is used to run JavaScript code and run associated node commands.
+
+Again, we want to use a version manager with Node to help us manage potential conflicts between versions and dependencies. In this case we will be using [NVM][nvm] (Node Version Manager) to install/manage Node.js.
+
+```sh
+# install nvm
+brew install nvm
+
+# install a stable version of node
+nvm install 8.9.0
+
+# set version 8.9.0 as default version
+nvm use 8.9.0
+```
+
+Node, like Ruby, comes with a package manager called [NPM][npm], which provides access to a whole ecosystem of libraries and tools we can use. NPM comes pre-bundled with Node, so there is no additional work for us to do. By default we don't need any additional packages installed and will be installing them on a per-project basis.
+
+### React and Atom
+React's JSX syntax is not a standard part of JavaScript, so without a little help it will make our Atom linter very angry with us. Let's install an additional Atom package, `react`, to provide JSX linting support.
+
+```sh
+apm install react
+```
+
+**NB: The `react` Atom package is not listed in the graphical package interface, so you will have to use the `apm` command to install it.** 
+
+[node]: https://nodejs.org/en/
+[nvm]: https://github.com/creationix/nvm
+[npm]: https://docs.npmjs.com/
