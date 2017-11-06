@@ -24,9 +24,12 @@ $ xcode-select --install
 Homebrew is kind of like a low-tech App Store. It allows us access to and the ability to install a wide variety of software and command line tools from the console. These are distinct from those hosted on the App Store and will need to be managed by Homebrew.
 
 Enter the following in your terminal to download and install Homebrew:
+
 ```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
+
+Let's break this down a bit. `curl`, a command-line tool commonly used for downloading files from the internet, is used to download the Homebrew installation file. The `"$(...)"` transforms the file content into a string. Finally, the string is passed to our Ruby executable (`/usr/bin/ruby` is where this file is stored on our machine) with the `-e` flag to tell Ruby to run the argument as code.
 
 Check out the [Homebrew website][homebrew] to learn the basic commands.
 
@@ -36,10 +39,15 @@ Check out the [Homebrew website][homebrew] to learn the basic commands.
 Git is a version control system that allows us to track, commit and revert changes to files within a directory. Here we will install it and add global user info.
 
 ```sh
+# install git
 brew install git
+
+# makes git terminal output pretty
 git config --global color.ui true
+
 # this will mark you as the 'author' of each committed change
 git config --global user.name "your name here"
+
 # use the email associated with your GitHub account
 git config --global user.email your_email_here
 ```
@@ -63,32 +71,48 @@ First we will install rbenv, then use it to install our desired version of Ruby.
 ```sh
 # install rbenv
 brew install rbenv
+
 # add to the PATH (rbenv commands are now available from terminal)
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-# initialize rbenv every time you open a new console window
+
+# initialize rbenv everytime you open a new console window (otherwise our system ruby version will take over when we start a new terminal session)
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+
 # update current console window with new settings
 source ~/.bashrc
-# install and use ruby version 2.3.1
+
+# install Ruby version 2.3.1
 rbenv install 2.3.1
+
+# set version 2.3.1 to be our global default
 rbenv global 2.3.1
+
 # the 'rehash' command updates the environment to your configuration
 rbenv rehash
 
 # and let's verify everything is correct
 # check the version
 ruby -v # => 2.3.1
+
 # check that we are using rbenv (this tells you where the version of ruby you are using is installed)
 which ruby # => /Users/your-username/.rbenv/shims/ruby
 ```
 
 ### Gems
-There are a few gems we will want access to globally, let's install them.
+There are a few gems we will want access to globally.
+
+- Bundler allows us to define project dependencies inside a `Gemfile` and gives us a slew of commands to update, remove and install them. Check out the [Bundler docs][bundler-docs] for more info.
+- Pry is an alternative to the Irb (the default Ruby REPL). It is not only more powerful, but also easier to use than Irb and should be your go-to for running and debugging Ruby code. Check out the [Pry website][pry-repl] for more info and a super useful tutorial.
+- Byebug is feature-rich debugging tool for Ruby. With Byebug you can halt the execution of your code and inspect/track variables and the flow of execution. Lots of cool features in here, so check out the [Byebug docs][byebug-docs]!
+
 ```sh
 gem install bundler pry byebug
 ```
 
 [rbenv]: https://github.com/rbenv/rbenv
+[bunlder-docs]: http://bundler.io/docs.html
+[pry-repl]: http://pryrepl.org/
+[byebug-docs]: https://github.com/deivid-rodriguez/byebug
 
 ## Phase 2: SQL and Rails
 
