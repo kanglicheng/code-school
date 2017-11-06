@@ -111,7 +111,6 @@ which ruby # => /Users/your-username/.rbenv/shims/ruby
 ```
 
 ### Gems
-
 There are a few gems we will want to access globally.
 
 - Bundler allows us to define project dependencies inside a `Gemfile` and gives us a bunch of commands to update, remove and install them. Check out the [Bundler docs][bundler-docs] for more info.
@@ -122,6 +121,10 @@ Let's install them.
 
 ```sh
 gem install bundler pry byebug
+
+# need to refresh our rbenv configuration to make these commands available in
+# the current terminal session
+rbenv rehash
 ```
 
 [rbenv]: https://github.com/rbenv/rbenv
@@ -129,15 +132,42 @@ gem install bundler pry byebug
 [pry-repl]: http://pryrepl.org/
 [byebug-docs]: https://github.com/deivid-rodriguez/byebug
 
-## Phase 2: SQL and Rails
+## Phase 2: Backend Development
+For backend development we will need a database application, a server, and a web-application framework.
 
-
+For the purposes of this course, we will be using two database applications: PostgreSQL and SQLite.
 
 ### PostgreSQL
+PostgreSQL is a fast, feature-rich, open-source database application. It is a scalable application that we can use for development and production apps. We will be using PostgreSQL for most of our web-apps.
 
+Fortunately for MacOS X, we can use [Postgres.app][postgres-app], which provides the database application and a command line interface (CLI) so we can interact with it. To install Postgres.app, download and follow the installation instructions from the website.
+
+**NB: You do not need a graphical client for this course. We encourage you to use the CLI as it teaches you the hard way and is the most common way to interact with a database directly.**
 
 ### SQLite
+[SQLite][sqlite] is a small, lightweight database application that requires no configuration and stores the database as a stand-alone file. For this reason, we will be using SQLite for a few of our in-class projects.
+
+Install using the Brew package manager:
+```sh
+brew install sqlite
+```
 
 ### Rails
+[Ruby on Rails][rails] will serve as our application framework for this course. Rails is a very full-featured, opinionated framework that provides all the tools we need to create a complete web-app. These include an ORM (Object Relational Mapper - essentially we can continue to use Object Oriented Programming with respect to resources in our database), routing, a development server, and a templating engine.
+
+Fortunately for us, Rails is available as a gem in the Ruby ecosystem. Let's install it.
+
+```sh
+# install rails
+gem install rails
+
+# need to refresh our rbenv configuration to make the 'rails' commands available in
+# the current terminal session
+rbenv rehash
+```
+
+[postgres-app]: https://postgresapp.com/
+[sqlite]: https://www.sqlite.org/about.html
+[rails]: http://rubyonrails.org/
 
 ## Phase 3: Frontend Development
