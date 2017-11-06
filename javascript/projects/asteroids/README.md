@@ -222,7 +222,7 @@ Write a `GameView.prototype.start` method. It should call `setInterval` to call
 In the body of your HTML file, add a `<canvas id="game-canvas">` tag with the
 width and height you defined in `Game`.
 
-### Create your entry file Create a new file called `asteroids.js`.
+### Create your entry file called `asteroids.js`.
 
 In the file, add an event listener for the `DOMContentLoaded` event. Within the
 callback, use `document.getElementById()` to find the canvas element. Call
