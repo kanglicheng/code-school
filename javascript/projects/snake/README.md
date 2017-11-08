@@ -35,7 +35,7 @@ will also be the entry point for webpack.
 * Write a `Board` class.
     * The board should construct and hold a `Snake`.
     * Later, your `Board` can hold on to the apples that are on the board.
-    * At the bottom on `snake.js`, export the `Board` class because it will be
+    * At the bottom on `board.js`, export the `Board` class because it will be
     used in the `View` class.
 
 ## Phase II: Write a simple `View` class
