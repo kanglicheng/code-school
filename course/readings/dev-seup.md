@@ -23,12 +23,14 @@ We have a custom Chrome Extension for new tabs that provides a dashboard with li
 This is not required, but feel free to give it a try. To install, follow the installation instructions on the [App Academy Chrome Tab Repo][aa-chrome-tab].
 
 ### Xcode
-Let's start with Xcode. First download and install Xcode from the App Store.
+Let's start with Xcode. First download and install [Xcode from the App Store][xcode].
 
 Next, install the command line tools, by running the following from the console.
 ```sh
 $ xcode-select --install
 ```
+
+To conclude the installation you will need to agree to the Xcode license. Start the Xcode app, click "Agree", and allow the installation to finish. Then you can go ahead and quit the Xcode app.
 
 ### Homebrew
 Homebrew is kind of like a low-tech App Store. It allows us access to and the ability to install a wide variety of software and command line tools from the console. These are distinct from those hosted on the App Store and will need to be managed by Homebrew.
@@ -39,10 +41,13 @@ Enter the following in your terminal to download and install Homebrew:
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Let's break this down a bit. `curl`, a command-line tool commonly used for downloading files from the internet, is used to download the Homebrew installation file. The `"$(...)"` transforms the file content into a string. Finally, the string is passed to our Ruby executable (`/usr/bin/ruby` is where this file is stored on our machine) with the `-e` flag to tell Ruby to run the argument as code.
+You will be given a list of dependencies that will be installed and prompted to continue or abort. Press `RETURN` to continue.
+
+Let's break this command down a bit. `curl`, a command-line tool commonly used for downloading files from the internet, is used to download the Homebrew installation file. The `"$(...)"` transforms the file content into a string. Finally, the string is passed to our Ruby executable (`/usr/bin/ruby` is where this file is stored on our machine) with the `-e` flag to tell Ruby to run the argument as code.
 
 Check out the [Homebrew website][homebrew] to learn the basic commands.
 
+[xcode]: https://itunes.apple.com/us/app/xcode/id497799835
 [homebrew]: https://brew.sh/
 [chrome-dl]: https://www.google.com/chrome/browser/desktop/index.html
 [aa-chrome-tab]: https://github.com/appacademy/app-academy-chrome-tab
@@ -70,7 +75,7 @@ This one is super easy. Go to [atom.io](atom.io), then download and install Atom
 Next, use the Atom Package Manager (apm) to install a few packages that will provide linting and syntax highlighting:
 ```sh
 # apm is the 'atom package manager'
-apm install linter linter-eslint linter-rubocop react rspec
+apm install linter linter-eslint linter-rubocop rspec
 ```
 
 ## Phase 1: Ruby
@@ -85,6 +90,7 @@ First we will install rbenv, then use it to install our desired version of Ruby.
 brew install rbenv
 
 # add to the PATH (rbenv commands are now available from terminal)
+# .bashrc is the file that contains all of our terminal settings
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 
 # initialize rbenv everytime you open a new console window (otherwise our system ruby version will take over when we start a new terminal session)
@@ -120,11 +126,7 @@ There are a few gems we will want to access globally.
 Let's install them.
 
 ```sh
-gem install bundler pry byebug
-
-# need to refresh our rbenv configuration to make these commands available in
-# the current terminal session
-rbenv rehash
+gem install bundler pry byebug rubocop
 ```
 
 [rbenv]: https://github.com/rbenv/rbenv
@@ -142,6 +144,23 @@ PostgreSQL is a fast, feature-rich, open-source database application. It is a sc
 
 Fortunately for MacOS X, we can use [Postgres.app][postgres-app], which provides the database application and a command line interface (CLI) so we can interact with it. To install Postgres.app, download and follow the installation instructions from the website.
 
+Close and reopen your terminal to gain access to the `psql` command. Let's try it out.
+
+```
+# open the PostgreSQL CLI
+psql
+
+# you should be greeted with a prompt that looks like this
+psql (10.X)
+Type "help" for help.
+
+yourname=#
+
+# type '/q' to quit
+yourname=# \q
+
+```
+
 **NB: You do not need a graphical client for this course. We encourage you to use the CLI as it teaches you the hard way and is the most common way to interact with a database directly.**
 
 ### SQLite
@@ -150,6 +169,22 @@ Fortunately for MacOS X, we can use [Postgres.app][postgres-app], which provides
 Install using the Brew package manager:
 ```sh
 brew install sqlite
+```
+
+Again, verify that installation was successful by opening the SQLite CLI.
+
+```sh
+# open SQLite CLI with this command
+sqlite3
+
+#  you should see this output
+# SQLite version 3.16.0 2016-11-04 19:09:39
+# Enter ".help" for usage hints.
+# Connected to a transient in-memory database.
+# Use ".open FILENAME" to reopen on a persistent database.
+
+# .q to quit
+sqlite> .q
 ```
 
 ### Rails
@@ -161,9 +196,8 @@ Fortunately for us, Rails is available as a gem in the Ruby ecosystem. Let's ins
 # install rails
 gem install rails
 
-# need to refresh our rbenv configuration to make the 'rails' commands available in
-# the current terminal session
-rbenv rehash
+# verify installation
+which rails # => /Users/username/.rbenv/shims/rails
 ```
 
 [postgres-app]: https://postgresapp.com/
@@ -173,19 +207,25 @@ rbenv rehash
 ## Phase 3: Frontend Development
 
 ### Node.js & NPM
-[Node.js][node] will be our local JavaScript runtime. This is used to run JavaScript code and run associated node commands.
+[Node.js][node] will be our local JavaScript engine. This is used to run JavaScript code and run associated node commands.
 
 Again, we want to use a version manager with Node to help us manage potential conflicts between versions and dependencies. In this case we will be using [NVM][nvm] (Node Version Manager) to install/manage Node.js.
 
 ```sh
-# install nvm
-brew install nvm
+# download and run the official install script
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+
+# update your terminal config (you will now have access to the nvm command)
+source ~/.bashrc
 
 # install a stable version of node
 nvm install 8.9.0
 
 # set version 8.9.0 as default version
 nvm use 8.9.0
+
+# verify install/config
+which node # => /Users/username/.nvm/versions/node/v8.9.0/bin/node
 ```
 
 Node, like Ruby, comes with a package manager called [NPM][npm], which provides access to a whole ecosystem of libraries and tools we can use. NPM comes pre-bundled with Node, so there is no additional work for us to do. By default we don't need any additional packages installed and will be installing them on a per-project basis.
@@ -197,7 +237,7 @@ React's JSX syntax is not a standard part of JavaScript, so without a little hel
 apm install react
 ```
 
-**NB: The `react` Atom package is not listed in the graphical package interface, so you will have to use the `apm` command to install it.** 
+**NB: The `react` Atom package is not listed in the graphical package interface, so you will have to use the `apm` command to install it.**
 
 [node]: https://nodejs.org/en/
 [nvm]: https://github.com/creationix/nvm
