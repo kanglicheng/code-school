@@ -86,7 +86,7 @@ Display a congratulatory message when a player wins!
 
 **Note:** Since the solution classes are written for the node console, the `Game` class has a `Game.prototype.run` and a
 `Game.prototype.promptMove` method. Ignore these. You're going to call
-`Game.prototype.makeMove` directly from your `View.prototype.makeMove` method.
+`Game.prototype.playMove` directly from your `View.prototype.makeMove` method.
 
 [ttt-demo]: http://appacademy.github.io/ttt.js/solution/index.html
 [ttt-node]: http://github.com/appacademy/curriculum/tree/master/javascript/projects/ttt_node/solution.zip?raw=true
