@@ -48,6 +48,6 @@ Please raise an issue on this repo and we will resolve it in a day or two.  If m
 
 [solutions]: ./course/readings/solutions.md
 
-[dev-setup]: ./readings/dev-setup.md
+[dev-setup]: ./course/readings/dev-setup.md
 [dotfiles]: https://github.com/appacademy/dotfiles
 [atom-cheatsheet]: ./course/readings/atom_cheatsheet.md
