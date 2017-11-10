@@ -173,61 +173,61 @@ Hint: Use this default application state as a template for any session informati
 `receiveErrors` will take an array.
 All other action creators accept a user object. On logout success dispatch `receiveCurrentUser(null)` to remove the current user.
 
-### `SessionReducer`
+### `sessionReducer`
 
 + Create a new reducer in a new file `reducers/session_reducer.js` to keep track of our current user.
 
-The `SessionReducer` should listen for 1 action type and respond to it like so:
+The `sessionReducer` should listen for 1 action type and respond to it like so:
   * `RECEIVE_CURRENT_USER` - sets `currentUser` to the action's user
 
-Your `SessionReducer` should maintain its own default state.
-To do that pass in an object as a default argument to SessionReducer with `currentUser` set to `null` and `errors` set to an empty array.
+Your `sessionReducer` should maintain its own default state.
+To do that pass in an object as a default argument to sessionReducer with `currentUser` set to `null` and `errors` set to an empty array.
 
 Remember to use both `Object.freeze()` and `Object.assign` or `lodash/merge` to prevent the state from being accidentally mutated.
 
-### `SessionErrorsReducer`
+### `sessionErrorsReducer`
 
 + Create a new reducer in a new file `reducers/session_errors_reducer.js` to keep track of any error messages.
 
-The `SessionErrorsReducer` should listen for 2 action type and respond to it like so:
+The `sessionErrorsReducer` should listen for 2 action type and respond to it like so:
 + `RECEIVE_SESSION_ERRORS` - sets `errors` to the action's errors
 + `RECEIVE_CURRENT_USER` - clears the `errors`
 
-### `ErrorsReducer`
+### `errorsReducer`
 
 + Create a new reducer in a new file `reducers/errors_reducer.js` to keep track of any error messages.
 
 This file will be responsible for combining our reducers that handle errors.
 
 * Import `combineReducers` from the `redux` library.
-* Also import the `SessionErrorsReducer` function we just created!
-* The `ErrorsReducer` should use `combineReducers` and will only have a single key-value pair for now named `session` which points to the `SessionErrorsReducer`. We will add more error reducers to this later.
+* Also import the `sessionErrorsReducer` function we just created!
+* The `errorsReducer` should use `combineReducers` and will only have a single key-value pair for now named `session` which points to the `sessionErrorsReducer`. We will add more error reducers to this later.
   * Remember, the `combineReducers` function accepts a single argument: an object whose properties will represent properties of our application state, and values that correspond to domain-specific reducing functions.
-* `export default ErrorsReducer`.
+* `export default errorsReducer`.
 
-Your `ErrorsReducer` should look something like this:
+Your `errorsReducer` should look something like this:
 
 ```javascript
 // frontend/reducers/errors_reducer.jsx
 
 import { combineReducers } from 'redux';
 
-import SessionErrorsReducer from './session_errors_reducer';
+import sessionErrorsReducer from './session_errors_reducer';
 
-const ErrorsReducer = combineReducers({
-  session: SessionErrorsReducer
+const errorsReducer = combineReducers({
+  session: sessionErrorsReducer
 });
 
-export default ErrorsReducer;
+export default errorsReducer;
 ```
 
-### `RootReducer`
+### `rootReducer`
 
 Create a new file, `reducers/root_reducer.js`.
 This file will be responsible for combining our multiple, domain-specific reducers.
-It will export a single `RootReducer`.
+It will export a single `rootReducer`.
 
-Use `combineReducers` to create the `RootReducer` with keys for the `SessionReducer` and `ErrorsReducer`, similarly to how you created the `ErrorsReducer`.
+Use `combineReducers` to create the `rootReducer` with keys for the `sessionReducer` and `errorsReducer`, similarly to how you created the `errorsReducer`.
 
 So far, our default application state should look something like this:
 
@@ -248,11 +248,11 @@ Set up a `configureStore` method for initializing our Store:
 
 * Create a new file, `/store/store.js`.
 * Import `createStore` and `applyMiddleware` from the redux library.
-* Import our `RootReducer`, `redux-logger`, and thunk middleware.
+* Import our `rootReducer`, `redux-logger`, and thunk middleware.
 Write it yourself, or import the library.
 If you use the library don't forget to install it!
 * Define a new function, `configureStore`, that accepts a single argument, `preloadedState`.
-* `configureStore` should return a new `store` with the `RootReducer` and `preloadedState` passed in.
+* `configureStore` should return a new `store` with the `rootReducer` and `preloadedState` passed in.
 
 ```javascript
 // frontend/store/store.js
@@ -260,11 +260,11 @@ If you use the library don't forget to install it!
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import RootReducer from '../reducers/root_reducer';
+import rootReducer from '../reducers/root_reducer';
 
 const configureStore = (preloadedState = {}) => (
   createStore(
-    RootReducer,
+    rootReducer,
     preloadedState,
     applyMiddleware(thunk, logger)
   )

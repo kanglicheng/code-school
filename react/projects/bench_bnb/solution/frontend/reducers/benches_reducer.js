@@ -7,7 +7,7 @@ import {
   RECEIVE_BENCH
 } from '../actions/bench_actions';
 
-const BenchesReducer = (state = {}, action) => {
+const benchesReducer = (state = {}, action) => {
   Object.freeze(state)
   let newState = merge({}, state);
 
@@ -26,4 +26,4 @@ const BenchesReducer = (state = {}, action) => {
   }
 };
 
-export default BenchesReducer;
+export default benchesReducer;

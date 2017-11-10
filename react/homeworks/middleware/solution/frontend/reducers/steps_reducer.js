@@ -18,8 +18,8 @@ const stepsReducer = (state = {}, action) => {
       return merge({}, state, { [action.step.id]: action.step });
     case REMOVE_STEP:
       nextState = merge({}, state);
-      delete nextState[action.step.id]
-      return nextState
+      delete nextState[action.step.id];
+      return nextState;
     default:
       return state;
   }

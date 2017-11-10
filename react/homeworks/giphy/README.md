@@ -132,9 +132,9 @@ export const receiveSearchGiphys = giphys => {
 Before testing this action creator, we need a reducer.
 
 
-### GiphysReducer
+### giphysReducer
 
-Define `GiphysReducer` in `giphys_reducer.js` to receive the previous
+Define `giphysReducer` in `giphys_reducer.js` to receive the previous
 state and an action. Recall that a reducer describes how that state
 should change based on a dispatched action. It should always return the
 new state without mutating the previous state. If the action dispatched to
@@ -147,7 +147,7 @@ Your reducer should look similar to the this one:
 ```js
 import { RECEIVE_SEARCH_GIPHYS } from '../actions/giphy_actions';
 
-const GiphysReducer = (state = [], action) => {
+const giphysReducer = (state = [], action) => {
   switch (action.type) {
     case RECEIVE_SEARCH_GIPHYS:
       return action.giphys;
@@ -161,7 +161,7 @@ const GiphysReducer = (state = [], action) => {
 ### rootReducer
 
 Recall the state shape we planned earlier in this project.
-The `GiphysReducer` above should control the `giphys` slice of the
+The `giphysReducer` above should control the `giphys` slice of the
 application. We use a `rootReducer` with Redux's `combineReducers`
 function to assign control of different slices of state to their
 reducers and create the application state.
@@ -169,16 +169,16 @@ reducers and create the application state.
 This project only needs one reducer, but using `combineReducers` would
 allow you to easily add more state slices in the future.
 
-We've imported `combineReducers` and `GiphysReducer` for you. Your simple
+We've imported `combineReducers` and `giphysReducer` for you. Your simple
 root reducer file should look similar to the following:
 
 ```js
 import { combineReducers } from 'redux';
 
-import GiphysReducer from './giphys_reducer';
+import giphysReducer from './giphys_reducer';
 
 export default combineReducers({
-  giphys: GiphysReducer
+  giphys: giphysReducer
 });
 
 ```
