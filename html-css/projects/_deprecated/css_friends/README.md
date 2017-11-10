@@ -655,7 +655,11 @@ the classes `.js-modal-open` and `.js-modal-close` to any elements you
 want to add interactivity. Enjoy!
 
 ```html
-<script src="../shared/js/jquery.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
 <script>
 $(function(){
 

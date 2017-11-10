@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170714060238) do
   create_table "goals", force: :cascade do |t|
     t.string "title", null: false
     t.boolean "private", default: false, null: false
-    t.text "details", null: false
+    t.text "details"
     t.boolean "completed", default: false, null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
