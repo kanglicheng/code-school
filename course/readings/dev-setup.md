@@ -43,7 +43,7 @@ Enter the following in your terminal to download and install Homebrew:
 
 You will be given a list of dependencies that will be installed and prompted to continue or abort. Press `RETURN` to continue.
 
-Let's break this command down a bit. `curl`, a command-line tool commonly used for downloading files from the internet, is used to download the Homebrew installation file. The `"$(...)"` transforms the file content into a string. Finally, the string is passed to our Ruby executable (`/usr/bin/ruby` is where this file is stored on our machine) with the `-e` flag to tell Ruby to run the argument as code.
+Let's break this command down a bit. `curl`, a command-line tool commonly used for downloading files from the internet, is used to download the Homebrew installation file. The `"$(...)"` transforms the file content into a string. Finally, the string is passed to our Ruby executable (`/usr/bin/ruby` is where this the system Ruby executable file is stored on our machine) with the `-e` flag to tell Ruby to run the argument as code. 
 
 Check out the [Homebrew website][homebrew] to learn the basic commands.
 
@@ -80,7 +80,7 @@ apm install linter linter-eslint linter-rubocop rspec
 
 ## Phase 1: Ruby
 
-Here we will be setting up Ruby with the help of [rbenv][rbenv], a Ruby environment manager. We like rbenv because it allows us to switch between versions of Ruby easily and setup default versions to use within project directories.
+Here we will be setting up Ruby with the help of [rbenv][rbenv], a Ruby environment manager. We like rbenv because it allows us to switch between versions of Ruby easily and setup default versions to use within project directories. This will install instances of Ruby in addition to the system version, which comes pre-installed.
 
 ### Rbenv + Ruby
 First we will install rbenv, then use it to install our desired version of Ruby.
