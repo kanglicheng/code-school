@@ -1,4 +1,4 @@
-# CSS Warm Up
+# CSS Review
 
 We're going to take our first steps using CSS! In this assignment we'll build a pixel perfect clone of [this page][live-04].
 
