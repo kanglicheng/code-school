@@ -112,6 +112,9 @@ Build a `new` form page to create a new `Cat`:
 
 * Your edit view duplicates your new view. Let's unify the two.
 * Copy your edit view to a partial named `_form`.
+* Make sure you are passing `@cat` into your partial as a local variable like so: `<%= render 'form', cat: @cat %>`
+  * We do not want to use instance variables in our partials because it promotes **coupling** between our partial and the controllers that render it. By passing in the instance variable as a local variable, we keep our code DRY and prevent bugs should we ever decide to refactor. 
+  * It also gives us the flexibility to pass different variables depending on the context (for example, using `@cats[idx]` if we were to use this partial in the index view.)
 * Change your edit view to render the partial, passing in a local
   named `cat`. Everything should still work.
 * Our goal is to reuse the form for the new form too.
