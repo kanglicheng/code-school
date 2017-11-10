@@ -29,6 +29,7 @@ During class, you will work on that day's **Projects**, consulting **Additional 
 
 ### Resources
 
+* [Development Environment Setup Instructions][dev-setup]
 * [AA .dotfiles][dotfiles]
 * [Atom Cheat Sheet][atom-cheatsheet]
 
@@ -47,5 +48,6 @@ Please raise an issue on this repo and we will resolve it in a day or two.  If m
 
 [solutions]: ./course/readings/solutions.md
 
+[dev-setup]: ./readings/dev-setup.md
 [dotfiles]: https://github.com/appacademy/dotfiles
 [atom-cheatsheet]: ./course/readings/atom_cheatsheet.md

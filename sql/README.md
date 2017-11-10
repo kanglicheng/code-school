@@ -1,6 +1,12 @@
 # SQL and ActiveRecord
 :link: *[w3d1](#w3d1) :: [w3d2](#w3d2) :: [w3d3](#w3d3) :: [w3d4](#w3d4) :: [w3d5](#w3d5)* :link:
 
+## Setting up your personal machine 
+- [Setting up a Development Environment][dev-setup]
+  - Complete Phase 2 
+
+[dev-setup]: ../course/readings/dev-setup.md#phase-2-backend-development
+
 ## w3d1
 
 ### Assessment02

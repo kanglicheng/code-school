@@ -14,6 +14,7 @@
 
 # Resources
 
+* [Development Environment Setup][dev-setup]
 * [AA .dotfiles](https://github.com/appacademy/dotfiles)
 * [Atom Cheat Sheet](readings/atom_cheatsheet.md)
 
@@ -24,3 +25,4 @@
 [react]: ../react
 [html-css]: ../html-css
 [nontech]: ./non-technical-readings.md
+[dev-setup]: ./readings/dev-setup.md

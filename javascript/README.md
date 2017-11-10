@@ -2,6 +2,12 @@
 
 :link: *[w5d4](#w5d4) :: [w5d5](#w5d5) :: [w6d1](#w6d1) :: [w6d2](#w6d2) :: [w6d3](#w6d3) :: [w6d4](#w6d4)* :link:
 
+## Setting up your personal machine 
+- [Setting up a Development Environment][dev-setup]
+  - Complete Phase 3 
+
+[dev-setup]: ../course/readings/dev-setup.md#phase-3-frontend-development
+
 ## w5d4
 
 ### Breakfast
