@@ -9,12 +9,12 @@
 #  updated_at  :datetime         not null
 #
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :party do
     occasion 'birthday'
 
     sequence :capy do |n|
-      FactoryGirl.build(:capy)
+      FactoryBot.build(:capy)
     end
   end
 

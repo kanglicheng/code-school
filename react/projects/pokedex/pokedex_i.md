@@ -12,7 +12,7 @@ We've already set up a Rails backend with migrations and models in the
 
 * Download the [skeleton][skeleton-zip].
 * Run `bundle install`.
-* Make sure Postgres is running, then run `rake db:setup` (short for `rake db:create db:schema:load db:seed`).
+* Make sure Postgres is running, then run `rails db:setup` (short for `rails db:create db:schema:load db:seed`).
 
 Get yourself oriented.
 
@@ -195,7 +195,7 @@ Next we need to configure Webpack to compile our `bundle.js` file.
         }
       ]
     },
-    devtool: 'source-maps'
+    devtool: 'source-map'
   };
   ```
 
@@ -294,7 +294,7 @@ We'd like to render all of our pokemon. Let's start by setting up a way to fetch
 fetching information from our rails api.
 * Export a function called `fetchAllPokemon` that returns a promise.
   * The function should make an AJAX request that will make a http request to our `PokemonController#index` endpoint.
-  * Run `rake routes` to determine the appropriate url for this request.
+  * Run `rails routes` to determine the appropriate url for this request.
 
 Next, define an action creator to be called on success of
 `APIUtil#fetchAllPokemon`.

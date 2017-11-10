@@ -22,7 +22,7 @@ You shouldn't be using any HTML views on your full-stack project anyway.
   * [Integration tests][integration-tests]
   * [RSpec and Rails setup][rspec-and-rails]
   * [Testing models][testing-models]
-  * [The FactoryGirl and Faker gems][factorygirl-and-faker]
+  * [The FactoryBot and Faker gems][factorybot-and-faker]
   * [Testing controllers][testing-controllers]
 
 [rspec-syntax]: ../../ruby/readings/rspec-syntax.md
@@ -32,7 +32,7 @@ You shouldn't be using any HTML views on your full-stack project anyway.
 [integration-tests]: ../../rails/readings/integration-testing.md
 [rspec-and-rails]: ../../rails/readings/rspec-and-rails-setup.md
 [testing-models]: ../../rails/readings/rspec-models.md
-[factorygirl-and-faker]: ../../rails/readings/factorygirl-and-faker.md
+[factorybot-and-faker]: ../../rails/readings/factorybot-and-faker.md
 [testing-controllers]: ../../rails/readings/rspec-controllers.md
 
 ## Frontend Testing

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User do
   subject(:user) do
-    FactoryGirl.build(:user,
+    FactoryBot.build(:user,
       email: "jonathan@fakesite.com",
       password: "good_password")
   end

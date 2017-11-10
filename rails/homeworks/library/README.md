@@ -85,7 +85,7 @@ Rails.application.routes.draw do
 end
 ```
 
-Now we can check our existing routes by running `bundle exec rake
+Now we can check our existing routes by running `bundle exec rails
 routes` in the terminal. We have these `:new` and `:create` routes now,
 and they are expecting the corresponding controller actions to work
 properly when we navigate to them. Let's finish up by writing those

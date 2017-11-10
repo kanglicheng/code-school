@@ -46,10 +46,10 @@
 [postman]: readings/postman.md
 
 ### Culture
-* [True Diversity is Intersectional][intersectional] (9 min)
+* **[True Diversity is Intersectional][intersectional]** (9 min)
 * [6-Year-Old Girls Already Have Gendered Beliefs About Intelligence][gendered-beliefs] (4 min)
 * [VCs and Female Entrepreneurs][vc-entrepreneurs] (5 min)
-* [Elephant in the Valley][elephant] (3 min, longer if you read the stories)
+* **[Elephant in the Valley][elephant]** (3 min, longer if you read the stories)
 * [When Bias in Product Design Means Life or Death][bias-product] (6 min)
 
 [intersectional]: https://medium.com/projectinclude/true-diversity-is-intersectional-2282b8da8882
@@ -129,7 +129,7 @@
 
 ### Materials (20 min)
 * :book: [CSS Nontechnical Overview][css-nontech] (20 min)
-* :book: [CSS Resposive Design][css-responsive] (10 min)
+* :book: [CSS Responsive Design][css-responsive] (10 min)
 
 [css-nontech]: ../html-css/readings/css_nontech.md
 [css-responsive]: ../html-css/readings/responsive_design.md
@@ -157,8 +157,7 @@
 
 ## w4d4
 
-### :clock10: Class will start at 10am! :clock10:
-* **Progress Tracker reports are still due at 9am.**
+### SF ONLY: Late Start - 10:00am
 
 ### Materials (2 hr, 38 min)
 :closed_lock_with_key: `go_video_go`
@@ -276,15 +275,18 @@
 
 ### Homeworks (45 min)
 * [Capybara][capybara-hw] (45 min)
+* [Read CSS Friends Intro][css-friends]
+* [CSS Friends Phase 0: Reset][css-friends]
 
 [capybara-hw]: homeworks/capybara
+[css-friends]: ../html-css/micro-projects/css-friends/
 
 ### Culture
 * [Have You Experienced Racism in the Workplace?][racism-stats] (3 min)
 * [Diversity in Tech Remains Elusive][diversity-elusive] (7 min)
 * [Commoditization and Exploitation of Asians in Tech][asian-racism] (11 min)
-* [The Other Side of Diversity][other-side-diversity] (11 min)
-* [How AI is Learning All of Our Worst Impulses][ai-impulses] (9 min)
+* **[The Other Side of Diversity][other-side-diversity]** (11 min)
+* **[How AI is Learning All of Our Worst Impulses][ai-impulses]** (9 min)
 
 [racism-stats]: https://www.comparably.com/guest/culture/tech/all-departments/109-have-you-ever-experienced-racism-in-the-workplace
 [diversity-elusive]: https://modelviewculture.com/pieces/diversity-in-tech-remains-elusive-due-to-racism-lack-of-representation-and-cultural-differences
@@ -296,7 +298,7 @@
 * [Integration Testing][integration-testing]
 * [RSpec and Rails Setup][rspec-setup]
 * [Testing Models][rspec-models]
-* [FactoryGirl and Faker Gems][fac-grl-faker]
+* [FactoryBot and Faker Gems][fac-grl-faker]
 * [Testing Controllers][rspec-controllers]
 * [Testing with Capybara][capybara]
 * [Spring and Guard Setup][spring-guard]
@@ -305,11 +307,12 @@
 [rspec-setup]: readings/rspec-and-rails-setup.md
 [rspec-models]: readings/rspec-models.md
 [rspec-controllers]: readings/rspec-controllers.md
-[fac-grl-faker]: readings/factorygirl-and-faker.md
+[fac-grl-faker]: readings/factorybot-and-faker.md
 [capybara]: readings/capybara.md
 [spring-guard]: readings/guard-spring-setup.md
 
 ### Projects
+* [CSS Friends Phase 1][css-friends]
 * [Goal App][goal-app]
 * **(BONUS)** [Appacademy.io Tests][appacademyio-tests]
 
@@ -352,6 +355,7 @@
 [checkboxes-id-setters]: readings/checkboxes.md
 
 ### Projects
+* [CSS Friends Phase 2][css-friends]
 * [RedditClone][reddit-clone]
 
 [reddit-clone]: projects/reddit_on_rails

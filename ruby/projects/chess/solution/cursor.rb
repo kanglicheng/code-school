@@ -21,14 +21,14 @@ KEYMAP = {
   "\177" => :backspace,
   "\004" => :delete,
   "\u0003" => :ctrl_c,
-}
+}.freeze
 
 MOVES = {
   left: [0, -1],
   right: [0, 1],
   up: [-1, 0],
   down: [1, 0]
-}
+}.freeze
 
 class Cursor
 
@@ -71,7 +71,7 @@ class Cursor
     STDIN.raw!
 
     input = STDIN.getc.chr
-    if input == "\e" then
+    if input == "\e"
       input << STDIN.read_nonblock(3) rescue nil
       input << STDIN.read_nonblock(2) rescue nil
     end
@@ -79,7 +79,7 @@ class Cursor
     STDIN.echo = true
     STDIN.cooked!
 
-    return input
+    input
   end
 
   def update_pos(diff)

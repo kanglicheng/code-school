@@ -26,7 +26,7 @@ class Card
   end
 
   def to_s
-    revealed? ? "#{value}" : " "
+    revealed? ? value.to_s : " "
   end
 
   def reveal

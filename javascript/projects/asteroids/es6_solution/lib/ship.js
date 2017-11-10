@@ -6,7 +6,7 @@ function randomColor() {
   const hexDigits = "0123456789ABCDEF";
 
   let color = "#";
-  for (let i = 0; i < 3; i ++) {
+  for (let i = 0; i < 3; i++) {
     color += hexDigits[Math.floor((Math.random() * 16))];
   }
 
@@ -24,7 +24,7 @@ class Ship extends MovingObject {
   fireBullet() {
     const norm = Util.norm(this.vel);
 
-    if (norm == 0) {
+    if (norm === 0) {
       // Can't fire unless moving.
       return;
     }

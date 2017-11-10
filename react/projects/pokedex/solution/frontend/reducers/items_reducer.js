@@ -2,7 +2,7 @@ import merge from 'lodash/merge';
 
 import { RECEIVE_SINGLE_POKEMON } from '../actions/pokemon_actions';
 
-const ItemsReducer = (state = {}, action) => {
+const itemsReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch(action.type) {
@@ -15,6 +15,6 @@ const ItemsReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};
 
-export default ItemsReducer;
+export default itemsReducer;

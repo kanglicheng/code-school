@@ -21,7 +21,8 @@ Add the following to the Gemfile of your Ruby on Rails application:
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :test do
@@ -64,7 +65,7 @@ development:
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
+# re-generated from your development database when you run "rails".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
@@ -86,7 +87,7 @@ running a server on localhost, Rails is using the `development`
 database. For running tests, it will use a separate `test` database. The
 default configuration will work just fine for testing with RSpec.
 
-If you are using postgresql, you must run `rake db:create` on the
+If you are using postgresql, you must run `rails db:create` on the
 command line to create your development and test databases.
 
 ## Configure RSpec

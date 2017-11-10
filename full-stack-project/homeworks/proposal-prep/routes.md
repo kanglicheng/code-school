@@ -50,4 +50,4 @@ Here's yet another example from _Bluebird_, a Twitter clone:
 + `POST /api/likes` - like a chirp
 + `DELETE /api/likes` - unlike a chirp
 
-Note: likes does not include a `GET` route because these routes will render `'api/chirps/show'`. See [Sample State](sample-state).
+Note: likes does not include a `GET` route because these routes will render `'api/chirps/show'`. See [Sample State](https://github.com/appacademy/bluebird/wiki/sample-state).

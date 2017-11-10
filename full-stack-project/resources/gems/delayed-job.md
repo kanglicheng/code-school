@@ -28,7 +28,7 @@ job (https://devcenter.heroku.com/articles/delayed-job).
 
 First they have you setup DJ; this involves installing the gem,
 running `rails generate delayed_job:active_record` to generate a
-migration to add a jobs table to your DB, and then `rake db:migrate`
+migration to add a jobs table to your DB, and then `rails db:migrate`
 to actually run the migration.
 
 When you schedule a delayed job, DJ will store it in this new
@@ -38,7 +38,7 @@ be there for DJ to use.
 It will have you add a line to your `Procfile`; the procfile lists
 what kind of work each process should do. A standard `Procfile` has
 `web` processes start a Rails server, while `worker`processes should
-run `rake jobs:work`. The `rake jobs:work` task will just take jobs
+run `rails jobs:work`. The `rails jobs:work` task will just take jobs
 one-by-one out of the database, complete them, and then move on to the
 next.
 
@@ -49,9 +49,9 @@ serving a web response.
 
 ## The Delayed Job Gem
 delayed Job is a useful gem for pushing your application's slower tasks into the
-background. It creates a table in your database that acts as a TODO list of tasks. 
+background. It creates a table in your database that acts as a TODO list of tasks.
 doing this allows your server to process work asynchronously, so
-that your responses are not unnecessarily delayed. 
+that your responses are not unnecessarily delayed.
 
 ##Installation
 since we're using Active Record you're going to want to install that
@@ -59,7 +59,7 @@ version of DJ. `gem 'delayed_job_active_record'` and bundle install.
 
 ```bash
 rails generate delayed_job:active_record
-rake db:migrate
+rails db:migrate
 ```
 
 ##Building A Queue
@@ -105,15 +105,15 @@ userMailer.delay.welcome_email(user) # don't use deliver
 ##Performing the Work
 ok, now that we've queued up a bunch of processes to be performed in the
 background, we need to set up a process to start doing the work.  
-the easiest way to do this is by using `rake jobs:work`. This sets up a
+the easiest way to do this is by using `rails jobs:work`. This sets up a
 worker that checks the database ~every 5 seconds and performs any jobs
 that need to be done. Tell it to stop with `CTRL-C`.  
 
-if you just want to make one pass and exit, you can use `rake
+if you just want to make one pass and exit, you can use `rails
 jobs:workoff`.
 
 optionally you can define and specify which queues you want to work off.  
-clear all jobs with `rake jobs:clear`
+clear all jobs with `rails jobs:clear`
 
 be aware that running a worker on a Heroku app will fire up an
 additional dyno and consume your precious free monthly hours. Plan

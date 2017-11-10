@@ -33,7 +33,7 @@ class Board
   end
 
   def populate
-    num_pairs = (size ** 2) / 2
+    num_pairs = (size**2) / 2
     cards = Card.shuffled_pairs(num_pairs)
     rows.each_index do |i|
       rows[i].each_index do |j|
@@ -44,9 +44,9 @@ class Board
 
   def render
     system("clear")
-    puts "  #{(0...size).to_a.join(" ")}"
+    puts "  #{(0...size).to_a.join(' ')}"
     rows.each_with_index do |row, i|
-      puts "#{i} #{row.join(" ")}"
+      puts "#{i} #{row.join(' ')}"
     end
   end
 
@@ -56,10 +56,11 @@ class Board
 
   def won?
     rows.all? do |row|
-      row.all? { |card| card.revealed? }
+      row.all?(&:revealed?)
     end
   end
 
   private
+
   attr_reader :rows
 end

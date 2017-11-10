@@ -11,7 +11,7 @@ describe SuperComputerPlayer do
     test_board[[0, 1]] = :x
     test_board[[1, 0]] = :o
     test_board[[1, 1]] = :o
-    double("TicTacToe", :board => test_board)
+    double("TicTacToe", board: test_board)
   end
 
   let(:blockable_win_game) do
@@ -19,7 +19,7 @@ describe SuperComputerPlayer do
     test_board[[0, 0]] = :x
     test_board[[1, 0]] = :o
     test_board[[1, 1]] = :o
-    double("TicTacToe", :board => test_board)
+    double("TicTacToe", board: test_board)
   end
 
   let(:unwinnable_game) do
@@ -27,7 +27,7 @@ describe SuperComputerPlayer do
     test_board[[0, 0]] = :o
     test_board[[2, 2]] = :o
     test_board[[2, 0]] = :o
-    double("TicTacToe", :board => test_board)
+    double("TicTacToe", board: test_board)
   end
 
   let(:two_moves_to_victory_game) do
@@ -36,7 +36,7 @@ describe SuperComputerPlayer do
     test_board[[2, 0]] = :x
     test_board[[1, 0]] = :o
     test_board[[2, 1]] = :o
-    double("TicTacToe", :board => test_board)
+    double("TicTacToe", board: test_board)
   end
 
   describe "#move" do

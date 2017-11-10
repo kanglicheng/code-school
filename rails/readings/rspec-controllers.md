@@ -98,5 +98,6 @@ end
 ```
 
 For more information on controller specs, consult the
-[rspec-controller-docs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs
 [documentation][rspec-controller-docs].
+
+[rspec-controller-docs]: https://www.relishapp.com/rspec/rspec-rails/docs/controller-specs

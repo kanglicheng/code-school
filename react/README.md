@@ -5,7 +5,7 @@
 
 ## w6d5
 
-### :clock10: Class will start at 10am! :clock10:
+### :clock10: (SF Only!) Class will start at 10am! :clock10:
 * **Progress Tracker reports are still due at 9am.**
 
 ### Materials (126 min)
@@ -64,9 +64,11 @@
   [react_docs]: https://facebook.github.io/react/docs/getting-started.html
 
 ### Projects
+* [CSS Friends Phase 12][css-friends]
 * [Widgets][widgets]
 * [Minesweeper][minesweeper]
 
+[css-friends]: ../html-css/micro-projects/css-friends/
 [widgets]: projects/widgets
 [minesweeper]: projects/react_minesweeper
 
@@ -121,9 +123,9 @@
 ### Culture
 
 * [Is Ageism In Tech An Under-The-Radar Diversity Issue?][ageism] (5 min)
-* [Building Accessibility Culture][accessibility] (8 min)
+* **[Building Accessibility Culture][accessibility]** (8 min)
 * [Building Better Tech Cultures for People with ADHD][adhd] (6 min)
-* ["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness] (6 min) 
+* **["Brilliance," "Pride," and "Genius": How Tech Culture Hides Mental Illness][mental-illness]** (6 min) 
 
 [ageism]: https://www.fastcompany.com/3054204/is-ageism-in-tech-an-under-the-radar-diversity-issue
 [accessibility]: https://modelviewculture.com/pieces/building-accessibility-culture
@@ -172,8 +174,6 @@
 
 ## w7d3
 
-### Study Hall 9 - 10am
-
 ### Materials (50 min)
 * :book: [Intro to Jbuilder][jbuilder-intro] (5 min)
 * :book: [Jbuilder][jbuilder_docs] (20 min)
@@ -190,6 +190,7 @@
 
 ### Homeworks (90 min)
 * [Giphy Homework][giphy_homework] (90 min)
+* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 
 [giphy_homework]: homeworks/giphy
 
@@ -222,7 +223,6 @@
 
 ### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
-* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
@@ -299,13 +299,13 @@
   * **Due by 9am on Monday w8d1**
 
 [full_stack_project_proposal]: ../full-stack-project/proposal/full-stack-project-proposal.md
-[uxhw]: ../full-stack-project/homeworks/ux
+[uxhw]: homeworks/ux
 
 ### Culture
 * [The Tech Industry is Forcing Gentrification][gentrification] (4 min)
 * [How Tech Campuses Hinder Diversity and Help Gentrification][tech-campuses] (4 min)
-* [Silicon Valley's Poorest Workers][poor-workers] (3 min)
-* [Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities] (7 min)
+* **[Silicon Valley's Poorest Workers][poor-workers]** (3 min)
+* **[Tech in Underserved Communities: Beyond Feel Good Stories][underserved-communities]** (7 min)
 * [The Accidental Classism and Unintentional Racism Of iOS Development for Children][ios-classism] (8 min)
 
 [gentrification]: https://thetempest.co/2017/05/01/now-beyond/tech-money/tech-industry-gentrification/
@@ -323,6 +323,12 @@
 * Continue [BenchBnB][bench_bnb]
 
 ## w8d2
+
+### Assessment06
++ [Practice][assessment-prep-6]
+
+[assessment-prep-6]: https://github.com/appacademy/assessment-prep#assessment-6
+
 
 ### Homework
 * Begin work on projects

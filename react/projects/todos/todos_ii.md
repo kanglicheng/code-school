@@ -10,7 +10,7 @@ We will also learn to use and implement thunk middleware to handle asynchronous 
 
 ## Phase 0
 
-If you haven't already, finish part one of the project through phase 5 (up to, but not including, steps). You will not need to have steps implemented to work with most of today's project, but you will need a working todo form.
+If you haven't already, finish [Part 1][todos-i] of the project through Phase 4 (up to, but not including, updating/deleting todos). You will not need to have update/delete functionality to work with most of today's project, but you will need a working todo form.
 
 ## Phase 1: Rails API
 
@@ -30,7 +30,10 @@ that either fire AJAX requests or render the newest application state.
 Let's get started!
 
 * Create a new rails project using `--database=postgresql` and `--skip-turbolinks`
-* Update your Gemfile with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
+* Update your `Gemfile` with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
+* As of `Rails 5.1.2`, Rails no longer includes JQuery by default. To allow us to use `$.ajax`, include the following:
+  * Include `gem 'jquery-rails'` in your `Gemfile`
+  * Include `//= require jquery3` and `//= require jquery_ujs` in `application.js` above `//= require_tree .`
 
 ### Todos
 * Create a `Todo` migration and model with a `title` string (required), a `body` string (required), and a `done` boolean (required).
@@ -72,11 +75,13 @@ end
 ```
 
 ### Routes
-+ Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
-+ Nest your routes under [namespace][namespace-docs] `api`.
-+ In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
+
+* Create routes for `:index`, `:show`, `:create`, `:destroy`, and `:update`.
+* Nest your routes under [namespace][namespace-docs] `api`.
+* In `config/routes.rb`, set `defaults: {format: :json}` for your `api` namespace.
 
 **Test your routes** - You should get the following when you run `rails routes`.
+
 ```
 api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
           POST   /api/todos(.:format)     api/todos#create {format: :json}
@@ -87,15 +92,24 @@ api_todos GET    /api/todos(.:format)     api/todos#index {format: :json}
 ```
 
 ### StaticPages
-+ Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
-+ Update `routes.rb` to `root to: 'static_pages#root'`.
 
+* Create a `StaticPagesController` that will serve a `root` view with `<div id="content"></div>`.
+* Update `routes.rb` to `root to: 'static_pages#root'`.
+
+Since Rails 5 doesn't include jQuery for us, we're going to need to do one more thing to get jQuery's `ajax` to work.
+To add jQuery to your project:
+
+1. Add `gem jquery-rails` to your `Gemfile`.
+2. Run `bundle install`.
+3. Add `//= require jquery` and `//= require jquery_ujs` to your `application.js`
+4. If your Rails server was previously running, restart it.
 
 You're almost ready to go!
-+ Seed your database with a few todos for testing.
-+ Start your server (`rails s`) so that it can respond to HTTP requests.
-+ Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
-  + Inspect the page and double check that `<div id="content"></div>` is present.
+
+* Seed your database with a few todos for testing.
+* Start your server (`rails s`) so that it can respond to HTTP requests.
+* Visit [http://localhost:3000/](http://localhost:3000/). It should render your root page.
+  * Inspect the page and double check that `<div id="content"></div>` is present.
 
 **Test your API** - Try out your API endpoints using `$.ajax`. You should be able
 to send `POST`, `GET`, `PATCH`, and `DELETE` requests and receive the appropriate
@@ -103,7 +117,7 @@ responses in the console.
 
 For example, try:
 
-```
+```js
 $.ajax({
   method: 'GET',
   url: '/api/todos'
@@ -149,8 +163,8 @@ so that the caller of the function can handle success and failure however they s
 
 Let's write our Todo API Util.
 
-+ Create a file `util/todo_api_util.js`.
-+ Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
+* Create a file `util/todo_api_util.js`.
+* Write a function that takes no arguments, makes a request to `api/todos` with a method of `GET`, and returns a promise.
 
 **Test your code** - Try running your function in the console and make sure
 you can resolve the promise by passing a function to `then`.
@@ -217,8 +231,8 @@ Since our thunk middleware returns the promise back to the caller, we can take o
 
 ```js
 // inside of handleSubmit
-this.props.createTodo({ todo }).then(
-  () => this.setState({ title: '', body: '' })
+this.props.createTodo({todo}).then(
+  () => this.setState({title: '', body: ''})
 );
 ```
 
@@ -238,15 +252,13 @@ Now that we have somewhere to store errors, when todo creation fails, dispatch t
 You will need to update your `createTodo` action like this.
 
 ```js
-export function createTodo(todo) {
-  return (dispatch) => (
-    APIUtil.createTodo(todo)
-      .then(
-        todo => dispatch(receiveTodo(todo)),
-        err => dispatch(receiveErrors(err.responseJSON))
-      )
-  );
-}
+const createTodo = todo => dispatch => (
+  APIUtil.createTodo(todo)
+    .then(
+      todo => dispatch(receiveTodo(todo)),
+      err => dispatch(receiveErrors(err.responseJSON))
+    )
+);
 ```
 
 Verify that your error state is populated if you try to create a todo with invalid params.
@@ -254,6 +266,9 @@ Then, inside your todo form component, display the errors. You will need to pass
 `mapStateToProps` of the top level component. Make sure to clear the errors when the todo is successfully created!
 
 #### Updating Todos
+
+**NB:** If you did not finish [Phase 5][todos-i-phase-5] from yesterday (Updating and Deleting Todos), please complete it. You will need the actions and reducer logic before proceeding.
+
 
 This will be very similar to creating todos, (the resulting action will still be `receiveTodo`)
 but we need a different action because we will hit a different route on the back end.
@@ -357,6 +372,8 @@ Consider adding a `fetching` boolean to state and new sync actions like
   * Sort by due date
   * Item pops up when it is due
 
+[todos-i]: ./todos_i.md
+[todos-i-phase-5]: ./todos_i.md#phase-5
 [store_reading]: ../../readings/store.md
 [thunks_reading]: ../../readings/thunks.md
 [middleware_reading]: ../../readings/middleware.md

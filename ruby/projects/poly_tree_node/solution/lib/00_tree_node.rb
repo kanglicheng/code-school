@@ -85,6 +85,7 @@ class PolyTreeNode
   end
 
   protected
+  
   # Protected method to give a node direct access to another node's
   # children.
   def _children

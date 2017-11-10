@@ -13,7 +13,7 @@ NB: use Atom's ⌘-t shortcut to quickly navigate around your rails project
   # Gemfile
 
   group :test do
-    gem 'factory_girl_rails', :require => false
+    gem 'factory_bot_rails', :require => false
     gem 'faker'
     gem 'capybara'
     gem 'launchy'

@@ -85,7 +85,7 @@ class Board
   end
 
   def pieces
-    @rows.flatten.reject { |piece| piece.empty? }
+    @rows.flatten.reject(&:empty?)
   end
 
   def valid_pos?(pos)
@@ -93,6 +93,7 @@ class Board
   end
 
   private
+
   attr_reader :sentinel
 
   def fill_back_row(color)
@@ -100,14 +101,14 @@ class Board
       Rook, Knight, Bishop, Queen, King, Bishop, Knight, Rook
     ]
 
-    i = (color == :white) ? 7 : 0
+    i = color == :white ? 7 : 0
     back_pieces.each_with_index do |piece_class, j|
       piece_class.new(color, self, [i, j])
     end
   end
 
   def fill_pawns_row(color)
-    i = (color == :white) ? 6 : 1
+    i = color == :white ? 6 : 1
     8.times { |j| Pawn.new(color, self, [i, j]) }
   end
 
@@ -119,7 +120,7 @@ class Board
   def make_starting_grid(fill_board)
     @rows = Array.new(8) { Array.new(8, sentinel) }
     return unless fill_board
-    [:white, :black].each do |color|
+    %i(white black).each do |color|
       fill_back_row(color)
       fill_pawns_row(color)
     end

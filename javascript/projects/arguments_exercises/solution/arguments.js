@@ -19,16 +19,14 @@ function sum2(...nums) {
 Function.prototype.myBind1 = function (ctx) {
   const fn = this;
   const bindArgs = Array.from(arguments).slice(1);
-  return function () {
+  return function _boundFn() {
     const callArgs = Array.from(arguments);
     return fn.apply(ctx, bindArgs.concat(callArgs));
   };
 };
 
 Function.prototype.myBind2 = function (ctx, ...bindArgs) {
-  return (...callArgs) => {
-    return this.apply(ctx, bindArgs.concat(callArgs));
-  };
+  return (...callArgs) => this.apply(ctx, bindArgs.concat(callArgs));
 };
 
 function curriedSum(numArgs) {
@@ -70,16 +68,16 @@ Function.prototype.curry = function (numArgs) {
 };
 
 // using apply
-Function.prototype.curry1 = function(numArgs){
+Function.prototype.curry1 = function (numArgs) {
   const args = [];
-  let fn = this;
-  function _curried(arg){
+  const fn = this;
+  function _curriedFn(arg) {
     args.push(arg);
     if (args.length === numArgs) {
       return fn.apply(null, args);
     } else {
-      return _curried;
+      return _curriedFn;
     }
   }
-  return _curried;
+  return _curriedFn;
 };

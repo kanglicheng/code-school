@@ -35,7 +35,7 @@ Here is a quick guide to git yer app on the interwebs.
     git add Gemfile package.json other_files...
     git commit -m "Prepare for initial Heroku push"
     ```
-    
+
 2. **Create a new Heroku app**
   * Create an account on [heroku.com](http://www.heroku.com)
   * Create a new app
@@ -44,7 +44,7 @@ Here is a quick guide to git yer app on the interwebs.
     * Add `heroku/nodejs`, then `heroku/ruby`
       * **NB:** Buildpacks run in the order specified, which is why it is important to add `heroku/nodejs` first.
         If `heroku/ruby` ran first, it would recompile our assets *before* creating a new `bundle.js`. We want `bundle.js` to be up-to-date *before* Rails recompiles our assets.
-        
+
 3. **Install the Heroku CLI and make your initial push**
   * Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
   * Login with `heroku login`
@@ -53,9 +53,9 @@ Here is a quick guide to git yer app on the interwebs.
   * Follow instructions in `Deploy` tab in Heroku Dashboard
     * You should already have a repo, so use `heroku git:remote -a appname` or `git remote add heroku https://git.heroku.com/appname.git`
   * Push to Heroku remote: `git push heroku master`
-  * Check the status of your migrations with `heroku run rake db:migrate:status`
-  * Setup production database with: `heroku run bundle exec rake db:migrate`
-  * Optionally, include seed data with: `heroku run bundle exec rake db:seed`
+  * Check the status of your migrations with `heroku run rails db:migrate:status`
+  * Setup production database with: `heroku run bundle exec rails db:migrate`
+  * Optionally, include seed data with: `heroku run bundle exec rails db:seed`
 
 4. **(Optional) Migrate static assets to the Asset Pipeline**
   * Move assets to `app/assets/`
@@ -79,7 +79,7 @@ Here is a quick guide to git yer app on the interwebs.
   * Something is failing silently server-side. Use `heroku logs -t` to see your server logs and debug the issue
 * Can't fetch any data
   * Make sure you created, migrated and seeded your database on Heroku
-  * Run `heroku run rake db:migrate:status` to see which migrations you have and haven't run yet on Heroku
+  * Run `heroku run rails db:migrate:status` to see which migrations you have and haven't run yet on Heroku
 * Changing only capitalization when renaming a file.
   * Git will fail to recognize the change. Use `git mv -f <old_file_name> <new_file_name>` to force the update
 * Asset pipeline not retrieving an asset, but is looking in the right directory (on `localhost`)
@@ -91,10 +91,11 @@ Here is a quick guide to git yer app on the interwebs.
 * `heroku logs -t` - opens running server log of your Heroku app
 * `heroku run <command>` - can run any terminal command
   * `heroku run bundle exec rails console`
-  * `heroku run bundle exec rake db:<cmd>`
+  * `heroku run bundle exec rails db:<cmd>`
 * `heroku pg:psql` - connect to Postgres db (in lieu of `rails dbconsole`)
-* `heroku pg:reset DATABASE_URL` - used to drop and reset your Heroku Postgres database (we don't have permissions to run `rake db:reset` and `rake db:drop` on Heroku)
+* `heroku pg:reset DATABASE_URL` - used to drop and reset your Heroku Postgres database (we don't have permissions to run `rails db:reset` and `rails db:drop` on Heroku)
   * `DATABASE_URL` is a Heroku config variable we can reference from the command line
+  * Make sure to run `heroku run db:migrate` and `heroku run db:seed` to remigrate and reseed your database
 * `heroku open` - opens your app in the browser
 
 ## Setting up a Custom Domain

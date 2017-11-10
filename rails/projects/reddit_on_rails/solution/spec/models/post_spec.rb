@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'builds a nested comments hash' do
-      moderator = FactoryGirl.create(:user)
+      moderator = FactoryBot.create(:user)
       sub = moderator.subs.create!(name: 'A sub!', description: 'Something!')
 
       post = Post.new(url: 'URL', title: 'TITLE')

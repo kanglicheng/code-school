@@ -104,7 +104,7 @@ in separate scopes and variables/mixins can't see each other.
 ## Compilation
 
 When you deploy your application to Heroku environment, Heroku will
-precompile your asset files to `public/assets` by running the `rake
+precompile your asset files to `public/assets` by running the `rails
 assets:precompile` task.
 
 The precompilation task involves:
@@ -113,7 +113,7 @@ The precompilation task involves:
 0. concatenation of manifest files
 0. final minification of the results.
 
-The precompiled versions are then place in the `public/assets`
+The precompiled versions are then placed in the `public/assets`
 folder. When using the Rails asset tag helpers (see below), links
 refer to this directory. The original sources in `app/assets` are
 never served directly in the production environment.
@@ -199,4 +199,3 @@ itself.
 ## Resources
 
 * http://railscasts.com/episodes/279-understanding-the-asset-pipeline?view=asciicast
-
