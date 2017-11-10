@@ -197,7 +197,8 @@ end
 def expensive_tastes
   # Select the five styles of music with the highest average price per track,
   # along with the price per track. One or more of each aggregate functions,
-  # subqueries, and joins will be required.
+  # subqueries, and joins will be required. Order first by the average 
+  # price per track (highest to lowest), then by style (a to z).
   #
   # HINT: Start by getting the number of tracks per album. You can do this in a
   # subquery. Next, JOIN the styles table to this result and use aggregates to
@@ -225,7 +226,8 @@ def expensive_tastes
     GROUP BY
       styles.style
     ORDER BY
-      (SUM(album_track_counts.price) / SUM(album_track_counts.count)) DESC
+      (SUM(album_track_counts.price) / SUM(album_track_counts.count)) DESC,
+      styles.style ASC
     LIMIT 5
   SQL
 end
