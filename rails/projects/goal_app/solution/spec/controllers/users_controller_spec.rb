@@ -3,14 +3,12 @@ require 'byebug'
 
 RSpec.describe UsersController, type: :controller do
 
-  subject(:user) { FactoryBot.create(:user, username: "jill_bruce") }
-
   subject(:user) do
     User.create!(
     username: "jill_bruce",
     password: "password")
   end
-     
+
   describe "GET #show" do
     it "renders the show template" do
       get :show, params: { id: user.id }
@@ -62,4 +60,3 @@ RSpec.describe UsersController, type: :controller do
       end
     end
   end
-end

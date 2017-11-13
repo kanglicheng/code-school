@@ -4,17 +4,12 @@ RSpec.describe User, type: :model do
 
   subject(:user) do
     User.create!(
-    username: "gerald",
-    password: "super_secret_password"
+      username: "gerald",
+      password: "super_secret_password"
     )
   end
 
   describe "password encryption" do
-
-    it "our test" do
-      expect(user).not_to be(nil)
-    end
-
     it "does not save passwords to the database" do
       User.create!(username: "mary_mack", password: "abcdef")
       user = User.find_by_username("mary_mack")
