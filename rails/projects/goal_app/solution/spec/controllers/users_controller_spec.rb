@@ -5,13 +5,12 @@ RSpec.describe UsersController, type: :controller do
 
   subject(:user) { FactoryBot.create(:user, username: "jill_bruce") }
 
-  # the same as the below code
-  # subject(:user) do
-  #   User.create!(
-  #   username: "jill_bruce",
-  #   password: "password")
-  # end
-
+  subject(:user) do
+    User.create!(
+    username: "jill_bruce",
+    password: "password")
+  end
+     
   describe "GET #show" do
     it "renders the show template" do
       get :show, params: { id: user.id }
