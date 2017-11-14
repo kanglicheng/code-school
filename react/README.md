@@ -160,13 +160,9 @@
 [obj-freeze]: readings/object_freeze.md
 [namespacing]: readings/rails_router_namespacing.md
 
-### Homework (55 min)
-* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
-  * **Due by 9AM Tuesday w7d2**
-  * Check out the [list of approved apps][approved-apps]
+### Homework (45 min)
 * [Middleware Homework][middleware_homework] (45 min)
 
-[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [middleware_homework]: homeworks/middleware
 
 ### Projects
@@ -188,10 +184,13 @@
 [updating-normalized]: http://redux.js.org/docs/recipes/reducers/UpdatingNormalizedData.html
 [redux-nontech]: readings/redux_nontech.md
 
-### Homeworks (90 min)
+### Homeworks (100 min)
+* [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
+  * **Due by 9AM Wednesday w7d2**
+  * Check out the [list of approved apps][approved-apps]
 * [Giphy Homework][giphy_homework] (90 min)
-* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 
+[tentative-proposal]: ../full-stack-project/proposal/tentative-project-proposal.md
 [giphy_homework]: homeworks/giphy
 
 ### Additional Resources
@@ -223,6 +222,7 @@
 
 ### Homeworks (60 min)
 * [Rainbow Routes][rainbow_routes] (30 min)
+* [Full-stack Proposal Prep: Component Hierarchy][prep-component-hierarchy] (15 min)
 * [Full-stack Proposal Prep: State Shape][prep-state-shape] (15 min)
 
 [rainbow_routes]: homeworks/rainbow_routes
