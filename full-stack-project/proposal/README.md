@@ -1,155 +1,120 @@
-# Fullstack Project Github Management
+# Full-Stack Project Proposals
 
-## Phase 1: Create the Repo
+Welcome to full-stack projects! This is a hectic and exciting time, and it
+represents the culmination of your education at App Academy. Now that you've
+chosen your project, we want to help you build the best projects possible; so
+we'll help you come up with a road map to keep yourself on track.
 
-1. Create a new Rails project.
-  - `--skip-turbolinks=true`
-  - `--database=postgresql`
-2. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
+We are going to use Github's built-in project management to store all your
+planning materials. The main document will be a wiki that outlines all the major
+facets of your development process.
 
-```
-// .gitignore
+## Sample Proposal
 
-// ... a bunch of preloaded ignores
+To get started, take a look at this [sample proposal repo][sample-proposal].
+This is what your proposal should look like by the time you've finished it.
+We want it to be comprehensive, well-organized, and well-polished. This is not
+just for our benefit; by the time you start implementing your project, you will
+have already thought carefully about the functionality and scope of each
+feature, allowing your future self to focus completely on writing the code for
+it.
 
-// To add:
-node_modules/
-bundle.js
-bundle.js.map
-.byebug_history
-.DS_Store
-npm-debug.log
-```
+[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
 
-3. Create a new repo and give it a good name.
+## Fleshing Out the Proposal
 
-![Screenshot: naming repo][name_repo]
+The Github wiki of your project repo MUST include the following:
 
-4. Commit your files and push to your remote.
+### Heroku Link
 
-5. Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+At the end of the first day of full-stack projects, you should have a link to
+the live version of your site. It doesn't have to be pretty, but it has to be
+there. Push to Heroku ASAP!
 
-![Add Collaborators][add_project_manager]
+### Minimum Viable Product
 
-## Phase 2: Create the Proposal
+- `mvp-list`
 
-Your fullstack project proposal is a documentation of your planning process in the form of a GitHub Wiki. Look [here](#) for the overall requirements for the proposal.
+Write a one-sentence summary of the project and a list of the features that
+would be absolutely necessary for the app to be marketable. Your MVP section
+must follow the format outlined [here][mvp-features].
 
-In your new fullstack repo, create a new wiki.
+[mvp-features]: mvp-list.md
 
-![Screenshot: create wiki][create_wiki]
+### DB Schema
 
-Create these pages:
-* Home (the initial wiki page)
-* MVP List
-* Database Schema
-* Routes
-* Sample State
-* Component Hierarchy
-* Wireframes
+- `schema`
 
-Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project advisor will review your proposal and give you feedback on any major issues.
+Link to a document outlining the database schema for your app. Build up the
+schema by walking through your app's wireframes. Think carefully about what data
+will be needed for each view and the best way to store that data. Make note
+of any database-level validations and foreign key relationships.
 
-![Screenshot: add page in wiki][proposal_wiki]
+### Routes
 
-## Phase 3: Milestones and MVPs
+- `routes`
 
-Every fullstack project has 7 core MVPs (Minimum Viable Products). You need to create a separate **milestone** for *each* MVP.
+Link to a page that lists your Rails API endpoints and frontend React Router
+routes. Break these up between HTML and JSON endpoints. Discuss what params,
+if any, will be needed for each route, and what information will be returned.
 
-Milestones are a way of setting a timeline for completing tasks in GitHub.
+### Sample State
 
-To create a milestone, go to the issues tab.
+- `sample-state`
 
-![issues tab][issues]
+Create a basic illustration of your state shape. Think about what information
+you need to store for your app to work, and how best to organize it to minimize
+duplication and maximize ease of access.
 
-Click on 'Milestones', and then click 'New Milestone'.
+### React Components
 
-The title of each milestone should be the main goal of your MVP. You can add a brief description as well.
+- `component-hierarchy`
 
-Make sure to set a due date for each milestone. Your project advisor will hold you to these dates, and let you know if you need to make adjustments.
+In conjunction with the wireframes, diagram a tree indicating your
+application's overall component structure.
 
-![create a milestone][create_milestone]
+Discuss how you will nest your components. If components will need containers,
+indicate what state and dispatch props they will need. For presentational
+components, discuss what props and state they will need.
 
-After creating a milestone, you will see an empty progress bar. Later on, you will learn how to use it.
+Map out your React Routes with their respective components and paths.
 
-![progress bar][milestone_empty]
+See the sample project proposal for an example of this.
 
-## Phase 4: Create Labels and Issues
+### Wireframes
 
-In GitHub, issues are like tasks. They can be labeled, assigned to team members, and attached to milestones. Before you start making issues, you will want some custom labels.
+- `wireframes`
 
-On the issues tab, click 'Labels'. You can edit, delete, and re-color the existing labels, and you can create your own labels. Below are the minimum recommended labels you will need.
+Annotate your wireframes. Which React component corresponds to
+each element? Keep grids in mind while roughly drafting your layout.
 
-![labels][labels]
+Each wireframe should be a basic representation of the layout and information
+presented in a view. Since you will certainly use nested React components,
+clearly indicate the hierarchy in your wireframes. We should be able to see
+every view of your website using your wireframes, and how each view is reached.
 
-With your new labels and your new milestones, you are ready to create your issues.
+**NB**: Your wireframes will be viewed not only by yourself and the App Academy
+staff, but potentially future employers. If you are going to use pen and
+paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
 
-Start by breaking your MVPs into smaller chunks or steps. Make an issue for each step.
+[draw.io]: https://www.draw.io/
 
-You can apply the appropriate labels and set the issue to be part a particular milestone.
+### Implementation Timeline
 
-![Create Github issue][create_issues]
+This is crucial both here and in the industry. The truth is, one never knows
+how long implementing any particular phase will take. Constraints change.
+Timelines are shortened without warning. An app after any phase must be able
+to stand on its own. We call this building in 'slices' instead of 'layers'. To
+create your timeline, add due dates to each of your milestones on Github.
 
-The issues you assign to each of your MVPs will vary depending on the task at hand, but here is an example for `chirps` that you can use to guide you:
+## Submission
 
-+ Chirps Backend (can be split into: DB, model, controller, views if desired)
-+ Chirps Redux Loop (can be split up into: ajax, actions, reducer if desired)
-+ Chirps Presentational Components
-+ Chirps Styling
-+ Chirps Smooth, bug-free navigation
-+ Chirps Adequate and appropriate seeds
+Email the repo link to your Instructional team (instructors-sf@appacademy.io or
+instructors-ny@appacademy.io).  A TA will review each proposal and leave their
+comments in issues on the project repo. Be prepared to respond to feedback, and
+keep your wiki up to date as you make progress. Happy hunting!
 
-For every MVP, you will need an issue called `PA Review: {task}` (Project Advisor Review) set up to be part of the corresponding milestone for that MVP.
+## Set up your proposal
+[Follow these instructions][fsp-instructions] to set up your proposal!
 
-For the example above, you should create an issue called `PA Review: Chirps`. When you have fully completed an MVP, _assign_ that issue to your project advisor. Upon assigning them, they will receive a notification and know to review your work (both the code and Heroku!).
-
-After you have finished all of the issues for an MVP, your project advisor will review your MVP and provide feedback. Your project advisor will close the 'PA Review' issues when they are satisfied with your work for that milestone.
-
-Don't forget to add issues for `Production README` and `Hosting on Heroku`!
-
-![Assign issue][pm_review_issue]
-
-From the 'Issues' tab, you can view all open issues.
-
-![Issues overview][issues_overview]
-
-As you create your app, you will write enough code to satisfy an issue. Make sure that you have tested that part of your code thoroughly!
-
-If this issue is a `core-feature` or was created by your PA, you should:
-1. Comment on the issue mentioning that you have completed it. Make sure to include your PA's username!
-2. They will review your code and Heroku site.
-  + If they are satisfied, your PA will close the issue.
-  + If there are any additional changes to be made, your PA will leave a comment describing the them. At which point, you should make those changes and then leave a new comment with your PA's Github username when it is completed for another review.
-
-If you created the issue and it is **not** a `core-feature`, feel free to close it yourself! You can include a [special command][git_keywords] in your git commit message telling GitHub to automatically close the issue. Simply include the keyword and the number of the issue that you are closing, and GitHub does the rest!
-
-![GCM resolves issue][gcm_resolves_issue]
-
-After your PA has closed an issue, any milestones associated with that issue will be updated. You can click on any milestone to see the remaining issues for that milestone.
-
-![50% completed milestone][milestones_overview]
-
-
-[create_new_repo]: ./assets/create_new_repo.png
-[name_repo]: ./assets/name_repo.png
-[copy_git_url]: assets/copy_git_url.png
-
-[add_project_manager]: assets/add_project_manager.png
-
-[create_wiki]: assets/create_wiki.png
-[proposal_wiki]: assets/proposal_wiki.png
-
-[issues]: assets/issues.png
-[create_milestone]: assets/create_milestone.png
-[milestone_empty]: assets/milestone_empty.png
-
-[labels]: assets/labels.png
-
-[create_issues]: assets/create_issues.png
-[pm_review_issue]: assets/pm_review_issue.png
-[issues_overview]: assets/issues_overview.png
-
-[git_keywords]: https://help.github.com/articles/closing-issues-using-keywords/
-
-[gcm_resolves_issue]: assets/gcm_resolves_issue.png
-[milestones_overview]: assets/milestones_overview.png
+[fsp-instructions]: ./full-stack-project-proposal.md
