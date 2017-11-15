@@ -1,4 +1,4 @@
-# Full-stack Proposal Preparation: Routes
+# Full-stack Design Docs Preparation: Routes
 
 Now that we know how to delegate some of our app state to our frontend router, we should begin thinking about what routes we need in our full-stack projects. Let's consider frontend routes first, then backend.
 

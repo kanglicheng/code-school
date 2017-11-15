@@ -1,4 +1,4 @@
-# Full-stack Proposal Preparation: State Shape
+# Full-stack Design Docs Preparation: State Shape
 
 We've learned how important our state shape (and normalization) is to our keeping our application logic simple as our app scales.
 Following what we've done in class, let's work on structuring our redux state.

@@ -36,7 +36,8 @@ design documents:
 
 You will spend the next two weeks working full-time on your
 full-stack project Here are the important deadlines. Read the rest of this
-document before starting.
+document and the [workflow you should be following][during-project] before
+starting.
 
 * **W8D2**: Start work on your full-stack project after you finish A06
 * **W9D1**: [Culture Readings](#w9d1)
@@ -47,6 +48,7 @@ document before starting.
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 * **W10D1**: [Culture Readings](#w10d1)
 
+[during-project]: project/during-the-project.md
 [peer-review]: project/peer-review.md
 [production-readme]: project/production-readme.md
 [turn-in-fullstack]: project/turn_in_fullstack.md

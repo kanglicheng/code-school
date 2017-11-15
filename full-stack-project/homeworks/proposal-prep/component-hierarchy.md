@@ -1,6 +1,8 @@
-# Full-stack Proposal Preparation: Component Hierarchy
+# Full-stack Design Docs Preparation: Component Hierarchy
 
 Now that we are React+Redux wizards, we should turn our gaze to the future, to our full-stack projects!
+
+Before starting our preparation, let's get our repo ready. Complete `Phase 1` and `Phase 2` of [these instructions][design-docs] to create your Design Docs wiki on Github. The homework for the rest of the Design Docs will be done here.
 
 Take some time to research the site you are cloning. While referring to to your [MVPs][mvps], keep these things in mind:
 - What views are required?
@@ -9,6 +11,7 @@ Take some time to research the site you are cloning. While referring to to your 
 - What data does each component need from our redux state?
   - Does it need to `connect` to the store or can it be passed down from a parent as `props`?
 
+[design-docs]: ../../proposal/full-stack-project-proposal.md
 [mvps]: ../../proposal/mvp-list.md
 
 Create a rough-draft of your component hierarchy (starting from `App`) which includes a list of the needed components (per view) in a hierarchy with the data source for each component. While not required, we also recommend laying out your component hierarchy visually (using wireframes).

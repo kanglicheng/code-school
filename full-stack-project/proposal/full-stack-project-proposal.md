@@ -31,7 +31,7 @@ npm-debug.log
 
 ## Phase 2: Create Your Design Documents
 
-Your fullstack project design docs are a documentation of your planning process in the form of a GitHub Wiki. Look [here](./) for explanation of each of the design docs below.
+Your fullstack project design docs are a documentation of your planning process in the form of a Github Wiki. Look [here](./) for an explanation of each of the design docs below.
 
 Also, see the [sample design docs][sample].
 
@@ -53,11 +53,15 @@ Make sure to use the layout menu to give the appropriate styling to your documen
 
 ![Screenshot: add page in wiki][design-docs-wiki]
 
+## Phase 3: Complete Your Design Docs
+
+Go back over all of the design docs you did for homework and make any necessary changes. Also complete any of the above docs that were not completed for homework.
+
 Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
 
 [sample]: https://www.github.com/appacademy/bluebird/wiki
 
-## Phase 3: Milestones and MVPs
+## Phase 4: Milestones and MVPs
 
 Every fullstack project has 7 core MVPs (Minimum Viable Products). You need to create a separate **milestone** for *each* MVP.
 
@@ -83,7 +87,7 @@ Create milestones for all of your MVPs.
 
 Don't forget the `Production README` and `Hosting on Heroku` milestones!
 
-## Phase 4: Labels and Issues
+## Phase 5: Labels and Issues
 
 In GitHub, issues are like tasks. They can be labeled, assigned to team members, and attached to milestones. Before we start the project, let's set up our GitHub workspace by creating some custom labels.
 
@@ -94,6 +98,10 @@ On the issues tab, click 'Labels'. You can edit, delete, and re-color the existi
 ![labels][labels]
 
 We will apply these labels to any issues we create once we start the project.
+
+## Phase 6: During the Project
+
+To see what you'll be doing during the project, take a look at [these instructions](../project/during-the-project.md)
 
 [create_new_repo]: ./assets/create_new_repo.png
 [name_repo]: ./assets/name_repo.png
