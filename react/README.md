@@ -186,7 +186,7 @@
 
 ### Homeworks (100 min)
 * [Submit your tentative Full-Stack Project Proposal][tentative-proposal] (10 min)
-  * **Due by 9AM Wednesday w7d2**
+  * **Due by 9AM Wednesday w7d3**
   * Check out the [list of approved apps][approved-apps]
 * [Giphy Homework][giphy_homework] (90 min)
 
