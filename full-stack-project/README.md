@@ -5,7 +5,7 @@
 Before you can start working on your full-stack project you need to pick
 an app to build. You will start by submitting a list of three possible
 apps you would be interested in creating. This is your _tentative
-proposal_. You will assigned one of them. Important deadline for the tentative
+proposal_. You will be assigned one of them. Important deadline for the tentative
 proposal:
 
 
