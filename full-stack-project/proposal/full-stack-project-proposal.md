@@ -29,11 +29,13 @@ npm-debug.log
 
 ![Add Collaborators][add_project_manager]
 
-## Phase 2: Create the Proposal
+## Phase 2: Create Your Design Documents
 
-Your fullstack project proposal is a documentation of your planning process in the form of a GitHub Wiki. Look [here](#) for the overall requirements for the proposal.
+Your fullstack project design docs are a documentation of your planning process in the form of a GitHub Wiki. Look [here](./) for explanation of each of the design docs below.
 
-In your new fullstack repo, create a new wiki.
+Also, see the [sample design docs][sample].
+
+In your new fullstack repo, create a wiki.
 
 ![Screenshot: create wiki][create_wiki]
 
@@ -47,11 +49,13 @@ Create these pages:
 
 On the home page, create links to each of these pages.
 
-Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project advisor will review your proposal and give you feedback on any major issues.
+Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project advisor will review your design docs and give you feedback on any major issues.
 
-![Screenshot: add page in wiki][proposal_wiki]
+![Screenshot: add page in wiki][design-docs-wiki]
 
 Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+
+[sample]: https://www.github.com/appacademy/bluebird/wiki
 
 ## Phase 3: Milestones and MVPs
 
@@ -98,7 +102,7 @@ We will apply these labels to any issues we create once we start the project.
 [add_project_manager]: assets/add_project_manager.png
 
 [create_wiki]: assets/create_wiki.png
-[proposal_wiki]: assets/proposal_wiki.png
+[design-docs-wiki]: assets/proposal_wiki.png
 
 [issues]: assets/issues.png
 [create_milestone]: assets/create_milestone.png

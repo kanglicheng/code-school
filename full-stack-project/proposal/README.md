@@ -1,4 +1,4 @@
-# Full-Stack Project Proposals
+# Full-Stack Design Documents 
 
 Welcome to full-stack projects! This is a hectic and exciting time, and it
 represents the culmination of your education at App Academy. Now that you've
@@ -9,19 +9,19 @@ We are going to use Github's built-in project management to store all your
 planning materials. The main document will be a wiki that outlines all the major
 facets of your development process.
 
-## Sample Proposal
+## Sample Design Docs
 
-To get started, take a look at this [sample proposal repo][sample-proposal].
-This is what your proposal should look like by the time you've finished it.
+To get started, take a look at this [sample repo][sample].
+This is what your design docs should look like by the time you've finished it.
 We want it to be comprehensive, well-organized, and well-polished. This is not
 just for our benefit; by the time you start implementing your project, you will
 have already thought carefully about the functionality and scope of each
 feature, allowing your future self to focus completely on writing the code for
 it.
 
-[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
+[sample]: https://www.github.com/appacademy/bluebird/wiki
 
-## Fleshing Out the Proposal
+## Fleshing Out the Design Docs
 
 The Github wiki of your project repo MUST include the following:
 
@@ -79,7 +79,7 @@ components, discuss what props and state they will need.
 
 Map out your React Routes with their respective components and paths.
 
-See the sample project proposal for an example of this.
+See the sample for an example of this.
 
 ### Wireframes
 
@@ -110,11 +110,11 @@ create your timeline, add due dates to each of your milestones on Github.
 ## Submission
 
 Email the repo link to your Instructional team (instructors-sf@appacademy.io or
-instructors-ny@appacademy.io).  A TA will review each proposal and leave their
+instructors-ny@appacademy.io).  A TA will review your design docs and leave their
 comments in issues on the project repo. Be prepared to respond to feedback, and
 keep your wiki up to date as you make progress. Happy hunting!
 
-## Set up your proposal
-[Follow these instructions][fsp-instructions] to set up your proposal!
+## Set up your Design Documents
+[Follow these instructions][fsp-instructions] to set up your Design Docs!
 
 [fsp-instructions]: ./full-stack-project-proposal.md

@@ -23,13 +23,13 @@ documents, in which you carefully plan out the app you are going to build.
 These are your _full-stack design documents_. Important deadline for the
 design documents:
 
-  * **W8D1**: Submit your full-stack proposal by 9am
-    * [Full-stack proposal guidelines][fsp]
+  * **W8D1**: Submit your full-stack design docs by 9am
+    * [Full-stack design document instructions][fsp]
     * [MVP Checklist][mvp-checklist]
-    * [Sample Proposal][sample-proposal]
+    * [Sample Design Docs][sample-design-docs]
 
-[fsp]: proposal/full-stack-project-proposal.md
-[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
+[fsp]: proposal/
+[sample-design-docs]: https://www.github.com/appacademy/bluebird/wiki
 [mvp-checklist]: proposal/mvp-list.md
 
 ## Project
