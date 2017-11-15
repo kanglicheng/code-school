@@ -23,10 +23,17 @@ documents, in which you carefully plan out the app you are going to build.
 These are your _full-stack design documents_. Important deadline for the
 design documents:
 
+  * **W7D3**: Design Docs Prep: [Component Hierarchy Homework][component]
+  * **W7D4**: Design Docs Prep: [State Shape Homework][state-shape]
+  * **W7D5**: Design Docs Prep: [Routes Homework][routes]
   * **W8D1**: Submit your full-stack design docs by 9am
     * [Full-stack design document instructions][fsp]
     * [MVP Checklist][mvp-checklist]
     * [Sample Design Docs][sample-design-docs]
+
+[component]: homeworks/proposal-prep/component-hierarchy.md
+[state-shape]: homeworks/proposal-prep/state-shape.md
+[routes]: homeworks/proposal-prep/routes.md
 
 [fsp]: proposal/
 [sample-design-docs]: https://www.github.com/appacademy/bluebird/wiki
