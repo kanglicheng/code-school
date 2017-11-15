@@ -8,14 +8,14 @@ export const TODO_ERROR = "TODO_ERROR";
 
 
 // sync actions
-export const receiveTodos = todos => ({
+export const receiveTodos = payload => ({
   type: RECEIVE_TODOS,
-  todos
+  payload
 });
 
-export const receiveTodo = todo => ({
+export const receiveTodo = payload => ({
   type: RECEIVE_TODO,
-  todo
+  payload
 });
 
 export const removeTodo = todo => ({
