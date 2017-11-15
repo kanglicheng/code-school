@@ -38,7 +38,6 @@ should think about the following:
 - [Medium](http://www.medium.com)
 - [Meetup](http://www.meetup.com)
 - [Newsblur](http://www.newsblur.com)
-- [OKCupid](http://www.okcupid.com)
 - [OpenTable](http://www.opentable.com/)
 - [Pinterest](http://www.pinterest.com)
 - [Pivotal Tracker](http://www.pivotaltracker.com)
