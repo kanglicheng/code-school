@@ -26,13 +26,13 @@ pass a template name to `render` (`render :index` for example).
 
 ```
 instagram_clone
-  |- app
-      |- ...
-      |- views
-          |- photos
-              |- index.json.jbuilder
-              |- show.json.jbuilder
-              |- _photo.json.jbuilder
+  └─ app
+      └─ ...
+      └─ views
+          └─ photos
+              └─ index.json.jbuilder
+              └─ show.json.jbuilder
+              └─ _photo.json.jbuilder
 ```
 
 As shown in the directory structure above, you can also use partials with
