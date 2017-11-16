@@ -115,6 +115,6 @@ comments in issues on the project repo. Be prepared to respond to feedback, and
 keep your wiki up to date as you make progress. Happy hunting!
 
 ## Set up your Design Documents
-[Follow these instructions][fsp-instructions] to set up your Design Docs!
+[Follow these instructions][fsp-instructions] to set up your Design Docs! You will complete Phases 1 and 2 for homework. You should complete the rest by ** 9am - W8D1**
 
 [fsp-instructions]: ./full-stack-project-proposal.md
