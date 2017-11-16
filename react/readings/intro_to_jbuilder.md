@@ -24,6 +24,17 @@ You also want to set the default format of resources (in the `config/routes.rb`
 file) to `:json`. Then Rails will automatically look for a `.json` file when you
 pass a template name to `#render` (`render :index` for example).
 
+```diff
+# routes.rb
+
+Rails.application.routes.draw do
++  namespace :api, defaults: { format: :json } do
+-  namespace :api do
+    resources :pokemon, only: [:index, :show, :create, :destroy]
+  end
+end
+```
+
 As shown in the directory structure below, you can also use partials with
 Jbuilder just as you have with ERB.
 
