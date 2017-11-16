@@ -24,6 +24,9 @@ You also want to set the default format of resources (in the `config/routes.rb`
 file) to `:json`. Then Rails will automatically look for a `.json` file when you
 pass a template name to `#render` (`render :index` for example).
 
+As shown in the directory structure below, you can also use partials with
+Jbuilder just as you have with ERB.
+
 ```
 instagram_clone
   └─ app
@@ -34,8 +37,5 @@ instagram_clone
               └─ show.json.jbuilder
               └─ _photo.json.jbuilder
 ```
-
-As shown in the directory structure above, you can also use partials with
-Jbuilder just as you have with ERB.
 
 [jbuilder-docs]:https://github.com/rails/jbuilder
