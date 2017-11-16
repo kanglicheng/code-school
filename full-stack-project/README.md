@@ -1,35 +1,50 @@
 # Full-Stack Curriculum
 
-## Proposal
+## Tentative Project Proposal
 
 Before you can start working on your full-stack project you need to pick
 an app to build. You will start by submitting a list of three possible
 apps you would be interested in creating. This is your _tentative
-proposal_. You will assigned one of them.
+proposal_. You will be assigned one of them. Important deadline for the tentative
+proposal:
 
-Before you start on your full-stack project you will create a detailed
-proposal in which you carefully plan out the app you are going to build.
-This is your _full-stack project proposal_. Here are the important
-deadlines for this part of the curriculum.
 
   * **W7D2**: Submit your tentative proposal by 9am
     * [Tentative proposal guidelines][tentative-proposal]
     * [List of approved apps][good-projects]
-  * **W8D1**: Submit your full-stack proposal by 9am
-    * [Full-stack proposal guidelines][fsp]
-    * [MVP Checklist][mvp-checklist]
-    * [Sample Proposal][sample-proposal]
 
 [tentative-proposal]: proposal/tentative-project-proposal.md
 [good-projects]: proposal/projects-to-clone.md
-[fsp]: proposal/full-stack-project-proposal.md
-[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
+
+## Design Documents
+
+Before you start on your full-stack project you will create a set of detailed
+documents, in which you carefully plan out the app you are going to build.
+These are your _full-stack design documents_. Important deadline for the
+design documents:
+
+  * **W7D3**: Design Docs Prep: [Component Hierarchy Homework][component]
+  * **W7D4**: Design Docs Prep: [State Shape Homework][state-shape]
+  * **W7D5**: Design Docs Prep: [Routes Homework][routes]
+  * **W8D1**: Submit your full-stack design docs by 9am
+    * [Full-stack design document instructions][fsp]
+    * [MVP Checklist][mvp-checklist]
+    * [Sample Design Docs][sample-design-docs]
+
+[component]: homeworks/proposal-prep/component-hierarchy.md
+[state-shape]: homeworks/proposal-prep/state-shape.md
+[routes]: homeworks/proposal-prep/routes.md
+
+[fsp]: proposal/
+[sample-design-docs]: https://www.github.com/appacademy/bluebird/wiki
 [mvp-checklist]: proposal/mvp-list.md
 
 ## Project
 
 You will spend the next two weeks working full-time on your
-full-stack project Here are the important deadlines.
+full-stack project Here are the important deadlines. Read the rest of this
+document and the [workflow you should be following][during-project] before
+starting.
 
 * **W8D2**: Start work on your full-stack project after you finish A06
 * **W9D1**: [Culture Readings](#w9d1)
@@ -40,6 +55,7 @@ full-stack project Here are the important deadlines.
   * Next Steps: [Check out the Job Search Curriculum][jobsearch]
 * **W10D1**: [Culture Readings](#w10d1)
 
+[during-project]: project/during-the-project.md
 [peer-review]: project/peer-review.md
 [production-readme]: project/production-readme.md
 [turn-in-fullstack]: project/turn_in_fullstack.md

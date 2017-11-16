@@ -1,120 +1,120 @@
-# Full-Stack Project Proposals
+# Fullstack Project Setup
 
-Welcome to full-stack projects! This is a hectic and exciting time, and it
-represents the culmination of your education at App Academy. Now that you've
-chosen your project, we want to help you build the best projects possible; so
-we'll help you come up with a road map to keep yourself on track.
+## Phase 1: Create the Repo
 
-We are going to use Github's built-in project management to store all your
-planning materials. The main document will be a wiki that outlines all the major
-facets of your development process.
+1. Create a new Rails project.
+  - `--skip-turbolinks=true`
+  - `--database=postgresql`
+2. The rails skeleton includes a .gitignore file. In addition to what is already there, add the following:
 
-## Sample Proposal
+```
+// .gitignore
 
-To get started, take a look at this [sample proposal repo][sample-proposal].
-This is what your proposal should look like by the time you've finished it.
-We want it to be comprehensive, well-organized, and well-polished. This is not
-just for our benefit; by the time you start implementing your project, you will
-have already thought carefully about the functionality and scope of each
-feature, allowing your future self to focus completely on writing the code for
-it.
+// ... a bunch of preloaded ignores
 
-[sample-proposal]: https://www.github.com/appacademy/bluebird/wiki
+// To add:
+node_modules/
+bundle.js
+bundle.js.map
+.byebug_history
+.DS_Store
+npm-debug.log
+```
 
-## Fleshing Out the Proposal
+3. Create a new repo and give it a good name.
 
-The Github wiki of your project repo MUST include the following:
+![Screenshot: naming repo][name_repo]
 
-### Heroku Link
+4. Commit your files and push to your remote.
 
-At the end of the first day of full-stack projects, you should have a link to
-the live version of your site. It doesn't have to be pretty, but it has to be
-there. Push to Heroku ASAP!
+## Phase 2: Create Your Design Documents
 
-### Minimum Viable Product
+Your fullstack project design docs are a documentation of your planning process in the form of a Github Wiki. Look [here](./) for an explanation of each of the design docs below.
 
-- `mvp-list`
+Also, see the [sample design docs][sample].
 
-Write a one-sentence summary of the project and a list of the features that
-would be absolutely necessary for the app to be marketable. Your MVP section
-must follow the format outlined [here][mvp-features].
+In your new fullstack repo, create a wiki.
 
-[mvp-features]: mvp-list.md
+![Screenshot: create wiki][create_wiki]
 
-### DB Schema
+Create these pages:
+* MVP List
+* Database Schema
+* Routes
+* Sample State
+* Component Hierarchy
+* Wireframes
 
-- `schema`
+On the home page, create links to each of these pages.
 
-Link to a document outlining the database schema for your app. Build up the
-schema by walking through your app's wireframes. Think carefully about what data
-will be needed for each view and the best way to store that data. Make note
-of any database-level validations and foreign key relationships.
+Make sure to use the layout menu to give the appropriate styling to your documents (e.g. code should be in code blocks). Your project advisor will review your design docs and give you feedback on any major issues.
 
-### Routes
+![Screenshot: add page in wiki][design-docs-wiki]
 
-- `routes`
+## Phase 3: Complete Your Design Docs
 
-Link to a page that lists your Rails API endpoints and frontend React Router
-routes. Break these up between HTML and JSON endpoints. Discuss what params,
-if any, will be needed for each route, and what information will be returned.
+Go back over all of the design docs you did for homework and make any necessary changes. Also complete any of the above docs that were not completed for homework.
 
-### Sample State
+Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
 
-- `sample-state`
+![Add Collaborators][add_project_manager]
 
-Create a basic illustration of your state shape. Think about what information
-you need to store for your app to work, and how best to organize it to minimize
-duplication and maximize ease of access.
+[sample]: https://www.github.com/appacademy/bluebird/wiki
 
-### React Components
+## Phase 4: Milestones and MVPs
 
-- `component-hierarchy`
+Every fullstack project has 7 core MVPs (Minimum Viable Products). You need to create a separate **milestone** for *each* MVP.
 
-In conjunction with the wireframes, diagram a tree indicating your
-application's overall component structure.
+Milestones are a way of setting a timeline for completing tasks in GitHub.
 
-Discuss how you will nest your components. If components will need containers,
-indicate what state and dispatch props they will need. For presentational
-components, discuss what props and state they will need.
+To create a milestone, go to the issues tab.
 
-Map out your React Routes with their respective components and paths.
+![issues tab][issues]
 
-See the sample project proposal for an example of this.
+Click on 'Milestones', and then click 'New Milestone'.
 
-### Wireframes
+The title of each milestone should be the main goal of your MVP. You can add a brief description as well.
 
-- `wireframes`
+Make sure to set a due date for each milestone. Your project advisor will hold you to these dates, and let you know if you need to make adjustments.
 
-Annotate your wireframes. Which React component corresponds to
-each element? Keep grids in mind while roughly drafting your layout.
+![create a milestone][create_milestone]
 
-Each wireframe should be a basic representation of the layout and information
-presented in a view. Since you will certainly use nested React components,
-clearly indicate the hierarchy in your wireframes. We should be able to see
-every view of your website using your wireframes, and how each view is reached.
+After creating a milestone, you will see an empty progress bar. Later on, you will learn how to use it.
 
-**NB**: Your wireframes will be viewed not only by yourself and the App Academy
-staff, but potentially future employers. If you are going to use pen and
-paper, it should look great. Otherwise, we recommend [draw.io][draw.io].
+![progress bar][milestone_empty]
 
-[draw.io]: https://www.draw.io/
+Create milestones for all of your MVPs.
 
-### Implementation Timeline
+Don't forget the `Production README` and `Hosting on Heroku` milestones!
 
-This is crucial both here and in the industry. The truth is, one never knows
-how long implementing any particular phase will take. Constraints change.
-Timelines are shortened without warning. An app after any phase must be able
-to stand on its own. We call this building in 'slices' instead of 'layers'. To
-create your timeline, add due dates to each of your milestones on Github.
+## Phase 5: Labels and Issues
 
-## Submission
+In GitHub, issues are like tasks. They can be labeled, assigned to team members, and attached to milestones. Before we start the project, let's set up our GitHub workspace by creating some custom labels.
 
-Email the repo link to your Instructional team (instructors-sf@appacademy.io or
-instructors-ny@appacademy.io).  A TA will review each proposal and leave their
-comments in issues on the project repo. Be prepared to respond to feedback, and
-keep your wiki up to date as you make progress. Happy hunting!
+### Setting Up Labels
 
-## Set up your proposal
-[Follow these instructions][fsp-instructions] to set up your proposal!
+On the issues tab, click 'Labels'. You can edit, delete, and re-color the existing labels, and you can create your own labels. Below are the minimum required labels you will need.
 
-[fsp-instructions]: ./README.md
+![labels][labels]
+
+We will apply these labels to any issues we create once we start the project.
+
+## Phase 6: During the Project
+
+To see what you'll be doing during the project, take a look at [these instructions](../project/during-the-project.md)
+
+[create_new_repo]: ./assets/create_new_repo.png
+[name_repo]: ./assets/name_repo.png
+[copy_git_url]: assets/copy_git_url.png
+
+[add_project_manager]: assets/add_project_manager.png
+
+[create_wiki]: assets/create_wiki.png
+[design-docs-wiki]: assets/proposal_wiki.png
+
+[issues]: assets/issues.png
+[create_milestone]: assets/create_milestone.png
+[milestone_empty]: assets/milestone_empty.png
+
+[labels]: assets/labels.png
+
