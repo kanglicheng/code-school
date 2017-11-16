@@ -2,7 +2,11 @@
 
 Follow the instructions in this document once the project has started. Make sure that you have completed everything in the [proposal instructions][proposal] first.
 
-### Phase 1: Creating Issues
+### Design Documents
+
+We want to make sure that our design docs are up to date with our app's implementation. This allows us to reference them later without digging through code and will help us better plan future features. Whenever your implementation strays from the design you laid out, make sure to update your docs to reflect those changes. If you're making major changes, feel free to run them by your PA to make sure you're on the right track.
+
+### Creating Issues
 
 You will complete this phase for each MVP directly before coding it. Please do not complete all of the issues for all milestones for your proposal at once. This will be your final chance to think about your planning for this component before you start coding it.
 
