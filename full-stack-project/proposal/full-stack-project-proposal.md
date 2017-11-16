@@ -27,8 +27,6 @@ npm-debug.log
 
 4. Commit your files and push to your remote.
 
-![Add Collaborators][add_project_manager]
-
 ## Phase 2: Create Your Design Documents
 
 Your fullstack project design docs are a documentation of your planning process in the form of a Github Wiki. Look [here](./) for an explanation of each of the design docs below.
@@ -58,6 +56,8 @@ Make sure to use the layout menu to give the appropriate styling to your documen
 Go back over all of the design docs you did for homework and make any necessary changes. Also complete any of the above docs that were not completed for homework.
 
 Lastly, add your project advisor as a collaborator to your repo. To do this, go the 'Settings' tab, and click 'Collaborators'.
+
+![Add Collaborators][add_project_manager]
 
 [sample]: https://www.github.com/appacademy/bluebird/wiki
 
