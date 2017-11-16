@@ -21,7 +21,7 @@ We'll start with only one issue for our milestone. There will be more to add lat
 + Smooth, bug-free navigation
 + Adequate and appropriate seeds
 
-![image needed]()
+![Make checklist][checklist]
 
 3. Attach the label `core feature` to the issue
 
@@ -62,6 +62,7 @@ As long as an issue is not a `PA Review` issue, feel free to close it yourself! 
 
 [proposal]: ../proposal/full-stack-project-proposal.md
 
+[checklist]: ../proposal/assets/checklist.png
 [create_issues]: ../proposal/assets/create_issues.png
 [pm_review_issue]: ../proposal/assets/pm_review_issue.png
 [issues_overview]: ../proposal/assets/issues_overview.png
