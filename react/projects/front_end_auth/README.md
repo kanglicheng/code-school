@@ -6,7 +6,7 @@ Start the Rails server
 
 ## Step Two
 Follow along with these videos, coding as you watch.
-
+**go_video_go**
 * [Part 1](https://vimeo.com/243262762)
 * [Part 2](https://vimeo.com/243260194)
 * [Part 3](https://vimeo.com/243259603)
