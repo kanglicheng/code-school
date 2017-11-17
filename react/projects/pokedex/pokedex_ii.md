@@ -380,10 +380,8 @@ But so far, we have no way of letting our users know what happened. We need a wa
 * Add a `receivePokemonErrors` action and corresponding constant.
 * Add a second argument to the `then` method in your `createPokemon` thunk that dispatches `receivePokemonErrors` passing in `errors.responseJSON`.
 * Add a new reducer, `errorsReducer`, to handle the `errors` slice to your app state.
-* Update the `createPokemon` thunk action creator to use this new action on failure
-* Add a `mapStateToProps` function that connects to the `PokemonFormContainer`
-* Add an errors function to the `pokemonForm` that returns an unordered list of error messages.
 * Add a `mapStateToProps` function in the `PokemonFormContainer` to provide the `PokemonForm` with a list of errors
+* Add an errors function to the `pokemonForm` that returns an unordered list of error messages.
 
 To test that the errors properly show up, try adding a pokemon with the same name as a pokemon that currently exists in the database.
 Pokemon names have a `uniqueness: true` constraint, so it should display an error like "Name is already taken".
