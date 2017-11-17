@@ -1,9 +1,11 @@
 # Front-End Auth (React, Redux, React-Router)
 ## Step One
-Download the [skeleton](./auth_routes.zip)
-Start Webpack
-Start the Rails server
-
+Download the [skeleton]()
+* `npm install`
+* `bundle install`
+* `bundle exec rails db:setup`
+* Start Webpack
+* Start the Rails server
 ## Step Two
 Follow along with these videos, coding as you watch.
 **go_video_go**
