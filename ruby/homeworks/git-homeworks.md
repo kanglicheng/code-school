@@ -2,11 +2,11 @@
 
 Starting today, and for the duration of your cohort, you will use git to submit all of your homework assignments. All homework assignments will be accumulated into a single repo on GitHub. Each day's homework will be done in a local copy and pushed up to GitHub daily.
 
-The homework for the day should be submitted before 9 AM of the day in question. Homework scheduled for W1D5 needs to be submitted on W1D5 before 9AM.
+The homework for the day should be submitted before 9 AM of the day in question. Homework scheduled for W1D5 needs to be submitted on W1D5 before 9 AM.
 
 ## Setup
 Let's initialize our repo and setup a GitHub remote before moving on to adding homeworks.
-* Create a new folder in the directory of your choosing, the name of your directory should contain the word _homework_ with any AppAcademy related prefix/suffix.
+* Create a new folder in the directory of your choosing, the name of your directory should contain the word _homework_ with any App Academy related prefix/suffix.
   ```bash
   cd path-to-some-directory
   mkdir aA-homeworks
@@ -55,11 +55,17 @@ aA-homeworks/ (root directory)
 │   ├── map.rb
 │   ├── queue.rb
 │   └── stack.rb
-└── W2D1
-    ├── Gemfile
-    ├── Gemfile.lock
-    ├── lib
-    └── spec
+└── W3D4
+    ├── active_record_warmup
+    │   ├── Gemfile
+    │   ├── Gemfile.lock
+    │   ├── lib
+    │   └── spec
+    └── n_plus_1_buster
+        ├── Gemfile
+        ├── Gemfile.lock
+        ├── lib
+        └── spec
 ```
 
 Before beginning the day's homework, ensure your local repo is up-to-date with the remote.
