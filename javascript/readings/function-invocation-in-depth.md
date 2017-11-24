@@ -3,7 +3,7 @@
 Let's review the various ways to call a function that we have encountered:
 
 * Function-style (`fun(arg1, arg2)`)
-    * `this` is set to `window`
+    * `this` is set to the context that it is called in
 * Method-style (`obj.method(arg1, arg2)`)
     * `this` is set to `obj`
 * Constructor-style (`new ClassName(arg1, arg2)`).
@@ -11,15 +11,17 @@ Let's review the various ways to call a function that we have encountered:
     * Sets its `__proto__` property to `ClassName.prototype`.
     * The `ClassName` function is called with `this` set to the
       blank object.
-        * Your constructor function should setup the variables.
+        * Your constructor function sets up the object's key-value pairs (instance variables).
         * Implemented like the `initialize` method from Ruby
         * The return value is ignored.
 
 Note that callbacks (that is, functions you pass to other functions)
-are almost always eventually called function style, which makes `this`
-the global object.  Remember, you can use an anonymous function
-with the `const that = this` trick or `bind` to ensure that `this` is
-set properly in your callback, but using arrow functions so that `this` is set to the surrounding scope is preferred in ES6.
+are almost always eventually called function style, which, for a `function` not
+an arrow function, makes the function's context the same as the context that it
+is invoked in. Remember, you can use an anonymous function with the
+`const that = this` trick or `bind` to ensure that `this` is set properly in
+your callback, but using arrow functions so that `this` is set to the
+surrounding scope is preferred in ES6.
 
 ## Two last ways to call functions
 
