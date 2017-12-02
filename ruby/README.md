@@ -10,8 +10,8 @@
 
 ### Materials (65 min)
 
-* :book: (**Review**) Readings from [week 0][prep-w0] and [week 1][prep-w1] of the App Academy Prep course (30 min)
-  * **Pay special attention to code style readings from week 1!**
+* :book: (**Review**) Review the readings and solutions from the Alpha Curriculum (45 min)
+  * **Pay special attention to readings from the 'Writing Good Code' section!**
 * :book: Debugging
   * [the pry REPL and the byebug debugger][pry-and-byebug] (20 min)
   * [common error messages][common-error-messages] (15 min)
