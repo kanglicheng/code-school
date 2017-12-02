@@ -167,5 +167,5 @@ If you are having a tough time thinking of example cases, check out the [specs][
 
 [docs-enumerable]: http://ruby-doc.org/core-2.1.2/Enumerable.html
 [docs-array]: http://ruby-doc.org/core-2.1.2/Array.html
-[prep-iter-exercises]: https://github.com/appacademy/appacademy-prep/blob/master/ruby/assets/prep_iteration_exercises.rb
+[prep-iter-exercises]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/prep_iteration_exercises.rb
 [prep-iter-specs]: https://github.com/appacademy/curriculum/blob/master/ruby/assets/w1d1_spec.zip?raw=true
