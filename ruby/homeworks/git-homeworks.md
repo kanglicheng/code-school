@@ -38,12 +38,12 @@ Let's initialize our repo and setup a GitHub remote before moving on to adding h
   git push origin master
   ```
 
-* We've now successfully setup a repo on GitHub and made our first push. :smiley:
+* We've now successfully setup a repo on GitHub and made our first push.
 
 ## Submitting homework
 We want to do our homework within our *homeworks* repo. If we've just initialized our homeworks repo then we already have the most up-to-date version on our machine, but if we are doing our homework from a different machine we will need to *clone* our remote repo to make a new local copy we can work from.
 
-As we progress, we will create a new directory for each day's work. The following directory structure is an example of how your Github repository should look like. As developers we need to follow the directory and structure of the company we work for, AppAcademy is not the exception, **not following AppAcademy directory convention will result in your homework not being accepted.** 
+As we progress, we will create a new directory for each day's work. The following directory structure is an example of how your Github repository should look like. As developers we need to follow the directory naming and structure conventions of the company we work for, AppAcademy is not the exception; **not following AppAcademy directory convention will result in your homework not being accepted.** 
 
 ```
 aA-homeworks/ (root directory)
@@ -82,4 +82,4 @@ To add homework, start by creating a new folder *WXDX* in your *homeworks* direc
 git push origin master
 ```
 
-* **NB: git commit messages should start with capitalized verbs in the present tense that tell what the commit does and should not have any trailing punctuation**
+* **NB: git commit messages should start with capitalized verbs in the imperative mood that tell what the commit does and should not have any trailing punctuation**
