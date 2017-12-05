@@ -38,7 +38,7 @@ get to this later). The basic logic will look something like this:
 Assign instance variables for the `players`, `fragment`, and
 `dictionary`. Since we'll be checking the `fragment` for inclusion in
 the `dictionary`, we'll want to use a data structure with fast lookup: a
-Hash or Set would be ideal. You can use [this file][ghost-dictionary] to
+Hash or [Set](http://ruby-doc.org/stdlib-2.4.2/libdoc/set/rdoc/Set.html) would be ideal. You can use [this file][ghost-dictionary] to
 populate your dictionary; it contains only words three letters or longer
 (otherwise we wouldn't have a very interesting game).
 
