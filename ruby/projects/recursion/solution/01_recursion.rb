@@ -143,7 +143,7 @@ class Array
   def merge(left, right)
     merged_array = []
     until left.empty? || right.empty?
-      merged_array << (left.first < right.first) ? left.shift : right.shift
+      merged_array << ((left.first < right.first) ? left.shift : right.shift)
     end
 
     merged_array + left + right
