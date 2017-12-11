@@ -134,7 +134,7 @@ a class. We don't need to create instances of `Util`.
 
 ```javascript
 const Util = {
-  inherits (childClass, parentClass) {
+  inherits: function(childClass, parentClass) {
     //...
   }
 }
@@ -152,17 +152,19 @@ the `Asteroid` class: `Asteroid.COLOR` and `Asteroid.RADIUS`.
 Write your `Asteroid` constructor so that the caller specifies the `pos` and
 calls the `MovingObject` superconstructor, setting `color` and `radius` to the
 `Asteroid` defaults, and choosing a random vector for `vel`. Use the following
-helper functions to help you create a random vector.
+helper functions from the Util object to help you create a random vector.
 
 ```js
 // Return a randomly oriented vector with the given length.
-randomVec (length) {
-  const deg = 2 * Math.PI * Math.random();
-  return Util.scale([Math.sin(deg), Math.cos(deg)], length);
-},
-// Scale the length of a vector by the given amount.
-scale (vec, m) {
-  return [vec[0] * m, vec[1] * m];
+const Util = {
+  randomVec: function(length) {
+    const deg = 2 * Math.PI * Math.random();
+    return Util.scale([Math.sin(deg), Math.cos(deg)], length);
+  },
+  // Scale the length of a vector by the given amount.
+  scale: function(vec, m) {
+    return [vec[0] * m, vec[1] * m];
+  }
 }
 ```
 
