@@ -81,7 +81,7 @@ variable.
 Using this class, we can now build a `FollowToggle` instance for each
 `follow-toggle` button on the page.
 
-**NB:** Though the follow state is stored in the our database as a **_row_** (or lack thereof) in a join table, on the
+**NB:** Though the follow state is stored in our database as a **_row_** (or lack thereof) in a join table, on the
 client side, we'll keep track of the follow state as a **_string_**. To do this we've bootstrapped the the user's `id` and `follow-state` to the `user-id` and `initial-follow-state` `data-` attributes respectively.
 Later we'll add more states in addition to `followed`/`unfollowed`.
 
