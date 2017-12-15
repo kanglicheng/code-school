@@ -3,7 +3,7 @@
 [**Live Demo!**](https://appacademy.github.io/curriculum/widgets/)
 
 As an introduction to React, we are going to build four simple widgets. We will
-be building a clock, a weather widget,  interactive tabs, and a simple search
+be building a clock, interactive tabs, a weather widget, and a simple search
 component.
 
 ## Learning Goals
