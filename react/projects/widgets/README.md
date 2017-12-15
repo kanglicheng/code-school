@@ -266,7 +266,7 @@ with React? With the [ReactCSSTransitionGroup][react-transitions]!
 * First we need to import the `ReactCSSTransitionGroup` module into our project.
 In the console, run `npm install --save react-addons-css-transition-group`.
 * Then you need to require the module in the file. At the top of
-`autocomplete.jsx`, write `const ReactCSSTransitionGroup = require('react-addons-css-transition-group');`.
+`autocomplete.jsx`, write `import ReactCSSTransitionGroup from 'react-addons-css-transition-group';`.
 * In your `render` method, you will need to wrap the group of elements that will
 be entering and leaving the screen with the `<ReactCSSTransitionGroup>` element.
 In the case of the autocomplete widget, those are the `<li>`. **You are not
