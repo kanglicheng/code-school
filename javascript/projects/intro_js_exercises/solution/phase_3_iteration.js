@@ -24,8 +24,8 @@ String.prototype.substrings = function () {
   let substrings = [];
 
   for (let start = 0; start < this.length; start++) {
-    for (let len = 1; (start + len) <= this.length; len++) {
-      substrings.push(this.substring(start, start + len));
+    for (let end = start + 1; end <= this.length; end++) {
+      substrings.push(this.slice(start, end));
     }
   }
 

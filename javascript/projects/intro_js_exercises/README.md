@@ -93,7 +93,7 @@ These should be pretty familiar.
 
 Write the following functions:
 
-* `Array#bubbleSort` - receives an array, returns a sorted array by implementing [`bubble sort`][bubble sort] sorting algorithm
+* `Array#bubbleSort` - receives an array, returns a sorted array by implementing [`bubble sort`][bubblesort] sorting algorithm
 * `String#substrings` - receives a string, returns an array of all substrings
 
 ### Recap

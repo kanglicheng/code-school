@@ -25,7 +25,7 @@ You'll need the following packages:
 - `react-dom`
 - `babel-core`
 - `babel-loader`
-- `babel-preset-es2015`
+- `babel-preset-env`
 - `babel-preset-react`
 
 ## Configure Webpack
@@ -35,7 +35,7 @@ Make sure to do the following:
 
 - Set your entry and output files.
 - Configure Babel transpilation of React and ES6 syntax
-- Add a `devtool` 
+- Add a `devtool`
 - Ensure that `.js` and `.jsx` files resolve automatically
 
 In the generated `package.json`:

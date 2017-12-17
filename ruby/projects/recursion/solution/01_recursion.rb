@@ -34,8 +34,6 @@ end
 
 class Array
   def deep_dup
-    # Argh! Mario and Kriti beat me with a one line version?? Must
-    # have used `inject`...
     new_array = []
     self.each do |el|
       new_array << (el.is_a?(Array) ? el.deep_dup : el)
@@ -43,13 +41,7 @@ class Array
     new_array
   end
 
-  # The renowned one-line inject version of deep_dup
-  # Beware inject!
-  def dd_inject
-    inject([]) { |dup, el| dup << (el.is_a?(Array) ? el.dd_inject : el) }
-  end
-
-  # Beware map! The ultimate one-liner.
+  # The ultimate one-liner!
   def dd_map
     map { |el| el.is_a?(Array) ? el.dd_map : el }
   end
@@ -151,7 +143,7 @@ class Array
   def merge(left, right)
     merged_array = []
     until left.empty? || right.empty?
-      merged_array << (left.first < right.first) ? left.shift : right.shift
+      merged_array << ((left.first < right.first) ? left.shift : right.shift)
     end
 
     merged_array + left + right
