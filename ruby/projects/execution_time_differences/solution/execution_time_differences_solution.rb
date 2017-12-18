@@ -57,9 +57,9 @@ def largest_contiguous_subsum2(arr)
 
   return arr.max if arr.all? { |num| num < 0 }
 
-  arr.drop(1).each do |num|
+  (1...arr.length).each do |i|
     current = 0 if current < 0
-    current += num
+    current += arr[i]
     largest = current if current > largest
   end
 
