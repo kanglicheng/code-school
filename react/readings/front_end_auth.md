@@ -161,7 +161,7 @@ export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protecte
 
 In all your projects that use frontend auth you will want this code in a
 file `/frontend/util/route_util.jsx`. Then you can simply import these
-components and use them anywhere you want to need a protected route. For
+components and use them anywhere you need a protected route. For
 example, suppose we only want users to be able to write reviews if they
 are logged in.
 
