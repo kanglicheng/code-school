@@ -1,17 +1,24 @@
-# w3d4: JoinsDemo
+# README
 
-This app introduces you to all the major concepts of associations,
-validations, includes, and joins.
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-* First check out `db/schema.rb` to see the decomposition of the
-  problem: `User`s make `Post`s, and leave `Comment`s on existing
-  `Post`s.
-* `app/models/comment.rb` has notes on how associations are used to
-  generate SQL queries.
-* `app/models/user.rb` has an example and explanation of a `has_many
-  :through` relation.
-* `User` also demonstrates various ways to make a query using N+1
-  SELECTs, an `includes` to avoid the N+1 problem, and `joins` to
-  avoid fetching all the extra data that `includes` brings down.
+Things you may want to cover:
 
-**MAKE SURE TO UNDERSTAND THIS DEMO IN FULL**
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
