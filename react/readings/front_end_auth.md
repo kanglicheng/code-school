@@ -119,7 +119,7 @@ We still want to do the same thing, but we can no longer control this
 from the back end. Instead we will create special route components that
 trigger a redirect if the user shouldn't be allowed to see their
 component. We do this by placing a conditional in the `render` prop.
-Here is the code. Take a minute look it over and make sure you
+Here is the code. Take a minute to look it over and make sure you
 understand it.  
 
 ```jsx
