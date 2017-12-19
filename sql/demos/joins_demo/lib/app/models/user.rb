@@ -2,11 +2,11 @@ class User < ApplicationRecord
 
   validates :user_name, :first_name, :last_name, :presence => true
 
-  has_many :posts, :foreign_key => :author_id
+  has_many :posts, foreign_key: :author_id
   # SELECT *
   #   FROM posts
   #  WHERE posts.author_id = #{self.id}
-  has_many :comments, :foreign_key => :author_id
+  has_many :comments, foreign_key: :author_id
   # SELECT *
   #   FROM comments
   #  WHERE comments.author_id = #{self.id}
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   #
   # If the name of this association had been `comments`, Rails would
   # have guessed the second (`source`) association.
-  has_many :post_feedback, :through => :posts, :source => :comments
+  has_many :post_feedback, through: :posts, source: :comments
 
   def n_plus_one_post_comment_counts
     posts = self.posts
