@@ -33,7 +33,7 @@ Let's get started!
 * Update your `Gemfile` with `pry-rails`, `binding_of_caller`, `better_errors` and `annotate`.
 * As of `Rails 5.1.2`, Rails no longer includes JQuery by default. To allow us to use `$.ajax`, include the following:
   * Include `gem 'jquery-rails'` in your `Gemfile`
-  * Include `//= require jquery3` and `//= require jquery_ujs` in `application.js` above `//= require_tree .`
+  * Include `//= require jquery` and `//= require jquery_ujs` in `application.js` above `//= require_tree .`
 
 ### Todos
 * Create a `Todo` migration and model with a `title` string (required), a `body` string (required), and a `done` boolean (required).
