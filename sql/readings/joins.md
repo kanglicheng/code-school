@@ -1,6 +1,6 @@
 # Joins in Active Record
 
-This reading refers heavily to the [JoinsDemo][joins-demo]. Please clone that repository and follow along as you read.  
+This reading refers heavily to the [JoinsDemo][joins-demo]. Please download the zip file and follow along as you read.  
 
 [joins-demo]: ../demos/joins_demo
 
