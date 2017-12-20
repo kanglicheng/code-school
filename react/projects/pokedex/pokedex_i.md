@@ -159,7 +159,7 @@ As with previous projects, you will need to set up a `package.json` and a `webpa
   * redux-logger
   * babel-loader
   * babel-core
-  * babel-preset-es2015
+  * babel-preset-env
   * babel-preset-react
   * lodash
 
