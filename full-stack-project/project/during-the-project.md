@@ -51,7 +51,7 @@ From the 'Issues' tab, you can view all open issues.
     2. Make the changes for each list item and check it off
     3. When all are complete, leave a new comment on the `PA Review` issue with your PA's Github username. This will email them so they know to review it.
 
-[PA Feedback][pm_feedback]
+![PA Feedback][pm_feedback]
 
 There may be some time between finishing the checklist and getting feedback from your PA (like over the weekend). If this happens, start work on your next MVP while you wait. When you do get feedback, you need to go back and complete those before continuing on with your new MVP. The changes you need to make may affect the new MVP so it will be best to complete them ASAP.
 
