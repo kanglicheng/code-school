@@ -48,8 +48,9 @@ From the 'Issues' tab, you can view all open issues.
 3. Your PA will review your code and Heroku site.
   + If they are satisfied, your PA will close the issue and this MVP is considered complete.
   + Alternatively, if there are any additional changes to be made, your PA will leave a comment with checklists describing the needed changes in a list. At which point, you should:
-    2. Make the changes for each list item and check it off
-    3. When all are complete, leave a new comment on the `PA Review` issue with your PA's Github username. This will email them so they know to review it.
+  
+    1. Make the changes for each list item and check it off
+    2. When all are complete, leave a new comment on the `PA Review` issue with your PA's Github username. This will email them so they know to review it.
 
 ![PA Feedback][pm_feedback]
 
