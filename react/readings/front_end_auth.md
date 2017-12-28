@@ -119,7 +119,7 @@ We still want to do the same thing, but we can no longer control this
 from the back end. Instead we will create special route components that
 trigger a redirect if the user shouldn't be allowed to see their
 component. We do this by placing a conditional in the `render` prop.
-Here is the code. Take a minute look it over and make sure you
+Here is the code. Take a minute to look it over and make sure you
 understand it.  
 
 ```jsx
@@ -161,7 +161,7 @@ export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protecte
 
 In all your projects that use frontend auth you will want this code in a
 file `/frontend/util/route_util.jsx`. Then you can simply import these
-components and use them anywhere you want to need a protected route. For
+components and use them anywhere you need a protected route. For
 example, suppose we only want users to be able to write reviews if they
 are logged in.
 

@@ -47,10 +47,12 @@ From the 'Issues' tab, you can view all open issues.
 
 3. Your PA will review your code and Heroku site.
   + If they are satisfied, your PA will close the issue and this MVP is considered complete.
-  + Alternatively, if there are any additional changes to be made, your PA will leave a comment describing the them in a list. At which point, you should:
-    1. Make an issue for each of the changes with proper labels and milestone
-    2. Make the changes for each issue and `resolve` them (see below)
-    3. When all are complete, leave a new comment on the `PA Review` issue with your PA's Github username. This will email them so they know to review it.
+  + Alternatively, if there are any additional changes to be made, your PA will leave a comment with checklists describing the needed changes in a list. At which point, you should:
+  
+    1. Make the changes for each list item and check it off
+    2. When all are complete, leave a new comment on the `PA Review` issue with your PA's Github username. This will email them so they know to review it.
+
+![PA Feedback][pm_feedback]
 
 There may be some time between finishing the checklist and getting feedback from your PA (like over the weekend). If this happens, start work on your next MVP while you wait. When you do get feedback, you need to go back and complete those before continuing on with your new MVP. The changes you need to make may affect the new MVP so it will be best to complete them ASAP.
 
@@ -68,6 +70,7 @@ As long as an issue is not a `PA Review` issue, feel free to close it yourself! 
 
 [checklist]: ../proposal/assets/checklist.png
 [create_issues]: ../proposal/assets/create_issues.png
+[pm_feedback]: ../proposal/assets/pm_feedback.png
 [pm_review_issue]: ../proposal/assets/pm_review_issue.png
 [issues_overview]: ../proposal/assets/issues_overview.png
 

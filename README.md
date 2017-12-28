@@ -36,6 +36,10 @@ During class, you will work on that day's **Projects**, consulting **Additional 
 
 Please raise an issue on this repo and we will resolve it in a day or two.  If more urgent, please email `instructors-sf@appacademy.io` or reach out to the instructional staff on Slack.  
 
+### Curriculum Release Notes
+
+[Notes][notes]
+
 
 [ruby]: ruby/README.md
 [sql]: sql/README.md
@@ -49,3 +53,6 @@ Please raise an issue on this repo and we will resolve it in a day or two.  If m
 
 [dotfiles]: https://github.com/appacademy/dotfiles
 [atom-cheatsheet]: ./course/readings/atom_cheatsheet.md
+
+[notes]: ./release-notes.md
+

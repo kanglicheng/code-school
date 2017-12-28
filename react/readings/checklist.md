@@ -11,6 +11,7 @@ list.
   * `binding_of_caller`
   * `pry-rails`
   * `annotate`
+  * `bcrypt`
   * `jquery-rails` (When using rails 5.1+)
 * [ ] `bundle install`
 * [ ] When using Rails 5.1+, update your `application.js` manifest to include: 
