@@ -9,7 +9,7 @@ installation for apps that have multiple JS dependencies.
 
 ## Generating `package.json` with `npm init`
 
-Much like Ruby's `Gemfile`, the Node Package Manger can be used with a manifest
+Much like Ruby's `Gemfile`, the Node Package Manager can be used with a manifest
 file that lists all of an app's JavaScript dependencies. This file is called
 `package.json`. While you can write this file by hand, NPM's CLI (command line
 interface) significantly simplifies the process.
