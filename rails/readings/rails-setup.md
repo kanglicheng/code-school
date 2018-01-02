@@ -55,7 +55,7 @@ Removing the default Rails JS for now will help you get used to doing things the
 
 ## Add Common Debugging Gems
 
-You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. Lastly, you can use the `quiet_assets` gem, which will reduce excessive logging of requests for CSS/JavaScript files, making it easier for you to read your Rails logs:
+You want to use `better_errors` and `binding_of_caller`, which will make it much easier to see what is going on in your Rails app. You also want to use `pry-rails`, which will provide a nicer console than IRB when you run `rails console`. 
 
 ```ruby
 # Gemfile
