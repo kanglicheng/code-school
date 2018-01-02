@@ -438,7 +438,7 @@ end
 ```
 
 Go ahead and make a POST request to create a new user with Postman. Make
-sure to nest your params currently! The `UsersController#create` method is
+sure to nest your params correctly! The `UsersController#create` method is
 written expecting that all user params will be nested under the key `:user`
 in the params hash.
 
